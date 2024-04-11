@@ -1,0 +1,12 @@
+C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\bin\Debug\fazendaSuinos.exe.config
+C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\bin\Debug\fazendaSuinos.exe
+C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\bin\Debug\fazendaSuinos.pdb
+C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\obj\Debug\fazendaSuinos.csproj.AssemblyReference.cache
+C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\obj\Debug\fazendaSuinos.Properties.Resources.resources
+C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\obj\Debug\fazendaSuinos.csproj.GenerateResource.cache
+C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\obj\Debug\fazendaSuinos.csproj.CoreCompileInputs.cache
+C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\obj\Debug\fazendaSuinos.exe
+C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\obj\Debug\fazendaSuinos.pdb
+C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\obj\Debug\fazendaSuinos.FormMainMenu.resources
+C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\obj\Debug\fazendaS.78FEBE0B.Up2Date
