@@ -40,6 +40,7 @@
             this.comboLoteMenu = new System.Windows.Forms.ComboBox();
             this.fazendaSuinosDBDataSet = new fazendaSuinos.fazendaSuinosDBDataSet();
             this.logoMenu = new System.Windows.Forms.PictureBox();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDBDataSet)).BeginInit();
@@ -271,11 +272,21 @@
             this.logoMenu.TabIndex = 0;
             this.logoMenu.TabStop = false;
             // 
+            // mainPanel
+            // 
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(200, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1340, 845);
+            this.mainPanel.TabIndex = 1;
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1540, 845);
+            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.panelMenu);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMainMenu";
@@ -304,6 +315,7 @@
         private System.Windows.Forms.PictureBox logoMenu;
         private System.Windows.Forms.ComboBox comboLoteMenu;
         private fazendaSuinosDBDataSet fazendaSuinosDBDataSet;
+        private System.Windows.Forms.Panel mainPanel;
     }
 }
 

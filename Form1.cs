@@ -37,6 +37,19 @@ namespace fazendaSuinos
         }
 
         //Funcoes
+        public void loadForm(object Form)
+        {
+            if (this.mainPanel.Controls.Count > 0)
+                this.mainPanel.Controls.RemoveAt(0);
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.mainPanel.Controls.Add(f);
+            this.mainPanel.Tag = f;
+            f.Show();
+        }
+
+
         private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
@@ -104,6 +117,7 @@ namespace fazendaSuinos
         private void btnCadastros_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.verdeClaro);
+            loadForm(new FormCadastros());
         }
 
         private void FormMainMenu_Load(object sender, EventArgs e)
