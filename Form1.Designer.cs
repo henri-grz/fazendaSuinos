@@ -28,15 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.btnCadastros = new FontAwesome.Sharp.IconButton();
             this.btnMortalidade = new FontAwesome.Sharp.IconButton();
             this.btnPesoMedio = new FontAwesome.Sharp.IconButton();
             this.btnMedicacao = new FontAwesome.Sharp.IconButton();
             this.btnRacao = new FontAwesome.Sharp.IconButton();
             this.btnDetalhes = new FontAwesome.Sharp.IconButton();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.btnCadastros = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.fazendaSuinosDBDataSet = new fazendaSuinos.fazendaSuinosDBDataSet();
+            this.loteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.loteTableAdapter = new fazendaSuinos.fazendaSuinosDBDataSetTableAdapters.LoteTableAdapter();
             this.panelMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -48,13 +59,50 @@
             this.panelMenu.Controls.Add(this.btnMedicacao);
             this.panelMenu.Controls.Add(this.btnRacao);
             this.panelMenu.Controls.Add(this.btnDetalhes);
+            this.panelMenu.Controls.Add(this.iconButton1);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(200, 643);
             this.panelMenu.TabIndex = 0;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.panelLogo.Controls.Add(this.comboBox1);
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(200, 195);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // btnCadastros
+            // 
+            this.btnCadastros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCadastros.FlatAppearance.BorderSize = 0;
+            this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastros.ForeColor = System.Drawing.Color.White;
+            this.btnCadastros.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            this.btnCadastros.IconColor = System.Drawing.Color.White;
+            this.btnCadastros.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCadastros.IconSize = 34;
+            this.btnCadastros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastros.Location = new System.Drawing.Point(0, 555);
+            this.btnCadastros.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCadastros.Name = "btnCadastros";
+            this.btnCadastros.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
+            this.btnCadastros.Size = new System.Drawing.Size(200, 60);
+            this.btnCadastros.TabIndex = 6;
+            this.btnCadastros.Text = "Cadastros";
+            this.btnCadastros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadastros.UseVisualStyleBackColor = true;
+            this.btnCadastros.Click += new System.EventHandler(this.btnCadastros_Click);
             // 
             // btnMortalidade
             // 
@@ -68,8 +116,8 @@
             this.btnMortalidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMortalidade.IconSize = 34;
             this.btnMortalidade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMortalidade.Location = new System.Drawing.Point(0, 340);
-            this.btnMortalidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMortalidade.Location = new System.Drawing.Point(0, 495);
+            this.btnMortalidade.Margin = new System.Windows.Forms.Padding(2);
             this.btnMortalidade.Name = "btnMortalidade";
             this.btnMortalidade.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
             this.btnMortalidade.Size = new System.Drawing.Size(200, 60);
@@ -92,8 +140,8 @@
             this.btnPesoMedio.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPesoMedio.IconSize = 34;
             this.btnPesoMedio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesoMedio.Location = new System.Drawing.Point(0, 280);
-            this.btnPesoMedio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPesoMedio.Location = new System.Drawing.Point(0, 435);
+            this.btnPesoMedio.Margin = new System.Windows.Forms.Padding(2);
             this.btnPesoMedio.Name = "btnPesoMedio";
             this.btnPesoMedio.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
             this.btnPesoMedio.Size = new System.Drawing.Size(200, 60);
@@ -116,8 +164,8 @@
             this.btnMedicacao.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMedicacao.IconSize = 34;
             this.btnMedicacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMedicacao.Location = new System.Drawing.Point(0, 220);
-            this.btnMedicacao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMedicacao.Location = new System.Drawing.Point(0, 375);
+            this.btnMedicacao.Margin = new System.Windows.Forms.Padding(2);
             this.btnMedicacao.Name = "btnMedicacao";
             this.btnMedicacao.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
             this.btnMedicacao.Size = new System.Drawing.Size(200, 60);
@@ -140,8 +188,8 @@
             this.btnRacao.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRacao.IconSize = 34;
             this.btnRacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRacao.Location = new System.Drawing.Point(0, 160);
-            this.btnRacao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRacao.Location = new System.Drawing.Point(0, 315);
+            this.btnRacao.Margin = new System.Windows.Forms.Padding(2);
             this.btnRacao.Name = "btnRacao";
             this.btnRacao.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
             this.btnRacao.Size = new System.Drawing.Size(200, 60);
@@ -164,7 +212,7 @@
             this.btnDetalhes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDetalhes.IconSize = 34;
             this.btnDetalhes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDetalhes.Location = new System.Drawing.Point(0, 100);
+            this.btnDetalhes.Location = new System.Drawing.Point(0, 255);
             this.btnDetalhes.Margin = new System.Windows.Forms.Padding(2);
             this.btnDetalhes.Name = "btnDetalhes";
             this.btnDetalhes.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
@@ -175,38 +223,67 @@
             this.btnDetalhes.UseVisualStyleBackColor = true;
             this.btnDetalhes.Click += new System.EventHandler(this.btnDetalhes_Click);
             // 
-            // panelLogo
+            // iconButton1
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(200, 100);
-            this.panelLogo.TabIndex = 0;
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 34;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 195);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
+            this.iconButton1.Size = new System.Drawing.Size(200, 60);
+            this.iconButton1.TabIndex = 7;
+            this.iconButton1.Text = "Dashboard";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // btnCadastros
+            // pictureBox1
             // 
-            this.btnCadastros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCadastros.FlatAppearance.BorderSize = 0;
-            this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastros.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastros.ForeColor = System.Drawing.Color.White;
-            this.btnCadastros.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            this.btnCadastros.IconColor = System.Drawing.Color.White;
-            this.btnCadastros.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCadastros.IconSize = 34;
-            this.btnCadastros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastros.Location = new System.Drawing.Point(0, 400);
-            this.btnCadastros.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCadastros.Name = "btnCadastros";
-            this.btnCadastros.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
-            this.btnCadastros.Size = new System.Drawing.Size(200, 60);
-            this.btnCadastros.TabIndex = 6;
-            this.btnCadastros.Text = "Cadastros";
-            this.btnCadastros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCadastros.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = global::fazendaSuinos.Properties.Resources.logo_rodolfo_horizontal;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(199, 92);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.comboBox1.DataSource = this.loteBindingSource;
+            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 30;
+            this.comboBox1.Location = new System.Drawing.Point(27, 142);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(147, 36);
+            this.comboBox1.TabIndex = 8;
+            // 
+            // fazendaSuinosDBDataSet
+            // 
+            this.fazendaSuinosDBDataSet.DataSetName = "fazendaSuinosDBDataSet";
+            this.fazendaSuinosDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // loteBindingSource
+            // 
+            this.loteBindingSource.DataMember = "Lote";
+            this.loteBindingSource.DataSource = this.fazendaSuinosDBDataSet;
+            // 
+            // loteTableAdapter
+            // 
+            this.loteTableAdapter.ClearBeforeFill = true;
             // 
             // FormMainMenu
             // 
@@ -214,11 +291,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 643);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMainMenu";
             this.Text = "FormMainMenu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.panelMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loteBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -233,6 +315,12 @@
         private FontAwesome.Sharp.IconButton btnRacao;
         private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconButton btnCadastros;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private fazendaSuinosDBDataSet fazendaSuinosDBDataSet;
+        private System.Windows.Forms.BindingSource loteBindingSource;
+        private fazendaSuinosDBDataSetTableAdapters.LoteTableAdapter loteTableAdapter;
     }
 }
 

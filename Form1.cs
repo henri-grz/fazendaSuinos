@@ -23,7 +23,7 @@ namespace fazendaSuinos
         {
             InitializeComponent();
             leftBorderPnl = new Panel();
-            leftBorderPnl.Size = new Size(7, 60);
+            leftBorderPnl.Size = new Size(7, 74);
             panelMenu.Controls.Add(leftBorderPnl);
         }
         //Structs
@@ -52,7 +52,7 @@ namespace fazendaSuinos
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
                 //borda da esquerda do botao
                 leftBorderPnl.BackColor = color;
-                leftBorderPnl.Location = new Point(0,currentBtn.Location.Y);
+                leftBorderPnl.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderPnl.Visible = true;
                 leftBorderPnl.BringToFront();
             }
@@ -94,6 +94,23 @@ namespace fazendaSuinos
         private void btnMortalidade_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.verdeClaro);
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.verdeClaro);
+        }
+
+        private void btnCadastros_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.verdeClaro);
+        }
+
+        private void FormMainMenu_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'fazendaSuinosDBDataSet.Lote'. Você pode movê-la ou removê-la conforme necessário.
+            this.loteTableAdapter.Fill(this.fazendaSuinosDBDataSet.Lote);
+
         }
     }
 }

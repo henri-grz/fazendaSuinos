@@ -107,5 +107,8 @@
   <ItemGroup>
     <None Include="Resources\logoFazenda.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo rodolfo horizontal.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
