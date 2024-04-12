@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
             this.btnCadastros = new FontAwesome.Sharp.IconButton();
             this.btnMortalidade = new FontAwesome.Sharp.IconButton();
             this.btnPesoMedio = new FontAwesome.Sharp.IconButton();
@@ -38,16 +36,14 @@
             this.btnRacao = new FontAwesome.Sharp.IconButton();
             this.btnDetalhes = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.comboLoteMenu = new System.Windows.Forms.ComboBox();
             this.fazendaSuinosDBDataSet = new fazendaSuinos.fazendaSuinosDBDataSet();
-            this.loteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loteTableAdapter = new fazendaSuinos.fazendaSuinosDBDataSetTableAdapters.LoteTableAdapter();
+            this.logoMenu = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -65,20 +61,8 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 643);
+            this.panelMenu.Size = new System.Drawing.Size(200, 845);
             this.panelMenu.TabIndex = 0;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.panelLogo.Controls.Add(this.comboBox1);
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(200, 195);
-            this.panelLogo.TabIndex = 0;
             // 
             // btnCadastros
             // 
@@ -247,49 +231,51 @@
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // pictureBox1
+            // panelLogo
             // 
-            this.pictureBox1.Image = global::fazendaSuinos.Properties.Resources.logo_rodolfo_horizontal;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(199, 92);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.panelLogo.Controls.Add(this.comboLoteMenu);
+            this.panelLogo.Controls.Add(this.logoMenu);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(200, 195);
+            this.panelLogo.TabIndex = 0;
             // 
-            // comboBox1
+            // comboLoteMenu
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.comboBox1.DataSource = this.loteBindingSource;
-            this.comboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 30;
-            this.comboBox1.Location = new System.Drawing.Point(27, 142);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(147, 36);
-            this.comboBox1.TabIndex = 8;
+            this.comboLoteMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.comboLoteMenu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboLoteMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboLoteMenu.ForeColor = System.Drawing.Color.White;
+            this.comboLoteMenu.FormattingEnabled = true;
+            this.comboLoteMenu.ItemHeight = 30;
+            this.comboLoteMenu.Location = new System.Drawing.Point(27, 142);
+            this.comboLoteMenu.Name = "comboLoteMenu";
+            this.comboLoteMenu.Size = new System.Drawing.Size(147, 36);
+            this.comboLoteMenu.TabIndex = 8;
             // 
             // fazendaSuinosDBDataSet
             // 
             this.fazendaSuinosDBDataSet.DataSetName = "fazendaSuinosDBDataSet";
             this.fazendaSuinosDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // loteBindingSource
+            // logoMenu
             // 
-            this.loteBindingSource.DataMember = "Lote";
-            this.loteBindingSource.DataSource = this.fazendaSuinosDBDataSet;
-            // 
-            // loteTableAdapter
-            // 
-            this.loteTableAdapter.ClearBeforeFill = true;
+            this.logoMenu.Image = global::fazendaSuinos.Properties.Resources.logo_rodolfo_horizontal;
+            this.logoMenu.Location = new System.Drawing.Point(-2, 30);
+            this.logoMenu.Name = "logoMenu";
+            this.logoMenu.Size = new System.Drawing.Size(199, 92);
+            this.logoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoMenu.TabIndex = 0;
+            this.logoMenu.TabStop = false;
             // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 643);
+            this.ClientSize = new System.Drawing.Size(1540, 845);
             this.Controls.Add(this.panelMenu);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMainMenu";
@@ -298,9 +284,8 @@
             this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,11 +301,9 @@
         private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconButton btnCadastros;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox logoMenu;
+        private System.Windows.Forms.ComboBox comboLoteMenu;
         private fazendaSuinosDBDataSet fazendaSuinosDBDataSet;
-        private System.Windows.Forms.BindingSource loteBindingSource;
-        private fazendaSuinosDBDataSetTableAdapters.LoteTableAdapter loteTableAdapter;
     }
 }
 

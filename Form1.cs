@@ -109,7 +109,7 @@ namespace fazendaSuinos
         private void FormMainMenu_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'fazendaSuinosDBDataSet.Lote'. Você pode movê-la ou removê-la conforme necessário.
-            this.loteTableAdapter.Fill(this.fazendaSuinosDBDataSet.Lote);
+            //loteTableAdapter.Fill(this.fazendaSuinosDBDataSet.Lote);
 
         }
     }
