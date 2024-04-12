@@ -15,6 +15,7 @@ namespace fazendaSuinos
         public FormCadastros()
         {
             InitializeComponent();
+
         }
     }
 }
