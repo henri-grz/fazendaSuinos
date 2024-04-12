@@ -38,12 +38,13 @@
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.comboLoteMenu = new System.Windows.Forms.ComboBox();
-            this.fazendaSuinosDBDataSet = new fazendaSuinos.fazendaSuinosDBDataSet();
             this.logoMenu = new System.Windows.Forms.PictureBox();
+            this.fazendaSuinosDBDataSet = new fazendaSuinos.fazendaSuinosDBDataSet();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -256,11 +257,6 @@
             this.comboLoteMenu.Size = new System.Drawing.Size(147, 36);
             this.comboLoteMenu.TabIndex = 8;
             // 
-            // fazendaSuinosDBDataSet
-            // 
-            this.fazendaSuinosDBDataSet.DataSetName = "fazendaSuinosDBDataSet";
-            this.fazendaSuinosDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // logoMenu
             // 
             this.logoMenu.Image = global::fazendaSuinos.Properties.Resources.logo_rodolfo_horizontal;
@@ -271,11 +267,26 @@
             this.logoMenu.TabIndex = 0;
             this.logoMenu.TabStop = false;
             // 
+            // fazendaSuinosDBDataSet
+            // 
+            this.fazendaSuinosDBDataSet.DataSetName = "fazendaSuinosDBDataSet";
+            this.fazendaSuinosDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panelMain
+            // 
+            this.panelMain.AutoScroll = true;
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(200, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1340, 845);
+            this.panelMain.TabIndex = 1;
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1540, 845);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelMenu);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMainMenu";
@@ -284,8 +295,8 @@
             this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -304,6 +315,7 @@
         private System.Windows.Forms.PictureBox logoMenu;
         private System.Windows.Forms.ComboBox comboLoteMenu;
         private fazendaSuinosDBDataSet fazendaSuinosDBDataSet;
+        private System.Windows.Forms.Panel panelMain;
     }
 }
 

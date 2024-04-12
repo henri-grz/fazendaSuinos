@@ -10,3 +10,4 @@ C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\obj\Debug\fazendaSui
 C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\obj\Debug\fazendaSuinos.FormMainMenu.resources
 C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\obj\Debug\fazendaS.78FEBE0B.Up2Date
+C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\obj\Debug\fazendaSuinos.FormCadastros.resources

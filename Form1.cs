@@ -17,7 +17,8 @@ namespace fazendaSuinos
     {
         //campos
         private IconButton currentBtn;
-        private Panel leftBorderPnl;   
+        private Panel leftBorderPnl;
+        private Form currentChildForm;
         //constructor
         public FormMainMenu()
         {
@@ -71,6 +72,23 @@ namespace fazendaSuinos
             }
         }
 
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            childForm.AutoScroll = true;
+            panelMain.Controls.Add(childForm);
+            panelMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            
+        }
         private void btnDetalhes_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.verdeClaro);
@@ -104,6 +122,7 @@ namespace fazendaSuinos
         private void btnCadastros_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.verdeClaro);
+            OpenChildForm(new FormCadastros());
         }
 
         private void FormMainMenu_Load(object sender, EventArgs e)
