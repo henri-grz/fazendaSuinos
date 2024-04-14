@@ -35,14 +35,12 @@
             this.btnMedicacao = new FontAwesome.Sharp.IconButton();
             this.btnRacao = new FontAwesome.Sharp.IconButton();
             this.btnDetalhes = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnDashboard = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.comboLoteMenu = new System.Windows.Forms.ComboBox();
             this.logoMenu = new System.Windows.Forms.PictureBox();
-
             this.fazendaSuinosDBDataSet = new fazendaSuinos.fazendaSuinosDBDataSet();
             this.panelMain = new System.Windows.Forms.Panel();
-
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).BeginInit();
@@ -58,7 +56,7 @@
             this.panelMenu.Controls.Add(this.btnMedicacao);
             this.panelMenu.Controls.Add(this.btnRacao);
             this.panelMenu.Controls.Add(this.btnDetalhes);
-            this.panelMenu.Controls.Add(this.iconButton1);
+            this.panelMenu.Controls.Add(this.btnDashboard);
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -210,29 +208,29 @@
             this.btnDetalhes.UseVisualStyleBackColor = true;
             this.btnDetalhes.Click += new System.EventHandler(this.btnDetalhes_Click);
             // 
-            // iconButton1
+            // btnDashboard
             // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 34;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 195);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
-            this.iconButton1.Size = new System.Drawing.Size(200, 60);
-            this.iconButton1.TabIndex = 7;
-            this.iconButton1.Text = "Dashboard";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.ChartColumn;
+            this.btnDashboard.IconColor = System.Drawing.Color.White;
+            this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDashboard.IconSize = 34;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 195);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
+            this.btnDashboard.Size = new System.Drawing.Size(200, 60);
+            this.btnDashboard.TabIndex = 7;
+            this.btnDashboard.Text = "Dashboard";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // panelLogo
             // 
@@ -290,7 +288,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1540, 845);
             this.Controls.Add(this.panelMain);
-
             this.Controls.Add(this.panelMenu);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMainMenu";
@@ -315,7 +312,7 @@
         private FontAwesome.Sharp.IconButton btnRacao;
         private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconButton btnCadastros;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnDashboard;
         private System.Windows.Forms.PictureBox logoMenu;
         private System.Windows.Forms.ComboBox comboLoteMenu;
         private fazendaSuinosDBDataSet fazendaSuinosDBDataSet;
