@@ -50,26 +50,28 @@ namespace fazendaSuinos
             panelFiltroAcoes.Visible = false;
             panelFiltroEntidade.Visible = true;
             //AJUSTA CAMPOS DE CADASTRO
+            panelCadastroFazenda.Visible = false;
             panelCadastroEntidade.Visible = true;
             ResumeLayout();
         }
 
         private void btnFazenda_Click(object sender, EventArgs e)
         {
-            ResumeLayout();
+            SuspendLayout();
             //AJUSTA PANELS DE FILTRO
             panelFiltroAcoes.Visible = false;
             panelFiltroEntidade.Visible = false;
             panelFiltroFazenda.Visible = true;
             //AJUSTA CAMPOS DE CADASTRO
             panelCadastroEntidade.Visible = false;
+            panelCadastroFazenda.Visible = true;
             ResumeLayout();
 
         }
 
         private void btnAcoesCorretivas_Click(object sender, EventArgs e)
         {
-            ResumeLayout();
+            SuspendLayout();
             //AJUSTA PANELS DE FILTRO
             panelFiltroFazenda.Visible = false;
             panelFiltroEntidade.Visible = false;
@@ -392,7 +394,25 @@ namespace fazendaSuinos
 
         private void btnFiltroAco1_Click(object sender, EventArgs e)
         {
+            string atributoParaRemover = btnFiltroAco1.Text;
 
+            btnFiltroAco1.Visible = false;
+            btnFiltroAco1.Text = "";
+            tagsFiltrosAco.Add(btnFiltroAco1);
+
+            // Itera pela lista de filtrosEnt para encontrar o item a ser removido
+            for (int i = 0; i < filtrosAco.Count; i++)
+            {
+                string[] filtro = filtrosAco[i];
+                string atributo = filtro[0];
+
+                // Se o atributo corresponder ao texto da tag clicada, remova o item da lista
+                if (atributo == atributoParaRemover)
+                {
+                    filtrosAco.RemoveAt(i);
+                    break;
+                }
+            }
         }
 
         private void btnFiltroAco2_Click(object sender, EventArgs e)
@@ -439,6 +459,60 @@ namespace fazendaSuinos
                     break;
                 }
             }
+        }
+
+        private void comboTipoFazenda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboTipoFazenda.SelectedItem.ToString() == "Lote")
+            {
+                SuspendLayout();
+
+                escondeTodosCadastroFazenda();
+                panelCadastroFazenda.Size = new Size(1786, 634);
+
+                label12.Visible = true;
+                campoQuantidade.Visible = true;
+                campoPesoTotal.Visible = true;
+                campoPesoMedio.Visible = true;
+                label18.Visible = true;
+                label11.Visible = true;
+                label16.Visible = true;
+                comboSituacaoFazenda.Visible = true;
+                label10.Visible = true;
+                label14.Visible = true;
+                dateTPDataAlojamento.Visible = true;
+                dateTPEstimativaCarregamento.Visible = true;
+                label13.Visible = true;
+                label17.Visible = true;
+                campoCodGerente.Visible = true;
+                textoObservacoes.Visible = true;
+
+                ResumeLayout();
+            }
+            else
+            {
+                
+            }
+        }
+
+        private void escondeTodosCadastroFazenda()
+        {
+            label12.Visible = false;
+            campoQuantidade.Visible = false;
+            campoPesoTotal.Visible = false;
+            campoPesoMedio.Visible = false;
+            label18.Visible = false;
+            label11.Visible = false;
+            label16.Visible = false;
+            comboSituacaoFazenda.Visible = false;
+            label10.Visible = false;
+            label14.Visible = false;
+            dateTPDataAlojamento.Visible = false;
+            dateTPEstimativaCarregamento.Visible = false;
+            label13.Visible = false;
+            label17.Visible = false;
+            campoCodGerente.Visible = false;
+            textoObservacoes.Visible = false;
         }
     }
 }
