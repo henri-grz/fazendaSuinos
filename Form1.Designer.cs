@@ -41,10 +41,12 @@
             this.logoMenu = new System.Windows.Forms.PictureBox();
             this.fazendaSuinosDBDataSet = new fazendaSuinos.fazendaSuinosDBDataSet();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.panelTable = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDBDataSet)).BeginInit();
+            this.panelTable.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -275,11 +277,21 @@
             // panelMain
             // 
             this.panelMain.AutoScroll = true;
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMain.Location = new System.Drawing.Point(200, 0);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1340, 845);
             this.panelMain.TabIndex = 1;
+            // 
+            // panelTable
+            // 
+            this.panelTable.Controls.Add(this.panelMain);
+            this.panelTable.Controls.Add(this.panelMenu);
+            this.panelTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelTable.Location = new System.Drawing.Point(0, 0);
+            this.panelTable.Name = "panelTable";
+            this.panelTable.Size = new System.Drawing.Size(1540, 845);
+            this.panelTable.TabIndex = 0;
             // 
             // FormMainMenu
             // 
@@ -287,8 +299,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1540, 845);
-            this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.panelTable);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMainMenu";
             this.Text = "FormMainMenu";
@@ -298,6 +309,7 @@
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDBDataSet)).EndInit();
+            this.panelTable.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -317,6 +329,7 @@
         private System.Windows.Forms.ComboBox comboLoteMenu;
         private fazendaSuinosDBDataSet fazendaSuinosDBDataSet;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Panel panelTable;
     }
 }
 
