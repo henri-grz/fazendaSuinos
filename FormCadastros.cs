@@ -468,7 +468,6 @@ namespace fazendaSuinos
                 SuspendLayout();
 
                 escondeTodosCadastroFazenda();
-                panelCadastroFazenda.Size = new Size(1786, 634);
 
                 label12.Visible = true;
                 campoQuantidade.Visible = true;
@@ -489,9 +488,18 @@ namespace fazendaSuinos
 
                 ResumeLayout();
             }
-            else
+            else if(comboTipoFazenda.SelectedItem.ToString() == "Pocilga")
             {
-                
+                SuspendLayout();
+
+                escondeTodosCadastroFazenda();
+
+                label22.Visible = true;
+                campoCapacidadePocilga.Visible = true;
+                label23.Visible = true;
+                textoDescricaoPocilga.Visible = true;
+
+                ResumeLayout();
             }
         }
 
