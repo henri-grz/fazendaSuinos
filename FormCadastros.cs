@@ -470,7 +470,7 @@ namespace fazendaSuinos
                 escondeTodosCadastroFazenda();
 
                 label12.Visible = true;
-                campoQuantidade.Visible = true;
+                campoQuantidadeLote.Visible = true;
                 campoPesoTotal.Visible = true;
                 campoPesoMedio.Visible = true;
                 label18.Visible = true;
@@ -501,12 +501,35 @@ namespace fazendaSuinos
 
                 ResumeLayout();
             }
+            else if (comboTipoFazenda.SelectedItem.ToString() == "Visita")
+            {
+                SuspendLayout();
+
+                escondeTodosCadastroFazenda();
+
+                labelDataVisita.Visible = true;
+                dateTPDataVisita.Visible = true;
+                labelFinalidadeVisita.Visible = true;
+                campoFinalidadeVisita.Visible = true;
+                labelDataUltVisita.Visible = true;
+                dateTiPUltimaVisita.Visible = true;
+                labelCodUltVisita.Visible = true;
+                campoCodUltimaVisita.Visible = true;
+                labelObservacoesVisita.Visible = true;
+                textObservacoesVisita.Visible = true;
+                labelCodPessoaVisita.Visible = true;
+                campoCodigoPessoaVisita.Visible = true;
+                labelCodPocilgaVisita.Visible = true;
+                campoCodPocilgaVisita.Visible = true;
+
+                ResumeLayout();
+            }
         }
 
         private void escondeTodosCadastroFazenda()
         {
             label12.Visible = false;
-            campoQuantidade.Visible = false;
+            campoQuantidadeLote.Visible = false;
             campoPesoTotal.Visible = false;
             campoPesoMedio.Visible = false;
             label18.Visible = false;
@@ -521,6 +544,20 @@ namespace fazendaSuinos
             label17.Visible = false;
             campoCodGerente.Visible = false;
             textoObservacoes.Visible = false;
+            labelDataVisita.Visible = false;
+            dateTPDataVisita.Visible = false;
+            labelFinalidadeVisita.Visible = false;
+            campoFinalidadeVisita.Visible = false;
+            labelDataUltVisita.Visible = false;
+            dateTiPUltimaVisita.Visible = false;
+            labelCodUltVisita.Visible = false;
+            campoCodUltimaVisita.Visible = false;
+            labelObservacoesVisita.Visible = false;
+            textObservacoesVisita.Visible = false;
+            labelCodPessoaVisita.Visible = false;
+            campoCodigoPessoaVisita.Visible = false;
+            labelCodPocilgaVisita.Visible = false;
+            campoCodPocilgaVisita.Visible = false;
         }
     }
 }
