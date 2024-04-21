@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formcadastros.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|d:\\projeto integrador\\fazendasuinos\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|D:\\Projeto Integrador\\fazendaSuinos\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -49,8 +49,7 @@
               "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormMain.cs [Design]",
               "RelativeToolTip": "FormMain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T22:58:30.996Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-19T22:58:30.996Z"
             },
             {
               "$type": "Document",
@@ -60,7 +59,7 @@
               "RelativeDocumentMoniker": "FormCadastros.Designer.cs",
               "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormCadastros.Designer.cs",
               "RelativeToolTip": "FormCadastros.Designer.cs",
-              "ViewState": "AQIAAFIAAAAAAAAAAAASwGwAAAAeAAAA",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAowGEAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-13T17:45:18.892Z",
               "EditorCaption": ""
@@ -73,7 +72,7 @@
               "RelativeDocumentMoniker": "FormCadastros.cs",
               "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormCadastros.cs",
               "RelativeToolTip": "FormCadastros.cs",
-              "ViewState": "AQIAABACAAAAAAAAAAAAAC8CAAAxAAAA",
+              "ViewState": "AQIAAE8CAAAAAAAAAAAQwG0CAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-12T23:12:15.31Z",
               "EditorCaption": ""

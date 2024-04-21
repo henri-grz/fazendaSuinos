@@ -78,6 +78,7 @@ namespace fazendaSuinos
             panelFiltroAcoes.Visible = true;
             //AJUSTA CAMPOS DE CADASTRO
             panelCadastroEntidade.Visible = false;
+            panelCadastroFazenda.Visible = false;
             ResumeLayout();
         }
 
@@ -137,7 +138,7 @@ namespace fazendaSuinos
 
         private void limpaCamposCadastro()
         {
-            campoCodigo.Text = "";
+            campoCodigoEntidade.Text = "";
             campoNome.Text = "";
             campoRazaoSocial.Text = "";
             campoCPF.Text = "";
@@ -463,28 +464,31 @@ namespace fazendaSuinos
 
         private void comboTipoFazenda_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Verifica o item selecionado, esconde todos os campos e mostra
+            //apenas os necessários
+
             if (comboTipoFazenda.SelectedItem.ToString() == "Lote")
             {
                 SuspendLayout();
 
                 escondeTodosCadastroFazenda();
 
-                label12.Visible = true;
-                campoQuantidadeLote.Visible = true;
-                campoPesoTotal.Visible = true;
-                campoPesoMedio.Visible = true;
-                label18.Visible = true;
-                label11.Visible = true;
-                label16.Visible = true;
-                comboSituacaoFazenda.Visible = true;
-                label10.Visible = true;
-                label14.Visible = true;
-                dateTPDataAlojamento.Visible = true;
-                dateTPEstimativaCarregamento.Visible = true;
-                label13.Visible = true;
-                label17.Visible = true;
-                campoCodGerente.Visible = true;
-                textoObservacoes.Visible = true;
+                labelQuantidade_Lote.Visible = true;
+                campoQuantidade_Lote.Visible = true;
+                campoPesoTotal_Lote.Visible = true;
+                campoPesoMedio_Lote.Visible = true;
+                labelPesoTotal_Lote.Visible = true;
+                labelPesoMedio_Lote.Visible = true;
+                labelSituacao_Lote.Visible = true;
+                comboSituacao_Lote.Visible = true;
+                labelDataAloj_Lote.Visible = true;
+                labelEstCarreg_Lote.Visible = true;
+                dateTPDataAloj_Lote.Visible = true;
+                dateTPEstCarregamento_Lote.Visible = true;
+                labelCodigoGerente_Lote.Visible = true;
+                labelObservacoes_Lote.Visible = true;
+                campoCodGerente_Lote.Visible = true;
+                textoObservacoes_Lote.Visible = true;
 
                 ResumeLayout();
             }
@@ -494,10 +498,12 @@ namespace fazendaSuinos
 
                 escondeTodosCadastroFazenda();
 
-                label22.Visible = true;
-                campoCapacidadePocilga.Visible = true;
-                label23.Visible = true;
-                textoDescricaoPocilga.Visible = true;
+                labelCapacidade_Pocilga.Visible = true;
+                campoCapacidade_Pocilga.Visible = true;
+                labelDescricao_Pocilga.Visible = true;
+                textoDescricao_Pocilga.Visible = true;
+                labelCodPropriedade_Pocilga.Visible = true;
+                campoCodPropriedade_Pocilga.Visible = true;
 
                 ResumeLayout();
             }
@@ -507,20 +513,50 @@ namespace fazendaSuinos
 
                 escondeTodosCadastroFazenda();
 
-                labelDataVisita.Visible = true;
-                dateTPDataVisita.Visible = true;
-                labelFinalidadeVisita.Visible = true;
-                campoFinalidadeVisita.Visible = true;
-                labelDataUltVisita.Visible = true;
-                dateTiPUltimaVisita.Visible = true;
-                labelCodUltVisita.Visible = true;
-                campoCodUltimaVisita.Visible = true;
-                labelObservacoesVisita.Visible = true;
-                textObservacoesVisita.Visible = true;
-                labelCodPessoaVisita.Visible = true;
-                campoCodigoPessoaVisita.Visible = true;
-                labelCodPocilgaVisita.Visible = true;
-                campoCodPocilgaVisita.Visible = true;
+                labelData_Visita.Visible = true;
+                dateTPData_Visita.Visible = true;
+                labelFinalidade_Visita.Visible = true;
+                campoFinalidade_Visita.Visible = true;
+                labelDataUlt_Visita.Visible = true;
+                dateTPUlt_Visita.Visible = true;
+                labelCodUlt_Visita.Visible = true;
+                campoCodUlt_Visita.Visible = true;
+                labelObservacoes_Visita.Visible = true;
+                textObservacoes_Visita.Visible = true;
+                labelCodPessoa_Visita.Visible = true;
+                campoCodPessoa_Visita.Visible = true;
+                labelCodPocilga_Visita.Visible = true;
+                campoCodPocilga_Visita.Visible = true;
+
+                ResumeLayout();
+            }
+            else if (comboTipoFazenda.SelectedItem.ToString() == "Propriedade")
+            {
+                SuspendLayout();
+
+                escondeTodosCadastroFazenda();
+
+                labelNome_Propriedade.Visible = true;
+                campoNome_Propriedade.Visible = true;
+                labelCodProdutor_Propriedade.Visible = true;
+                campoCodigoProdutor_Propriedade.Visible = true;
+
+                ResumeLayout();
+            }
+            else if (comboTipoFazenda.SelectedItem.ToString() == "Produto")
+            {
+                SuspendLayout();
+
+                escondeTodosCadastroFazenda();
+
+                labelNome_Produto.Visible = true;
+                campoNome_Produto.Visible = true;
+                labelTipo_Produto.Visible = true;
+                comboTipo_Produto.Visible = true;
+                labelCategoria_Produto.Visible = true;
+                comboCategoria_Produto.Visible = true;
+                dateTPValidade_Produto.Visible = true;
+                labelValidade_Produto.Visible = true;
 
                 ResumeLayout();
             }
@@ -528,36 +564,64 @@ namespace fazendaSuinos
 
         private void escondeTodosCadastroFazenda()
         {
-            label12.Visible = false;
-            campoQuantidadeLote.Visible = false;
-            campoPesoTotal.Visible = false;
-            campoPesoMedio.Visible = false;
-            label18.Visible = false;
-            label11.Visible = false;
-            label16.Visible = false;
-            comboSituacaoFazenda.Visible = false;
-            label10.Visible = false;
-            label14.Visible = false;
-            dateTPDataAlojamento.Visible = false;
-            dateTPEstimativaCarregamento.Visible = false;
-            label13.Visible = false;
-            label17.Visible = false;
-            campoCodGerente.Visible = false;
-            textoObservacoes.Visible = false;
-            labelDataVisita.Visible = false;
-            dateTPDataVisita.Visible = false;
-            labelFinalidadeVisita.Visible = false;
-            campoFinalidadeVisita.Visible = false;
-            labelDataUltVisita.Visible = false;
-            dateTiPUltimaVisita.Visible = false;
-            labelCodUltVisita.Visible = false;
-            campoCodUltimaVisita.Visible = false;
-            labelObservacoesVisita.Visible = false;
-            textObservacoesVisita.Visible = false;
-            labelCodPessoaVisita.Visible = false;
-            campoCodigoPessoaVisita.Visible = false;
-            labelCodPocilgaVisita.Visible = false;
-            campoCodPocilgaVisita.Visible = false;
+            //Dados de LOTE
+            labelQuantidade_Lote.Visible = false;
+            campoQuantidade_Lote.Visible = false;
+            campoPesoTotal_Lote.Visible = false;
+            campoPesoMedio_Lote.Visible = false;
+            labelPesoTotal_Lote.Visible = false;
+            labelPesoMedio_Lote.Visible = false;
+            labelSituacao_Lote.Visible = false;
+            comboSituacao_Lote.Visible = false;
+            labelDataAloj_Lote.Visible = false;
+            labelEstCarreg_Lote.Visible = false;
+            dateTPDataAloj_Lote.Visible = false;
+            dateTPEstCarregamento_Lote.Visible = false;
+            labelCodigoGerente_Lote.Visible = false;
+            labelObservacoes_Lote.Visible = false;
+            campoCodGerente_Lote.Visible = false;
+            textoObservacoes_Lote.Visible = false;
+
+            //Dados de VISITA
+            labelData_Visita.Visible = false;
+            dateTPData_Visita.Visible = false;
+            labelFinalidade_Visita.Visible = false;
+            campoFinalidade_Visita.Visible = false;
+            labelDataUlt_Visita.Visible = false;
+            dateTPUlt_Visita.Visible = false;
+            labelCodUlt_Visita.Visible = false;
+            campoCodUlt_Visita.Visible = false;
+            labelObservacoes_Visita.Visible = false;
+            textObservacoes_Visita.Visible = false;
+            labelCodPessoa_Visita.Visible = false;
+            campoCodPessoa_Visita.Visible = false;
+            labelCodPocilga_Visita.Visible = false;
+            campoCodPocilga_Visita.Visible = false;
+
+            //Dados de POCILGA
+            campoCapacidade_Pocilga.Visible = false;
+            labelCapacidade_Pocilga.Visible = false;
+            labelDescricao_Pocilga.Visible = false;
+            textoDescricao_Pocilga.Visible = false;
+            labelCodPropriedade_Pocilga.Visible = false;
+            campoCodPropriedade_Pocilga.Visible = false;
+
+            //Dados de PROPRIEDADE
+            labelNome_Propriedade.Visible = false;
+            campoNome_Propriedade.Visible = false;
+            labelCodProdutor_Propriedade.Visible = false;
+            campoCodigoProdutor_Propriedade.Visible = false;
+
+            //Dados de PRODUTO
+            labelNome_Produto.Visible = false;
+            campoNome_Produto.Visible = false;
+            labelTipo_Produto.Visible = false;
+            comboTipo_Produto.Visible = false;
+            labelCategoria_Produto.Visible = false;
+            comboCategoria_Produto.Visible = false;
+            dateTPValidade_Produto.Visible = false;
+            labelValidade_Produto.Visible = false;
+
         }
     }
 }

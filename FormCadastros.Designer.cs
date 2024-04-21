@@ -94,60 +94,69 @@
             this.labelCPF = new System.Windows.Forms.Label();
             this.campoNome = new System.Windows.Forms.TextBox();
             this.labelNome = new System.Windows.Forms.Label();
-            this.campoCodigo = new System.Windows.Forms.TextBox();
-            this.labelCodigo = new System.Windows.Forms.Label();
+            this.campoCodigoEntidade = new System.Windows.Forms.TextBox();
+            this.labelCodigoEntidade = new System.Windows.Forms.Label();
             this.comboTipoEntidade = new System.Windows.Forms.ComboBox();
             this.labelTipo = new System.Windows.Forms.Label();
             this.labelDadosEntidades = new System.Windows.Forms.Label();
             this.panelCadastros = new System.Windows.Forms.Panel();
             this.panelCadastroFazenda = new System.Windows.Forms.Panel();
-            this.textoDescricaoPocilga = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.campoCapacidadePocilga = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.campoCodPessoa = new System.Windows.Forms.TextBox();
-            this.textoObservacoes = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.campoCodGerente = new System.Windows.Forms.TextBox();
-            this.dateTPEstimativaCarregamento = new System.Windows.Forms.DateTimePicker();
-            this.label14 = new System.Windows.Forms.Label();
-            this.dateTPDataAlojamento = new System.Windows.Forms.DateTimePicker();
-            this.comboSituacaoFazenda = new System.Windows.Forms.ComboBox();
-            this.campoQuantidadeLote = new System.Windows.Forms.TextBox();
-            this.campoPesoTotal = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.campoPesoMedio = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.labelCodPocilga_Visita = new System.Windows.Forms.Label();
+            this.campoCodPocilga_Visita = new System.Windows.Forms.TextBox();
+            this.labelCodPessoa_Visita = new System.Windows.Forms.Label();
+            this.textObservacoes_Visita = new System.Windows.Forms.TextBox();
+            this.labelObservacoes_Visita = new System.Windows.Forms.Label();
+            this.labelCodUlt_Visita = new System.Windows.Forms.Label();
+            this.campoCodUlt_Visita = new System.Windows.Forms.TextBox();
+            this.dateTPUlt_Visita = new System.Windows.Forms.DateTimePicker();
+            this.labelDataUlt_Visita = new System.Windows.Forms.Label();
+            this.campoFinalidade_Visita = new System.Windows.Forms.TextBox();
+            this.labelFinalidade_Visita = new System.Windows.Forms.Label();
+            this.dateTPData_Visita = new System.Windows.Forms.DateTimePicker();
+            this.labelData_Visita = new System.Windows.Forms.Label();
+            this.textoDescricao_Pocilga = new System.Windows.Forms.TextBox();
+            this.labelDescricao_Pocilga = new System.Windows.Forms.Label();
+            this.campoCapacidade_Pocilga = new System.Windows.Forms.TextBox();
+            this.labelCapacidade_Pocilga = new System.Windows.Forms.Label();
+            this.campoCodPessoa_Visita = new System.Windows.Forms.TextBox();
+            this.textoObservacoes_Lote = new System.Windows.Forms.TextBox();
+            this.labelObservacoes_Lote = new System.Windows.Forms.Label();
+            this.labelCodigoGerente_Lote = new System.Windows.Forms.Label();
+            this.campoCodGerente_Lote = new System.Windows.Forms.TextBox();
+            this.dateTPEstCarregamento_Lote = new System.Windows.Forms.DateTimePicker();
+            this.labelEstCarreg_Lote = new System.Windows.Forms.Label();
+            this.dateTPDataAloj_Lote = new System.Windows.Forms.DateTimePicker();
+            this.comboSituacao_Lote = new System.Windows.Forms.ComboBox();
+            this.campoQuantidade_Lote = new System.Windows.Forms.TextBox();
+            this.campoPesoTotal_Lote = new System.Windows.Forms.TextBox();
+            this.labelPesoTotal_Lote = new System.Windows.Forms.Label();
+            this.labelQuantidade_Lote = new System.Windows.Forms.Label();
+            this.labelDataAloj_Lote = new System.Windows.Forms.Label();
+            this.campoPesoMedio_Lote = new System.Windows.Forms.TextBox();
+            this.labelPesoMedio_Lote = new System.Windows.Forms.Label();
             this.btnGravarFazenda = new FontAwesome.Sharp.IconButton();
             this.btnIncluirFazenda = new FontAwesome.Sharp.IconButton();
             this.btnLimparCadastroFazenda = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
+            this.labelSituacao_Lote = new System.Windows.Forms.Label();
             this.campoCodigoFazenda = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
+            this.labelCodigoFazenda = new System.Windows.Forms.Label();
             this.comboTipoFazenda = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.labelDataVisita = new System.Windows.Forms.Label();
-            this.labelQuantidade = new System.Windows.Forms.Label();
-            this.dateTPDataVisita = new System.Windows.Forms.DateTimePicker();
-            this.campoFinalidadeVisita = new System.Windows.Forms.TextBox();
-            this.labelFinalidadeVisita = new System.Windows.Forms.Label();
-            this.dateTiPUltimaVisita = new System.Windows.Forms.DateTimePicker();
-            this.labelDataUltVisita = new System.Windows.Forms.Label();
-            this.labelCodUltVisita = new System.Windows.Forms.Label();
-            this.campoCodUltimaVisita = new System.Windows.Forms.TextBox();
-            this.textObservacoesVisita = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.labelObservacoesVisita = new System.Windows.Forms.Label();
-            this.labelCodPessoaVisita = new System.Windows.Forms.Label();
-            this.campoCodigoPessoaVisita = new System.Windows.Forms.TextBox();
-            this.labelCodPocilgaVisita = new System.Windows.Forms.Label();
-            this.campoCodPocilgaVisita = new System.Windows.Forms.TextBox();
+            this.labelTipoFazenda = new System.Windows.Forms.Label();
+            this.labelDadosFazenda = new System.Windows.Forms.Label();
+            this.campoNome_Propriedade = new System.Windows.Forms.TextBox();
+            this.labelNome_Propriedade = new System.Windows.Forms.Label();
+            this.campoCodigoProdutor_Propriedade = new System.Windows.Forms.TextBox();
+            this.labelCodProdutor_Propriedade = new System.Windows.Forms.Label();
+            this.campoCodPropriedade_Pocilga = new System.Windows.Forms.TextBox();
+            this.labelCodPropriedade_Pocilga = new System.Windows.Forms.Label();
+            this.campoNome_Produto = new System.Windows.Forms.TextBox();
+            this.labelNome_Produto = new System.Windows.Forms.Label();
+            this.labelCategoria_Produto = new System.Windows.Forms.Label();
+            this.comboCategoria_Produto = new System.Windows.Forms.ComboBox();
+            this.labelTipo_Produto = new System.Windows.Forms.Label();
+            this.comboTipo_Produto = new System.Windows.Forms.ComboBox();
+            this.dateTPValidade_Produto = new System.Windows.Forms.DateTimePicker();
+            this.labelValidade_Produto = new System.Windows.Forms.Label();
             this.panel3Botoes.SuspendLayout();
             this.panelFiltroEntidade.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEntidade)).BeginInit();
@@ -183,7 +192,7 @@
             this.panel3Botoes.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3Botoes.Location = new System.Drawing.Point(0, 0);
             this.panel3Botoes.Name = "panel3Botoes";
-            this.panel3Botoes.Size = new System.Drawing.Size(1338, 120);
+            this.panel3Botoes.Size = new System.Drawing.Size(1338, 150);
             this.panel3Botoes.TabIndex = 1;
             // 
             // btnAcoesCorretivas
@@ -229,15 +238,16 @@
             this.panelFiltroEntidade.Controls.Add(this.label2);
             this.panelFiltroEntidade.Controls.Add(this.label1);
             this.panelFiltroEntidade.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFiltroEntidade.Location = new System.Drawing.Point(0, 441);
+            this.panelFiltroEntidade.Location = new System.Drawing.Point(0, 1380);
             this.panelFiltroEntidade.Name = "panelFiltroEntidade";
-            this.panelFiltroEntidade.Size = new System.Drawing.Size(1338, 404);
+            this.panelFiltroEntidade.Size = new System.Drawing.Size(1338, 630);
             this.panelFiltroEntidade.TabIndex = 2;
             this.panelFiltroEntidade.Visible = false;
             // 
             // btnFiltroEnt2
             // 
             this.btnFiltroEnt2.AutoSize = true;
+            this.btnFiltroEnt2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnFiltroEnt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnFiltroEnt2.FlatAppearance.BorderSize = 0;
             this.btnFiltroEnt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -250,7 +260,7 @@
             this.btnFiltroEnt2.Location = new System.Drawing.Point(443, 169);
             this.btnFiltroEnt2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroEnt2.Name = "btnFiltroEnt2";
-            this.btnFiltroEnt2.Size = new System.Drawing.Size(148, 31);
+            this.btnFiltroEnt2.Size = new System.Drawing.Size(131, 31);
             this.btnFiltroEnt2.TabIndex = 10;
             this.btnFiltroEnt2.Text = "Especialidade";
             this.btnFiltroEnt2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -262,6 +272,7 @@
             // btnFiltroEnt3
             // 
             this.btnFiltroEnt3.AutoSize = true;
+            this.btnFiltroEnt3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnFiltroEnt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnFiltroEnt3.FlatAppearance.BorderSize = 0;
             this.btnFiltroEnt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -274,7 +285,7 @@
             this.btnFiltroEnt3.Location = new System.Drawing.Point(586, 169);
             this.btnFiltroEnt3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroEnt3.Name = "btnFiltroEnt3";
-            this.btnFiltroEnt3.Size = new System.Drawing.Size(148, 31);
+            this.btnFiltroEnt3.Size = new System.Drawing.Size(131, 31);
             this.btnFiltroEnt3.TabIndex = 10;
             this.btnFiltroEnt3.Text = "Especialidade";
             this.btnFiltroEnt3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -286,6 +297,7 @@
             // btnFiltroEnt1
             // 
             this.btnFiltroEnt1.AutoSize = true;
+            this.btnFiltroEnt1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnFiltroEnt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnFiltroEnt1.FlatAppearance.BorderSize = 0;
             this.btnFiltroEnt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -298,7 +310,7 @@
             this.btnFiltroEnt1.Location = new System.Drawing.Point(300, 169);
             this.btnFiltroEnt1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroEnt1.Name = "btnFiltroEnt1";
-            this.btnFiltroEnt1.Size = new System.Drawing.Size(148, 31);
+            this.btnFiltroEnt1.Size = new System.Drawing.Size(131, 31);
             this.btnFiltroEnt1.TabIndex = 9;
             this.btnFiltroEnt1.Text = "Especialidade";
             this.btnFiltroEnt1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -427,13 +439,13 @@
             // 
             // panelFiltros
             // 
-            this.panelFiltros.Controls.Add(this.panelFiltroAcoes);
             this.panelFiltros.Controls.Add(this.panelFiltroEntidade);
             this.panelFiltros.Controls.Add(this.panelFiltroFazenda);
+            this.panelFiltros.Controls.Add(this.panelFiltroAcoes);
             this.panelFiltros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFiltros.Location = new System.Drawing.Point(0, 120);
+            this.panelFiltros.Location = new System.Drawing.Point(0, 150);
             this.panelFiltros.Name = "panelFiltros";
-            this.panelFiltros.Size = new System.Drawing.Size(1338, 396);
+            this.panelFiltros.Size = new System.Drawing.Size(1338, 496);
             this.panelFiltros.TabIndex = 9;
             // 
             // panelFiltroAcoes
@@ -451,15 +463,16 @@
             this.panelFiltroAcoes.Controls.Add(this.label8);
             this.panelFiltroAcoes.Controls.Add(this.label9);
             this.panelFiltroAcoes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFiltroAcoes.Location = new System.Drawing.Point(0, 845);
+            this.panelFiltroAcoes.Location = new System.Drawing.Point(0, 0);
             this.panelFiltroAcoes.Name = "panelFiltroAcoes";
-            this.panelFiltroAcoes.Size = new System.Drawing.Size(1338, 441);
+            this.panelFiltroAcoes.Size = new System.Drawing.Size(1338, 690);
             this.panelFiltroAcoes.TabIndex = 11;
             this.panelFiltroAcoes.Visible = false;
             // 
             // btnFiltroAco2
             // 
             this.btnFiltroAco2.AutoSize = true;
+            this.btnFiltroAco2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnFiltroAco2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnFiltroAco2.FlatAppearance.BorderSize = 0;
             this.btnFiltroAco2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -472,7 +485,7 @@
             this.btnFiltroAco2.Location = new System.Drawing.Point(443, 169);
             this.btnFiltroAco2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroAco2.Name = "btnFiltroAco2";
-            this.btnFiltroAco2.Size = new System.Drawing.Size(148, 31);
+            this.btnFiltroAco2.Size = new System.Drawing.Size(131, 31);
             this.btnFiltroAco2.TabIndex = 10;
             this.btnFiltroAco2.Text = "Especialidade";
             this.btnFiltroAco2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -484,6 +497,7 @@
             // btnFiltroAco3
             // 
             this.btnFiltroAco3.AutoSize = true;
+            this.btnFiltroAco3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnFiltroAco3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnFiltroAco3.FlatAppearance.BorderSize = 0;
             this.btnFiltroAco3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -496,7 +510,7 @@
             this.btnFiltroAco3.Location = new System.Drawing.Point(586, 169);
             this.btnFiltroAco3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroAco3.Name = "btnFiltroAco3";
-            this.btnFiltroAco3.Size = new System.Drawing.Size(148, 31);
+            this.btnFiltroAco3.Size = new System.Drawing.Size(131, 31);
             this.btnFiltroAco3.TabIndex = 10;
             this.btnFiltroAco3.Text = "Especialidade";
             this.btnFiltroAco3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -508,6 +522,7 @@
             // btnFiltroAco1
             // 
             this.btnFiltroAco1.AutoSize = true;
+            this.btnFiltroAco1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnFiltroAco1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnFiltroAco1.FlatAppearance.BorderSize = 0;
             this.btnFiltroAco1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -520,7 +535,7 @@
             this.btnFiltroAco1.Location = new System.Drawing.Point(300, 169);
             this.btnFiltroAco1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroAco1.Name = "btnFiltroAco1";
-            this.btnFiltroAco1.Size = new System.Drawing.Size(148, 31);
+            this.btnFiltroAco1.Size = new System.Drawing.Size(131, 31);
             this.btnFiltroAco1.TabIndex = 9;
             this.btnFiltroAco1.Text = "Especialidade";
             this.btnFiltroAco1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -657,15 +672,16 @@
             this.panelFiltroFazenda.Controls.Add(this.label5);
             this.panelFiltroFazenda.Controls.Add(this.label6);
             this.panelFiltroFazenda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFiltroFazenda.Location = new System.Drawing.Point(0, 0);
+            this.panelFiltroFazenda.Location = new System.Drawing.Point(0, 690);
             this.panelFiltroFazenda.Name = "panelFiltroFazenda";
-            this.panelFiltroFazenda.Size = new System.Drawing.Size(1338, 441);
+            this.panelFiltroFazenda.Size = new System.Drawing.Size(1338, 690);
             this.panelFiltroFazenda.TabIndex = 11;
             this.panelFiltroFazenda.Visible = false;
             // 
             // btnFiltroFaz2
             // 
             this.btnFiltroFaz2.AutoSize = true;
+            this.btnFiltroFaz2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnFiltroFaz2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnFiltroFaz2.FlatAppearance.BorderSize = 0;
             this.btnFiltroFaz2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -678,7 +694,7 @@
             this.btnFiltroFaz2.Location = new System.Drawing.Point(443, 169);
             this.btnFiltroFaz2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroFaz2.Name = "btnFiltroFaz2";
-            this.btnFiltroFaz2.Size = new System.Drawing.Size(148, 31);
+            this.btnFiltroFaz2.Size = new System.Drawing.Size(131, 31);
             this.btnFiltroFaz2.TabIndex = 10;
             this.btnFiltroFaz2.Text = "Especialidade";
             this.btnFiltroFaz2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -690,6 +706,7 @@
             // btnFiltroFaz3
             // 
             this.btnFiltroFaz3.AutoSize = true;
+            this.btnFiltroFaz3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnFiltroFaz3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnFiltroFaz3.FlatAppearance.BorderSize = 0;
             this.btnFiltroFaz3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -702,7 +719,7 @@
             this.btnFiltroFaz3.Location = new System.Drawing.Point(586, 169);
             this.btnFiltroFaz3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroFaz3.Name = "btnFiltroFaz3";
-            this.btnFiltroFaz3.Size = new System.Drawing.Size(148, 31);
+            this.btnFiltroFaz3.Size = new System.Drawing.Size(131, 31);
             this.btnFiltroFaz3.TabIndex = 10;
             this.btnFiltroFaz3.Text = "Especialidade";
             this.btnFiltroFaz3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -714,6 +731,7 @@
             // btnFiltroFaz1
             // 
             this.btnFiltroFaz1.AutoSize = true;
+            this.btnFiltroFaz1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnFiltroFaz1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnFiltroFaz1.FlatAppearance.BorderSize = 0;
             this.btnFiltroFaz1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -726,7 +744,7 @@
             this.btnFiltroFaz1.Location = new System.Drawing.Point(300, 169);
             this.btnFiltroFaz1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroFaz1.Name = "btnFiltroFaz1";
-            this.btnFiltroFaz1.Size = new System.Drawing.Size(148, 31);
+            this.btnFiltroFaz1.Size = new System.Drawing.Size(131, 31);
             this.btnFiltroFaz1.TabIndex = 9;
             this.btnFiltroFaz1.Text = "Especialidade";
             this.btnFiltroFaz1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -875,16 +893,16 @@
             this.panelCadastroEntidade.Controls.Add(this.labelCPF);
             this.panelCadastroEntidade.Controls.Add(this.campoNome);
             this.panelCadastroEntidade.Controls.Add(this.labelNome);
-            this.panelCadastroEntidade.Controls.Add(this.campoCodigo);
-            this.panelCadastroEntidade.Controls.Add(this.labelCodigo);
+            this.panelCadastroEntidade.Controls.Add(this.campoCodigoEntidade);
+            this.panelCadastroEntidade.Controls.Add(this.labelCodigoEntidade);
             this.panelCadastroEntidade.Controls.Add(this.comboTipoEntidade);
             this.panelCadastroEntidade.Controls.Add(this.labelTipo);
             this.panelCadastroEntidade.Controls.Add(this.labelDadosEntidades);
             this.panelCadastroEntidade.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCadastroEntidade.Location = new System.Drawing.Point(0, 515);
+            this.panelCadastroEntidade.Location = new System.Drawing.Point(0, 805);
             this.panelCadastroEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelCadastroEntidade.Name = "panelCadastroEntidade";
-            this.panelCadastroEntidade.Size = new System.Drawing.Size(1338, 441);
+            this.panelCadastroEntidade.Size = new System.Drawing.Size(1338, 690);
             this.panelCadastroEntidade.TabIndex = 10;
             this.panelCadastroEntidade.Visible = false;
             // 
@@ -1181,28 +1199,28 @@
             this.labelNome.Text = "Nome";
             this.labelNome.Visible = false;
             // 
-            // campoCodigo
+            // campoCodigoEntidade
             // 
-            this.campoCodigo.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.campoCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoCodigo.Enabled = false;
-            this.campoCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodigo.Location = new System.Drawing.Point(507, 117);
-            this.campoCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.campoCodigo.Name = "campoCodigo";
-            this.campoCodigo.Size = new System.Drawing.Size(110, 19);
-            this.campoCodigo.TabIndex = 6;
+            this.campoCodigoEntidade.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodigoEntidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoCodigoEntidade.Enabled = false;
+            this.campoCodigoEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoCodigoEntidade.Location = new System.Drawing.Point(507, 117);
+            this.campoCodigoEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodigoEntidade.Name = "campoCodigoEntidade";
+            this.campoCodigoEntidade.Size = new System.Drawing.Size(110, 19);
+            this.campoCodigoEntidade.TabIndex = 6;
             // 
-            // labelCodigo
+            // labelCodigoEntidade
             // 
-            this.labelCodigo.AutoSize = true;
-            this.labelCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodigo.Location = new System.Drawing.Point(504, 93);
-            this.labelCodigo.Name = "labelCodigo";
-            this.labelCodigo.Size = new System.Drawing.Size(59, 20);
-            this.labelCodigo.TabIndex = 5;
-            this.labelCodigo.Text = "Código";
+            this.labelCodigoEntidade.AutoSize = true;
+            this.labelCodigoEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodigoEntidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelCodigoEntidade.Location = new System.Drawing.Point(504, 93);
+            this.labelCodigoEntidade.Name = "labelCodigoEntidade";
+            this.labelCodigoEntidade.Size = new System.Drawing.Size(59, 20);
+            this.labelCodigoEntidade.TabIndex = 5;
+            this.labelCodigoEntidade.Text = "Código";
             // 
             // comboTipoEntidade
             // 
@@ -1252,332 +1270,490 @@
             this.panelCadastros.Controls.Add(this.panelCadastroEntidade);
             this.panelCadastros.Controls.Add(this.panelCadastroFazenda);
             this.panelCadastros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCadastros.Location = new System.Drawing.Point(0, 516);
+            this.panelCadastros.Location = new System.Drawing.Point(0, 646);
             this.panelCadastros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelCadastros.Name = "panelCadastros";
-            this.panelCadastros.Size = new System.Drawing.Size(1338, 584);
+            this.panelCadastros.Size = new System.Drawing.Size(1338, 730);
             this.panelCadastros.TabIndex = 32;
             // 
             // panelCadastroFazenda
             // 
-            this.panelCadastroFazenda.Controls.Add(this.labelCodPocilgaVisita);
-            this.panelCadastroFazenda.Controls.Add(this.campoCodPocilgaVisita);
-            this.panelCadastroFazenda.Controls.Add(this.labelCodPessoaVisita);
-            this.panelCadastroFazenda.Controls.Add(this.campoCodigoPessoaVisita);
-            this.panelCadastroFazenda.Controls.Add(this.textObservacoesVisita);
-            this.panelCadastroFazenda.Controls.Add(this.label29);
-            this.panelCadastroFazenda.Controls.Add(this.textBox4);
-            this.panelCadastroFazenda.Controls.Add(this.labelObservacoesVisita);
-            this.panelCadastroFazenda.Controls.Add(this.labelCodUltVisita);
-            this.panelCadastroFazenda.Controls.Add(this.campoCodUltimaVisita);
-            this.panelCadastroFazenda.Controls.Add(this.dateTiPUltimaVisita);
-            this.panelCadastroFazenda.Controls.Add(this.labelDataUltVisita);
-            this.panelCadastroFazenda.Controls.Add(this.campoFinalidadeVisita);
-            this.panelCadastroFazenda.Controls.Add(this.labelFinalidadeVisita);
-            this.panelCadastroFazenda.Controls.Add(this.dateTPDataVisita);
-            this.panelCadastroFazenda.Controls.Add(this.labelDataVisita);
-            this.panelCadastroFazenda.Controls.Add(this.labelQuantidade);
-            this.panelCadastroFazenda.Controls.Add(this.textoDescricaoPocilga);
-            this.panelCadastroFazenda.Controls.Add(this.label23);
-            this.panelCadastroFazenda.Controls.Add(this.campoCapacidadePocilga);
-            this.panelCadastroFazenda.Controls.Add(this.label22);
-            this.panelCadastroFazenda.Controls.Add(this.label15);
-            this.panelCadastroFazenda.Controls.Add(this.campoCodPessoa);
-            this.panelCadastroFazenda.Controls.Add(this.textoObservacoes);
-            this.panelCadastroFazenda.Controls.Add(this.label17);
-            this.panelCadastroFazenda.Controls.Add(this.label13);
-            this.panelCadastroFazenda.Controls.Add(this.campoCodGerente);
-            this.panelCadastroFazenda.Controls.Add(this.dateTPEstimativaCarregamento);
-            this.panelCadastroFazenda.Controls.Add(this.label14);
-            this.panelCadastroFazenda.Controls.Add(this.dateTPDataAlojamento);
-            this.panelCadastroFazenda.Controls.Add(this.comboSituacaoFazenda);
-            this.panelCadastroFazenda.Controls.Add(this.campoQuantidadeLote);
-            this.panelCadastroFazenda.Controls.Add(this.campoPesoTotal);
-            this.panelCadastroFazenda.Controls.Add(this.label18);
-            this.panelCadastroFazenda.Controls.Add(this.label12);
-            this.panelCadastroFazenda.Controls.Add(this.label10);
-            this.panelCadastroFazenda.Controls.Add(this.campoPesoMedio);
-            this.panelCadastroFazenda.Controls.Add(this.label11);
+            this.panelCadastroFazenda.Controls.Add(this.dateTPValidade_Produto);
+            this.panelCadastroFazenda.Controls.Add(this.labelValidade_Produto);
+            this.panelCadastroFazenda.Controls.Add(this.labelTipo_Produto);
+            this.panelCadastroFazenda.Controls.Add(this.comboTipo_Produto);
+            this.panelCadastroFazenda.Controls.Add(this.labelCategoria_Produto);
+            this.panelCadastroFazenda.Controls.Add(this.comboCategoria_Produto);
+            this.panelCadastroFazenda.Controls.Add(this.campoNome_Produto);
+            this.panelCadastroFazenda.Controls.Add(this.labelNome_Produto);
+            this.panelCadastroFazenda.Controls.Add(this.campoCodigoProdutor_Propriedade);
+            this.panelCadastroFazenda.Controls.Add(this.labelCodProdutor_Propriedade);
+            this.panelCadastroFazenda.Controls.Add(this.campoNome_Propriedade);
+            this.panelCadastroFazenda.Controls.Add(this.labelNome_Propriedade);
+            this.panelCadastroFazenda.Controls.Add(this.labelCodPocilga_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.campoCodPocilga_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.labelCodPessoa_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.campoCodPessoa_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.textObservacoes_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.labelObservacoes_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.labelCodUlt_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.campoCodUlt_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.dateTPUlt_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.labelDataUlt_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.campoFinalidade_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.labelFinalidade_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.dateTPData_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.labelData_Visita);
+            this.panelCadastroFazenda.Controls.Add(this.labelCodPropriedade_Pocilga);
+            this.panelCadastroFazenda.Controls.Add(this.campoCodPropriedade_Pocilga);
+            this.panelCadastroFazenda.Controls.Add(this.textoDescricao_Pocilga);
+            this.panelCadastroFazenda.Controls.Add(this.labelDescricao_Pocilga);
+            this.panelCadastroFazenda.Controls.Add(this.campoCapacidade_Pocilga);
+            this.panelCadastroFazenda.Controls.Add(this.labelCapacidade_Pocilga);
+            this.panelCadastroFazenda.Controls.Add(this.textoObservacoes_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.labelObservacoes_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.labelCodigoGerente_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.campoCodGerente_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.dateTPEstCarregamento_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.labelEstCarreg_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.dateTPDataAloj_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.comboSituacao_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.campoQuantidade_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.campoPesoTotal_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.labelPesoTotal_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.labelQuantidade_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.labelDataAloj_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.campoPesoMedio_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.labelPesoMedio_Lote);
             this.panelCadastroFazenda.Controls.Add(this.btnGravarFazenda);
             this.panelCadastroFazenda.Controls.Add(this.btnIncluirFazenda);
             this.panelCadastroFazenda.Controls.Add(this.btnLimparCadastroFazenda);
-            this.panelCadastroFazenda.Controls.Add(this.label16);
+            this.panelCadastroFazenda.Controls.Add(this.labelSituacao_Lote);
             this.panelCadastroFazenda.Controls.Add(this.campoCodigoFazenda);
-            this.panelCadastroFazenda.Controls.Add(this.label19);
+            this.panelCadastroFazenda.Controls.Add(this.labelCodigoFazenda);
             this.panelCadastroFazenda.Controls.Add(this.comboTipoFazenda);
-            this.panelCadastroFazenda.Controls.Add(this.label20);
-            this.panelCadastroFazenda.Controls.Add(this.label21);
+            this.panelCadastroFazenda.Controls.Add(this.labelTipoFazenda);
+            this.panelCadastroFazenda.Controls.Add(this.labelDadosFazenda);
             this.panelCadastroFazenda.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadastroFazenda.Location = new System.Drawing.Point(0, 0);
             this.panelCadastroFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelCadastroFazenda.Name = "panelCadastroFazenda";
-            this.panelCadastroFazenda.Size = new System.Drawing.Size(1338, 515);
+            this.panelCadastroFazenda.Size = new System.Drawing.Size(1338, 805);
             this.panelCadastroFazenda.TabIndex = 32;
             this.panelCadastroFazenda.Visible = false;
             // 
-            // textoDescricaoPocilga
+            // labelCodPocilga_Visita
             // 
-            this.textoDescricaoPocilga.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.textoDescricaoPocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textoDescricaoPocilga.Location = new System.Drawing.Point(298, 373);
-            this.textoDescricaoPocilga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textoDescricaoPocilga.Multiline = true;
-            this.textoDescricaoPocilga.Name = "textoDescricaoPocilga";
-            this.textoDescricaoPocilga.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textoDescricaoPocilga.Size = new System.Drawing.Size(673, 53);
-            this.textoDescricaoPocilga.TabIndex = 52;
-            this.textoDescricaoPocilga.Visible = false;
+            this.labelCodPocilga_Visita.AutoSize = true;
+            this.labelCodPocilga_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodPocilga_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelCodPocilga_Visita.Location = new System.Drawing.Point(838, 257);
+            this.labelCodPocilga_Visita.Name = "labelCodPocilga_Visita";
+            this.labelCodPocilga_Visita.Size = new System.Drawing.Size(114, 20);
+            this.labelCodPocilga_Visita.TabIndex = 70;
+            this.labelCodPocilga_Visita.Text = "Código Pocilga";
+            this.labelCodPocilga_Visita.Visible = false;
             // 
-            // label23
+            // campoCodPocilga_Visita
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label23.Location = new System.Drawing.Point(296, 342);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(80, 20);
-            this.label23.TabIndex = 51;
-            this.label23.Text = "Descrição";
-            this.label23.Visible = false;
+            this.campoCodPocilga_Visita.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodPocilga_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoCodPocilga_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoCodPocilga_Visita.Location = new System.Drawing.Point(842, 284);
+            this.campoCodPocilga_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodPocilga_Visita.Name = "campoCodPocilga_Visita";
+            this.campoCodPocilga_Visita.Size = new System.Drawing.Size(131, 19);
+            this.campoCodPocilga_Visita.TabIndex = 69;
+            this.campoCodPocilga_Visita.Visible = false;
             // 
-            // campoCapacidadePocilga
+            // labelCodPessoa_Visita
             // 
-            this.campoCapacidadePocilga.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.campoCapacidadePocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoCapacidadePocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCapacidadePocilga.Location = new System.Drawing.Point(298, 198);
-            this.campoCapacidadePocilga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.campoCapacidadePocilga.Name = "campoCapacidadePocilga";
-            this.campoCapacidadePocilga.Size = new System.Drawing.Size(125, 19);
-            this.campoCapacidadePocilga.TabIndex = 50;
-            this.campoCapacidadePocilga.Visible = false;
+            this.labelCodPessoa_Visita.AutoSize = true;
+            this.labelCodPessoa_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodPessoa_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelCodPessoa_Visita.Location = new System.Drawing.Point(666, 257);
+            this.labelCodPessoa_Visita.Name = "labelCodPessoa_Visita";
+            this.labelCodPessoa_Visita.Size = new System.Drawing.Size(116, 20);
+            this.labelCodPessoa_Visita.TabIndex = 68;
+            this.labelCodPessoa_Visita.Text = "Código Pessoa";
+            this.labelCodPessoa_Visita.Visible = false;
             // 
-            // label22
+            // textObservacoes_Visita
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label22.Location = new System.Drawing.Point(294, 169);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(94, 20);
-            this.label22.TabIndex = 49;
-            this.label22.Text = "Capacidade";
-            this.label22.Visible = false;
+            this.textObservacoes_Visita.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.textObservacoes_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textObservacoes_Visita.Location = new System.Drawing.Point(300, 373);
+            this.textObservacoes_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textObservacoes_Visita.Multiline = true;
+            this.textObservacoes_Visita.Name = "textObservacoes_Visita";
+            this.textObservacoes_Visita.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textObservacoes_Visita.Size = new System.Drawing.Size(673, 53);
+            this.textObservacoes_Visita.TabIndex = 66;
+            this.textObservacoes_Visita.Visible = false;
             // 
-            // label15
+            // labelObservacoes_Visita
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label15.Location = new System.Drawing.Point(666, 257);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(114, 20);
-            this.label15.TabIndex = 48;
-            this.label15.Text = "Código Pocilga";
-            this.label15.Visible = false;
+            this.labelObservacoes_Visita.AutoSize = true;
+            this.labelObservacoes_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelObservacoes_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelObservacoes_Visita.Location = new System.Drawing.Point(298, 342);
+            this.labelObservacoes_Visita.Name = "labelObservacoes_Visita";
+            this.labelObservacoes_Visita.Size = new System.Drawing.Size(167, 20);
+            this.labelObservacoes_Visita.TabIndex = 63;
+            this.labelObservacoes_Visita.Text = "Observações da Visita";
+            this.labelObservacoes_Visita.Visible = false;
             // 
-            // campoCodPessoa
+            // labelCodUlt_Visita
             // 
-            this.campoCodPessoa.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.campoCodPessoa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoCodPessoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodPessoa.Location = new System.Drawing.Point(670, 284);
-            this.campoCodPessoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.campoCodPessoa.Name = "campoCodPessoa";
-            this.campoCodPessoa.Size = new System.Drawing.Size(111, 19);
-            this.campoCodPessoa.TabIndex = 47;
-            this.campoCodPessoa.Visible = false;
+            this.labelCodUlt_Visita.AutoSize = true;
+            this.labelCodUlt_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodUlt_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelCodUlt_Visita.Location = new System.Drawing.Point(468, 257);
+            this.labelCodUlt_Visita.Name = "labelCodUlt_Visita";
+            this.labelCodUlt_Visita.Size = new System.Drawing.Size(152, 20);
+            this.labelCodUlt_Visita.TabIndex = 62;
+            this.labelCodUlt_Visita.Text = "Código da Últ. Visita";
+            this.labelCodUlt_Visita.Visible = false;
             // 
-            // textoObservacoes
+            // campoCodUlt_Visita
             // 
-            this.textoObservacoes.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.textoObservacoes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textoObservacoes.Location = new System.Drawing.Point(300, 373);
-            this.textoObservacoes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textoObservacoes.Multiline = true;
-            this.textoObservacoes.Name = "textoObservacoes";
-            this.textoObservacoes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textoObservacoes.Size = new System.Drawing.Size(673, 53);
-            this.textoObservacoes.TabIndex = 46;
-            this.textoObservacoes.Visible = false;
+            this.campoCodUlt_Visita.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodUlt_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoCodUlt_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoCodUlt_Visita.Location = new System.Drawing.Point(472, 284);
+            this.campoCodUlt_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodUlt_Visita.Name = "campoCodUlt_Visita";
+            this.campoCodUlt_Visita.Size = new System.Drawing.Size(111, 19);
+            this.campoCodUlt_Visita.TabIndex = 61;
+            this.campoCodUlt_Visita.Visible = false;
             // 
-            // label17
+            // dateTPUlt_Visita
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label17.Location = new System.Drawing.Point(296, 342);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(102, 20);
-            this.label17.TabIndex = 45;
-            this.label17.Text = "Observações";
-            this.label17.Visible = false;
+            this.dateTPUlt_Visita.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
+            this.dateTPUlt_Visita.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.dateTPUlt_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTPUlt_Visita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTPUlt_Visita.Location = new System.Drawing.Point(298, 282);
+            this.dateTPUlt_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPUlt_Visita.Name = "dateTPUlt_Visita";
+            this.dateTPUlt_Visita.Size = new System.Drawing.Size(125, 23);
+            this.dateTPUlt_Visita.TabIndex = 60;
+            this.dateTPUlt_Visita.Value = new System.DateTime(2024, 4, 19, 0, 0, 0, 0);
+            this.dateTPUlt_Visita.Visible = false;
             // 
-            // label13
+            // labelDataUlt_Visita
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label13.Location = new System.Drawing.Point(838, 257);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 20);
-            this.label13.TabIndex = 44;
-            this.label13.Text = "Código Gerente";
-            this.label13.Visible = false;
+            this.labelDataUlt_Visita.AutoSize = true;
+            this.labelDataUlt_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDataUlt_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelDataUlt_Visita.Location = new System.Drawing.Point(294, 257);
+            this.labelDataUlt_Visita.Name = "labelDataUlt_Visita";
+            this.labelDataUlt_Visita.Size = new System.Drawing.Size(155, 20);
+            this.labelDataUlt_Visita.TabIndex = 59;
+            this.labelDataUlt_Visita.Text = "Data da Última Vista";
+            this.labelDataUlt_Visita.Visible = false;
             // 
-            // campoCodGerente
+            // campoFinalidade_Visita
             // 
-            this.campoCodGerente.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.campoCodGerente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoCodGerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodGerente.Location = new System.Drawing.Point(842, 284);
-            this.campoCodGerente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.campoCodGerente.Name = "campoCodGerente";
-            this.campoCodGerente.Size = new System.Drawing.Size(131, 19);
-            this.campoCodGerente.TabIndex = 43;
-            this.campoCodGerente.Visible = false;
+            this.campoFinalidade_Visita.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoFinalidade_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoFinalidade_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoFinalidade_Visita.Location = new System.Drawing.Point(474, 198);
+            this.campoFinalidade_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoFinalidade_Visita.Name = "campoFinalidade_Visita";
+            this.campoFinalidade_Visita.Size = new System.Drawing.Size(499, 19);
+            this.campoFinalidade_Visita.TabIndex = 58;
+            this.campoFinalidade_Visita.Visible = false;
             // 
-            // dateTPEstimativaCarregamento
+            // labelFinalidade_Visita
             // 
-            this.dateTPEstimativaCarregamento.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
-            this.dateTPEstimativaCarregamento.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.dateTPEstimativaCarregamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTPEstimativaCarregamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTPEstimativaCarregamento.Location = new System.Drawing.Point(473, 282);
-            this.dateTPEstimativaCarregamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateTPEstimativaCarregamento.Name = "dateTPEstimativaCarregamento";
-            this.dateTPEstimativaCarregamento.Size = new System.Drawing.Size(125, 23);
-            this.dateTPEstimativaCarregamento.TabIndex = 41;
-            this.dateTPEstimativaCarregamento.Value = new System.DateTime(2024, 4, 19, 0, 0, 0, 0);
-            this.dateTPEstimativaCarregamento.Visible = false;
+            this.labelFinalidade_Visita.AutoSize = true;
+            this.labelFinalidade_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFinalidade_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelFinalidade_Visita.Location = new System.Drawing.Point(471, 174);
+            this.labelFinalidade_Visita.Name = "labelFinalidade_Visita";
+            this.labelFinalidade_Visita.Size = new System.Drawing.Size(82, 20);
+            this.labelFinalidade_Visita.TabIndex = 57;
+            this.labelFinalidade_Visita.Text = "Finalidade";
+            this.labelFinalidade_Visita.Visible = false;
             // 
-            // label14
+            // dateTPData_Visita
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label14.Location = new System.Drawing.Point(469, 257);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(138, 20);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "Estimativa Carreg.";
-            this.label14.Visible = false;
+            this.dateTPData_Visita.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
+            this.dateTPData_Visita.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.dateTPData_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTPData_Visita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTPData_Visita.Location = new System.Drawing.Point(298, 196);
+            this.dateTPData_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPData_Visita.Name = "dateTPData_Visita";
+            this.dateTPData_Visita.Size = new System.Drawing.Size(125, 23);
+            this.dateTPData_Visita.TabIndex = 56;
+            this.dateTPData_Visita.Value = new System.DateTime(2024, 4, 19, 0, 0, 0, 0);
+            this.dateTPData_Visita.Visible = false;
             // 
-            // dateTPDataAlojamento
+            // labelData_Visita
             // 
-            this.dateTPDataAlojamento.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
-            this.dateTPDataAlojamento.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.dateTPDataAlojamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTPDataAlojamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTPDataAlojamento.Location = new System.Drawing.Point(298, 282);
-            this.dateTPDataAlojamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateTPDataAlojamento.Name = "dateTPDataAlojamento";
-            this.dateTPDataAlojamento.Size = new System.Drawing.Size(125, 23);
-            this.dateTPDataAlojamento.TabIndex = 38;
-            this.dateTPDataAlojamento.Value = new System.DateTime(2024, 4, 19, 0, 0, 0, 0);
-            this.dateTPDataAlojamento.Visible = false;
+            this.labelData_Visita.AutoSize = true;
+            this.labelData_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelData_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelData_Visita.Location = new System.Drawing.Point(294, 169);
+            this.labelData_Visita.Name = "labelData_Visita";
+            this.labelData_Visita.Size = new System.Drawing.Size(44, 20);
+            this.labelData_Visita.TabIndex = 55;
+            this.labelData_Visita.Text = "Data";
+            this.labelData_Visita.Visible = false;
             // 
-            // comboSituacaoFazenda
+            // textoDescricao_Pocilga
             // 
-            this.comboSituacaoFazenda.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.comboSituacaoFazenda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboSituacaoFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboSituacaoFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboSituacaoFazenda.FormattingEnabled = true;
-            this.comboSituacaoFazenda.ItemHeight = 18;
-            this.comboSituacaoFazenda.Items.AddRange(new object[] {
+            this.textoDescricao_Pocilga.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.textoDescricao_Pocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textoDescricao_Pocilga.Location = new System.Drawing.Point(298, 373);
+            this.textoDescricao_Pocilga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textoDescricao_Pocilga.Multiline = true;
+            this.textoDescricao_Pocilga.Name = "textoDescricao_Pocilga";
+            this.textoDescricao_Pocilga.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textoDescricao_Pocilga.Size = new System.Drawing.Size(673, 53);
+            this.textoDescricao_Pocilga.TabIndex = 52;
+            this.textoDescricao_Pocilga.Visible = false;
+            // 
+            // labelDescricao_Pocilga
+            // 
+            this.labelDescricao_Pocilga.AutoSize = true;
+            this.labelDescricao_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescricao_Pocilga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelDescricao_Pocilga.Location = new System.Drawing.Point(296, 342);
+            this.labelDescricao_Pocilga.Name = "labelDescricao_Pocilga";
+            this.labelDescricao_Pocilga.Size = new System.Drawing.Size(80, 20);
+            this.labelDescricao_Pocilga.TabIndex = 51;
+            this.labelDescricao_Pocilga.Text = "Descrição";
+            this.labelDescricao_Pocilga.Visible = false;
+            // 
+            // campoCapacidade_Pocilga
+            // 
+            this.campoCapacidade_Pocilga.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCapacidade_Pocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoCapacidade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoCapacidade_Pocilga.Location = new System.Drawing.Point(298, 198);
+            this.campoCapacidade_Pocilga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCapacidade_Pocilga.Name = "campoCapacidade_Pocilga";
+            this.campoCapacidade_Pocilga.Size = new System.Drawing.Size(125, 19);
+            this.campoCapacidade_Pocilga.TabIndex = 50;
+            this.campoCapacidade_Pocilga.Visible = false;
+            // 
+            // labelCapacidade_Pocilga
+            // 
+            this.labelCapacidade_Pocilga.AutoSize = true;
+            this.labelCapacidade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCapacidade_Pocilga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelCapacidade_Pocilga.Location = new System.Drawing.Point(294, 169);
+            this.labelCapacidade_Pocilga.Name = "labelCapacidade_Pocilga";
+            this.labelCapacidade_Pocilga.Size = new System.Drawing.Size(94, 20);
+            this.labelCapacidade_Pocilga.TabIndex = 49;
+            this.labelCapacidade_Pocilga.Text = "Capacidade";
+            this.labelCapacidade_Pocilga.Visible = false;
+            // 
+            // campoCodPessoa_Visita
+            // 
+            this.campoCodPessoa_Visita.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodPessoa_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoCodPessoa_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoCodPessoa_Visita.Location = new System.Drawing.Point(670, 284);
+            this.campoCodPessoa_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodPessoa_Visita.Name = "campoCodPessoa_Visita";
+            this.campoCodPessoa_Visita.Size = new System.Drawing.Size(111, 19);
+            this.campoCodPessoa_Visita.TabIndex = 47;
+            this.campoCodPessoa_Visita.Visible = false;
+            // 
+            // textoObservacoes_Lote
+            // 
+            this.textoObservacoes_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.textoObservacoes_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textoObservacoes_Lote.Location = new System.Drawing.Point(300, 373);
+            this.textoObservacoes_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textoObservacoes_Lote.Multiline = true;
+            this.textoObservacoes_Lote.Name = "textoObservacoes_Lote";
+            this.textoObservacoes_Lote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textoObservacoes_Lote.Size = new System.Drawing.Size(673, 53);
+            this.textoObservacoes_Lote.TabIndex = 46;
+            this.textoObservacoes_Lote.Visible = false;
+            // 
+            // labelObservacoes_Lote
+            // 
+            this.labelObservacoes_Lote.AutoSize = true;
+            this.labelObservacoes_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelObservacoes_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelObservacoes_Lote.Location = new System.Drawing.Point(296, 342);
+            this.labelObservacoes_Lote.Name = "labelObservacoes_Lote";
+            this.labelObservacoes_Lote.Size = new System.Drawing.Size(102, 20);
+            this.labelObservacoes_Lote.TabIndex = 45;
+            this.labelObservacoes_Lote.Text = "Observações";
+            this.labelObservacoes_Lote.Visible = false;
+            // 
+            // labelCodigoGerente_Lote
+            // 
+            this.labelCodigoGerente_Lote.AutoSize = true;
+            this.labelCodigoGerente_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodigoGerente_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelCodigoGerente_Lote.Location = new System.Drawing.Point(838, 257);
+            this.labelCodigoGerente_Lote.Name = "labelCodigoGerente_Lote";
+            this.labelCodigoGerente_Lote.Size = new System.Drawing.Size(122, 20);
+            this.labelCodigoGerente_Lote.TabIndex = 44;
+            this.labelCodigoGerente_Lote.Text = "Código Gerente";
+            this.labelCodigoGerente_Lote.Visible = false;
+            // 
+            // campoCodGerente_Lote
+            // 
+            this.campoCodGerente_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodGerente_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoCodGerente_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoCodGerente_Lote.Location = new System.Drawing.Point(842, 284);
+            this.campoCodGerente_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodGerente_Lote.Name = "campoCodGerente_Lote";
+            this.campoCodGerente_Lote.Size = new System.Drawing.Size(131, 19);
+            this.campoCodGerente_Lote.TabIndex = 43;
+            this.campoCodGerente_Lote.Visible = false;
+            // 
+            // dateTPEstCarregamento_Lote
+            // 
+            this.dateTPEstCarregamento_Lote.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
+            this.dateTPEstCarregamento_Lote.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.dateTPEstCarregamento_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTPEstCarregamento_Lote.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTPEstCarregamento_Lote.Location = new System.Drawing.Point(473, 282);
+            this.dateTPEstCarregamento_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPEstCarregamento_Lote.Name = "dateTPEstCarregamento_Lote";
+            this.dateTPEstCarregamento_Lote.Size = new System.Drawing.Size(125, 23);
+            this.dateTPEstCarregamento_Lote.TabIndex = 41;
+            this.dateTPEstCarregamento_Lote.Value = new System.DateTime(2024, 4, 19, 0, 0, 0, 0);
+            this.dateTPEstCarregamento_Lote.Visible = false;
+            // 
+            // labelEstCarreg_Lote
+            // 
+            this.labelEstCarreg_Lote.AutoSize = true;
+            this.labelEstCarreg_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEstCarreg_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelEstCarreg_Lote.Location = new System.Drawing.Point(469, 257);
+            this.labelEstCarreg_Lote.Name = "labelEstCarreg_Lote";
+            this.labelEstCarreg_Lote.Size = new System.Drawing.Size(138, 20);
+            this.labelEstCarreg_Lote.TabIndex = 40;
+            this.labelEstCarreg_Lote.Text = "Estimativa Carreg.";
+            this.labelEstCarreg_Lote.Visible = false;
+            // 
+            // dateTPDataAloj_Lote
+            // 
+            this.dateTPDataAloj_Lote.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
+            this.dateTPDataAloj_Lote.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.dateTPDataAloj_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTPDataAloj_Lote.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTPDataAloj_Lote.Location = new System.Drawing.Point(298, 282);
+            this.dateTPDataAloj_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPDataAloj_Lote.Name = "dateTPDataAloj_Lote";
+            this.dateTPDataAloj_Lote.Size = new System.Drawing.Size(125, 23);
+            this.dateTPDataAloj_Lote.TabIndex = 38;
+            this.dateTPDataAloj_Lote.Value = new System.DateTime(2024, 4, 19, 0, 0, 0, 0);
+            this.dateTPDataAloj_Lote.Visible = false;
+            // 
+            // comboSituacao_Lote
+            // 
+            this.comboSituacao_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboSituacao_Lote.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboSituacao_Lote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboSituacao_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboSituacao_Lote.FormattingEnabled = true;
+            this.comboSituacao_Lote.ItemHeight = 18;
+            this.comboSituacao_Lote.Items.AddRange(new object[] {
             "Aberto",
             "Em andamento",
             "Fechado"});
-            this.comboSituacaoFazenda.Location = new System.Drawing.Point(840, 198);
-            this.comboSituacaoFazenda.Name = "comboSituacaoFazenda";
-            this.comboSituacaoFazenda.Size = new System.Drawing.Size(134, 26);
-            this.comboSituacaoFazenda.TabIndex = 37;
-            this.comboSituacaoFazenda.Visible = false;
+            this.comboSituacao_Lote.Location = new System.Drawing.Point(840, 198);
+            this.comboSituacao_Lote.Name = "comboSituacao_Lote";
+            this.comboSituacao_Lote.Size = new System.Drawing.Size(134, 26);
+            this.comboSituacao_Lote.TabIndex = 37;
+            this.comboSituacao_Lote.Visible = false;
             // 
-            // campoQuantidadeLote
+            // campoQuantidade_Lote
             // 
-            this.campoQuantidadeLote.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.campoQuantidadeLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoQuantidadeLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoQuantidadeLote.Location = new System.Drawing.Point(298, 198);
-            this.campoQuantidadeLote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.campoQuantidadeLote.Name = "campoQuantidadeLote";
-            this.campoQuantidadeLote.Size = new System.Drawing.Size(125, 19);
-            this.campoQuantidadeLote.TabIndex = 36;
-            this.campoQuantidadeLote.Visible = false;
+            this.campoQuantidade_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoQuantidade_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoQuantidade_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoQuantidade_Lote.Location = new System.Drawing.Point(298, 198);
+            this.campoQuantidade_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoQuantidade_Lote.Name = "campoQuantidade_Lote";
+            this.campoQuantidade_Lote.Size = new System.Drawing.Size(125, 19);
+            this.campoQuantidade_Lote.TabIndex = 36;
+            this.campoQuantidade_Lote.Visible = false;
             // 
-            // campoPesoTotal
+            // campoPesoTotal_Lote
             // 
-            this.campoPesoTotal.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.campoPesoTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoPesoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoPesoTotal.Location = new System.Drawing.Point(473, 198);
-            this.campoPesoTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.campoPesoTotal.Name = "campoPesoTotal";
-            this.campoPesoTotal.Size = new System.Drawing.Size(110, 19);
-            this.campoPesoTotal.TabIndex = 35;
-            this.campoPesoTotal.Visible = false;
+            this.campoPesoTotal_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoPesoTotal_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoPesoTotal_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoPesoTotal_Lote.Location = new System.Drawing.Point(473, 198);
+            this.campoPesoTotal_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoPesoTotal_Lote.Name = "campoPesoTotal_Lote";
+            this.campoPesoTotal_Lote.Size = new System.Drawing.Size(110, 19);
+            this.campoPesoTotal_Lote.TabIndex = 35;
+            this.campoPesoTotal_Lote.Visible = false;
             // 
-            // label18
+            // labelPesoTotal_Lote
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label18.Location = new System.Drawing.Point(470, 174);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(84, 20);
-            this.label18.TabIndex = 34;
-            this.label18.Text = "Peso Total";
-            this.label18.Visible = false;
+            this.labelPesoTotal_Lote.AutoSize = true;
+            this.labelPesoTotal_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPesoTotal_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelPesoTotal_Lote.Location = new System.Drawing.Point(470, 174);
+            this.labelPesoTotal_Lote.Name = "labelPesoTotal_Lote";
+            this.labelPesoTotal_Lote.Size = new System.Drawing.Size(84, 20);
+            this.labelPesoTotal_Lote.TabIndex = 34;
+            this.labelPesoTotal_Lote.Text = "Peso Total";
+            this.labelPesoTotal_Lote.Visible = false;
             // 
-            // label12
+            // labelQuantidade_Lote
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label12.Location = new System.Drawing.Point(294, 169);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(92, 20);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Quantidade";
-            this.label12.Visible = false;
+            this.labelQuantidade_Lote.AutoSize = true;
+            this.labelQuantidade_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelQuantidade_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelQuantidade_Lote.Location = new System.Drawing.Point(294, 169);
+            this.labelQuantidade_Lote.Name = "labelQuantidade_Lote";
+            this.labelQuantidade_Lote.Size = new System.Drawing.Size(92, 20);
+            this.labelQuantidade_Lote.TabIndex = 33;
+            this.labelQuantidade_Lote.Text = "Quantidade";
+            this.labelQuantidade_Lote.Visible = false;
             // 
-            // label10
+            // labelDataAloj_Lote
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label10.Location = new System.Drawing.Point(296, 257);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(150, 20);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "Data de Alojamento";
-            this.label10.Visible = false;
+            this.labelDataAloj_Lote.AutoSize = true;
+            this.labelDataAloj_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDataAloj_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelDataAloj_Lote.Location = new System.Drawing.Point(296, 257);
+            this.labelDataAloj_Lote.Name = "labelDataAloj_Lote";
+            this.labelDataAloj_Lote.Size = new System.Drawing.Size(150, 20);
+            this.labelDataAloj_Lote.TabIndex = 30;
+            this.labelDataAloj_Lote.Text = "Data de Alojamento";
+            this.labelDataAloj_Lote.Visible = false;
             // 
-            // campoPesoMedio
+            // campoPesoMedio_Lote
             // 
-            this.campoPesoMedio.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.campoPesoMedio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoPesoMedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoPesoMedio.Location = new System.Drawing.Point(670, 198);
-            this.campoPesoMedio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.campoPesoMedio.Name = "campoPesoMedio";
-            this.campoPesoMedio.Size = new System.Drawing.Size(111, 19);
-            this.campoPesoMedio.TabIndex = 27;
-            this.campoPesoMedio.Visible = false;
+            this.campoPesoMedio_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoPesoMedio_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoPesoMedio_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoPesoMedio_Lote.Location = new System.Drawing.Point(670, 198);
+            this.campoPesoMedio_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoPesoMedio_Lote.Name = "campoPesoMedio_Lote";
+            this.campoPesoMedio_Lote.Size = new System.Drawing.Size(111, 19);
+            this.campoPesoMedio_Lote.TabIndex = 27;
+            this.campoPesoMedio_Lote.Visible = false;
             // 
-            // label11
+            // labelPesoMedio_Lote
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label11.Location = new System.Drawing.Point(666, 173);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 20);
-            this.label11.TabIndex = 26;
-            this.label11.Text = "Peso Médio";
-            this.label11.Visible = false;
+            this.labelPesoMedio_Lote.AutoSize = true;
+            this.labelPesoMedio_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPesoMedio_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelPesoMedio_Lote.Location = new System.Drawing.Point(666, 173);
+            this.labelPesoMedio_Lote.Name = "labelPesoMedio_Lote";
+            this.labelPesoMedio_Lote.Size = new System.Drawing.Size(92, 20);
+            this.labelPesoMedio_Lote.TabIndex = 26;
+            this.labelPesoMedio_Lote.Text = "Peso Médio";
+            this.labelPesoMedio_Lote.Visible = false;
             // 
             // btnGravarFazenda
             // 
@@ -1633,17 +1809,17 @@
             this.btnLimparCadastroFazenda.Text = "Limpar";
             this.btnLimparCadastroFazenda.UseVisualStyleBackColor = false;
             // 
-            // label16
+            // labelSituacao_Lote
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label16.Location = new System.Drawing.Point(838, 174);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(72, 20);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Situação";
-            this.label16.Visible = false;
+            this.labelSituacao_Lote.AutoSize = true;
+            this.labelSituacao_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSituacao_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelSituacao_Lote.Location = new System.Drawing.Point(838, 174);
+            this.labelSituacao_Lote.Name = "labelSituacao_Lote";
+            this.labelSituacao_Lote.Size = new System.Drawing.Size(72, 20);
+            this.labelSituacao_Lote.TabIndex = 11;
+            this.labelSituacao_Lote.Text = "Situação";
+            this.labelSituacao_Lote.Visible = false;
             // 
             // campoCodigoFazenda
             // 
@@ -1657,16 +1833,16 @@
             this.campoCodigoFazenda.Size = new System.Drawing.Size(110, 19);
             this.campoCodigoFazenda.TabIndex = 6;
             // 
-            // label19
+            // labelCodigoFazenda
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label19.Location = new System.Drawing.Point(469, 93);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(59, 20);
-            this.label19.TabIndex = 5;
-            this.label19.Text = "Código";
+            this.labelCodigoFazenda.AutoSize = true;
+            this.labelCodigoFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodigoFazenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelCodigoFazenda.Location = new System.Drawing.Point(469, 93);
+            this.labelCodigoFazenda.Name = "labelCodigoFazenda";
+            this.labelCodigoFazenda.Size = new System.Drawing.Size(59, 20);
+            this.labelCodigoFazenda.TabIndex = 5;
+            this.labelCodigoFazenda.Text = "Código";
             // 
             // comboTipoFazenda
             // 
@@ -1688,237 +1864,211 @@
             this.comboTipoFazenda.TabIndex = 4;
             this.comboTipoFazenda.SelectedIndexChanged += new System.EventHandler(this.comboTipoFazenda_SelectedIndexChanged);
             // 
-            // label20
+            // labelTipoFazenda
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label20.Location = new System.Drawing.Point(294, 94);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(39, 20);
-            this.label20.TabIndex = 3;
-            this.label20.Text = "Tipo";
+            this.labelTipoFazenda.AutoSize = true;
+            this.labelTipoFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTipoFazenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelTipoFazenda.Location = new System.Drawing.Point(294, 94);
+            this.labelTipoFazenda.Name = "labelTipoFazenda";
+            this.labelTipoFazenda.Size = new System.Drawing.Size(39, 20);
+            this.labelTipoFazenda.TabIndex = 3;
+            this.labelTipoFazenda.Text = "Tipo";
             // 
-            // label21
+            // labelDadosFazenda
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label21.Location = new System.Drawing.Point(285, 47);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(143, 24);
-            this.label21.TabIndex = 1;
-            this.label21.Text = "Dados Fazenda";
+            this.labelDadosFazenda.AutoSize = true;
+            this.labelDadosFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDadosFazenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelDadosFazenda.Location = new System.Drawing.Point(285, 47);
+            this.labelDadosFazenda.Name = "labelDadosFazenda";
+            this.labelDadosFazenda.Size = new System.Drawing.Size(143, 24);
+            this.labelDadosFazenda.TabIndex = 1;
+            this.labelDadosFazenda.Text = "Dados Fazenda";
             // 
-            // labelDataVisita
+            // campoNome_Propriedade
             // 
-            this.labelDataVisita.AutoSize = true;
-            this.labelDataVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDataVisita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelDataVisita.Location = new System.Drawing.Point(294, 169);
-            this.labelDataVisita.Name = "labelDataVisita";
-            this.labelDataVisita.Size = new System.Drawing.Size(44, 20);
-            this.labelDataVisita.TabIndex = 55;
-            this.labelDataVisita.Text = "Data";
-            this.labelDataVisita.Visible = false;
+            this.campoNome_Propriedade.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoNome_Propriedade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoNome_Propriedade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoNome_Propriedade.Location = new System.Drawing.Point(298, 199);
+            this.campoNome_Propriedade.Margin = new System.Windows.Forms.Padding(2);
+            this.campoNome_Propriedade.Name = "campoNome_Propriedade";
+            this.campoNome_Propriedade.Size = new System.Drawing.Size(483, 19);
+            this.campoNome_Propriedade.TabIndex = 72;
+            this.campoNome_Propriedade.Visible = false;
             // 
-            // labelQuantidade
+            // labelNome_Propriedade
             // 
-            this.labelQuantidade.AutoSize = true;
-            this.labelQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelQuantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelQuantidade.Location = new System.Drawing.Point(294, 169);
-            this.labelQuantidade.Name = "labelQuantidade";
-            this.labelQuantidade.Size = new System.Drawing.Size(92, 20);
-            this.labelQuantidade.TabIndex = 53;
-            this.labelQuantidade.Text = "Quantidade";
-            this.labelQuantidade.Visible = false;
+            this.labelNome_Propriedade.AutoSize = true;
+            this.labelNome_Propriedade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNome_Propriedade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelNome_Propriedade.Location = new System.Drawing.Point(295, 175);
+            this.labelNome_Propriedade.Name = "labelNome_Propriedade";
+            this.labelNome_Propriedade.Size = new System.Drawing.Size(51, 20);
+            this.labelNome_Propriedade.TabIndex = 71;
+            this.labelNome_Propriedade.Text = "Nome";
+            this.labelNome_Propriedade.Visible = false;
             // 
-            // dateTPDataVisita
+            // campoCodigoProdutor_Propriedade
             // 
-            this.dateTPDataVisita.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
-            this.dateTPDataVisita.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.dateTPDataVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTPDataVisita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTPDataVisita.Location = new System.Drawing.Point(298, 196);
-            this.dateTPDataVisita.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTPDataVisita.Name = "dateTPDataVisita";
-            this.dateTPDataVisita.Size = new System.Drawing.Size(125, 23);
-            this.dateTPDataVisita.TabIndex = 56;
-            this.dateTPDataVisita.Value = new System.DateTime(2024, 4, 19, 0, 0, 0, 0);
-            this.dateTPDataVisita.Visible = false;
+            this.campoCodigoProdutor_Propriedade.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodigoProdutor_Propriedade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoCodigoProdutor_Propriedade.Enabled = false;
+            this.campoCodigoProdutor_Propriedade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoCodigoProdutor_Propriedade.Location = new System.Drawing.Point(842, 198);
+            this.campoCodigoProdutor_Propriedade.Margin = new System.Windows.Forms.Padding(2);
+            this.campoCodigoProdutor_Propriedade.Name = "campoCodigoProdutor_Propriedade";
+            this.campoCodigoProdutor_Propriedade.Size = new System.Drawing.Size(110, 19);
+            this.campoCodigoProdutor_Propriedade.TabIndex = 74;
+            this.campoCodigoProdutor_Propriedade.Visible = false;
             // 
-            // campoFinalidadeVisita
+            // labelCodProdutor_Propriedade
             // 
-            this.campoFinalidadeVisita.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.campoFinalidadeVisita.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoFinalidadeVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoFinalidadeVisita.Location = new System.Drawing.Point(474, 198);
-            this.campoFinalidadeVisita.Margin = new System.Windows.Forms.Padding(2);
-            this.campoFinalidadeVisita.Name = "campoFinalidadeVisita";
-            this.campoFinalidadeVisita.Size = new System.Drawing.Size(499, 19);
-            this.campoFinalidadeVisita.TabIndex = 58;
-            this.campoFinalidadeVisita.Visible = false;
+            this.labelCodProdutor_Propriedade.AutoSize = true;
+            this.labelCodProdutor_Propriedade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodProdutor_Propriedade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelCodProdutor_Propriedade.Location = new System.Drawing.Point(839, 174);
+            this.labelCodProdutor_Propriedade.Name = "labelCodProdutor_Propriedade";
+            this.labelCodProdutor_Propriedade.Size = new System.Drawing.Size(146, 20);
+            this.labelCodProdutor_Propriedade.TabIndex = 73;
+            this.labelCodProdutor_Propriedade.Text = "Código do Produtor";
+            this.labelCodProdutor_Propriedade.Visible = false;
             // 
-            // labelFinalidadeVisita
+            // campoCodPropriedade_Pocilga
             // 
-            this.labelFinalidadeVisita.AutoSize = true;
-            this.labelFinalidadeVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFinalidadeVisita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelFinalidadeVisita.Location = new System.Drawing.Point(471, 174);
-            this.labelFinalidadeVisita.Name = "labelFinalidadeVisita";
-            this.labelFinalidadeVisita.Size = new System.Drawing.Size(82, 20);
-            this.labelFinalidadeVisita.TabIndex = 57;
-            this.labelFinalidadeVisita.Text = "Finalidade";
-            this.labelFinalidadeVisita.Visible = false;
+            this.campoCodPropriedade_Pocilga.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodPropriedade_Pocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoCodPropriedade_Pocilga.Enabled = false;
+            this.campoCodPropriedade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoCodPropriedade_Pocilga.Location = new System.Drawing.Point(472, 199);
+            this.campoCodPropriedade_Pocilga.Margin = new System.Windows.Forms.Padding(2);
+            this.campoCodPropriedade_Pocilga.Name = "campoCodPropriedade_Pocilga";
+            this.campoCodPropriedade_Pocilga.Size = new System.Drawing.Size(110, 19);
+            this.campoCodPropriedade_Pocilga.TabIndex = 76;
+            this.campoCodPropriedade_Pocilga.Visible = false;
             // 
-            // dateTiPUltimaVisita
+            // labelCodPropriedade_Pocilga
             // 
-            this.dateTiPUltimaVisita.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
-            this.dateTiPUltimaVisita.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.dateTiPUltimaVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTiPUltimaVisita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTiPUltimaVisita.Location = new System.Drawing.Point(298, 282);
-            this.dateTiPUltimaVisita.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTiPUltimaVisita.Name = "dateTiPUltimaVisita";
-            this.dateTiPUltimaVisita.Size = new System.Drawing.Size(125, 23);
-            this.dateTiPUltimaVisita.TabIndex = 60;
-            this.dateTiPUltimaVisita.Value = new System.DateTime(2024, 4, 19, 0, 0, 0, 0);
-            this.dateTiPUltimaVisita.Visible = false;
+            this.labelCodPropriedade_Pocilga.AutoSize = true;
+            this.labelCodPropriedade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodPropriedade_Pocilga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelCodPropriedade_Pocilga.Location = new System.Drawing.Point(469, 175);
+            this.labelCodPropriedade_Pocilga.Name = "labelCodPropriedade_Pocilga";
+            this.labelCodPropriedade_Pocilga.Size = new System.Drawing.Size(171, 20);
+            this.labelCodPropriedade_Pocilga.TabIndex = 75;
+            this.labelCodPropriedade_Pocilga.Text = "Código da Propriedade";
+            this.labelCodPropriedade_Pocilga.Visible = false;
             // 
-            // labelDataUltVisita
+            // campoNome_Produto
             // 
-            this.labelDataUltVisita.AutoSize = true;
-            this.labelDataUltVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDataUltVisita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelDataUltVisita.Location = new System.Drawing.Point(294, 257);
-            this.labelDataUltVisita.Name = "labelDataUltVisita";
-            this.labelDataUltVisita.Size = new System.Drawing.Size(155, 20);
-            this.labelDataUltVisita.TabIndex = 59;
-            this.labelDataUltVisita.Text = "Data da Última Vista";
-            this.labelDataUltVisita.Visible = false;
+            this.campoNome_Produto.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoNome_Produto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoNome_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoNome_Produto.Location = new System.Drawing.Point(298, 198);
+            this.campoNome_Produto.Margin = new System.Windows.Forms.Padding(2);
+            this.campoNome_Produto.Name = "campoNome_Produto";
+            this.campoNome_Produto.Size = new System.Drawing.Size(483, 19);
+            this.campoNome_Produto.TabIndex = 78;
+            this.campoNome_Produto.Visible = false;
             // 
-            // labelCodUltVisita
+            // labelNome_Produto
             // 
-            this.labelCodUltVisita.AutoSize = true;
-            this.labelCodUltVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCodUltVisita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodUltVisita.Location = new System.Drawing.Point(468, 257);
-            this.labelCodUltVisita.Name = "labelCodUltVisita";
-            this.labelCodUltVisita.Size = new System.Drawing.Size(152, 20);
-            this.labelCodUltVisita.TabIndex = 62;
-            this.labelCodUltVisita.Text = "Código da Últ. Visita";
-            this.labelCodUltVisita.Visible = false;
+            this.labelNome_Produto.AutoSize = true;
+            this.labelNome_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNome_Produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelNome_Produto.Location = new System.Drawing.Point(295, 174);
+            this.labelNome_Produto.Name = "labelNome_Produto";
+            this.labelNome_Produto.Size = new System.Drawing.Size(51, 20);
+            this.labelNome_Produto.TabIndex = 77;
+            this.labelNome_Produto.Text = "Nome";
+            this.labelNome_Produto.Visible = false;
             // 
-            // campoCodUltimaVisita
+            // labelCategoria_Produto
             // 
-            this.campoCodUltimaVisita.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.campoCodUltimaVisita.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoCodUltimaVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodUltimaVisita.Location = new System.Drawing.Point(472, 284);
-            this.campoCodUltimaVisita.Margin = new System.Windows.Forms.Padding(2);
-            this.campoCodUltimaVisita.Name = "campoCodUltimaVisita";
-            this.campoCodUltimaVisita.Size = new System.Drawing.Size(111, 19);
-            this.campoCodUltimaVisita.TabIndex = 61;
-            this.campoCodUltimaVisita.Visible = false;
+            this.labelCategoria_Produto.AutoSize = true;
+            this.labelCategoria_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCategoria_Produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelCategoria_Produto.Location = new System.Drawing.Point(836, 172);
+            this.labelCategoria_Produto.Name = "labelCategoria_Produto";
+            this.labelCategoria_Produto.Size = new System.Drawing.Size(78, 20);
+            this.labelCategoria_Produto.TabIndex = 80;
+            this.labelCategoria_Produto.Text = "Categoria";
+            this.labelCategoria_Produto.Visible = false;
             // 
-            // textObservacoesVisita
+            // comboCategoria_Produto
             // 
-            this.textObservacoesVisita.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.textObservacoesVisita.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textObservacoesVisita.Location = new System.Drawing.Point(300, 373);
-            this.textObservacoesVisita.Margin = new System.Windows.Forms.Padding(2);
-            this.textObservacoesVisita.Multiline = true;
-            this.textObservacoesVisita.Name = "textObservacoesVisita";
-            this.textObservacoesVisita.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textObservacoesVisita.Size = new System.Drawing.Size(673, 53);
-            this.textObservacoesVisita.TabIndex = 66;
-            this.textObservacoesVisita.Visible = false;
+            this.comboCategoria_Produto.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboCategoria_Produto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCategoria_Produto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboCategoria_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboCategoria_Produto.FormattingEnabled = true;
+            this.comboCategoria_Produto.ItemHeight = 18;
+            this.comboCategoria_Produto.Items.AddRange(new object[] {
+            "Aberto",
+            "Em andamento",
+            "Fechado"});
+            this.comboCategoria_Produto.Location = new System.Drawing.Point(837, 196);
+            this.comboCategoria_Produto.Name = "comboCategoria_Produto";
+            this.comboCategoria_Produto.Size = new System.Drawing.Size(134, 26);
+            this.comboCategoria_Produto.TabIndex = 79;
+            this.comboCategoria_Produto.Visible = false;
             // 
-            // label29
+            // labelTipo_Produto
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label29.Location = new System.Drawing.Point(298, 342);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(167, 20);
-            this.label29.TabIndex = 65;
-            this.label29.Text = "Observações da Visita";
-            this.label29.Visible = false;
+            this.labelTipo_Produto.AutoSize = true;
+            this.labelTipo_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTipo_Produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelTipo_Produto.Location = new System.Drawing.Point(471, 257);
+            this.labelTipo_Produto.Name = "labelTipo_Produto";
+            this.labelTipo_Produto.Size = new System.Drawing.Size(39, 20);
+            this.labelTipo_Produto.TabIndex = 82;
+            this.labelTipo_Produto.Text = "Tipo";
+            this.labelTipo_Produto.Visible = false;
             // 
-            // textBox4
+            // comboTipo_Produto
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(302, 373);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox4.Size = new System.Drawing.Size(673, 53);
-            this.textBox4.TabIndex = 64;
-            this.textBox4.Visible = false;
+            this.comboTipo_Produto.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboTipo_Produto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboTipo_Produto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboTipo_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboTipo_Produto.FormattingEnabled = true;
+            this.comboTipo_Produto.ItemHeight = 18;
+            this.comboTipo_Produto.Items.AddRange(new object[] {
+            "Aberto",
+            "Em andamento",
+            "Fechado"});
+            this.comboTipo_Produto.Location = new System.Drawing.Point(472, 281);
+            this.comboTipo_Produto.Name = "comboTipo_Produto";
+            this.comboTipo_Produto.Size = new System.Drawing.Size(134, 26);
+            this.comboTipo_Produto.TabIndex = 81;
+            this.comboTipo_Produto.Visible = false;
             // 
-            // labelObservacoesVisita
+            // dateTPValidade_Produto
             // 
-            this.labelObservacoesVisita.AutoSize = true;
-            this.labelObservacoesVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelObservacoesVisita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelObservacoesVisita.Location = new System.Drawing.Point(298, 342);
-            this.labelObservacoesVisita.Name = "labelObservacoesVisita";
-            this.labelObservacoesVisita.Size = new System.Drawing.Size(102, 20);
-            this.labelObservacoesVisita.TabIndex = 63;
-            this.labelObservacoesVisita.Text = "Observações";
-            this.labelObservacoesVisita.Visible = false;
+            this.dateTPValidade_Produto.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
+            this.dateTPValidade_Produto.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.dateTPValidade_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTPValidade_Produto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTPValidade_Produto.Location = new System.Drawing.Point(299, 281);
+            this.dateTPValidade_Produto.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTPValidade_Produto.Name = "dateTPValidade_Produto";
+            this.dateTPValidade_Produto.Size = new System.Drawing.Size(125, 23);
+            this.dateTPValidade_Produto.TabIndex = 84;
+            this.dateTPValidade_Produto.Value = new System.DateTime(2024, 4, 19, 0, 0, 0, 0);
+            this.dateTPValidade_Produto.Visible = false;
             // 
-            // labelCodPessoaVisita
+            // labelValidade_Produto
             // 
-            this.labelCodPessoaVisita.AutoSize = true;
-            this.labelCodPessoaVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCodPessoaVisita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodPessoaVisita.Location = new System.Drawing.Point(666, 257);
-            this.labelCodPessoaVisita.Name = "labelCodPessoaVisita";
-            this.labelCodPessoaVisita.Size = new System.Drawing.Size(116, 20);
-            this.labelCodPessoaVisita.TabIndex = 68;
-            this.labelCodPessoaVisita.Text = "Código Pessoa";
-            this.labelCodPessoaVisita.Visible = false;
-            // 
-            // campoCodigoPessoaVisita
-            // 
-            this.campoCodigoPessoaVisita.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.campoCodigoPessoaVisita.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoCodigoPessoaVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodigoPessoaVisita.Location = new System.Drawing.Point(670, 284);
-            this.campoCodigoPessoaVisita.Margin = new System.Windows.Forms.Padding(2);
-            this.campoCodigoPessoaVisita.Name = "campoCodigoPessoaVisita";
-            this.campoCodigoPessoaVisita.Size = new System.Drawing.Size(111, 19);
-            this.campoCodigoPessoaVisita.TabIndex = 67;
-            this.campoCodigoPessoaVisita.Visible = false;
-            // 
-            // labelCodPocilgaVisita
-            // 
-            this.labelCodPocilgaVisita.AutoSize = true;
-            this.labelCodPocilgaVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCodPocilgaVisita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodPocilgaVisita.Location = new System.Drawing.Point(838, 257);
-            this.labelCodPocilgaVisita.Name = "labelCodPocilgaVisita";
-            this.labelCodPocilgaVisita.Size = new System.Drawing.Size(114, 20);
-            this.labelCodPocilgaVisita.TabIndex = 70;
-            this.labelCodPocilgaVisita.Text = "Código Pocilga";
-            this.labelCodPocilgaVisita.Visible = false;
-            // 
-            // campoCodPocilgaVisita
-            // 
-            this.campoCodPocilgaVisita.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.campoCodPocilgaVisita.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoCodPocilgaVisita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodPocilgaVisita.Location = new System.Drawing.Point(842, 284);
-            this.campoCodPocilgaVisita.Margin = new System.Windows.Forms.Padding(2);
-            this.campoCodPocilgaVisita.Name = "campoCodPocilgaVisita";
-            this.campoCodPocilgaVisita.Size = new System.Drawing.Size(131, 19);
-            this.campoCodPocilgaVisita.TabIndex = 69;
-            this.campoCodPocilgaVisita.Visible = false;
+            this.labelValidade_Produto.AutoSize = true;
+            this.labelValidade_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValidade_Produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelValidade_Produto.Location = new System.Drawing.Point(295, 256);
+            this.labelValidade_Produto.Name = "labelValidade_Produto";
+            this.labelValidade_Produto.Size = new System.Drawing.Size(132, 20);
+            this.labelValidade_Produto.TabIndex = 83;
+            this.labelValidade_Produto.Text = "Data de Validade";
+            this.labelValidade_Produto.Visible = false;
             // 
             // FormCadastros
             // 
@@ -1970,7 +2120,7 @@
         private System.Windows.Forms.DataGridView dataGridEntidade;
         private System.Windows.Forms.Panel panelFiltros;
         private System.Windows.Forms.Panel panelCadastroEntidade;
-        private System.Windows.Forms.Label labelCodigo;
+        private System.Windows.Forms.Label labelCodigoEntidade;
         private System.Windows.Forms.ComboBox comboTipoEntidade;
         private System.Windows.Forms.Label labelTipo;
         private System.Windows.Forms.Label labelDadosEntidades;
@@ -1979,7 +2129,7 @@
         private System.Windows.Forms.TextBox campoCPF;
         private System.Windows.Forms.TextBox campoNome;
         private System.Windows.Forms.Label labelNome;
-        private System.Windows.Forms.TextBox campoCodigo;
+        private System.Windows.Forms.TextBox campoCodigoEntidade;
         private System.Windows.Forms.ComboBox comboPrivilegios;
         private System.Windows.Forms.Label labelPrivilegios;
         private FontAwesome.Sharp.IconButton btnIncluirEntidade;
@@ -2027,52 +2177,61 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panelCadastros;
         private System.Windows.Forms.Panel panelCadastroFazenda;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox campoPesoMedio;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label labelDataAloj_Lote;
+        private System.Windows.Forms.TextBox campoPesoMedio_Lote;
+        private System.Windows.Forms.Label labelPesoMedio_Lote;
         private FontAwesome.Sharp.IconButton btnGravarFazenda;
         private FontAwesome.Sharp.IconButton btnIncluirFazenda;
         private System.Windows.Forms.Button btnLimparCadastroFazenda;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label labelSituacao_Lote;
         private System.Windows.Forms.TextBox campoCodigoFazenda;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label labelCodigoFazenda;
         private System.Windows.Forms.ComboBox comboTipoFazenda;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox comboSituacaoFazenda;
-        private System.Windows.Forms.TextBox campoQuantidadeLote;
-        private System.Windows.Forms.TextBox campoPesoTotal;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DateTimePicker dateTPDataAlojamento;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox campoCodGerente;
-        private System.Windows.Forms.DateTimePicker dateTPEstimativaCarregamento;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textoObservacoes;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox campoCodPessoa;
-        private System.Windows.Forms.TextBox textoDescricaoPocilga;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox campoCapacidadePocilga;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.DateTimePicker dateTiPUltimaVisita;
-        private System.Windows.Forms.Label labelDataUltVisita;
-        private System.Windows.Forms.TextBox campoFinalidadeVisita;
-        private System.Windows.Forms.Label labelFinalidadeVisita;
-        private System.Windows.Forms.DateTimePicker dateTPDataVisita;
-        private System.Windows.Forms.Label labelDataVisita;
-        private System.Windows.Forms.Label labelQuantidade;
-        private System.Windows.Forms.Label labelCodPocilgaVisita;
-        private System.Windows.Forms.TextBox campoCodPocilgaVisita;
-        private System.Windows.Forms.Label labelCodPessoaVisita;
-        private System.Windows.Forms.TextBox campoCodigoPessoaVisita;
-        private System.Windows.Forms.TextBox textObservacoesVisita;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label labelObservacoesVisita;
-        private System.Windows.Forms.Label labelCodUltVisita;
-        private System.Windows.Forms.TextBox campoCodUltimaVisita;
+        private System.Windows.Forms.Label labelTipoFazenda;
+        private System.Windows.Forms.Label labelDadosFazenda;
+        private System.Windows.Forms.ComboBox comboSituacao_Lote;
+        private System.Windows.Forms.TextBox campoQuantidade_Lote;
+        private System.Windows.Forms.TextBox campoPesoTotal_Lote;
+        private System.Windows.Forms.Label labelPesoTotal_Lote;
+        private System.Windows.Forms.Label labelQuantidade_Lote;
+        private System.Windows.Forms.DateTimePicker dateTPDataAloj_Lote;
+        private System.Windows.Forms.Label labelCodigoGerente_Lote;
+        private System.Windows.Forms.TextBox campoCodGerente_Lote;
+        private System.Windows.Forms.DateTimePicker dateTPEstCarregamento_Lote;
+        private System.Windows.Forms.Label labelEstCarreg_Lote;
+        private System.Windows.Forms.TextBox textoObservacoes_Lote;
+        private System.Windows.Forms.Label labelObservacoes_Lote;
+        private System.Windows.Forms.TextBox campoCodPessoa_Visita;
+        private System.Windows.Forms.TextBox textoDescricao_Pocilga;
+        private System.Windows.Forms.Label labelDescricao_Pocilga;
+        private System.Windows.Forms.TextBox campoCapacidade_Pocilga;
+        private System.Windows.Forms.Label labelCapacidade_Pocilga;
+        private System.Windows.Forms.DateTimePicker dateTPUlt_Visita;
+        private System.Windows.Forms.Label labelDataUlt_Visita;
+        private System.Windows.Forms.TextBox campoFinalidade_Visita;
+        private System.Windows.Forms.Label labelFinalidade_Visita;
+        private System.Windows.Forms.DateTimePicker dateTPData_Visita;
+        private System.Windows.Forms.Label labelData_Visita;
+        private System.Windows.Forms.Label labelCodPocilga_Visita;
+        private System.Windows.Forms.TextBox campoCodPocilga_Visita;
+        private System.Windows.Forms.Label labelCodPessoa_Visita;
+        private System.Windows.Forms.TextBox textObservacoes_Visita;
+        private System.Windows.Forms.Label labelObservacoes_Visita;
+        private System.Windows.Forms.Label labelCodUlt_Visita;
+        private System.Windows.Forms.TextBox campoCodUlt_Visita;
+        private System.Windows.Forms.TextBox campoCodigoProdutor_Propriedade;
+        private System.Windows.Forms.Label labelCodProdutor_Propriedade;
+        private System.Windows.Forms.TextBox campoNome_Propriedade;
+        private System.Windows.Forms.Label labelNome_Propriedade;
+        private System.Windows.Forms.TextBox campoCodPropriedade_Pocilga;
+        private System.Windows.Forms.Label labelCodPropriedade_Pocilga;
+        private System.Windows.Forms.TextBox campoNome_Produto;
+        private System.Windows.Forms.Label labelNome_Produto;
+        private System.Windows.Forms.Label labelCategoria_Produto;
+        private System.Windows.Forms.ComboBox comboCategoria_Produto;
+        private System.Windows.Forms.DateTimePicker dateTPValidade_Produto;
+        private System.Windows.Forms.Label labelValidade_Produto;
+        private System.Windows.Forms.Label labelTipo_Produto;
+        private System.Windows.Forms.ComboBox comboTipo_Produto;
     }
 }
