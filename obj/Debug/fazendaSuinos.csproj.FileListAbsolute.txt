@@ -16,7 +16,6 @@ D:\Projeto Integrador\FazendaSuinos\bin\Debug\fazendaSuinos.exe
 D:\Projeto Integrador\FazendaSuinos\bin\Debug\fazendaSuinos.pdb
 D:\Projeto Integrador\FazendaSuinos\bin\Debug\FontAwesome.Sharp.dll
 D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.csproj.AssemblyReference.cache
-D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormMainMenu.resources
 D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormCadastros.resources
 D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.Properties.Resources.resources
 D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.csproj.GenerateResource.cache
@@ -24,3 +23,5 @@ D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.csproj.CoreCompileIn
 D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaS.78FEBE0B.Up2Date
 D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.exe
 D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.pdb
+D:\Projeto Integrador\fazendaSuinos\obj\Debug\fazendaSuinos.FormDashboard.resources
+D:\Projeto Integrador\fazendaSuinos\obj\Debug\fazendaSuinos.Rodolfo.resources

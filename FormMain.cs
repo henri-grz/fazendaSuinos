@@ -90,6 +90,12 @@ namespace fazendaSuinos
             childForm.Show();
             
         }
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.verdeClaro);
+            OpenChildForm(new FormDashboard());
+        }
+
         private void btnDetalhes_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.verdeClaro);
@@ -115,11 +121,6 @@ namespace fazendaSuinos
             ActivateButton(sender, RGBColors.verdeClaro);
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender, RGBColors.verdeClaro);
-        }
-
         private void btnCadastros_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.verdeClaro);
@@ -132,5 +133,7 @@ namespace fazendaSuinos
             //loteTableAdapter.Fill(this.fazendaSuinosDBDataSet.Lote);
 
         }
+
+        
     }
 }

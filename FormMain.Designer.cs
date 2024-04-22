@@ -232,7 +232,7 @@
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDashboard.UseVisualStyleBackColor = true;
-            this.btnDashboard.Click += new System.EventHandler(this.iconButton1_Click);
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // panelLogo
             // 
@@ -302,7 +302,7 @@
             this.Controls.Add(this.panelTable);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMainMenu";
-            this.Text = "FormMainMenu";
+            this.Text = "Rodolfo - Gestão de Fazendas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.panelMenu.ResumeLayout(false);
