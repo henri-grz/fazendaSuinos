@@ -355,7 +355,7 @@
             this.panelFiltros.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFiltros.Location = new System.Drawing.Point(0, 150);
             this.panelFiltros.Name = "panelFiltros";
-            this.panelFiltros.Size = new System.Drawing.Size(1338, 496);
+            this.panelFiltros.Size = new System.Drawing.Size(1338, 414);
             this.panelFiltros.TabIndex = 9;
             // 
             // panelFiltroFazenda
@@ -960,10 +960,10 @@
             this.panelCadastros.Controls.Add(this.panelCadastroEntidade);
             this.panelCadastros.Controls.Add(this.panelCadastroFazenda);
             this.panelCadastros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCadastros.Location = new System.Drawing.Point(0, 646);
+            this.panelCadastros.Location = new System.Drawing.Point(0, 564);
             this.panelCadastros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelCadastros.Name = "panelCadastros";
-            this.panelCadastros.Size = new System.Drawing.Size(1338, 730);
+            this.panelCadastros.Size = new System.Drawing.Size(1338, 524);
             this.panelCadastros.TabIndex = 32;
             // 
             // panelCadastroFazenda
