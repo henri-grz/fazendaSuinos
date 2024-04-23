@@ -162,7 +162,10 @@
             this.dataGridLotesAssociados_Pocilga = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.btnExcluirFazenda = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnExcluirEntidade = new FontAwesome.Sharp.IconButton();
+            this.flowLayoutFiltroAcoes = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutFiltroFazenda = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutFiltroEntidade = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3Botoes.SuspendLayout();
             this.panelFiltroEntidade.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEntidade)).BeginInit();
@@ -175,6 +178,9 @@
             this.panelCadastros.SuspendLayout();
             this.panelCadastroFazenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLotesAssociados_Pocilga)).BeginInit();
+            this.flowLayoutFiltroAcoes.SuspendLayout();
+            this.flowLayoutFiltroFazenda.SuspendLayout();
+            this.flowLayoutFiltroEntidade.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEntidades
@@ -232,9 +238,7 @@
             // 
             // panelFiltroEntidade
             // 
-            this.panelFiltroEntidade.Controls.Add(this.btnFiltroEnt2);
-            this.panelFiltroEntidade.Controls.Add(this.btnFiltroEnt3);
-            this.panelFiltroEntidade.Controls.Add(this.btnFiltroEnt1);
+            this.panelFiltroEntidade.Controls.Add(this.flowLayoutFiltroEntidade);
             this.panelFiltroEntidade.Controls.Add(this.dataGridEntidade);
             this.panelFiltroEntidade.Controls.Add(this.btnLimparEntidade);
             this.panelFiltroEntidade.Controls.Add(this.btnConsultarEntidade);
@@ -245,7 +249,7 @@
             this.panelFiltroEntidade.Controls.Add(this.label2);
             this.panelFiltroEntidade.Controls.Add(this.label1);
             this.panelFiltroEntidade.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFiltroEntidade.Location = new System.Drawing.Point(0, 1380);
+            this.panelFiltroEntidade.Location = new System.Drawing.Point(0, 0);
             this.panelFiltroEntidade.Name = "panelFiltroEntidade";
             this.panelFiltroEntidade.Size = new System.Drawing.Size(1338, 630);
             this.panelFiltroEntidade.TabIndex = 2;
@@ -263,11 +267,11 @@
             this.btnFiltroEnt2.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
             this.btnFiltroEnt2.IconColor = System.Drawing.Color.White;
             this.btnFiltroEnt2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroEnt2.IconSize = 25;
-            this.btnFiltroEnt2.Location = new System.Drawing.Point(443, 169);
+            this.btnFiltroEnt2.IconSize = 20;
+            this.btnFiltroEnt2.Location = new System.Drawing.Point(2, 2);
             this.btnFiltroEnt2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroEnt2.Name = "btnFiltroEnt2";
-            this.btnFiltroEnt2.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroEnt2.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroEnt2.TabIndex = 10;
             this.btnFiltroEnt2.Text = "Especialidade";
             this.btnFiltroEnt2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -288,11 +292,11 @@
             this.btnFiltroEnt3.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
             this.btnFiltroEnt3.IconColor = System.Drawing.Color.White;
             this.btnFiltroEnt3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroEnt3.IconSize = 25;
-            this.btnFiltroEnt3.Location = new System.Drawing.Point(586, 169);
+            this.btnFiltroEnt3.IconSize = 20;
+            this.btnFiltroEnt3.Location = new System.Drawing.Point(262, 2);
             this.btnFiltroEnt3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroEnt3.Name = "btnFiltroEnt3";
-            this.btnFiltroEnt3.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroEnt3.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroEnt3.TabIndex = 10;
             this.btnFiltroEnt3.Text = "Especialidade";
             this.btnFiltroEnt3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -313,11 +317,11 @@
             this.btnFiltroEnt1.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
             this.btnFiltroEnt1.IconColor = System.Drawing.Color.White;
             this.btnFiltroEnt1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroEnt1.IconSize = 25;
-            this.btnFiltroEnt1.Location = new System.Drawing.Point(300, 169);
+            this.btnFiltroEnt1.IconSize = 20;
+            this.btnFiltroEnt1.Location = new System.Drawing.Point(132, 2);
             this.btnFiltroEnt1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroEnt1.Name = "btnFiltroEnt1";
-            this.btnFiltroEnt1.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroEnt1.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroEnt1.TabIndex = 9;
             this.btnFiltroEnt1.Text = "Especialidade";
             this.btnFiltroEnt1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -446,9 +450,9 @@
             // 
             // panelFiltros
             // 
-            this.panelFiltros.Controls.Add(this.panelFiltroEntidade);
             this.panelFiltros.Controls.Add(this.panelFiltroFazenda);
             this.panelFiltros.Controls.Add(this.panelFiltroAcoes);
+            this.panelFiltros.Controls.Add(this.panelFiltroEntidade);
             this.panelFiltros.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFiltros.Location = new System.Drawing.Point(0, 150);
             this.panelFiltros.Name = "panelFiltros";
@@ -457,9 +461,7 @@
             // 
             // panelFiltroFazenda
             // 
-            this.panelFiltroFazenda.Controls.Add(this.btnFiltroFaz2);
-            this.panelFiltroFazenda.Controls.Add(this.btnFiltroFaz3);
-            this.panelFiltroFazenda.Controls.Add(this.btnFiltroFaz1);
+            this.panelFiltroFazenda.Controls.Add(this.flowLayoutFiltroFazenda);
             this.panelFiltroFazenda.Controls.Add(this.dataGridFazenda);
             this.panelFiltroFazenda.Controls.Add(this.btnLimparFazenda);
             this.panelFiltroFazenda.Controls.Add(this.btnConsultarFazenda);
@@ -470,7 +472,7 @@
             this.panelFiltroFazenda.Controls.Add(this.label5);
             this.panelFiltroFazenda.Controls.Add(this.label6);
             this.panelFiltroFazenda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFiltroFazenda.Location = new System.Drawing.Point(0, 690);
+            this.panelFiltroFazenda.Location = new System.Drawing.Point(0, 1320);
             this.panelFiltroFazenda.Name = "panelFiltroFazenda";
             this.panelFiltroFazenda.Size = new System.Drawing.Size(1338, 690);
             this.panelFiltroFazenda.TabIndex = 11;
@@ -488,11 +490,11 @@
             this.btnFiltroFaz2.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
             this.btnFiltroFaz2.IconColor = System.Drawing.Color.White;
             this.btnFiltroFaz2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroFaz2.IconSize = 25;
-            this.btnFiltroFaz2.Location = new System.Drawing.Point(443, 169);
+            this.btnFiltroFaz2.IconSize = 20;
+            this.btnFiltroFaz2.Location = new System.Drawing.Point(2, 2);
             this.btnFiltroFaz2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroFaz2.Name = "btnFiltroFaz2";
-            this.btnFiltroFaz2.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroFaz2.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroFaz2.TabIndex = 10;
             this.btnFiltroFaz2.Text = "Especialidade";
             this.btnFiltroFaz2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -513,11 +515,11 @@
             this.btnFiltroFaz3.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
             this.btnFiltroFaz3.IconColor = System.Drawing.Color.White;
             this.btnFiltroFaz3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroFaz3.IconSize = 25;
-            this.btnFiltroFaz3.Location = new System.Drawing.Point(586, 169);
+            this.btnFiltroFaz3.IconSize = 20;
+            this.btnFiltroFaz3.Location = new System.Drawing.Point(262, 2);
             this.btnFiltroFaz3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroFaz3.Name = "btnFiltroFaz3";
-            this.btnFiltroFaz3.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroFaz3.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroFaz3.TabIndex = 10;
             this.btnFiltroFaz3.Text = "Especialidade";
             this.btnFiltroFaz3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -538,11 +540,11 @@
             this.btnFiltroFaz1.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
             this.btnFiltroFaz1.IconColor = System.Drawing.Color.White;
             this.btnFiltroFaz1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroFaz1.IconSize = 25;
-            this.btnFiltroFaz1.Location = new System.Drawing.Point(300, 169);
+            this.btnFiltroFaz1.IconSize = 20;
+            this.btnFiltroFaz1.Location = new System.Drawing.Point(132, 2);
             this.btnFiltroFaz1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroFaz1.Name = "btnFiltroFaz1";
-            this.btnFiltroFaz1.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroFaz1.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroFaz1.TabIndex = 9;
             this.btnFiltroFaz1.Text = "Especialidade";
             this.btnFiltroFaz1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -670,9 +672,7 @@
             // 
             // panelFiltroAcoes
             // 
-            this.panelFiltroAcoes.Controls.Add(this.btnFiltroAco2);
-            this.panelFiltroAcoes.Controls.Add(this.btnFiltroAco3);
-            this.panelFiltroAcoes.Controls.Add(this.btnFiltroAco1);
+            this.panelFiltroAcoes.Controls.Add(this.flowLayoutFiltroAcoes);
             this.panelFiltroAcoes.Controls.Add(this.dataGridAcoes);
             this.panelFiltroAcoes.Controls.Add(this.btnLimparAcoes);
             this.panelFiltroAcoes.Controls.Add(this.btnConsultarAcoes);
@@ -683,7 +683,7 @@
             this.panelFiltroAcoes.Controls.Add(this.label8);
             this.panelFiltroAcoes.Controls.Add(this.label9);
             this.panelFiltroAcoes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFiltroAcoes.Location = new System.Drawing.Point(0, 0);
+            this.panelFiltroAcoes.Location = new System.Drawing.Point(0, 630);
             this.panelFiltroAcoes.Name = "panelFiltroAcoes";
             this.panelFiltroAcoes.Size = new System.Drawing.Size(1338, 690);
             this.panelFiltroAcoes.TabIndex = 11;
@@ -701,11 +701,11 @@
             this.btnFiltroAco2.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
             this.btnFiltroAco2.IconColor = System.Drawing.Color.White;
             this.btnFiltroAco2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroAco2.IconSize = 25;
-            this.btnFiltroAco2.Location = new System.Drawing.Point(443, 169);
+            this.btnFiltroAco2.IconSize = 20;
+            this.btnFiltroAco2.Location = new System.Drawing.Point(132, 2);
             this.btnFiltroAco2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroAco2.Name = "btnFiltroAco2";
-            this.btnFiltroAco2.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroAco2.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroAco2.TabIndex = 10;
             this.btnFiltroAco2.Text = "Especialidade";
             this.btnFiltroAco2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -726,11 +726,11 @@
             this.btnFiltroAco3.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
             this.btnFiltroAco3.IconColor = System.Drawing.Color.White;
             this.btnFiltroAco3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroAco3.IconSize = 25;
-            this.btnFiltroAco3.Location = new System.Drawing.Point(586, 169);
+            this.btnFiltroAco3.IconSize = 20;
+            this.btnFiltroAco3.Location = new System.Drawing.Point(262, 2);
             this.btnFiltroAco3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroAco3.Name = "btnFiltroAco3";
-            this.btnFiltroAco3.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroAco3.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroAco3.TabIndex = 10;
             this.btnFiltroAco3.Text = "Especialidade";
             this.btnFiltroAco3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -751,11 +751,11 @@
             this.btnFiltroAco1.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
             this.btnFiltroAco1.IconColor = System.Drawing.Color.White;
             this.btnFiltroAco1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroAco1.IconSize = 25;
-            this.btnFiltroAco1.Location = new System.Drawing.Point(300, 169);
+            this.btnFiltroAco1.IconSize = 20;
+            this.btnFiltroAco1.Location = new System.Drawing.Point(2, 2);
             this.btnFiltroAco1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFiltroAco1.Name = "btnFiltroAco1";
-            this.btnFiltroAco1.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroAco1.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroAco1.TabIndex = 9;
             this.btnFiltroAco1.Text = "Especialidade";
             this.btnFiltroAco1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -879,7 +879,7 @@
             // 
             // panelCadastroEntidade
             // 
-            this.panelCadastroEntidade.Controls.Add(this.iconButton1);
+            this.panelCadastroEntidade.Controls.Add(this.btnExcluirEntidade);
             this.panelCadastroEntidade.Controls.Add(this.campoCEP);
             this.panelCadastroEntidade.Controls.Add(this.labelCEP);
             this.panelCadastroEntidade.Controls.Add(this.campoCNPJ);
@@ -1211,11 +1211,11 @@
             // 
             this.campoCodigoEntidade.BackColor = System.Drawing.SystemColors.MenuBar;
             this.campoCodigoEntidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoCodigoEntidade.Enabled = false;
             this.campoCodigoEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodigoEntidade.Location = new System.Drawing.Point(472, 117);
             this.campoCodigoEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.campoCodigoEntidade.Name = "campoCodigoEntidade";
+            this.campoCodigoEntidade.ReadOnly = true;
             this.campoCodigoEntidade.Size = new System.Drawing.Size(110, 19);
             this.campoCodigoEntidade.TabIndex = 6;
             // 
@@ -1469,7 +1469,6 @@
             // 
             this.campoCodigoProdutor_Propriedade.BackColor = System.Drawing.SystemColors.MenuBar;
             this.campoCodigoProdutor_Propriedade.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoCodigoProdutor_Propriedade.Enabled = false;
             this.campoCodigoProdutor_Propriedade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodigoProdutor_Propriedade.Location = new System.Drawing.Point(842, 198);
             this.campoCodigoProdutor_Propriedade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -2008,11 +2007,11 @@
             // 
             this.campoCodigoFazenda.BackColor = System.Drawing.SystemColors.MenuBar;
             this.campoCodigoFazenda.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoCodigoFazenda.Enabled = false;
             this.campoCodigoFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodigoFazenda.Location = new System.Drawing.Point(472, 117);
             this.campoCodigoFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.campoCodigoFazenda.Name = "campoCodigoFazenda";
+            this.campoCodigoFazenda.ReadOnly = true;
             this.campoCodigoFazenda.Size = new System.Drawing.Size(110, 19);
             this.campoCodigoFazenda.TabIndex = 6;
             // 
@@ -2148,25 +2147,55 @@
             this.btnExcluirFazenda.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnExcluirFazenda.UseVisualStyleBackColor = false;
             // 
-            // iconButton1
+            // btnExcluirEntidade
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(590, 354);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(106, 30);
-            this.iconButton1.TabIndex = 91;
-            this.iconButton1.Text = "Excluir";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btnExcluirEntidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.btnExcluirEntidade.FlatAppearance.BorderSize = 0;
+            this.btnExcluirEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluirEntidade.ForeColor = System.Drawing.Color.White;
+            this.btnExcluirEntidade.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnExcluirEntidade.IconColor = System.Drawing.Color.White;
+            this.btnExcluirEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExcluirEntidade.IconSize = 20;
+            this.btnExcluirEntidade.Location = new System.Drawing.Point(590, 354);
+            this.btnExcluirEntidade.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExcluirEntidade.Name = "btnExcluirEntidade";
+            this.btnExcluirEntidade.Size = new System.Drawing.Size(106, 30);
+            this.btnExcluirEntidade.TabIndex = 91;
+            this.btnExcluirEntidade.Text = "Excluir";
+            this.btnExcluirEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluirEntidade.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnExcluirEntidade.UseVisualStyleBackColor = false;
+            // 
+            // flowLayoutFiltroAcoes
+            // 
+            this.flowLayoutFiltroAcoes.Controls.Add(this.btnFiltroAco1);
+            this.flowLayoutFiltroAcoes.Controls.Add(this.btnFiltroAco2);
+            this.flowLayoutFiltroAcoes.Controls.Add(this.btnFiltroAco3);
+            this.flowLayoutFiltroAcoes.Location = new System.Drawing.Point(289, 170);
+            this.flowLayoutFiltroAcoes.Name = "flowLayoutFiltroAcoes";
+            this.flowLayoutFiltroAcoes.Size = new System.Drawing.Size(419, 30);
+            this.flowLayoutFiltroAcoes.TabIndex = 11;
+            // 
+            // flowLayoutFiltroFazenda
+            // 
+            this.flowLayoutFiltroFazenda.Controls.Add(this.btnFiltroFaz2);
+            this.flowLayoutFiltroFazenda.Controls.Add(this.btnFiltroFaz1);
+            this.flowLayoutFiltroFazenda.Controls.Add(this.btnFiltroFaz3);
+            this.flowLayoutFiltroFazenda.Location = new System.Drawing.Point(289, 170);
+            this.flowLayoutFiltroFazenda.Name = "flowLayoutFiltroFazenda";
+            this.flowLayoutFiltroFazenda.Size = new System.Drawing.Size(419, 30);
+            this.flowLayoutFiltroFazenda.TabIndex = 12;
+            // 
+            // flowLayoutFiltroEntidade
+            // 
+            this.flowLayoutFiltroEntidade.Controls.Add(this.btnFiltroEnt2);
+            this.flowLayoutFiltroEntidade.Controls.Add(this.btnFiltroEnt1);
+            this.flowLayoutFiltroEntidade.Controls.Add(this.btnFiltroEnt3);
+            this.flowLayoutFiltroEntidade.Location = new System.Drawing.Point(289, 170);
+            this.flowLayoutFiltroEntidade.Name = "flowLayoutFiltroEntidade";
+            this.flowLayoutFiltroEntidade.Size = new System.Drawing.Size(419, 30);
+            this.flowLayoutFiltroEntidade.TabIndex = 13;
             // 
             // FormCadastros
             // 
@@ -2197,6 +2226,12 @@
             this.panelCadastroFazenda.ResumeLayout(false);
             this.panelCadastroFazenda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLotesAssociados_Pocilga)).EndInit();
+            this.flowLayoutFiltroAcoes.ResumeLayout(false);
+            this.flowLayoutFiltroAcoes.PerformLayout();
+            this.flowLayoutFiltroFazenda.ResumeLayout(false);
+            this.flowLayoutFiltroFazenda.PerformLayout();
+            this.flowLayoutFiltroEntidade.ResumeLayout(false);
+            this.flowLayoutFiltroEntidade.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2337,6 +2372,9 @@
         private System.Windows.Forms.Label labelLotesAssociados_Pocilga;
         private FontAwesome.Sharp.IconButton btnExcluirFazenda;
         private System.Windows.Forms.Button button1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnExcluirEntidade;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutFiltroAcoes;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutFiltroEntidade;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutFiltroFazenda;
     }
 }

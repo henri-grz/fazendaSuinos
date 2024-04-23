@@ -26,6 +26,7 @@ namespace fazendaSuinos
             leftBorderPnl = new Panel();
             leftBorderPnl.Size = new Size(7, 74);
             panelMenu.Controls.Add(leftBorderPnl);
+            OpenChildForm(new FormDashboard());
         }
         //Structs
         private struct RGBColors

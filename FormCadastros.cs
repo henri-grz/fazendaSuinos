@@ -87,14 +87,7 @@ namespace fazendaSuinos
 
             if (comboTipoEntidade.SelectedItem.ToString() == "Fornecedor")
             {
-                campoNome.Visible = false;
-                labelNome.Visible = false;
-                campoCPF.Visible = false;
-                labelCPF.Visible = false;
-                comboSetor.Visible = false;
-                labelSetor.Visible = false;
-                comboEspecialidade.Visible = false;
-                labelEspecialidade.Visible = false;
+                escondeTodosCadastroEntidade();
 
                 campoRazaoSocial.Visible = true;
                 labelRazaoSocial.Visible = true;
@@ -107,23 +100,44 @@ namespace fazendaSuinos
                 campoCEP.Visible = true;
                 labelCEP.Visible = true;
             }
-            else
+            else if (comboTipoEntidade.SelectedItem.ToString() == "Gerente")
             {
-                campoRazaoSocial.Visible = false;
-                labelRazaoSocial.Visible = false;
-                campoCNPJ.Visible = false;
-                labelCNPJ.Visible = false;
-                campoCEP.Visible = false;
-                labelCEP.Visible = false;
+                escondeTodosCadastroEntidade();
 
                 campoNome.Visible = true;
                 labelNome.Visible = true;
                 campoCPF.Visible = true;
                 labelCPF.Visible = true;
+                campoTelefone.Visible = true;
+                labelTelefone.Visible = true;
+                comboPrivilegios.Visible = true;
+                labelPrivilegios.Visible = true;
                 comboSetor.Visible = true;
                 labelSetor.Visible = true;
+            }
+            else if(comboTipoEntidade.SelectedItem.ToString() == "Técnico")
+            {
+                escondeTodosCadastroEntidade();
+
+                campoNome.Visible = true;
+                labelNome.Visible = true;
+                campoCPF.Visible = true;
+                labelCPF.Visible = true;
+                campoTelefone.Visible = true;
+                labelTelefone.Visible = true;
+                comboPrivilegios.Visible = true;
+                labelPrivilegios.Visible = true;
                 comboEspecialidade.Visible = true;
                 labelEspecialidade.Visible = true;
+            }
+            else
+            {
+                escondeTodosCadastroEntidade();
+
+                campoNome.Visible = true;
+                labelNome.Visible = true;
+                campoCPF.Visible = true;
+                labelCPF.Visible = true;
                 campoTelefone.Visible = true;
                 labelTelefone.Visible = true;
                 comboPrivilegios.Visible = true;
@@ -630,6 +644,37 @@ namespace fazendaSuinos
             dateTPValidade_Produto.Visible = false;
             labelValidade_Produto.Visible = false;
 
+        }
+
+        private void escondeTodosCadastroEntidade()
+        {
+            //Dados Comuns
+            campoNome.Visible = false;
+            labelNome.Visible = false;
+            campoCPF.Visible = false;
+            labelCPF.Visible = false;
+            campoTelefone.Visible = false;
+            labelTelefone.Visible = false;
+            comboPrivilegios.Visible = false;
+            labelPrivilegios.Visible = false;
+
+            //Dados de ADMINISTRADOR
+
+            //Dados de GERENTE
+            comboSetor.Visible = false;
+            labelSetor.Visible = false;
+
+            //Dados de TECNICO
+            comboEspecialidade.Visible = false;
+            labelEspecialidade.Visible = false;
+
+            //Dados de FORNECEDOR
+            campoRazaoSocial.Visible = false;
+            labelRazaoSocial.Visible = false;
+            campoCNPJ.Visible = false;
+            labelCNPJ.Visible = false;
+            campoCEP.Visible = false;
+            labelCEP.Visible = false;
         }
     }
 }
