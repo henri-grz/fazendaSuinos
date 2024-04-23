@@ -33,9 +33,13 @@
             this.btnAcoesCorretivas = new System.Windows.Forms.Button();
             this.btnFazenda = new System.Windows.Forms.Button();
             this.panelFiltroEntidade = new System.Windows.Forms.Panel();
+            this.btnFiltroEnt2 = new FontAwesome.Sharp.IconButton();
+            this.btnFiltroEnt3 = new FontAwesome.Sharp.IconButton();
+            this.btnFiltroEnt1 = new FontAwesome.Sharp.IconButton();
             this.dataGridEntidade = new System.Windows.Forms.DataGridView();
             this.btnLimparEntidade = new System.Windows.Forms.Button();
             this.btnConsultarEntidade = new System.Windows.Forms.Button();
+            this.btnAddFiltroEntidade = new FontAwesome.Sharp.IconButton();
             this.campoValorEntidade = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboAtributoEntidade = new System.Windows.Forms.ComboBox();
@@ -43,18 +47,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelFiltros = new System.Windows.Forms.Panel();
             this.panelFiltroFazenda = new System.Windows.Forms.Panel();
+            this.btnFiltroFaz2 = new FontAwesome.Sharp.IconButton();
+            this.btnFiltroFaz3 = new FontAwesome.Sharp.IconButton();
+            this.btnFiltroFaz1 = new FontAwesome.Sharp.IconButton();
             this.dataGridFazenda = new System.Windows.Forms.DataGridView();
             this.btnLimparFazenda = new System.Windows.Forms.Button();
             this.btnConsultarFazenda = new System.Windows.Forms.Button();
+            this.btnAddFiltroFazenda = new FontAwesome.Sharp.IconButton();
             this.campoValorFazenda = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboAtributoFazenda = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panelFiltroAcoes = new System.Windows.Forms.Panel();
+            this.btnFiltroAco2 = new FontAwesome.Sharp.IconButton();
+            this.btnFiltroAco3 = new FontAwesome.Sharp.IconButton();
+            this.btnFiltroAco1 = new FontAwesome.Sharp.IconButton();
             this.dataGridAcoes = new System.Windows.Forms.DataGridView();
             this.btnLimparAcoes = new System.Windows.Forms.Button();
             this.btnConsultarAcoes = new System.Windows.Forms.Button();
+            this.btnAddFiltroAcoes = new FontAwesome.Sharp.IconButton();
             this.campoValorAcoes = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.comboAtributoAcoes = new System.Windows.Forms.ComboBox();
@@ -67,6 +79,8 @@
             this.labelCNPJ = new System.Windows.Forms.Label();
             this.campoRazaoSocial = new System.Windows.Forms.TextBox();
             this.labelRazaoSocial = new System.Windows.Forms.Label();
+            this.btnGravarEntidade = new FontAwesome.Sharp.IconButton();
+            this.btnIncluirEntidade = new FontAwesome.Sharp.IconButton();
             this.btnLimparCadastroEntidade = new System.Windows.Forms.Button();
             this.comboPrivilegios = new System.Windows.Forms.ComboBox();
             this.labelPrivilegios = new System.Windows.Forms.Label();
@@ -134,29 +148,21 @@
             this.labelDataAloj_Lote = new System.Windows.Forms.Label();
             this.campoPesoMedio_Lote = new System.Windows.Forms.TextBox();
             this.labelPesoMedio_Lote = new System.Windows.Forms.Label();
-            this.btnLimparCadastroFazenda = new System.Windows.Forms.Button();
+            this.btnGravarFazenda = new FontAwesome.Sharp.IconButton();
+            this.btnIncluirFazenda = new FontAwesome.Sharp.IconButton();
             this.labelSituacao_Lote = new System.Windows.Forms.Label();
             this.campoCodigoFazenda = new System.Windows.Forms.TextBox();
             this.labelCodigoFazenda = new System.Windows.Forms.Label();
             this.comboTipoFazenda = new System.Windows.Forms.ComboBox();
             this.labelTipoFazenda = new System.Windows.Forms.Label();
             this.labelDadosFazenda = new System.Windows.Forms.Label();
-            this.btnGravarEntidade = new FontAwesome.Sharp.IconButton();
-            this.btnIncluirEntidade = new FontAwesome.Sharp.IconButton();
-            this.btnGravarFazenda = new FontAwesome.Sharp.IconButton();
-            this.btnIncluirFazenda = new FontAwesome.Sharp.IconButton();
-            this.btnFiltroEnt2 = new FontAwesome.Sharp.IconButton();
-            this.btnFiltroEnt3 = new FontAwesome.Sharp.IconButton();
-            this.btnFiltroEnt1 = new FontAwesome.Sharp.IconButton();
-            this.btnAddFiltroEntidade = new FontAwesome.Sharp.IconButton();
-            this.btnFiltroFaz2 = new FontAwesome.Sharp.IconButton();
-            this.btnFiltroFaz3 = new FontAwesome.Sharp.IconButton();
-            this.btnFiltroFaz1 = new FontAwesome.Sharp.IconButton();
-            this.btnAddFiltroFazenda = new FontAwesome.Sharp.IconButton();
-            this.btnFiltroAco2 = new FontAwesome.Sharp.IconButton();
-            this.btnFiltroAco3 = new FontAwesome.Sharp.IconButton();
-            this.btnFiltroAco1 = new FontAwesome.Sharp.IconButton();
-            this.btnAddFiltroAcoes = new FontAwesome.Sharp.IconButton();
+            this.labelCodPocilga_Lote = new System.Windows.Forms.Label();
+            this.campoCodPocilga_Lote = new System.Windows.Forms.TextBox();
+            this.labelLotesAssociados_Pocilga = new System.Windows.Forms.Label();
+            this.dataGridLotesAssociados_Pocilga = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnExcluirFazenda = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel3Botoes.SuspendLayout();
             this.panelFiltroEntidade.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEntidade)).BeginInit();
@@ -168,6 +174,7 @@
             this.panelCadastroEntidade.SuspendLayout();
             this.panelCadastros.SuspendLayout();
             this.panelCadastroFazenda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridLotesAssociados_Pocilga)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEntidades
@@ -244,6 +251,81 @@
             this.panelFiltroEntidade.TabIndex = 2;
             this.panelFiltroEntidade.Visible = false;
             // 
+            // btnFiltroEnt2
+            // 
+            this.btnFiltroEnt2.AutoSize = true;
+            this.btnFiltroEnt2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFiltroEnt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnFiltroEnt2.FlatAppearance.BorderSize = 0;
+            this.btnFiltroEnt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroEnt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroEnt2.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroEnt2.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            this.btnFiltroEnt2.IconColor = System.Drawing.Color.White;
+            this.btnFiltroEnt2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroEnt2.IconSize = 25;
+            this.btnFiltroEnt2.Location = new System.Drawing.Point(443, 169);
+            this.btnFiltroEnt2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroEnt2.Name = "btnFiltroEnt2";
+            this.btnFiltroEnt2.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroEnt2.TabIndex = 10;
+            this.btnFiltroEnt2.Text = "Especialidade";
+            this.btnFiltroEnt2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltroEnt2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnFiltroEnt2.UseVisualStyleBackColor = false;
+            this.btnFiltroEnt2.Visible = false;
+            this.btnFiltroEnt2.Click += new System.EventHandler(this.btnFiltroEnt2_Click);
+            // 
+            // btnFiltroEnt3
+            // 
+            this.btnFiltroEnt3.AutoSize = true;
+            this.btnFiltroEnt3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFiltroEnt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnFiltroEnt3.FlatAppearance.BorderSize = 0;
+            this.btnFiltroEnt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroEnt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroEnt3.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroEnt3.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            this.btnFiltroEnt3.IconColor = System.Drawing.Color.White;
+            this.btnFiltroEnt3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroEnt3.IconSize = 25;
+            this.btnFiltroEnt3.Location = new System.Drawing.Point(586, 169);
+            this.btnFiltroEnt3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroEnt3.Name = "btnFiltroEnt3";
+            this.btnFiltroEnt3.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroEnt3.TabIndex = 10;
+            this.btnFiltroEnt3.Text = "Especialidade";
+            this.btnFiltroEnt3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltroEnt3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnFiltroEnt3.UseVisualStyleBackColor = false;
+            this.btnFiltroEnt3.Visible = false;
+            this.btnFiltroEnt3.Click += new System.EventHandler(this.btnFiltroEnt3_Click);
+            // 
+            // btnFiltroEnt1
+            // 
+            this.btnFiltroEnt1.AutoSize = true;
+            this.btnFiltroEnt1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFiltroEnt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnFiltroEnt1.FlatAppearance.BorderSize = 0;
+            this.btnFiltroEnt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroEnt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroEnt1.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroEnt1.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            this.btnFiltroEnt1.IconColor = System.Drawing.Color.White;
+            this.btnFiltroEnt1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroEnt1.IconSize = 25;
+            this.btnFiltroEnt1.Location = new System.Drawing.Point(300, 169);
+            this.btnFiltroEnt1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroEnt1.Name = "btnFiltroEnt1";
+            this.btnFiltroEnt1.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroEnt1.TabIndex = 9;
+            this.btnFiltroEnt1.Text = "Especialidade";
+            this.btnFiltroEnt1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltroEnt1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnFiltroEnt1.UseVisualStyleBackColor = false;
+            this.btnFiltroEnt1.Visible = false;
+            this.btnFiltroEnt1.Click += new System.EventHandler(this.btnFiltroEnt1_Click);
+            // 
             // dataGridEntidade
             // 
             this.dataGridEntidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -280,6 +362,21 @@
             this.btnConsultarEntidade.TabIndex = 6;
             this.btnConsultarEntidade.Text = "Consultar";
             this.btnConsultarEntidade.UseVisualStyleBackColor = false;
+            // 
+            // btnAddFiltroEntidade
+            // 
+            this.btnAddFiltroEntidade.FlatAppearance.BorderSize = 0;
+            this.btnAddFiltroEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddFiltroEntidade.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAddFiltroEntidade.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnAddFiltroEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddFiltroEntidade.IconSize = 35;
+            this.btnAddFiltroEntidade.Location = new System.Drawing.Point(943, 112);
+            this.btnAddFiltroEntidade.Name = "btnAddFiltroEntidade";
+            this.btnAddFiltroEntidade.Size = new System.Drawing.Size(30, 30);
+            this.btnAddFiltroEntidade.TabIndex = 5;
+            this.btnAddFiltroEntidade.UseVisualStyleBackColor = true;
+            this.btnAddFiltroEntidade.Click += new System.EventHandler(this.btnAdicionarFiltroEntidade_Click);
             // 
             // campoValorEntidade
             // 
@@ -379,6 +476,81 @@
             this.panelFiltroFazenda.TabIndex = 11;
             this.panelFiltroFazenda.Visible = false;
             // 
+            // btnFiltroFaz2
+            // 
+            this.btnFiltroFaz2.AutoSize = true;
+            this.btnFiltroFaz2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFiltroFaz2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnFiltroFaz2.FlatAppearance.BorderSize = 0;
+            this.btnFiltroFaz2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroFaz2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroFaz2.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroFaz2.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            this.btnFiltroFaz2.IconColor = System.Drawing.Color.White;
+            this.btnFiltroFaz2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroFaz2.IconSize = 25;
+            this.btnFiltroFaz2.Location = new System.Drawing.Point(443, 169);
+            this.btnFiltroFaz2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroFaz2.Name = "btnFiltroFaz2";
+            this.btnFiltroFaz2.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroFaz2.TabIndex = 10;
+            this.btnFiltroFaz2.Text = "Especialidade";
+            this.btnFiltroFaz2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltroFaz2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnFiltroFaz2.UseVisualStyleBackColor = false;
+            this.btnFiltroFaz2.Visible = false;
+            this.btnFiltroFaz2.Click += new System.EventHandler(this.btnFiltroFaz2_Click);
+            // 
+            // btnFiltroFaz3
+            // 
+            this.btnFiltroFaz3.AutoSize = true;
+            this.btnFiltroFaz3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFiltroFaz3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnFiltroFaz3.FlatAppearance.BorderSize = 0;
+            this.btnFiltroFaz3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroFaz3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroFaz3.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroFaz3.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            this.btnFiltroFaz3.IconColor = System.Drawing.Color.White;
+            this.btnFiltroFaz3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroFaz3.IconSize = 25;
+            this.btnFiltroFaz3.Location = new System.Drawing.Point(586, 169);
+            this.btnFiltroFaz3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroFaz3.Name = "btnFiltroFaz3";
+            this.btnFiltroFaz3.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroFaz3.TabIndex = 10;
+            this.btnFiltroFaz3.Text = "Especialidade";
+            this.btnFiltroFaz3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltroFaz3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnFiltroFaz3.UseVisualStyleBackColor = false;
+            this.btnFiltroFaz3.Visible = false;
+            this.btnFiltroFaz3.Click += new System.EventHandler(this.btnFiltroFaz3_Click);
+            // 
+            // btnFiltroFaz1
+            // 
+            this.btnFiltroFaz1.AutoSize = true;
+            this.btnFiltroFaz1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFiltroFaz1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnFiltroFaz1.FlatAppearance.BorderSize = 0;
+            this.btnFiltroFaz1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroFaz1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroFaz1.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroFaz1.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            this.btnFiltroFaz1.IconColor = System.Drawing.Color.White;
+            this.btnFiltroFaz1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroFaz1.IconSize = 25;
+            this.btnFiltroFaz1.Location = new System.Drawing.Point(300, 169);
+            this.btnFiltroFaz1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroFaz1.Name = "btnFiltroFaz1";
+            this.btnFiltroFaz1.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroFaz1.TabIndex = 9;
+            this.btnFiltroFaz1.Text = "Especialidade";
+            this.btnFiltroFaz1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltroFaz1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnFiltroFaz1.UseVisualStyleBackColor = false;
+            this.btnFiltroFaz1.Visible = false;
+            this.btnFiltroFaz1.Click += new System.EventHandler(this.btnFiltroFaz1_Click);
+            // 
             // dataGridFazenda
             // 
             this.dataGridFazenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -415,6 +587,21 @@
             this.btnConsultarFazenda.TabIndex = 6;
             this.btnConsultarFazenda.Text = "Consultar";
             this.btnConsultarFazenda.UseVisualStyleBackColor = false;
+            // 
+            // btnAddFiltroFazenda
+            // 
+            this.btnAddFiltroFazenda.FlatAppearance.BorderSize = 0;
+            this.btnAddFiltroFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddFiltroFazenda.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAddFiltroFazenda.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnAddFiltroFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddFiltroFazenda.IconSize = 35;
+            this.btnAddFiltroFazenda.Location = new System.Drawing.Point(943, 112);
+            this.btnAddFiltroFazenda.Name = "btnAddFiltroFazenda";
+            this.btnAddFiltroFazenda.Size = new System.Drawing.Size(30, 30);
+            this.btnAddFiltroFazenda.TabIndex = 5;
+            this.btnAddFiltroFazenda.UseVisualStyleBackColor = true;
+            this.btnAddFiltroFazenda.Click += new System.EventHandler(this.btnAdicionarFiltroFazenda_Click);
             // 
             // campoValorFazenda
             // 
@@ -502,6 +689,81 @@
             this.panelFiltroAcoes.TabIndex = 11;
             this.panelFiltroAcoes.Visible = false;
             // 
+            // btnFiltroAco2
+            // 
+            this.btnFiltroAco2.AutoSize = true;
+            this.btnFiltroAco2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFiltroAco2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnFiltroAco2.FlatAppearance.BorderSize = 0;
+            this.btnFiltroAco2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroAco2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroAco2.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroAco2.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            this.btnFiltroAco2.IconColor = System.Drawing.Color.White;
+            this.btnFiltroAco2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroAco2.IconSize = 25;
+            this.btnFiltroAco2.Location = new System.Drawing.Point(443, 169);
+            this.btnFiltroAco2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroAco2.Name = "btnFiltroAco2";
+            this.btnFiltroAco2.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroAco2.TabIndex = 10;
+            this.btnFiltroAco2.Text = "Especialidade";
+            this.btnFiltroAco2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltroAco2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnFiltroAco2.UseVisualStyleBackColor = false;
+            this.btnFiltroAco2.Visible = false;
+            this.btnFiltroAco2.Click += new System.EventHandler(this.btnFiltroAco2_Click);
+            // 
+            // btnFiltroAco3
+            // 
+            this.btnFiltroAco3.AutoSize = true;
+            this.btnFiltroAco3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFiltroAco3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnFiltroAco3.FlatAppearance.BorderSize = 0;
+            this.btnFiltroAco3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroAco3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroAco3.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroAco3.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            this.btnFiltroAco3.IconColor = System.Drawing.Color.White;
+            this.btnFiltroAco3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroAco3.IconSize = 25;
+            this.btnFiltroAco3.Location = new System.Drawing.Point(586, 169);
+            this.btnFiltroAco3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroAco3.Name = "btnFiltroAco3";
+            this.btnFiltroAco3.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroAco3.TabIndex = 10;
+            this.btnFiltroAco3.Text = "Especialidade";
+            this.btnFiltroAco3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltroAco3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnFiltroAco3.UseVisualStyleBackColor = false;
+            this.btnFiltroAco3.Visible = false;
+            this.btnFiltroAco3.Click += new System.EventHandler(this.btnFiltroAco3_Click);
+            // 
+            // btnFiltroAco1
+            // 
+            this.btnFiltroAco1.AutoSize = true;
+            this.btnFiltroAco1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFiltroAco1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnFiltroAco1.FlatAppearance.BorderSize = 0;
+            this.btnFiltroAco1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroAco1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroAco1.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroAco1.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            this.btnFiltroAco1.IconColor = System.Drawing.Color.White;
+            this.btnFiltroAco1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroAco1.IconSize = 25;
+            this.btnFiltroAco1.Location = new System.Drawing.Point(300, 169);
+            this.btnFiltroAco1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroAco1.Name = "btnFiltroAco1";
+            this.btnFiltroAco1.Size = new System.Drawing.Size(131, 31);
+            this.btnFiltroAco1.TabIndex = 9;
+            this.btnFiltroAco1.Text = "Especialidade";
+            this.btnFiltroAco1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltroAco1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnFiltroAco1.UseVisualStyleBackColor = false;
+            this.btnFiltroAco1.Visible = false;
+            this.btnFiltroAco1.Click += new System.EventHandler(this.btnFiltroAco1_Click);
+            // 
             // dataGridAcoes
             // 
             this.dataGridAcoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -538,6 +800,21 @@
             this.btnConsultarAcoes.TabIndex = 6;
             this.btnConsultarAcoes.Text = "Consultar";
             this.btnConsultarAcoes.UseVisualStyleBackColor = false;
+            // 
+            // btnAddFiltroAcoes
+            // 
+            this.btnAddFiltroAcoes.FlatAppearance.BorderSize = 0;
+            this.btnAddFiltroAcoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddFiltroAcoes.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAddFiltroAcoes.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnAddFiltroAcoes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddFiltroAcoes.IconSize = 35;
+            this.btnAddFiltroAcoes.Location = new System.Drawing.Point(943, 112);
+            this.btnAddFiltroAcoes.Name = "btnAddFiltroAcoes";
+            this.btnAddFiltroAcoes.Size = new System.Drawing.Size(30, 30);
+            this.btnAddFiltroAcoes.TabIndex = 5;
+            this.btnAddFiltroAcoes.UseVisualStyleBackColor = true;
+            this.btnAddFiltroAcoes.Click += new System.EventHandler(this.btnAdicionarFiltroAcoes_Click);
             // 
             // campoValorAcoes
             // 
@@ -602,6 +879,7 @@
             // 
             // panelCadastroEntidade
             // 
+            this.panelCadastroEntidade.Controls.Add(this.iconButton1);
             this.panelCadastroEntidade.Controls.Add(this.campoCEP);
             this.panelCadastroEntidade.Controls.Add(this.labelCEP);
             this.panelCadastroEntidade.Controls.Add(this.campoCNPJ);
@@ -629,7 +907,7 @@
             this.panelCadastroEntidade.Controls.Add(this.labelTipo);
             this.panelCadastroEntidade.Controls.Add(this.labelDadosEntidades);
             this.panelCadastroEntidade.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCadastroEntidade.Location = new System.Drawing.Point(0, 805);
+            this.panelCadastroEntidade.Location = new System.Drawing.Point(0, 0);
             this.panelCadastroEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelCadastroEntidade.Name = "panelCadastroEntidade";
             this.panelCadastroEntidade.Size = new System.Drawing.Size(1338, 690);
@@ -708,6 +986,46 @@
             this.labelRazaoSocial.Text = "Razão Social";
             this.labelRazaoSocial.Visible = false;
             // 
+            // btnGravarEntidade
+            // 
+            this.btnGravarEntidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnGravarEntidade.FlatAppearance.BorderSize = 0;
+            this.btnGravarEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGravarEntidade.ForeColor = System.Drawing.Color.White;
+            this.btnGravarEntidade.IconChar = FontAwesome.Sharp.IconChar.File;
+            this.btnGravarEntidade.IconColor = System.Drawing.Color.White;
+            this.btnGravarEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGravarEntidade.IconSize = 25;
+            this.btnGravarEntidade.Location = new System.Drawing.Point(730, 354);
+            this.btnGravarEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGravarEntidade.Name = "btnGravarEntidade";
+            this.btnGravarEntidade.Size = new System.Drawing.Size(106, 30);
+            this.btnGravarEntidade.TabIndex = 23;
+            this.btnGravarEntidade.Text = "Gravar";
+            this.btnGravarEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGravarEntidade.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnGravarEntidade.UseVisualStyleBackColor = false;
+            // 
+            // btnIncluirEntidade
+            // 
+            this.btnIncluirEntidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnIncluirEntidade.FlatAppearance.BorderSize = 0;
+            this.btnIncluirEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncluirEntidade.ForeColor = System.Drawing.Color.White;
+            this.btnIncluirEntidade.IconChar = FontAwesome.Sharp.IconChar.Add;
+            this.btnIncluirEntidade.IconColor = System.Drawing.Color.White;
+            this.btnIncluirEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnIncluirEntidade.IconSize = 25;
+            this.btnIncluirEntidade.Location = new System.Drawing.Point(868, 354);
+            this.btnIncluirEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIncluirEntidade.Name = "btnIncluirEntidade";
+            this.btnIncluirEntidade.Size = new System.Drawing.Size(106, 30);
+            this.btnIncluirEntidade.TabIndex = 22;
+            this.btnIncluirEntidade.Text = "Incluir";
+            this.btnIncluirEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIncluirEntidade.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnIncluirEntidade.UseVisualStyleBackColor = false;
+            // 
             // btnLimparCadastroEntidade
             // 
             this.btnLimparCadastroEntidade.BackColor = System.Drawing.SystemColors.MenuBar;
@@ -715,7 +1033,7 @@
             this.btnLimparCadastroEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimparCadastroEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimparCadastroEntidade.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLimparCadastroEntidade.Location = new System.Drawing.Point(587, 354);
+            this.btnLimparCadastroEntidade.Location = new System.Drawing.Point(448, 354);
             this.btnLimparCadastroEntidade.Name = "btnLimparCadastroEntidade";
             this.btnLimparCadastroEntidade.Size = new System.Drawing.Size(106, 30);
             this.btnLimparCadastroEntidade.TabIndex = 20;
@@ -895,7 +1213,7 @@
             this.campoCodigoEntidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodigoEntidade.Enabled = false;
             this.campoCodigoEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodigoEntidade.Location = new System.Drawing.Point(507, 117);
+            this.campoCodigoEntidade.Location = new System.Drawing.Point(472, 117);
             this.campoCodigoEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.campoCodigoEntidade.Name = "campoCodigoEntidade";
             this.campoCodigoEntidade.Size = new System.Drawing.Size(110, 19);
@@ -906,7 +1224,7 @@
             this.labelCodigoEntidade.AutoSize = true;
             this.labelCodigoEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodigoEntidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodigoEntidade.Location = new System.Drawing.Point(504, 93);
+            this.labelCodigoEntidade.Location = new System.Drawing.Point(469, 93);
             this.labelCodigoEntidade.Name = "labelCodigoEntidade";
             this.labelCodigoEntidade.Size = new System.Drawing.Size(59, 20);
             this.labelCodigoEntidade.TabIndex = 5;
@@ -929,7 +1247,7 @@
             "Visita"});
             this.comboTipoEntidade.Location = new System.Drawing.Point(298, 117);
             this.comboTipoEntidade.Name = "comboTipoEntidade";
-            this.comboTipoEntidade.Size = new System.Drawing.Size(152, 26);
+            this.comboTipoEntidade.Size = new System.Drawing.Size(125, 26);
             this.comboTipoEntidade.TabIndex = 4;
             this.comboTipoEntidade.SelectedIndexChanged += new System.EventHandler(this.comboTipoEntidade_SelectedIndexChanged);
             // 
@@ -957,8 +1275,8 @@
             // 
             // panelCadastros
             // 
-            this.panelCadastros.Controls.Add(this.panelCadastroEntidade);
             this.panelCadastros.Controls.Add(this.panelCadastroFazenda);
+            this.panelCadastros.Controls.Add(this.panelCadastroEntidade);
             this.panelCadastros.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadastros.Location = new System.Drawing.Point(0, 564);
             this.panelCadastros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -968,6 +1286,12 @@
             // 
             // panelCadastroFazenda
             // 
+            this.panelCadastroFazenda.Controls.Add(this.btnExcluirFazenda);
+            this.panelCadastroFazenda.Controls.Add(this.button1);
+            this.panelCadastroFazenda.Controls.Add(this.dataGridLotesAssociados_Pocilga);
+            this.panelCadastroFazenda.Controls.Add(this.labelLotesAssociados_Pocilga);
+            this.panelCadastroFazenda.Controls.Add(this.labelCodPocilga_Lote);
+            this.panelCadastroFazenda.Controls.Add(this.campoCodPocilga_Lote);
             this.panelCadastroFazenda.Controls.Add(this.dateTPValidade_Produto);
             this.panelCadastroFazenda.Controls.Add(this.labelValidade_Produto);
             this.panelCadastroFazenda.Controls.Add(this.labelTipo_Produto);
@@ -1017,7 +1341,6 @@
             this.panelCadastroFazenda.Controls.Add(this.labelPesoMedio_Lote);
             this.panelCadastroFazenda.Controls.Add(this.btnGravarFazenda);
             this.panelCadastroFazenda.Controls.Add(this.btnIncluirFazenda);
-            this.panelCadastroFazenda.Controls.Add(this.btnLimparCadastroFazenda);
             this.panelCadastroFazenda.Controls.Add(this.labelSituacao_Lote);
             this.panelCadastroFazenda.Controls.Add(this.campoCodigoFazenda);
             this.panelCadastroFazenda.Controls.Add(this.labelCodigoFazenda);
@@ -1025,7 +1348,7 @@
             this.panelCadastroFazenda.Controls.Add(this.labelTipoFazenda);
             this.panelCadastroFazenda.Controls.Add(this.labelDadosFazenda);
             this.panelCadastroFazenda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCadastroFazenda.Location = new System.Drawing.Point(0, 0);
+            this.panelCadastroFazenda.Location = new System.Drawing.Point(0, 690);
             this.panelCadastroFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelCadastroFazenda.Name = "panelCadastroFazenda";
             this.panelCadastroFazenda.Size = new System.Drawing.Size(1338, 805);
@@ -1369,7 +1692,7 @@
             this.labelCodPropriedade_Pocilga.AutoSize = true;
             this.labelCodPropriedade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodPropriedade_Pocilga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodPropriedade_Pocilga.Location = new System.Drawing.Point(469, 175);
+            this.labelCodPropriedade_Pocilga.Location = new System.Drawing.Point(295, 260);
             this.labelCodPropriedade_Pocilga.Name = "labelCodPropriedade_Pocilga";
             this.labelCodPropriedade_Pocilga.Size = new System.Drawing.Size(171, 20);
             this.labelCodPropriedade_Pocilga.TabIndex = 75;
@@ -1382,7 +1705,7 @@
             this.campoCodPropriedade_Pocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodPropriedade_Pocilga.Enabled = false;
             this.campoCodPropriedade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodPropriedade_Pocilga.Location = new System.Drawing.Point(472, 199);
+            this.campoCodPropriedade_Pocilga.Location = new System.Drawing.Point(298, 284);
             this.campoCodPropriedade_Pocilga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.campoCodPropriedade_Pocilga.Name = "campoCodPropriedade_Pocilga";
             this.campoCodPropriedade_Pocilga.Size = new System.Drawing.Size(110, 19);
@@ -1629,19 +1952,45 @@
             this.labelPesoMedio_Lote.Text = "Peso Médio";
             this.labelPesoMedio_Lote.Visible = false;
             // 
-            // btnLimparCadastroFazenda
+            // btnGravarFazenda
             // 
-            this.btnLimparCadastroFazenda.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.btnLimparCadastroFazenda.FlatAppearance.BorderSize = 0;
-            this.btnLimparCadastroFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimparCadastroFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimparCadastroFazenda.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLimparCadastroFazenda.Location = new System.Drawing.Point(587, 455);
-            this.btnLimparCadastroFazenda.Name = "btnLimparCadastroFazenda";
-            this.btnLimparCadastroFazenda.Size = new System.Drawing.Size(106, 30);
-            this.btnLimparCadastroFazenda.TabIndex = 20;
-            this.btnLimparCadastroFazenda.Text = "Limpar";
-            this.btnLimparCadastroFazenda.UseVisualStyleBackColor = false;
+            this.btnGravarFazenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnGravarFazenda.FlatAppearance.BorderSize = 0;
+            this.btnGravarFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGravarFazenda.ForeColor = System.Drawing.Color.White;
+            this.btnGravarFazenda.IconChar = FontAwesome.Sharp.IconChar.File;
+            this.btnGravarFazenda.IconColor = System.Drawing.Color.White;
+            this.btnGravarFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGravarFazenda.IconSize = 23;
+            this.btnGravarFazenda.Location = new System.Drawing.Point(730, 455);
+            this.btnGravarFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGravarFazenda.Name = "btnGravarFazenda";
+            this.btnGravarFazenda.Size = new System.Drawing.Size(106, 30);
+            this.btnGravarFazenda.TabIndex = 23;
+            this.btnGravarFazenda.Text = "Gravar";
+            this.btnGravarFazenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGravarFazenda.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnGravarFazenda.UseVisualStyleBackColor = false;
+            // 
+            // btnIncluirFazenda
+            // 
+            this.btnIncluirFazenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnIncluirFazenda.FlatAppearance.BorderSize = 0;
+            this.btnIncluirFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncluirFazenda.ForeColor = System.Drawing.Color.White;
+            this.btnIncluirFazenda.IconChar = FontAwesome.Sharp.IconChar.Add;
+            this.btnIncluirFazenda.IconColor = System.Drawing.Color.White;
+            this.btnIncluirFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnIncluirFazenda.IconSize = 23;
+            this.btnIncluirFazenda.Location = new System.Drawing.Point(868, 455);
+            this.btnIncluirFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIncluirFazenda.Name = "btnIncluirFazenda";
+            this.btnIncluirFazenda.Size = new System.Drawing.Size(106, 30);
+            this.btnIncluirFazenda.TabIndex = 22;
+            this.btnIncluirFazenda.Text = "Incluir";
+            this.btnIncluirFazenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIncluirFazenda.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnIncluirFazenda.UseVisualStyleBackColor = false;
             // 
             // labelSituacao_Lote
             // 
@@ -1720,355 +2069,104 @@
             this.labelDadosFazenda.TabIndex = 1;
             this.labelDadosFazenda.Text = "Dados Fazenda";
             // 
-            // btnGravarEntidade
+            // labelCodPocilga_Lote
             // 
-            this.btnGravarEntidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnGravarEntidade.FlatAppearance.BorderSize = 0;
-            this.btnGravarEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGravarEntidade.ForeColor = System.Drawing.Color.White;
-            this.btnGravarEntidade.IconChar = FontAwesome.Sharp.IconChar.File;
-            this.btnGravarEntidade.IconColor = System.Drawing.Color.White;
-            this.btnGravarEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGravarEntidade.IconSize = 25;
-            this.btnGravarEntidade.Location = new System.Drawing.Point(730, 354);
-            this.btnGravarEntidade.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGravarEntidade.Name = "btnGravarEntidade";
-            this.btnGravarEntidade.Size = new System.Drawing.Size(106, 30);
-            this.btnGravarEntidade.TabIndex = 23;
-            this.btnGravarEntidade.Text = "Gravar";
-            this.btnGravarEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGravarEntidade.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnGravarEntidade.UseVisualStyleBackColor = false;
+            this.labelCodPocilga_Lote.AutoSize = true;
+            this.labelCodPocilga_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodPocilga_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelCodPocilga_Lote.Location = new System.Drawing.Point(666, 258);
+            this.labelCodPocilga_Lote.Name = "labelCodPocilga_Lote";
+            this.labelCodPocilga_Lote.Size = new System.Drawing.Size(114, 20);
+            this.labelCodPocilga_Lote.TabIndex = 86;
+            this.labelCodPocilga_Lote.Text = "Código Pocilga";
+            this.labelCodPocilga_Lote.Visible = false;
             // 
-            // btnIncluirEntidade
+            // campoCodPocilga_Lote
             // 
-            this.btnIncluirEntidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnIncluirEntidade.FlatAppearance.BorderSize = 0;
-            this.btnIncluirEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIncluirEntidade.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirEntidade.IconChar = FontAwesome.Sharp.IconChar.Add;
-            this.btnIncluirEntidade.IconColor = System.Drawing.Color.White;
-            this.btnIncluirEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnIncluirEntidade.IconSize = 25;
-            this.btnIncluirEntidade.Location = new System.Drawing.Point(868, 354);
-            this.btnIncluirEntidade.Margin = new System.Windows.Forms.Padding(2);
-            this.btnIncluirEntidade.Name = "btnIncluirEntidade";
-            this.btnIncluirEntidade.Size = new System.Drawing.Size(106, 30);
-            this.btnIncluirEntidade.TabIndex = 22;
-            this.btnIncluirEntidade.Text = "Incluir";
-            this.btnIncluirEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIncluirEntidade.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnIncluirEntidade.UseVisualStyleBackColor = false;
+            this.campoCodPocilga_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodPocilga_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoCodPocilga_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoCodPocilga_Lote.Location = new System.Drawing.Point(670, 285);
+            this.campoCodPocilga_Lote.Margin = new System.Windows.Forms.Padding(2);
+            this.campoCodPocilga_Lote.Name = "campoCodPocilga_Lote";
+            this.campoCodPocilga_Lote.Size = new System.Drawing.Size(111, 19);
+            this.campoCodPocilga_Lote.TabIndex = 85;
+            this.campoCodPocilga_Lote.Visible = false;
             // 
-            // btnGravarFazenda
+            // labelLotesAssociados_Pocilga
             // 
-            this.btnGravarFazenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnGravarFazenda.FlatAppearance.BorderSize = 0;
-            this.btnGravarFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGravarFazenda.ForeColor = System.Drawing.Color.White;
-            this.btnGravarFazenda.IconChar = FontAwesome.Sharp.IconChar.File;
-            this.btnGravarFazenda.IconColor = System.Drawing.Color.White;
-            this.btnGravarFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGravarFazenda.IconSize = 25;
-            this.btnGravarFazenda.Location = new System.Drawing.Point(730, 455);
-            this.btnGravarFazenda.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGravarFazenda.Name = "btnGravarFazenda";
-            this.btnGravarFazenda.Size = new System.Drawing.Size(106, 30);
-            this.btnGravarFazenda.TabIndex = 23;
-            this.btnGravarFazenda.Text = "Gravar";
-            this.btnGravarFazenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGravarFazenda.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnGravarFazenda.UseVisualStyleBackColor = false;
+            this.labelLotesAssociados_Pocilga.AutoSize = true;
+            this.labelLotesAssociados_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLotesAssociados_Pocilga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelLotesAssociados_Pocilga.Location = new System.Drawing.Point(470, 173);
+            this.labelLotesAssociados_Pocilga.Name = "labelLotesAssociados_Pocilga";
+            this.labelLotesAssociados_Pocilga.Size = new System.Drawing.Size(135, 20);
+            this.labelLotesAssociados_Pocilga.TabIndex = 87;
+            this.labelLotesAssociados_Pocilga.Text = "Lotes Associados";
+            this.labelLotesAssociados_Pocilga.Visible = false;
             // 
-            // btnIncluirFazenda
+            // dataGridLotesAssociados_Pocilga
             // 
-            this.btnIncluirFazenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnIncluirFazenda.FlatAppearance.BorderSize = 0;
-            this.btnIncluirFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIncluirFazenda.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirFazenda.IconChar = FontAwesome.Sharp.IconChar.Add;
-            this.btnIncluirFazenda.IconColor = System.Drawing.Color.White;
-            this.btnIncluirFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnIncluirFazenda.IconSize = 25;
-            this.btnIncluirFazenda.Location = new System.Drawing.Point(868, 455);
-            this.btnIncluirFazenda.Margin = new System.Windows.Forms.Padding(2);
-            this.btnIncluirFazenda.Name = "btnIncluirFazenda";
-            this.btnIncluirFazenda.Size = new System.Drawing.Size(106, 30);
-            this.btnIncluirFazenda.TabIndex = 22;
-            this.btnIncluirFazenda.Text = "Incluir";
-            this.btnIncluirFazenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIncluirFazenda.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnIncluirFazenda.UseVisualStyleBackColor = false;
+            this.dataGridLotesAssociados_Pocilga.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridLotesAssociados_Pocilga.Location = new System.Drawing.Point(473, 198);
+            this.dataGridLotesAssociados_Pocilga.Name = "dataGridLotesAssociados_Pocilga";
+            this.dataGridLotesAssociados_Pocilga.Size = new System.Drawing.Size(500, 106);
+            this.dataGridLotesAssociados_Pocilga.TabIndex = 88;
+            this.dataGridLotesAssociados_Pocilga.Visible = false;
             // 
-            // btnFiltroEnt2
+            // button1
             // 
-            this.btnFiltroEnt2.AutoSize = true;
-            this.btnFiltroEnt2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFiltroEnt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnFiltroEnt2.FlatAppearance.BorderSize = 0;
-            this.btnFiltroEnt2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroEnt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroEnt2.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroEnt2.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            this.btnFiltroEnt2.IconColor = System.Drawing.Color.White;
-            this.btnFiltroEnt2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroEnt2.IconSize = 25;
-            this.btnFiltroEnt2.Location = new System.Drawing.Point(443, 169);
-            this.btnFiltroEnt2.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFiltroEnt2.Name = "btnFiltroEnt2";
-            this.btnFiltroEnt2.Size = new System.Drawing.Size(131, 31);
-            this.btnFiltroEnt2.TabIndex = 10;
-            this.btnFiltroEnt2.Text = "Especialidade";
-            this.btnFiltroEnt2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltroEnt2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnFiltroEnt2.UseVisualStyleBackColor = false;
-            this.btnFiltroEnt2.Visible = false;
-            this.btnFiltroEnt2.Click += new System.EventHandler(this.btnFiltroEnt2_Click);
+            this.button1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(448, 455);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 30);
+            this.button1.TabIndex = 89;
+            this.button1.Text = "Limpar";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // btnFiltroEnt3
+            // btnExcluirFazenda
             // 
-            this.btnFiltroEnt3.AutoSize = true;
-            this.btnFiltroEnt3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFiltroEnt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnFiltroEnt3.FlatAppearance.BorderSize = 0;
-            this.btnFiltroEnt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroEnt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroEnt3.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroEnt3.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            this.btnFiltroEnt3.IconColor = System.Drawing.Color.White;
-            this.btnFiltroEnt3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroEnt3.IconSize = 25;
-            this.btnFiltroEnt3.Location = new System.Drawing.Point(586, 169);
-            this.btnFiltroEnt3.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFiltroEnt3.Name = "btnFiltroEnt3";
-            this.btnFiltroEnt3.Size = new System.Drawing.Size(131, 31);
-            this.btnFiltroEnt3.TabIndex = 10;
-            this.btnFiltroEnt3.Text = "Especialidade";
-            this.btnFiltroEnt3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltroEnt3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnFiltroEnt3.UseVisualStyleBackColor = false;
-            this.btnFiltroEnt3.Visible = false;
-            this.btnFiltroEnt3.Click += new System.EventHandler(this.btnFiltroEnt3_Click);
+            this.btnExcluirFazenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.btnExcluirFazenda.FlatAppearance.BorderSize = 0;
+            this.btnExcluirFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluirFazenda.ForeColor = System.Drawing.Color.White;
+            this.btnExcluirFazenda.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnExcluirFazenda.IconColor = System.Drawing.Color.White;
+            this.btnExcluirFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExcluirFazenda.IconSize = 20;
+            this.btnExcluirFazenda.Location = new System.Drawing.Point(587, 455);
+            this.btnExcluirFazenda.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExcluirFazenda.Name = "btnExcluirFazenda";
+            this.btnExcluirFazenda.Size = new System.Drawing.Size(106, 30);
+            this.btnExcluirFazenda.TabIndex = 90;
+            this.btnExcluirFazenda.Text = "Excluir";
+            this.btnExcluirFazenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluirFazenda.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnExcluirFazenda.UseVisualStyleBackColor = false;
             // 
-            // btnFiltroEnt1
+            // iconButton1
             // 
-            this.btnFiltroEnt1.AutoSize = true;
-            this.btnFiltroEnt1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFiltroEnt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnFiltroEnt1.FlatAppearance.BorderSize = 0;
-            this.btnFiltroEnt1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroEnt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroEnt1.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroEnt1.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            this.btnFiltroEnt1.IconColor = System.Drawing.Color.White;
-            this.btnFiltroEnt1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroEnt1.IconSize = 25;
-            this.btnFiltroEnt1.Location = new System.Drawing.Point(300, 169);
-            this.btnFiltroEnt1.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFiltroEnt1.Name = "btnFiltroEnt1";
-            this.btnFiltroEnt1.Size = new System.Drawing.Size(131, 31);
-            this.btnFiltroEnt1.TabIndex = 9;
-            this.btnFiltroEnt1.Text = "Especialidade";
-            this.btnFiltroEnt1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltroEnt1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnFiltroEnt1.UseVisualStyleBackColor = false;
-            this.btnFiltroEnt1.Visible = false;
-            this.btnFiltroEnt1.Click += new System.EventHandler(this.btnFiltroEnt1_Click);
-            // 
-            // btnAddFiltroEntidade
-            // 
-            this.btnAddFiltroEntidade.FlatAppearance.BorderSize = 0;
-            this.btnAddFiltroEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddFiltroEntidade.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAddFiltroEntidade.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnAddFiltroEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddFiltroEntidade.IconSize = 35;
-            this.btnAddFiltroEntidade.Location = new System.Drawing.Point(943, 112);
-            this.btnAddFiltroEntidade.Name = "btnAddFiltroEntidade";
-            this.btnAddFiltroEntidade.Size = new System.Drawing.Size(30, 30);
-            this.btnAddFiltroEntidade.TabIndex = 5;
-            this.btnAddFiltroEntidade.UseVisualStyleBackColor = true;
-            this.btnAddFiltroEntidade.Click += new System.EventHandler(this.btnAdicionarFiltroEntidade_Click);
-            // 
-            // btnFiltroFaz2
-            // 
-            this.btnFiltroFaz2.AutoSize = true;
-            this.btnFiltroFaz2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFiltroFaz2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnFiltroFaz2.FlatAppearance.BorderSize = 0;
-            this.btnFiltroFaz2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroFaz2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroFaz2.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroFaz2.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            this.btnFiltroFaz2.IconColor = System.Drawing.Color.White;
-            this.btnFiltroFaz2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroFaz2.IconSize = 25;
-            this.btnFiltroFaz2.Location = new System.Drawing.Point(443, 169);
-            this.btnFiltroFaz2.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFiltroFaz2.Name = "btnFiltroFaz2";
-            this.btnFiltroFaz2.Size = new System.Drawing.Size(131, 31);
-            this.btnFiltroFaz2.TabIndex = 10;
-            this.btnFiltroFaz2.Text = "Especialidade";
-            this.btnFiltroFaz2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltroFaz2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnFiltroFaz2.UseVisualStyleBackColor = false;
-            this.btnFiltroFaz2.Visible = false;
-            this.btnFiltroFaz2.Click += new System.EventHandler(this.btnFiltroFaz2_Click);
-            // 
-            // btnFiltroFaz3
-            // 
-            this.btnFiltroFaz3.AutoSize = true;
-            this.btnFiltroFaz3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFiltroFaz3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnFiltroFaz3.FlatAppearance.BorderSize = 0;
-            this.btnFiltroFaz3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroFaz3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroFaz3.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroFaz3.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            this.btnFiltroFaz3.IconColor = System.Drawing.Color.White;
-            this.btnFiltroFaz3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroFaz3.IconSize = 25;
-            this.btnFiltroFaz3.Location = new System.Drawing.Point(586, 169);
-            this.btnFiltroFaz3.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFiltroFaz3.Name = "btnFiltroFaz3";
-            this.btnFiltroFaz3.Size = new System.Drawing.Size(131, 31);
-            this.btnFiltroFaz3.TabIndex = 10;
-            this.btnFiltroFaz3.Text = "Especialidade";
-            this.btnFiltroFaz3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltroFaz3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnFiltroFaz3.UseVisualStyleBackColor = false;
-            this.btnFiltroFaz3.Visible = false;
-            this.btnFiltroFaz3.Click += new System.EventHandler(this.btnFiltroFaz3_Click);
-            // 
-            // btnFiltroFaz1
-            // 
-            this.btnFiltroFaz1.AutoSize = true;
-            this.btnFiltroFaz1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFiltroFaz1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnFiltroFaz1.FlatAppearance.BorderSize = 0;
-            this.btnFiltroFaz1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroFaz1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroFaz1.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroFaz1.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            this.btnFiltroFaz1.IconColor = System.Drawing.Color.White;
-            this.btnFiltroFaz1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroFaz1.IconSize = 25;
-            this.btnFiltroFaz1.Location = new System.Drawing.Point(300, 169);
-            this.btnFiltroFaz1.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFiltroFaz1.Name = "btnFiltroFaz1";
-            this.btnFiltroFaz1.Size = new System.Drawing.Size(131, 31);
-            this.btnFiltroFaz1.TabIndex = 9;
-            this.btnFiltroFaz1.Text = "Especialidade";
-            this.btnFiltroFaz1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltroFaz1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnFiltroFaz1.UseVisualStyleBackColor = false;
-            this.btnFiltroFaz1.Visible = false;
-            this.btnFiltroFaz1.Click += new System.EventHandler(this.btnFiltroFaz1_Click);
-            // 
-            // btnAddFiltroFazenda
-            // 
-            this.btnAddFiltroFazenda.FlatAppearance.BorderSize = 0;
-            this.btnAddFiltroFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddFiltroFazenda.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAddFiltroFazenda.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnAddFiltroFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddFiltroFazenda.IconSize = 35;
-            this.btnAddFiltroFazenda.Location = new System.Drawing.Point(943, 112);
-            this.btnAddFiltroFazenda.Name = "btnAddFiltroFazenda";
-            this.btnAddFiltroFazenda.Size = new System.Drawing.Size(30, 30);
-            this.btnAddFiltroFazenda.TabIndex = 5;
-            this.btnAddFiltroFazenda.UseVisualStyleBackColor = true;
-            this.btnAddFiltroFazenda.Click += new System.EventHandler(this.btnAdicionarFiltroFazenda_Click);
-            // 
-            // btnFiltroAco2
-            // 
-            this.btnFiltroAco2.AutoSize = true;
-            this.btnFiltroAco2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFiltroAco2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnFiltroAco2.FlatAppearance.BorderSize = 0;
-            this.btnFiltroAco2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroAco2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroAco2.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroAco2.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            this.btnFiltroAco2.IconColor = System.Drawing.Color.White;
-            this.btnFiltroAco2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroAco2.IconSize = 25;
-            this.btnFiltroAco2.Location = new System.Drawing.Point(443, 169);
-            this.btnFiltroAco2.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFiltroAco2.Name = "btnFiltroAco2";
-            this.btnFiltroAco2.Size = new System.Drawing.Size(131, 31);
-            this.btnFiltroAco2.TabIndex = 10;
-            this.btnFiltroAco2.Text = "Especialidade";
-            this.btnFiltroAco2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltroAco2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnFiltroAco2.UseVisualStyleBackColor = false;
-            this.btnFiltroAco2.Visible = false;
-            this.btnFiltroAco2.Click += new System.EventHandler(this.btnFiltroAco2_Click);
-            // 
-            // btnFiltroAco3
-            // 
-            this.btnFiltroAco3.AutoSize = true;
-            this.btnFiltroAco3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFiltroAco3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnFiltroAco3.FlatAppearance.BorderSize = 0;
-            this.btnFiltroAco3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroAco3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroAco3.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroAco3.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            this.btnFiltroAco3.IconColor = System.Drawing.Color.White;
-            this.btnFiltroAco3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroAco3.IconSize = 25;
-            this.btnFiltroAco3.Location = new System.Drawing.Point(586, 169);
-            this.btnFiltroAco3.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFiltroAco3.Name = "btnFiltroAco3";
-            this.btnFiltroAco3.Size = new System.Drawing.Size(131, 31);
-            this.btnFiltroAco3.TabIndex = 10;
-            this.btnFiltroAco3.Text = "Especialidade";
-            this.btnFiltroAco3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltroAco3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnFiltroAco3.UseVisualStyleBackColor = false;
-            this.btnFiltroAco3.Visible = false;
-            this.btnFiltroAco3.Click += new System.EventHandler(this.btnFiltroAco3_Click);
-            // 
-            // btnFiltroAco1
-            // 
-            this.btnFiltroAco1.AutoSize = true;
-            this.btnFiltroAco1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFiltroAco1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnFiltroAco1.FlatAppearance.BorderSize = 0;
-            this.btnFiltroAco1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroAco1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroAco1.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroAco1.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            this.btnFiltroAco1.IconColor = System.Drawing.Color.White;
-            this.btnFiltroAco1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroAco1.IconSize = 25;
-            this.btnFiltroAco1.Location = new System.Drawing.Point(300, 169);
-            this.btnFiltroAco1.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFiltroAco1.Name = "btnFiltroAco1";
-            this.btnFiltroAco1.Size = new System.Drawing.Size(131, 31);
-            this.btnFiltroAco1.TabIndex = 9;
-            this.btnFiltroAco1.Text = "Especialidade";
-            this.btnFiltroAco1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltroAco1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnFiltroAco1.UseVisualStyleBackColor = false;
-            this.btnFiltroAco1.Visible = false;
-            this.btnFiltroAco1.Click += new System.EventHandler(this.btnFiltroAco1_Click);
-            // 
-            // btnAddFiltroAcoes
-            // 
-            this.btnAddFiltroAcoes.FlatAppearance.BorderSize = 0;
-            this.btnAddFiltroAcoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddFiltroAcoes.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAddFiltroAcoes.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnAddFiltroAcoes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddFiltroAcoes.IconSize = 35;
-            this.btnAddFiltroAcoes.Location = new System.Drawing.Point(943, 112);
-            this.btnAddFiltroAcoes.Name = "btnAddFiltroAcoes";
-            this.btnAddFiltroAcoes.Size = new System.Drawing.Size(30, 30);
-            this.btnAddFiltroAcoes.TabIndex = 5;
-            this.btnAddFiltroAcoes.UseVisualStyleBackColor = true;
-            this.btnAddFiltroAcoes.Click += new System.EventHandler(this.btnAdicionarFiltroAcoes_Click);
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.Location = new System.Drawing.Point(590, 354);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(106, 30);
+            this.iconButton1.TabIndex = 91;
+            this.iconButton1.Text = "Excluir";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // FormCadastros
             // 
@@ -2098,6 +2196,7 @@
             this.panelCadastros.ResumeLayout(false);
             this.panelCadastroFazenda.ResumeLayout(false);
             this.panelCadastroFazenda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridLotesAssociados_Pocilga)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2182,7 +2281,6 @@
         private System.Windows.Forms.Label labelPesoMedio_Lote;
         private FontAwesome.Sharp.IconButton btnGravarFazenda;
         private FontAwesome.Sharp.IconButton btnIncluirFazenda;
-        private System.Windows.Forms.Button btnLimparCadastroFazenda;
         private System.Windows.Forms.Label labelSituacao_Lote;
         private System.Windows.Forms.TextBox campoCodigoFazenda;
         private System.Windows.Forms.Label labelCodigoFazenda;
@@ -2233,5 +2331,12 @@
         private System.Windows.Forms.Label labelValidade_Produto;
         private System.Windows.Forms.Label labelTipo_Produto;
         private System.Windows.Forms.ComboBox comboTipo_Produto;
+        private System.Windows.Forms.Label labelCodPocilga_Lote;
+        private System.Windows.Forms.TextBox campoCodPocilga_Lote;
+        private System.Windows.Forms.DataGridView dataGridLotesAssociados_Pocilga;
+        private System.Windows.Forms.Label labelLotesAssociados_Pocilga;
+        private FontAwesome.Sharp.IconButton btnExcluirFazenda;
+        private System.Windows.Forms.Button button1;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

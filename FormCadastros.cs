@@ -489,6 +489,8 @@ namespace fazendaSuinos
                 labelObservacoes_Lote.Visible = true;
                 campoCodGerente_Lote.Visible = true;
                 textoObservacoes_Lote.Visible = true;
+                labelCodPocilga_Lote.Visible = true;
+                campoCodPocilga_Lote.Visible = true;
 
                 ResumeLayout();
             }
@@ -504,6 +506,8 @@ namespace fazendaSuinos
                 textoDescricao_Pocilga.Visible = true;
                 labelCodPropriedade_Pocilga.Visible = true;
                 campoCodPropriedade_Pocilga.Visible = true;
+                labelLotesAssociados_Pocilga.Visible = true;
+                dataGridLotesAssociados_Pocilga.Visible = true;
 
                 ResumeLayout();
             }
@@ -581,6 +585,8 @@ namespace fazendaSuinos
             labelObservacoes_Lote.Visible = false;
             campoCodGerente_Lote.Visible = false;
             textoObservacoes_Lote.Visible = false;
+            labelCodPocilga_Lote.Visible = false;
+            campoCodPocilga_Lote.Visible = false;
 
             //Dados de VISITA
             labelData_Visita.Visible = false;
@@ -605,6 +611,8 @@ namespace fazendaSuinos
             textoDescricao_Pocilga.Visible = false;
             labelCodPropriedade_Pocilga.Visible = false;
             campoCodPropriedade_Pocilga.Visible = false;
+            labelLotesAssociados_Pocilga.Visible = false;
+            dataGridLotesAssociados_Pocilga.Visible = false;
 
             //Dados de PROPRIEDADE
             labelNome_Propriedade.Visible = false;
