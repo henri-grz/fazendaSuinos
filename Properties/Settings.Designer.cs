@@ -33,5 +33,16 @@ namespace fazendaSuinos.Properties {
                 return ((string)(this["fazendaSuinosDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\sqlexpress;Initial Catalog=fazendaSuinos;User ID=admin;Pass" +
+            "word=rodolfo;Encrypt=False")]
+        public string fazendaSuinosConnectionString {
+            get {
+                return ((string)(this["fazendaSuinosConnectionString"]));
+            }
+        }
     }
 }

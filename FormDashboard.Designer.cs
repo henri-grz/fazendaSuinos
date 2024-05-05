@@ -29,32 +29,32 @@
         private void InitializeComponent()
         {
             this.panelDashboard = new System.Windows.Forms.Panel();
-            this.panelHoje = new System.Windows.Forms.Panel();
-            this.panelDetalhesLote = new System.Windows.Forms.Panel();
             this.panelAcoesCorretivas = new System.Windows.Forms.Panel();
-            this.labelDashHoje = new System.Windows.Forms.Label();
-            this.labelDashDetalhes = new System.Windows.Forms.Label();
             this.labelDashAcoes = new System.Windows.Forms.Label();
-            this.labelDetCod = new System.Windows.Forms.Label();
-            this.labelDetQuant = new System.Windows.Forms.Label();
-            this.labelDetPesoTotal = new System.Windows.Forms.Label();
-            this.labelDetPesoMedio = new System.Windows.Forms.Label();
-            this.labelDetSituacao = new System.Windows.Forms.Label();
-            this.labelDetDataAloj = new System.Windows.Forms.Label();
-            this.labelDetDataCarreg = new System.Windows.Forms.Label();
-            this.labelDetCodGerente = new System.Windows.Forms.Label();
-            this.campoDetCod = new System.Windows.Forms.TextBox();
-            this.campoDetQuant = new System.Windows.Forms.TextBox();
-            this.campoDetPesoTotal = new System.Windows.Forms.TextBox();
-            this.campoDetPesoMedio = new System.Windows.Forms.TextBox();
-            this.campoDetSituacao = new System.Windows.Forms.TextBox();
-            this.campoDetDataAloj = new System.Windows.Forms.TextBox();
-            this.campoDetDataCarreg = new System.Windows.Forms.TextBox();
+            this.panelDetalhesLote = new System.Windows.Forms.Panel();
             this.campoDetCodGerente = new System.Windows.Forms.TextBox();
+            this.campoDetDataCarreg = new System.Windows.Forms.TextBox();
+            this.campoDetDataAloj = new System.Windows.Forms.TextBox();
+            this.campoDetSituacao = new System.Windows.Forms.TextBox();
+            this.campoDetPesoMedio = new System.Windows.Forms.TextBox();
+            this.campoDetPesoTotal = new System.Windows.Forms.TextBox();
+            this.campoDetQuant = new System.Windows.Forms.TextBox();
+            this.campoDetCod = new System.Windows.Forms.TextBox();
+            this.labelDetCodGerente = new System.Windows.Forms.Label();
+            this.labelDetDataCarreg = new System.Windows.Forms.Label();
+            this.labelDetDataAloj = new System.Windows.Forms.Label();
+            this.labelDetSituacao = new System.Windows.Forms.Label();
+            this.labelDetPesoMedio = new System.Windows.Forms.Label();
+            this.labelDetPesoTotal = new System.Windows.Forms.Label();
+            this.labelDetQuant = new System.Windows.Forms.Label();
+            this.labelDetCod = new System.Windows.Forms.Label();
+            this.labelDashDetalhes = new System.Windows.Forms.Label();
+            this.panelHoje = new System.Windows.Forms.Panel();
+            this.labelDashHoje = new System.Windows.Forms.Label();
             this.panelDashboard.SuspendLayout();
-            this.panelHoje.SuspendLayout();
-            this.panelDetalhesLote.SuspendLayout();
             this.panelAcoesCorretivas.SuspendLayout();
+            this.panelDetalhesLote.SuspendLayout();
+            this.panelHoje.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDashboard
@@ -65,17 +65,28 @@
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDashboard.Location = new System.Drawing.Point(0, 0);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(1355, 857);
+            this.panelDashboard.Size = new System.Drawing.Size(1355, 845);
             this.panelDashboard.TabIndex = 0;
             // 
-            // panelHoje
+            // panelAcoesCorretivas
             // 
-            this.panelHoje.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.panelHoje.Controls.Add(this.labelDashHoje);
-            this.panelHoje.Location = new System.Drawing.Point(85, 65);
-            this.panelHoje.Name = "panelHoje";
-            this.panelHoje.Size = new System.Drawing.Size(496, 316);
-            this.panelHoje.TabIndex = 0;
+            this.panelAcoesCorretivas.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panelAcoesCorretivas.Controls.Add(this.labelDashAcoes);
+            this.panelAcoesCorretivas.Location = new System.Drawing.Point(85, 428);
+            this.panelAcoesCorretivas.Name = "panelAcoesCorretivas";
+            this.panelAcoesCorretivas.Size = new System.Drawing.Size(1043, 306);
+            this.panelAcoesCorretivas.TabIndex = 2;
+            // 
+            // labelDashAcoes
+            // 
+            this.labelDashAcoes.AutoSize = true;
+            this.labelDashAcoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDashAcoes.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelDashAcoes.Location = new System.Drawing.Point(35, 32);
+            this.labelDashAcoes.Name = "labelDashAcoes";
+            this.labelDashAcoes.Size = new System.Drawing.Size(276, 37);
+            this.labelDashAcoes.TabIndex = 1;
+            this.labelDashAcoes.Text = "Ações Corretivas";
             // 
             // panelDetalhesLote
             // 
@@ -102,196 +113,17 @@
             this.panelDetalhesLote.Size = new System.Drawing.Size(496, 316);
             this.panelDetalhesLote.TabIndex = 1;
             // 
-            // panelAcoesCorretivas
+            // campoDetCodGerente
             // 
-            this.panelAcoesCorretivas.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.panelAcoesCorretivas.Controls.Add(this.labelDashAcoes);
-            this.panelAcoesCorretivas.Location = new System.Drawing.Point(85, 428);
-            this.panelAcoesCorretivas.Name = "panelAcoesCorretivas";
-            this.panelAcoesCorretivas.Size = new System.Drawing.Size(1043, 306);
-            this.panelAcoesCorretivas.TabIndex = 2;
-            // 
-            // labelDashHoje
-            // 
-            this.labelDashHoje.AutoSize = true;
-            this.labelDashHoje.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDashHoje.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelDashHoje.Location = new System.Drawing.Point(35, 25);
-            this.labelDashHoje.Name = "labelDashHoje";
-            this.labelDashHoje.Size = new System.Drawing.Size(86, 37);
-            this.labelDashHoje.TabIndex = 0;
-            this.labelDashHoje.Text = "Hoje";
-            // 
-            // labelDashDetalhes
-            // 
-            this.labelDashDetalhes.AutoSize = true;
-            this.labelDashDetalhes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDashDetalhes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelDashDetalhes.Location = new System.Drawing.Point(34, 25);
-            this.labelDashDetalhes.Name = "labelDashDetalhes";
-            this.labelDashDetalhes.Size = new System.Drawing.Size(150, 37);
-            this.labelDashDetalhes.TabIndex = 1;
-            this.labelDashDetalhes.Text = "Detalhes";
-            // 
-            // labelDashAcoes
-            // 
-            this.labelDashAcoes.AutoSize = true;
-            this.labelDashAcoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDashAcoes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelDashAcoes.Location = new System.Drawing.Point(35, 32);
-            this.labelDashAcoes.Name = "labelDashAcoes";
-            this.labelDashAcoes.Size = new System.Drawing.Size(276, 37);
-            this.labelDashAcoes.TabIndex = 1;
-            this.labelDashAcoes.Text = "Ações Corretivas";
-            // 
-            // labelDetCod
-            // 
-            this.labelDetCod.AutoSize = true;
-            this.labelDetCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetCod.Location = new System.Drawing.Point(311, 34);
-            this.labelDetCod.Name = "labelDetCod";
-            this.labelDetCod.Size = new System.Drawing.Size(60, 18);
-            this.labelDetCod.TabIndex = 2;
-            this.labelDetCod.Text = "Código:";
-            // 
-            // labelDetQuant
-            // 
-            this.labelDetQuant.AutoSize = true;
-            this.labelDetQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetQuant.Location = new System.Drawing.Point(47, 85);
-            this.labelDetQuant.Name = "labelDetQuant";
-            this.labelDetQuant.Size = new System.Drawing.Size(87, 18);
-            this.labelDetQuant.TabIndex = 3;
-            this.labelDetQuant.Text = "Quantidade:";
-            // 
-            // labelDetPesoTotal
-            // 
-            this.labelDetPesoTotal.AutoSize = true;
-            this.labelDetPesoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetPesoTotal.Location = new System.Drawing.Point(47, 113);
-            this.labelDetPesoTotal.Name = "labelDetPesoTotal";
-            this.labelDetPesoTotal.Size = new System.Drawing.Size(84, 18);
-            this.labelDetPesoTotal.TabIndex = 4;
-            this.labelDetPesoTotal.Text = "Peso Total:";
-            // 
-            // labelDetPesoMedio
-            // 
-            this.labelDetPesoMedio.AutoSize = true;
-            this.labelDetPesoMedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetPesoMedio.Location = new System.Drawing.Point(47, 141);
-            this.labelDetPesoMedio.Name = "labelDetPesoMedio";
-            this.labelDetPesoMedio.Size = new System.Drawing.Size(92, 18);
-            this.labelDetPesoMedio.TabIndex = 5;
-            this.labelDetPesoMedio.Text = "Peso Médio:";
-            // 
-            // labelDetSituacao
-            // 
-            this.labelDetSituacao.AutoSize = true;
-            this.labelDetSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetSituacao.Location = new System.Drawing.Point(47, 169);
-            this.labelDetSituacao.Name = "labelDetSituacao";
-            this.labelDetSituacao.Size = new System.Drawing.Size(70, 18);
-            this.labelDetSituacao.TabIndex = 6;
-            this.labelDetSituacao.Text = "Situação:";
-            // 
-            // labelDetDataAloj
-            // 
-            this.labelDetDataAloj.AutoSize = true;
-            this.labelDetDataAloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetDataAloj.Location = new System.Drawing.Point(47, 197);
-            this.labelDetDataAloj.Name = "labelDetDataAloj";
-            this.labelDetDataAloj.Size = new System.Drawing.Size(141, 18);
-            this.labelDetDataAloj.TabIndex = 7;
-            this.labelDetDataAloj.Text = "Data de Alojamento:";
-            // 
-            // labelDetDataCarreg
-            // 
-            this.labelDetDataCarreg.AutoSize = true;
-            this.labelDetDataCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetDataCarreg.Location = new System.Drawing.Point(47, 225);
-            this.labelDetDataCarreg.Name = "labelDetDataCarreg";
-            this.labelDetDataCarreg.Size = new System.Drawing.Size(162, 18);
-            this.labelDetDataCarreg.TabIndex = 8;
-            this.labelDetDataCarreg.Text = "Data de Carregamento:";
-            // 
-            // labelDetCodGerente
-            // 
-            this.labelDetCodGerente.AutoSize = true;
-            this.labelDetCodGerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetCodGerente.Location = new System.Drawing.Point(47, 253);
-            this.labelDetCodGerente.Name = "labelDetCodGerente";
-            this.labelDetCodGerente.Size = new System.Drawing.Size(138, 18);
-            this.labelDetCodGerente.TabIndex = 9;
-            this.labelDetCodGerente.Text = "Código do Gerente:";
-            // 
-            // campoDetCod
-            // 
-            this.campoDetCod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoDetCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetCod.Location = new System.Drawing.Point(377, 34);
-            this.campoDetCod.Name = "campoDetCod";
-            this.campoDetCod.Size = new System.Drawing.Size(76, 19);
-            this.campoDetCod.TabIndex = 10;
-            // 
-            // campoDetQuant
-            // 
-            this.campoDetQuant.BackColor = System.Drawing.Color.White;
-            this.campoDetQuant.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoDetQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetQuant.Location = new System.Drawing.Point(279, 84);
-            this.campoDetQuant.Name = "campoDetQuant";
-            this.campoDetQuant.ReadOnly = true;
-            this.campoDetQuant.Size = new System.Drawing.Size(174, 19);
-            this.campoDetQuant.TabIndex = 11;
-            this.campoDetQuant.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // campoDetPesoTotal
-            // 
-            this.campoDetPesoTotal.BackColor = System.Drawing.Color.White;
-            this.campoDetPesoTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoDetPesoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetPesoTotal.Location = new System.Drawing.Point(279, 113);
-            this.campoDetPesoTotal.Name = "campoDetPesoTotal";
-            this.campoDetPesoTotal.ReadOnly = true;
-            this.campoDetPesoTotal.Size = new System.Drawing.Size(174, 19);
-            this.campoDetPesoTotal.TabIndex = 12;
-            this.campoDetPesoTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // campoDetPesoMedio
-            // 
-            this.campoDetPesoMedio.BackColor = System.Drawing.Color.White;
-            this.campoDetPesoMedio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoDetPesoMedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetPesoMedio.Location = new System.Drawing.Point(279, 141);
-            this.campoDetPesoMedio.Name = "campoDetPesoMedio";
-            this.campoDetPesoMedio.ReadOnly = true;
-            this.campoDetPesoMedio.Size = new System.Drawing.Size(174, 19);
-            this.campoDetPesoMedio.TabIndex = 13;
-            this.campoDetPesoMedio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // campoDetSituacao
-            // 
-            this.campoDetSituacao.BackColor = System.Drawing.Color.White;
-            this.campoDetSituacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoDetSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetSituacao.Location = new System.Drawing.Point(279, 169);
-            this.campoDetSituacao.Name = "campoDetSituacao";
-            this.campoDetSituacao.ReadOnly = true;
-            this.campoDetSituacao.Size = new System.Drawing.Size(174, 19);
-            this.campoDetSituacao.TabIndex = 14;
-            this.campoDetSituacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // campoDetDataAloj
-            // 
-            this.campoDetDataAloj.BackColor = System.Drawing.Color.White;
-            this.campoDetDataAloj.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoDetDataAloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetDataAloj.Location = new System.Drawing.Point(279, 197);
-            this.campoDetDataAloj.Name = "campoDetDataAloj";
-            this.campoDetDataAloj.ReadOnly = true;
-            this.campoDetDataAloj.Size = new System.Drawing.Size(174, 19);
-            this.campoDetDataAloj.TabIndex = 15;
-            this.campoDetDataAloj.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.campoDetCodGerente.BackColor = System.Drawing.Color.White;
+            this.campoDetCodGerente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoDetCodGerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.campoDetCodGerente.Location = new System.Drawing.Point(279, 253);
+            this.campoDetCodGerente.Name = "campoDetCodGerente";
+            this.campoDetCodGerente.ReadOnly = true;
+            this.campoDetCodGerente.Size = new System.Drawing.Size(174, 19);
+            this.campoDetCodGerente.TabIndex = 17;
+            this.campoDetCodGerente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // campoDetDataCarreg
             // 
@@ -305,34 +137,202 @@
             this.campoDetDataCarreg.TabIndex = 16;
             this.campoDetDataCarreg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // campoDetCodGerente
+            // campoDetDataAloj
             // 
-            this.campoDetCodGerente.BackColor = System.Drawing.Color.White;
-            this.campoDetCodGerente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoDetCodGerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetCodGerente.Location = new System.Drawing.Point(279, 253);
-            this.campoDetCodGerente.Name = "campoDetCodGerente";
-            this.campoDetCodGerente.ReadOnly = true;
-            this.campoDetCodGerente.Size = new System.Drawing.Size(174, 19);
-            this.campoDetCodGerente.TabIndex = 17;
-            this.campoDetCodGerente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.campoDetDataAloj.BackColor = System.Drawing.Color.White;
+            this.campoDetDataAloj.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoDetDataAloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.campoDetDataAloj.Location = new System.Drawing.Point(279, 197);
+            this.campoDetDataAloj.Name = "campoDetDataAloj";
+            this.campoDetDataAloj.ReadOnly = true;
+            this.campoDetDataAloj.Size = new System.Drawing.Size(174, 19);
+            this.campoDetDataAloj.TabIndex = 15;
+            this.campoDetDataAloj.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // campoDetSituacao
+            // 
+            this.campoDetSituacao.BackColor = System.Drawing.Color.White;
+            this.campoDetSituacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoDetSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.campoDetSituacao.Location = new System.Drawing.Point(279, 169);
+            this.campoDetSituacao.Name = "campoDetSituacao";
+            this.campoDetSituacao.ReadOnly = true;
+            this.campoDetSituacao.Size = new System.Drawing.Size(174, 19);
+            this.campoDetSituacao.TabIndex = 14;
+            this.campoDetSituacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // campoDetPesoMedio
+            // 
+            this.campoDetPesoMedio.BackColor = System.Drawing.Color.White;
+            this.campoDetPesoMedio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoDetPesoMedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.campoDetPesoMedio.Location = new System.Drawing.Point(279, 141);
+            this.campoDetPesoMedio.Name = "campoDetPesoMedio";
+            this.campoDetPesoMedio.ReadOnly = true;
+            this.campoDetPesoMedio.Size = new System.Drawing.Size(174, 19);
+            this.campoDetPesoMedio.TabIndex = 13;
+            this.campoDetPesoMedio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // campoDetPesoTotal
+            // 
+            this.campoDetPesoTotal.BackColor = System.Drawing.Color.White;
+            this.campoDetPesoTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoDetPesoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.campoDetPesoTotal.Location = new System.Drawing.Point(279, 113);
+            this.campoDetPesoTotal.Name = "campoDetPesoTotal";
+            this.campoDetPesoTotal.ReadOnly = true;
+            this.campoDetPesoTotal.Size = new System.Drawing.Size(174, 19);
+            this.campoDetPesoTotal.TabIndex = 12;
+            this.campoDetPesoTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // campoDetQuant
+            // 
+            this.campoDetQuant.BackColor = System.Drawing.Color.White;
+            this.campoDetQuant.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoDetQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.campoDetQuant.Location = new System.Drawing.Point(279, 84);
+            this.campoDetQuant.Name = "campoDetQuant";
+            this.campoDetQuant.ReadOnly = true;
+            this.campoDetQuant.Size = new System.Drawing.Size(174, 19);
+            this.campoDetQuant.TabIndex = 11;
+            this.campoDetQuant.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // campoDetCod
+            // 
+            this.campoDetCod.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoDetCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.campoDetCod.Location = new System.Drawing.Point(377, 34);
+            this.campoDetCod.Name = "campoDetCod";
+            this.campoDetCod.Size = new System.Drawing.Size(76, 19);
+            this.campoDetCod.TabIndex = 10;
+            // 
+            // labelDetCodGerente
+            // 
+            this.labelDetCodGerente.AutoSize = true;
+            this.labelDetCodGerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelDetCodGerente.Location = new System.Drawing.Point(47, 253);
+            this.labelDetCodGerente.Name = "labelDetCodGerente";
+            this.labelDetCodGerente.Size = new System.Drawing.Size(138, 18);
+            this.labelDetCodGerente.TabIndex = 9;
+            this.labelDetCodGerente.Text = "Código do Gerente:";
+            // 
+            // labelDetDataCarreg
+            // 
+            this.labelDetDataCarreg.AutoSize = true;
+            this.labelDetDataCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelDetDataCarreg.Location = new System.Drawing.Point(47, 225);
+            this.labelDetDataCarreg.Name = "labelDetDataCarreg";
+            this.labelDetDataCarreg.Size = new System.Drawing.Size(162, 18);
+            this.labelDetDataCarreg.TabIndex = 8;
+            this.labelDetDataCarreg.Text = "Data de Carregamento:";
+            // 
+            // labelDetDataAloj
+            // 
+            this.labelDetDataAloj.AutoSize = true;
+            this.labelDetDataAloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelDetDataAloj.Location = new System.Drawing.Point(47, 197);
+            this.labelDetDataAloj.Name = "labelDetDataAloj";
+            this.labelDetDataAloj.Size = new System.Drawing.Size(141, 18);
+            this.labelDetDataAloj.TabIndex = 7;
+            this.labelDetDataAloj.Text = "Data de Alojamento:";
+            // 
+            // labelDetSituacao
+            // 
+            this.labelDetSituacao.AutoSize = true;
+            this.labelDetSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelDetSituacao.Location = new System.Drawing.Point(47, 169);
+            this.labelDetSituacao.Name = "labelDetSituacao";
+            this.labelDetSituacao.Size = new System.Drawing.Size(70, 18);
+            this.labelDetSituacao.TabIndex = 6;
+            this.labelDetSituacao.Text = "Situação:";
+            // 
+            // labelDetPesoMedio
+            // 
+            this.labelDetPesoMedio.AutoSize = true;
+            this.labelDetPesoMedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelDetPesoMedio.Location = new System.Drawing.Point(47, 141);
+            this.labelDetPesoMedio.Name = "labelDetPesoMedio";
+            this.labelDetPesoMedio.Size = new System.Drawing.Size(92, 18);
+            this.labelDetPesoMedio.TabIndex = 5;
+            this.labelDetPesoMedio.Text = "Peso Médio:";
+            // 
+            // labelDetPesoTotal
+            // 
+            this.labelDetPesoTotal.AutoSize = true;
+            this.labelDetPesoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelDetPesoTotal.Location = new System.Drawing.Point(47, 113);
+            this.labelDetPesoTotal.Name = "labelDetPesoTotal";
+            this.labelDetPesoTotal.Size = new System.Drawing.Size(84, 18);
+            this.labelDetPesoTotal.TabIndex = 4;
+            this.labelDetPesoTotal.Text = "Peso Total:";
+            // 
+            // labelDetQuant
+            // 
+            this.labelDetQuant.AutoSize = true;
+            this.labelDetQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelDetQuant.Location = new System.Drawing.Point(47, 85);
+            this.labelDetQuant.Name = "labelDetQuant";
+            this.labelDetQuant.Size = new System.Drawing.Size(87, 18);
+            this.labelDetQuant.TabIndex = 3;
+            this.labelDetQuant.Text = "Quantidade:";
+            // 
+            // labelDetCod
+            // 
+            this.labelDetCod.AutoSize = true;
+            this.labelDetCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.labelDetCod.Location = new System.Drawing.Point(311, 34);
+            this.labelDetCod.Name = "labelDetCod";
+            this.labelDetCod.Size = new System.Drawing.Size(60, 18);
+            this.labelDetCod.TabIndex = 2;
+            this.labelDetCod.Text = "Código:";
+            // 
+            // labelDashDetalhes
+            // 
+            this.labelDashDetalhes.AutoSize = true;
+            this.labelDashDetalhes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDashDetalhes.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelDashDetalhes.Location = new System.Drawing.Point(34, 25);
+            this.labelDashDetalhes.Name = "labelDashDetalhes";
+            this.labelDashDetalhes.Size = new System.Drawing.Size(150, 37);
+            this.labelDashDetalhes.TabIndex = 1;
+            this.labelDashDetalhes.Text = "Detalhes";
+            // 
+            // panelHoje
+            // 
+            this.panelHoje.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panelHoje.Controls.Add(this.labelDashHoje);
+            this.panelHoje.Location = new System.Drawing.Point(85, 65);
+            this.panelHoje.Name = "panelHoje";
+            this.panelHoje.Size = new System.Drawing.Size(496, 316);
+            this.panelHoje.TabIndex = 0;
+            // 
+            // labelDashHoje
+            // 
+            this.labelDashHoje.AutoSize = true;
+            this.labelDashHoje.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDashHoje.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelDashHoje.Location = new System.Drawing.Point(35, 25);
+            this.labelDashHoje.Name = "labelDashHoje";
+            this.labelDashHoje.Size = new System.Drawing.Size(86, 37);
+            this.labelDashHoje.TabIndex = 0;
+            this.labelDashHoje.Text = "Hoje";
             // 
             // FormDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1355, 857);
+            this.ClientSize = new System.Drawing.Size(1355, 845);
             this.Controls.Add(this.panelDashboard);
             this.Name = "FormDashboard";
             this.Text = "FormDashboard";
             this.panelDashboard.ResumeLayout(false);
-            this.panelHoje.ResumeLayout(false);
-            this.panelHoje.PerformLayout();
-            this.panelDetalhesLote.ResumeLayout(false);
-            this.panelDetalhesLote.PerformLayout();
             this.panelAcoesCorretivas.ResumeLayout(false);
             this.panelAcoesCorretivas.PerformLayout();
+            this.panelDetalhesLote.ResumeLayout(false);
+            this.panelDetalhesLote.PerformLayout();
+            this.panelHoje.ResumeLayout(false);
+            this.panelHoje.PerformLayout();
             this.ResumeLayout(false);
 
         }

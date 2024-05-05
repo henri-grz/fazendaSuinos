@@ -53,6 +53,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseConnection.cs" />
+    <Compile Include="fazendaSuinosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fazendaSuinosDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="fazendaSuinosDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -97,6 +103,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="fazendaSuinosDataSet.xsc">
+      <DependentUpon>fazendaSuinosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="fazendaSuinosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fazendaSuinosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fazendaSuinosDataSet.xss">
+      <DependentUpon>fazendaSuinosDataSet.xsd</DependentUpon>
+    </None>
     <None Include="fazendaSuinosDBDataSet.xsc">
       <DependentUpon>fazendaSuinosDBDataSet.xsd</DependentUpon>
     </None>

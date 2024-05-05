@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "D:\\Projeto Integrador\\fazendaSuinos\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|d:\\projeto integrador\\fazendasuinos\\formcadastros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formcadastros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|d:\\projeto integrador\\fazendasuinos\\formcadastros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formcadastros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|D:\\Projeto Integrador\\fazendaSuinos\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|D:\\Projeto Integrador\\fazendaSuinos\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|D:\\Projeto Integrador\\fazendaSuinos\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|D:\\Projeto Integrador\\fazendaSuinos\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|D:\\Projeto Integrador\\fazendaSuinos\\formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|D:\\Projeto Integrador\\fazendaSuinos\\formcadastros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formcadastros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,63 +47,62 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "DatabaseConnection.cs",
+              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\DatabaseConnection.cs",
+              "RelativeDocumentMoniker": "DatabaseConnection.cs",
+              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\DatabaseConnection.cs",
+              "RelativeToolTip": "DatabaseConnection.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAuwBQAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T19:15:08.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "FormCadastros.cs",
               "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\FormCadastros.cs",
               "RelativeDocumentMoniker": "FormCadastros.cs",
               "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormCadastros.cs",
               "RelativeToolTip": "FormCadastros.cs",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAAAIsAAAAoAAAA",
+              "ViewState": "AQIAAL4CAAAAAAAAAAAYwMUCAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T12:12:59.739Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormDashboard.cs [Design]",
-              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\FormDashboard.cs",
-              "RelativeDocumentMoniker": "FormDashboard.cs",
-              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormDashboard.cs [Design]",
-              "RelativeToolTip": "FormDashboard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T19:39:46.999Z"
+              "DocumentIndex": 2,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-05T01:37:50.415Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FormMain.cs",
               "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\FormMain.cs",
               "RelativeDocumentMoniker": "FormMain.cs",
               "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormMain.cs",
               "RelativeToolTip": "FormMain.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAUwB0AAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T19:38:46.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T19:38:46.991Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormMain.cs [Design]",
-              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\FormMain.cs",
-              "RelativeDocumentMoniker": "FormMain.cs",
-              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormMain.cs [Design]",
-              "RelativeToolTip": "FormMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T22:58:30.996Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "FormCadastros.cs [Design]",
               "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\FormCadastros.cs",
               "RelativeDocumentMoniker": "FormCadastros.cs",
               "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormCadastros.cs [Design]",
               "RelativeToolTip": "FormCadastros.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T23:11:46.109Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-12T23:11:46.109Z"
             }
           ]
         }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,8 @@ namespace fazendaSuinos
 {
     public partial class FormCadastros : Form
     {
+        private string connectionString = Properties.Settings.Default.fazendaSuinosConnectionString;
+
         // Lista para armazenar os filtros
         private List<string[]> filtrosEnt = new List<string[]>();
         private List<string[]> filtrosFaz = new List<string[]>();
@@ -23,7 +26,7 @@ namespace fazendaSuinos
         private List<IconButton> tagsFiltrosFaz = new List<IconButton>();
         private List<IconButton> tagsFiltrosAco = new List<IconButton>();
 
-
+        private String[] listaTipoEntidade = { "Administrador", "Fornecedor", "Gerente", "Produtor", "Tecnico", "Visita" };
 
         public FormCadastros()
         {
@@ -40,7 +43,7 @@ namespace fazendaSuinos
             tagsFiltrosAco.Add(btnFiltroAco2);
             tagsFiltrosAco.Add(btnFiltroAco3);
 
-        }       
+        }
 
         private void btnEntidades_Click(object sender, EventArgs e)
         {
@@ -88,6 +91,7 @@ namespace fazendaSuinos
             if (comboTipoEntidade.SelectedItem.ToString() == "Fornecedor")
             {
                 escondeTodosCadastroEntidade();
+                limpaCamposCadastro();
 
                 campoRazaoSocial.Visible = true;
                 labelRazaoSocial.Visible = true;
@@ -103,6 +107,7 @@ namespace fazendaSuinos
             else if (comboTipoEntidade.SelectedItem.ToString() == "Gerente")
             {
                 escondeTodosCadastroEntidade();
+                limpaCamposCadastro();
 
                 campoNome.Visible = true;
                 labelNome.Visible = true;
@@ -115,9 +120,10 @@ namespace fazendaSuinos
                 comboSetor.Visible = true;
                 labelSetor.Visible = true;
             }
-            else if(comboTipoEntidade.SelectedItem.ToString() == "Técnico")
+            else if (comboTipoEntidade.SelectedItem.ToString() == "Técnico")
             {
                 escondeTodosCadastroEntidade();
+                limpaCamposCadastro();
 
                 campoNome.Visible = true;
                 labelNome.Visible = true;
@@ -133,6 +139,7 @@ namespace fazendaSuinos
             else
             {
                 escondeTodosCadastroEntidade();
+                limpaCamposCadastro();
 
                 campoNome.Visible = true;
                 labelNome.Visible = true;
@@ -177,7 +184,7 @@ namespace fazendaSuinos
             }
 
             //Verifica se o campo Valor não está vazio
-            if(campoValorEntidade.Text == "" || comboAtributoEntidade.SelectedItem == null)
+            if (campoValorEntidade.Text == "" || comboAtributoEntidade.SelectedItem == null)
             {
                 MessageBox.Show("O valor do atributo e do filtro não podem ser nulos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -298,7 +305,7 @@ namespace fazendaSuinos
 
             btnFiltroEnt2.Visible = false;
             btnFiltroEnt2.Text = "";
-            tagsFiltrosEnt.Add(btnFiltroEnt2);        
+            tagsFiltrosEnt.Add(btnFiltroEnt2);
 
             // Itera pela lista de filtrosEnt para encontrar o item a ser removido
             for (int i = 0; i < filtrosEnt.Count; i++)
@@ -508,7 +515,7 @@ namespace fazendaSuinos
 
                 ResumeLayout();
             }
-            else if(comboTipoFazenda.SelectedItem.ToString() == "Pocilga")
+            else if (comboTipoFazenda.SelectedItem.ToString() == "Pocilga")
             {
                 SuspendLayout();
 
@@ -675,6 +682,128 @@ namespace fazendaSuinos
             labelCNPJ.Visible = false;
             campoCEP.Visible = false;
             labelCEP.Visible = false;
+        }
+
+        private void btnIncluirEntidade_Click(object sender, EventArgs e)
+        {
+            //Vê o índice da Combo Box e atribui o valor a uma string.
+            String entidadeTabela = listaTipoEntidade[comboTipoEntidade.SelectedIndex];
+
+            //Inicia a Query SQL
+            StringBuilder queryBuilder = new StringBuilder("INSERT INTO " + entidadeTabela + "(");
+
+            //Gera a lista com o valor dos devidos campos
+            List<string> listaValores = verificaCamposEntidade();
+
+            //Gera automaticamente a estrutura que vincula o campo da tabela ao valor da Text Box
+            geraDadosQueryEntidade(entidadeTabela, listaValores);
+
+
+        }
+
+        private List<string> verificaCamposEntidade()
+        {
+            List<string> listaValores = new List<string>();
+
+            TextBox[] textboxes =
+            {
+                campoNome,campoCNPJ,
+                campoCPF, campoRazaoSocial,
+                campoCEP, campoTelefone
+            };
+
+            ComboBox[] comboBoxes =
+            {
+                comboSetor, comboEspecialidade
+
+                //NECESSÁRIO AJUSTAR BANCO DE DADOS PARA QUE O CAMPO PRIVILÉGIOS EXISTA
+                //comboSetor, comboEspecialidade, comboPrivilegios
+            };
+
+            foreach(TextBox campo in textboxes)
+            {
+                if (campo.Visible && campo.Text != null)
+                {
+                    listaValores.Add(campo.Text);
+                }
+                else if(campo.Visible && campo.Text == null)
+                {
+                    MessageBox.Show("Há campos obrigatórios em branco.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return null;
+                }
+            }
+            foreach (ComboBox combo in comboBoxes)
+            {
+                if (combo.Visible && combo.Text != null)
+                {
+                    listaValores.Add(combo.Text);
+                }
+                else if (combo.Visible && combo.Text == null)
+                {
+                    MessageBox.Show("Há campos obrigatórios em branco.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return null;
+                }
+            }
+
+            foreach(string valor in listaValores)
+            {
+                Console.WriteLine(valor);
+            }
+            
+            return listaValores;
+        }
+
+        private void geraDadosQueryEntidade(string tabela, List<string> listaValores)
+        {
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                connection.Open();
+                Console.WriteLine("Abriu com " + tabela);
+
+                // Query para obter os nomes dos campos da tabela
+                string query = $"SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{tabela}' AND LEFT(COLUMN_NAME, 3) != 'Cod'";
+
+                using (SqlCommand command = connection.CreateCommand(query))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Lista para armazenar os nomes dos campos
+                        var nomesCampos = new List<string>();
+
+                        // Lê os nomes dos campos retornados pela consulta
+                        while (reader.Read())
+                        {
+                            string nomeCampo = reader.GetString(0);
+                            nomesCampos.Add(nomeCampo);
+
+                            Console.WriteLine($"{nomeCampo}");
+                        }
+
+                        Dictionary<string, string> dados = new Dictionary<string, string>();
+
+                        // Verifica se as listas têm o mesmo comprimento
+                        if (nomesCampos.Count == listaValores.Count)
+                        {
+                            // Adiciona os valores e nomes de campo ao dicionário
+                            for (int i = 0; i < nomesCampos.Count; i++)
+                            {
+                                dados.Add(nomesCampos[i], listaValores[i]);
+                            }
+
+                            // Exibe os dados no dicionário
+                            foreach (var kvp in dados)
+                            {
+                                Console.WriteLine($"Campo: {kvp.Key}, Valor: {kvp.Value}");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("As listas de nomes de campos e valores têm comprimentos diferentes.");
+                            Console.WriteLine("Quantidade de campos: " + nomesCampos.Count + " Quantidade de valores: " + listaValores.Count);
+                        }
+                    }
+                }
+            }
         }
     }
 }

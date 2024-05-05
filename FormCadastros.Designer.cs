@@ -33,9 +33,10 @@
             this.btnAcoesCorretivas = new System.Windows.Forms.Button();
             this.btnFazenda = new System.Windows.Forms.Button();
             this.panelFiltroEntidade = new System.Windows.Forms.Panel();
+            this.flowLayoutFiltroEntidade = new System.Windows.Forms.FlowLayoutPanel();
             this.btnFiltroEnt2 = new FontAwesome.Sharp.IconButton();
-            this.btnFiltroEnt3 = new FontAwesome.Sharp.IconButton();
             this.btnFiltroEnt1 = new FontAwesome.Sharp.IconButton();
+            this.btnFiltroEnt3 = new FontAwesome.Sharp.IconButton();
             this.dataGridEntidade = new System.Windows.Forms.DataGridView();
             this.btnLimparEntidade = new System.Windows.Forms.Button();
             this.btnConsultarEntidade = new System.Windows.Forms.Button();
@@ -47,9 +48,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelFiltros = new System.Windows.Forms.Panel();
             this.panelFiltroFazenda = new System.Windows.Forms.Panel();
+            this.flowLayoutFiltroFazenda = new System.Windows.Forms.FlowLayoutPanel();
             this.btnFiltroFaz2 = new FontAwesome.Sharp.IconButton();
-            this.btnFiltroFaz3 = new FontAwesome.Sharp.IconButton();
             this.btnFiltroFaz1 = new FontAwesome.Sharp.IconButton();
+            this.btnFiltroFaz3 = new FontAwesome.Sharp.IconButton();
             this.dataGridFazenda = new System.Windows.Forms.DataGridView();
             this.btnLimparFazenda = new System.Windows.Forms.Button();
             this.btnConsultarFazenda = new System.Windows.Forms.Button();
@@ -60,9 +62,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panelFiltroAcoes = new System.Windows.Forms.Panel();
+            this.flowLayoutFiltroAcoes = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnFiltroAco1 = new FontAwesome.Sharp.IconButton();
             this.btnFiltroAco2 = new FontAwesome.Sharp.IconButton();
             this.btnFiltroAco3 = new FontAwesome.Sharp.IconButton();
-            this.btnFiltroAco1 = new FontAwesome.Sharp.IconButton();
             this.dataGridAcoes = new System.Windows.Forms.DataGridView();
             this.btnLimparAcoes = new System.Windows.Forms.Button();
             this.btnConsultarAcoes = new System.Windows.Forms.Button();
@@ -73,6 +76,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panelCadastroEntidade = new System.Windows.Forms.Panel();
+            this.btnExcluirEntidade = new FontAwesome.Sharp.IconButton();
             this.campoCEP = new System.Windows.Forms.TextBox();
             this.labelCEP = new System.Windows.Forms.Label();
             this.campoCNPJ = new System.Windows.Forms.TextBox();
@@ -101,6 +105,12 @@
             this.labelDadosEntidades = new System.Windows.Forms.Label();
             this.panelCadastros = new System.Windows.Forms.Panel();
             this.panelCadastroFazenda = new System.Windows.Forms.Panel();
+            this.btnExcluirFazenda = new FontAwesome.Sharp.IconButton();
+            this.btnLimparDadosFazenda = new System.Windows.Forms.Button();
+            this.dataGridLotesAssociados_Pocilga = new System.Windows.Forms.DataGridView();
+            this.labelLotesAssociados_Pocilga = new System.Windows.Forms.Label();
+            this.labelCodPocilga_Lote = new System.Windows.Forms.Label();
+            this.campoCodPocilga_Lote = new System.Windows.Forms.TextBox();
             this.dateTPValidade_Produto = new System.Windows.Forms.DateTimePicker();
             this.labelValidade_Produto = new System.Windows.Forms.Label();
             this.labelTipo_Produto = new System.Windows.Forms.Label();
@@ -156,31 +166,21 @@
             this.comboTipoFazenda = new System.Windows.Forms.ComboBox();
             this.labelTipoFazenda = new System.Windows.Forms.Label();
             this.labelDadosFazenda = new System.Windows.Forms.Label();
-            this.labelCodPocilga_Lote = new System.Windows.Forms.Label();
-            this.campoCodPocilga_Lote = new System.Windows.Forms.TextBox();
-            this.labelLotesAssociados_Pocilga = new System.Windows.Forms.Label();
-            this.dataGridLotesAssociados_Pocilga = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnExcluirFazenda = new FontAwesome.Sharp.IconButton();
-            this.btnExcluirEntidade = new FontAwesome.Sharp.IconButton();
-            this.flowLayoutFiltroAcoes = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutFiltroFazenda = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutFiltroEntidade = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3Botoes.SuspendLayout();
             this.panelFiltroEntidade.SuspendLayout();
+            this.flowLayoutFiltroEntidade.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEntidade)).BeginInit();
             this.panelFiltros.SuspendLayout();
             this.panelFiltroFazenda.SuspendLayout();
+            this.flowLayoutFiltroFazenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFazenda)).BeginInit();
             this.panelFiltroAcoes.SuspendLayout();
+            this.flowLayoutFiltroAcoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAcoes)).BeginInit();
             this.panelCadastroEntidade.SuspendLayout();
             this.panelCadastros.SuspendLayout();
             this.panelCadastroFazenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLotesAssociados_Pocilga)).BeginInit();
-            this.flowLayoutFiltroAcoes.SuspendLayout();
-            this.flowLayoutFiltroFazenda.SuspendLayout();
-            this.flowLayoutFiltroEntidade.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEntidades
@@ -255,6 +255,16 @@
             this.panelFiltroEntidade.TabIndex = 2;
             this.panelFiltroEntidade.Visible = false;
             // 
+            // flowLayoutFiltroEntidade
+            // 
+            this.flowLayoutFiltroEntidade.Controls.Add(this.btnFiltroEnt2);
+            this.flowLayoutFiltroEntidade.Controls.Add(this.btnFiltroEnt1);
+            this.flowLayoutFiltroEntidade.Controls.Add(this.btnFiltroEnt3);
+            this.flowLayoutFiltroEntidade.Location = new System.Drawing.Point(289, 170);
+            this.flowLayoutFiltroEntidade.Name = "flowLayoutFiltroEntidade";
+            this.flowLayoutFiltroEntidade.Size = new System.Drawing.Size(419, 30);
+            this.flowLayoutFiltroEntidade.TabIndex = 13;
+            // 
             // btnFiltroEnt2
             // 
             this.btnFiltroEnt2.AutoSize = true;
@@ -269,7 +279,7 @@
             this.btnFiltroEnt2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroEnt2.IconSize = 20;
             this.btnFiltroEnt2.Location = new System.Drawing.Point(2, 2);
-            this.btnFiltroEnt2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroEnt2.Margin = new System.Windows.Forms.Padding(2);
             this.btnFiltroEnt2.Name = "btnFiltroEnt2";
             this.btnFiltroEnt2.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroEnt2.TabIndex = 10;
@@ -279,31 +289,6 @@
             this.btnFiltroEnt2.UseVisualStyleBackColor = false;
             this.btnFiltroEnt2.Visible = false;
             this.btnFiltroEnt2.Click += new System.EventHandler(this.btnFiltroEnt2_Click);
-            // 
-            // btnFiltroEnt3
-            // 
-            this.btnFiltroEnt3.AutoSize = true;
-            this.btnFiltroEnt3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFiltroEnt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnFiltroEnt3.FlatAppearance.BorderSize = 0;
-            this.btnFiltroEnt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroEnt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroEnt3.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroEnt3.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            this.btnFiltroEnt3.IconColor = System.Drawing.Color.White;
-            this.btnFiltroEnt3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroEnt3.IconSize = 20;
-            this.btnFiltroEnt3.Location = new System.Drawing.Point(262, 2);
-            this.btnFiltroEnt3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnFiltroEnt3.Name = "btnFiltroEnt3";
-            this.btnFiltroEnt3.Size = new System.Drawing.Size(126, 27);
-            this.btnFiltroEnt3.TabIndex = 10;
-            this.btnFiltroEnt3.Text = "Especialidade";
-            this.btnFiltroEnt3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltroEnt3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnFiltroEnt3.UseVisualStyleBackColor = false;
-            this.btnFiltroEnt3.Visible = false;
-            this.btnFiltroEnt3.Click += new System.EventHandler(this.btnFiltroEnt3_Click);
             // 
             // btnFiltroEnt1
             // 
@@ -319,7 +304,7 @@
             this.btnFiltroEnt1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroEnt1.IconSize = 20;
             this.btnFiltroEnt1.Location = new System.Drawing.Point(132, 2);
-            this.btnFiltroEnt1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroEnt1.Margin = new System.Windows.Forms.Padding(2);
             this.btnFiltroEnt1.Name = "btnFiltroEnt1";
             this.btnFiltroEnt1.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroEnt1.TabIndex = 9;
@@ -329,6 +314,31 @@
             this.btnFiltroEnt1.UseVisualStyleBackColor = false;
             this.btnFiltroEnt1.Visible = false;
             this.btnFiltroEnt1.Click += new System.EventHandler(this.btnFiltroEnt1_Click);
+            // 
+            // btnFiltroEnt3
+            // 
+            this.btnFiltroEnt3.AutoSize = true;
+            this.btnFiltroEnt3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFiltroEnt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnFiltroEnt3.FlatAppearance.BorderSize = 0;
+            this.btnFiltroEnt3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroEnt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroEnt3.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroEnt3.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            this.btnFiltroEnt3.IconColor = System.Drawing.Color.White;
+            this.btnFiltroEnt3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroEnt3.IconSize = 20;
+            this.btnFiltroEnt3.Location = new System.Drawing.Point(262, 2);
+            this.btnFiltroEnt3.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFiltroEnt3.Name = "btnFiltroEnt3";
+            this.btnFiltroEnt3.Size = new System.Drawing.Size(126, 27);
+            this.btnFiltroEnt3.TabIndex = 10;
+            this.btnFiltroEnt3.Text = "Especialidade";
+            this.btnFiltroEnt3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltroEnt3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnFiltroEnt3.UseVisualStyleBackColor = false;
+            this.btnFiltroEnt3.Visible = false;
+            this.btnFiltroEnt3.Click += new System.EventHandler(this.btnFiltroEnt3_Click);
             // 
             // dataGridEntidade
             // 
@@ -478,6 +488,16 @@
             this.panelFiltroFazenda.TabIndex = 11;
             this.panelFiltroFazenda.Visible = false;
             // 
+            // flowLayoutFiltroFazenda
+            // 
+            this.flowLayoutFiltroFazenda.Controls.Add(this.btnFiltroFaz2);
+            this.flowLayoutFiltroFazenda.Controls.Add(this.btnFiltroFaz1);
+            this.flowLayoutFiltroFazenda.Controls.Add(this.btnFiltroFaz3);
+            this.flowLayoutFiltroFazenda.Location = new System.Drawing.Point(289, 170);
+            this.flowLayoutFiltroFazenda.Name = "flowLayoutFiltroFazenda";
+            this.flowLayoutFiltroFazenda.Size = new System.Drawing.Size(419, 30);
+            this.flowLayoutFiltroFazenda.TabIndex = 12;
+            // 
             // btnFiltroFaz2
             // 
             this.btnFiltroFaz2.AutoSize = true;
@@ -492,7 +512,7 @@
             this.btnFiltroFaz2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroFaz2.IconSize = 20;
             this.btnFiltroFaz2.Location = new System.Drawing.Point(2, 2);
-            this.btnFiltroFaz2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroFaz2.Margin = new System.Windows.Forms.Padding(2);
             this.btnFiltroFaz2.Name = "btnFiltroFaz2";
             this.btnFiltroFaz2.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroFaz2.TabIndex = 10;
@@ -502,31 +522,6 @@
             this.btnFiltroFaz2.UseVisualStyleBackColor = false;
             this.btnFiltroFaz2.Visible = false;
             this.btnFiltroFaz2.Click += new System.EventHandler(this.btnFiltroFaz2_Click);
-            // 
-            // btnFiltroFaz3
-            // 
-            this.btnFiltroFaz3.AutoSize = true;
-            this.btnFiltroFaz3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFiltroFaz3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnFiltroFaz3.FlatAppearance.BorderSize = 0;
-            this.btnFiltroFaz3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroFaz3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroFaz3.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroFaz3.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            this.btnFiltroFaz3.IconColor = System.Drawing.Color.White;
-            this.btnFiltroFaz3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroFaz3.IconSize = 20;
-            this.btnFiltroFaz3.Location = new System.Drawing.Point(262, 2);
-            this.btnFiltroFaz3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnFiltroFaz3.Name = "btnFiltroFaz3";
-            this.btnFiltroFaz3.Size = new System.Drawing.Size(126, 27);
-            this.btnFiltroFaz3.TabIndex = 10;
-            this.btnFiltroFaz3.Text = "Especialidade";
-            this.btnFiltroFaz3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltroFaz3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnFiltroFaz3.UseVisualStyleBackColor = false;
-            this.btnFiltroFaz3.Visible = false;
-            this.btnFiltroFaz3.Click += new System.EventHandler(this.btnFiltroFaz3_Click);
             // 
             // btnFiltroFaz1
             // 
@@ -542,7 +537,7 @@
             this.btnFiltroFaz1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroFaz1.IconSize = 20;
             this.btnFiltroFaz1.Location = new System.Drawing.Point(132, 2);
-            this.btnFiltroFaz1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroFaz1.Margin = new System.Windows.Forms.Padding(2);
             this.btnFiltroFaz1.Name = "btnFiltroFaz1";
             this.btnFiltroFaz1.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroFaz1.TabIndex = 9;
@@ -552,6 +547,31 @@
             this.btnFiltroFaz1.UseVisualStyleBackColor = false;
             this.btnFiltroFaz1.Visible = false;
             this.btnFiltroFaz1.Click += new System.EventHandler(this.btnFiltroFaz1_Click);
+            // 
+            // btnFiltroFaz3
+            // 
+            this.btnFiltroFaz3.AutoSize = true;
+            this.btnFiltroFaz3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFiltroFaz3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnFiltroFaz3.FlatAppearance.BorderSize = 0;
+            this.btnFiltroFaz3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroFaz3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroFaz3.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroFaz3.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            this.btnFiltroFaz3.IconColor = System.Drawing.Color.White;
+            this.btnFiltroFaz3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroFaz3.IconSize = 20;
+            this.btnFiltroFaz3.Location = new System.Drawing.Point(262, 2);
+            this.btnFiltroFaz3.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFiltroFaz3.Name = "btnFiltroFaz3";
+            this.btnFiltroFaz3.Size = new System.Drawing.Size(126, 27);
+            this.btnFiltroFaz3.TabIndex = 10;
+            this.btnFiltroFaz3.Text = "Especialidade";
+            this.btnFiltroFaz3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltroFaz3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnFiltroFaz3.UseVisualStyleBackColor = false;
+            this.btnFiltroFaz3.Visible = false;
+            this.btnFiltroFaz3.Click += new System.EventHandler(this.btnFiltroFaz3_Click);
             // 
             // dataGridFazenda
             // 
@@ -689,6 +709,41 @@
             this.panelFiltroAcoes.TabIndex = 11;
             this.panelFiltroAcoes.Visible = false;
             // 
+            // flowLayoutFiltroAcoes
+            // 
+            this.flowLayoutFiltroAcoes.Controls.Add(this.btnFiltroAco1);
+            this.flowLayoutFiltroAcoes.Controls.Add(this.btnFiltroAco2);
+            this.flowLayoutFiltroAcoes.Controls.Add(this.btnFiltroAco3);
+            this.flowLayoutFiltroAcoes.Location = new System.Drawing.Point(289, 170);
+            this.flowLayoutFiltroAcoes.Name = "flowLayoutFiltroAcoes";
+            this.flowLayoutFiltroAcoes.Size = new System.Drawing.Size(419, 30);
+            this.flowLayoutFiltroAcoes.TabIndex = 11;
+            // 
+            // btnFiltroAco1
+            // 
+            this.btnFiltroAco1.AutoSize = true;
+            this.btnFiltroAco1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFiltroAco1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnFiltroAco1.FlatAppearance.BorderSize = 0;
+            this.btnFiltroAco1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltroAco1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltroAco1.ForeColor = System.Drawing.Color.White;
+            this.btnFiltroAco1.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            this.btnFiltroAco1.IconColor = System.Drawing.Color.White;
+            this.btnFiltroAco1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnFiltroAco1.IconSize = 20;
+            this.btnFiltroAco1.Location = new System.Drawing.Point(2, 2);
+            this.btnFiltroAco1.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFiltroAco1.Name = "btnFiltroAco1";
+            this.btnFiltroAco1.Size = new System.Drawing.Size(126, 27);
+            this.btnFiltroAco1.TabIndex = 9;
+            this.btnFiltroAco1.Text = "Especialidade";
+            this.btnFiltroAco1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFiltroAco1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnFiltroAco1.UseVisualStyleBackColor = false;
+            this.btnFiltroAco1.Visible = false;
+            this.btnFiltroAco1.Click += new System.EventHandler(this.btnFiltroAco1_Click);
+            // 
             // btnFiltroAco2
             // 
             this.btnFiltroAco2.AutoSize = true;
@@ -703,7 +758,7 @@
             this.btnFiltroAco2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroAco2.IconSize = 20;
             this.btnFiltroAco2.Location = new System.Drawing.Point(132, 2);
-            this.btnFiltroAco2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroAco2.Margin = new System.Windows.Forms.Padding(2);
             this.btnFiltroAco2.Name = "btnFiltroAco2";
             this.btnFiltroAco2.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroAco2.TabIndex = 10;
@@ -728,7 +783,7 @@
             this.btnFiltroAco3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroAco3.IconSize = 20;
             this.btnFiltroAco3.Location = new System.Drawing.Point(262, 2);
-            this.btnFiltroAco3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroAco3.Margin = new System.Windows.Forms.Padding(2);
             this.btnFiltroAco3.Name = "btnFiltroAco3";
             this.btnFiltroAco3.Size = new System.Drawing.Size(126, 27);
             this.btnFiltroAco3.TabIndex = 10;
@@ -738,31 +793,6 @@
             this.btnFiltroAco3.UseVisualStyleBackColor = false;
             this.btnFiltroAco3.Visible = false;
             this.btnFiltroAco3.Click += new System.EventHandler(this.btnFiltroAco3_Click);
-            // 
-            // btnFiltroAco1
-            // 
-            this.btnFiltroAco1.AutoSize = true;
-            this.btnFiltroAco1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnFiltroAco1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnFiltroAco1.FlatAppearance.BorderSize = 0;
-            this.btnFiltroAco1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltroAco1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFiltroAco1.ForeColor = System.Drawing.Color.White;
-            this.btnFiltroAco1.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
-            this.btnFiltroAco1.IconColor = System.Drawing.Color.White;
-            this.btnFiltroAco1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnFiltroAco1.IconSize = 20;
-            this.btnFiltroAco1.Location = new System.Drawing.Point(2, 2);
-            this.btnFiltroAco1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnFiltroAco1.Name = "btnFiltroAco1";
-            this.btnFiltroAco1.Size = new System.Drawing.Size(126, 27);
-            this.btnFiltroAco1.TabIndex = 9;
-            this.btnFiltroAco1.Text = "Especialidade";
-            this.btnFiltroAco1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFiltroAco1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnFiltroAco1.UseVisualStyleBackColor = false;
-            this.btnFiltroAco1.Visible = false;
-            this.btnFiltroAco1.Click += new System.EventHandler(this.btnFiltroAco1_Click);
             // 
             // dataGridAcoes
             // 
@@ -908,11 +938,31 @@
             this.panelCadastroEntidade.Controls.Add(this.labelDadosEntidades);
             this.panelCadastroEntidade.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadastroEntidade.Location = new System.Drawing.Point(0, 0);
-            this.panelCadastroEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelCadastroEntidade.Margin = new System.Windows.Forms.Padding(2);
             this.panelCadastroEntidade.Name = "panelCadastroEntidade";
             this.panelCadastroEntidade.Size = new System.Drawing.Size(1338, 690);
             this.panelCadastroEntidade.TabIndex = 10;
             this.panelCadastroEntidade.Visible = false;
+            // 
+            // btnExcluirEntidade
+            // 
+            this.btnExcluirEntidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.btnExcluirEntidade.FlatAppearance.BorderSize = 0;
+            this.btnExcluirEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluirEntidade.ForeColor = System.Drawing.Color.White;
+            this.btnExcluirEntidade.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnExcluirEntidade.IconColor = System.Drawing.Color.White;
+            this.btnExcluirEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExcluirEntidade.IconSize = 20;
+            this.btnExcluirEntidade.Location = new System.Drawing.Point(590, 354);
+            this.btnExcluirEntidade.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExcluirEntidade.Name = "btnExcluirEntidade";
+            this.btnExcluirEntidade.Size = new System.Drawing.Size(106, 30);
+            this.btnExcluirEntidade.TabIndex = 91;
+            this.btnExcluirEntidade.Text = "Excluir";
+            this.btnExcluirEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluirEntidade.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnExcluirEntidade.UseVisualStyleBackColor = false;
             // 
             // campoCEP
             // 
@@ -920,7 +970,7 @@
             this.campoCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCEP.Location = new System.Drawing.Point(299, 276);
-            this.campoCEP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCEP.Margin = new System.Windows.Forms.Padding(2);
             this.campoCEP.Name = "campoCEP";
             this.campoCEP.Size = new System.Drawing.Size(134, 19);
             this.campoCEP.TabIndex = 31;
@@ -944,7 +994,7 @@
             this.campoCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCNPJ.Location = new System.Drawing.Point(660, 198);
-            this.campoCNPJ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCNPJ.Margin = new System.Windows.Forms.Padding(2);
             this.campoCNPJ.Name = "campoCNPJ";
             this.campoCNPJ.Size = new System.Drawing.Size(134, 19);
             this.campoCNPJ.TabIndex = 27;
@@ -968,7 +1018,7 @@
             this.campoRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoRazaoSocial.Location = new System.Drawing.Point(299, 198);
-            this.campoRazaoSocial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoRazaoSocial.Margin = new System.Windows.Forms.Padding(2);
             this.campoRazaoSocial.Name = "campoRazaoSocial";
             this.campoRazaoSocial.Size = new System.Drawing.Size(320, 19);
             this.campoRazaoSocial.TabIndex = 25;
@@ -997,7 +1047,7 @@
             this.btnGravarEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGravarEntidade.IconSize = 25;
             this.btnGravarEntidade.Location = new System.Drawing.Point(730, 354);
-            this.btnGravarEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGravarEntidade.Margin = new System.Windows.Forms.Padding(2);
             this.btnGravarEntidade.Name = "btnGravarEntidade";
             this.btnGravarEntidade.Size = new System.Drawing.Size(106, 30);
             this.btnGravarEntidade.TabIndex = 23;
@@ -1017,7 +1067,7 @@
             this.btnIncluirEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnIncluirEntidade.IconSize = 25;
             this.btnIncluirEntidade.Location = new System.Drawing.Point(868, 354);
-            this.btnIncluirEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIncluirEntidade.Margin = new System.Windows.Forms.Padding(2);
             this.btnIncluirEntidade.Name = "btnIncluirEntidade";
             this.btnIncluirEntidade.Size = new System.Drawing.Size(106, 30);
             this.btnIncluirEntidade.TabIndex = 22;
@@ -1025,6 +1075,7 @@
             this.btnIncluirEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIncluirEntidade.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnIncluirEntidade.UseVisualStyleBackColor = false;
+            this.btnIncluirEntidade.Click += new System.EventHandler(this.btnIncluirEntidade_Click);
             // 
             // btnLimparCadastroEntidade
             // 
@@ -1141,7 +1192,7 @@
             this.campoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoTelefone.Location = new System.Drawing.Point(841, 198);
-            this.campoTelefone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.campoTelefone.Name = "campoTelefone";
             this.campoTelefone.Size = new System.Drawing.Size(134, 19);
             this.campoTelefone.TabIndex = 12;
@@ -1165,7 +1216,7 @@
             this.campoCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCPF.Location = new System.Drawing.Point(660, 198);
-            this.campoCPF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCPF.Margin = new System.Windows.Forms.Padding(2);
             this.campoCPF.Name = "campoCPF";
             this.campoCPF.Size = new System.Drawing.Size(134, 19);
             this.campoCPF.TabIndex = 10;
@@ -1189,7 +1240,7 @@
             this.campoNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoNome.Location = new System.Drawing.Point(299, 198);
-            this.campoNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoNome.Margin = new System.Windows.Forms.Padding(2);
             this.campoNome.Name = "campoNome";
             this.campoNome.Size = new System.Drawing.Size(320, 19);
             this.campoNome.TabIndex = 8;
@@ -1213,7 +1264,7 @@
             this.campoCodigoEntidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodigoEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodigoEntidade.Location = new System.Drawing.Point(472, 117);
-            this.campoCodigoEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodigoEntidade.Margin = new System.Windows.Forms.Padding(2);
             this.campoCodigoEntidade.Name = "campoCodigoEntidade";
             this.campoCodigoEntidade.ReadOnly = true;
             this.campoCodigoEntidade.Size = new System.Drawing.Size(110, 19);
@@ -1279,7 +1330,7 @@
             this.panelCadastros.Controls.Add(this.panelCadastroEntidade);
             this.panelCadastros.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadastros.Location = new System.Drawing.Point(0, 564);
-            this.panelCadastros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelCadastros.Margin = new System.Windows.Forms.Padding(2);
             this.panelCadastros.Name = "panelCadastros";
             this.panelCadastros.Size = new System.Drawing.Size(1338, 524);
             this.panelCadastros.TabIndex = 32;
@@ -1287,7 +1338,7 @@
             // panelCadastroFazenda
             // 
             this.panelCadastroFazenda.Controls.Add(this.btnExcluirFazenda);
-            this.panelCadastroFazenda.Controls.Add(this.button1);
+            this.panelCadastroFazenda.Controls.Add(this.btnLimparDadosFazenda);
             this.panelCadastroFazenda.Controls.Add(this.dataGridLotesAssociados_Pocilga);
             this.panelCadastroFazenda.Controls.Add(this.labelLotesAssociados_Pocilga);
             this.panelCadastroFazenda.Controls.Add(this.labelCodPocilga_Lote);
@@ -1349,11 +1400,91 @@
             this.panelCadastroFazenda.Controls.Add(this.labelDadosFazenda);
             this.panelCadastroFazenda.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadastroFazenda.Location = new System.Drawing.Point(0, 690);
-            this.panelCadastroFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelCadastroFazenda.Margin = new System.Windows.Forms.Padding(2);
             this.panelCadastroFazenda.Name = "panelCadastroFazenda";
             this.panelCadastroFazenda.Size = new System.Drawing.Size(1338, 805);
             this.panelCadastroFazenda.TabIndex = 32;
             this.panelCadastroFazenda.Visible = false;
+            // 
+            // btnExcluirFazenda
+            // 
+            this.btnExcluirFazenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
+            this.btnExcluirFazenda.FlatAppearance.BorderSize = 0;
+            this.btnExcluirFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluirFazenda.ForeColor = System.Drawing.Color.White;
+            this.btnExcluirFazenda.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnExcluirFazenda.IconColor = System.Drawing.Color.White;
+            this.btnExcluirFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExcluirFazenda.IconSize = 20;
+            this.btnExcluirFazenda.Location = new System.Drawing.Point(587, 455);
+            this.btnExcluirFazenda.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExcluirFazenda.Name = "btnExcluirFazenda";
+            this.btnExcluirFazenda.Size = new System.Drawing.Size(106, 30);
+            this.btnExcluirFazenda.TabIndex = 90;
+            this.btnExcluirFazenda.Text = "Excluir";
+            this.btnExcluirFazenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluirFazenda.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnExcluirFazenda.UseVisualStyleBackColor = false;
+            // 
+            // btnLimparDadosFazenda
+            // 
+            this.btnLimparDadosFazenda.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnLimparDadosFazenda.FlatAppearance.BorderSize = 0;
+            this.btnLimparDadosFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimparDadosFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimparDadosFazenda.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLimparDadosFazenda.Location = new System.Drawing.Point(448, 455);
+            this.btnLimparDadosFazenda.Name = "btnLimparDadosFazenda";
+            this.btnLimparDadosFazenda.Size = new System.Drawing.Size(106, 30);
+            this.btnLimparDadosFazenda.TabIndex = 89;
+            this.btnLimparDadosFazenda.Text = "Limpar";
+            this.btnLimparDadosFazenda.UseVisualStyleBackColor = false;
+            // 
+            // dataGridLotesAssociados_Pocilga
+            // 
+            this.dataGridLotesAssociados_Pocilga.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridLotesAssociados_Pocilga.Location = new System.Drawing.Point(473, 198);
+            this.dataGridLotesAssociados_Pocilga.Name = "dataGridLotesAssociados_Pocilga";
+            this.dataGridLotesAssociados_Pocilga.RowHeadersWidth = 51;
+            this.dataGridLotesAssociados_Pocilga.Size = new System.Drawing.Size(500, 106);
+            this.dataGridLotesAssociados_Pocilga.TabIndex = 88;
+            this.dataGridLotesAssociados_Pocilga.Visible = false;
+            // 
+            // labelLotesAssociados_Pocilga
+            // 
+            this.labelLotesAssociados_Pocilga.AutoSize = true;
+            this.labelLotesAssociados_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLotesAssociados_Pocilga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelLotesAssociados_Pocilga.Location = new System.Drawing.Point(470, 173);
+            this.labelLotesAssociados_Pocilga.Name = "labelLotesAssociados_Pocilga";
+            this.labelLotesAssociados_Pocilga.Size = new System.Drawing.Size(135, 20);
+            this.labelLotesAssociados_Pocilga.TabIndex = 87;
+            this.labelLotesAssociados_Pocilga.Text = "Lotes Associados";
+            this.labelLotesAssociados_Pocilga.Visible = false;
+            // 
+            // labelCodPocilga_Lote
+            // 
+            this.labelCodPocilga_Lote.AutoSize = true;
+            this.labelCodPocilga_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodPocilga_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelCodPocilga_Lote.Location = new System.Drawing.Point(666, 258);
+            this.labelCodPocilga_Lote.Name = "labelCodPocilga_Lote";
+            this.labelCodPocilga_Lote.Size = new System.Drawing.Size(114, 20);
+            this.labelCodPocilga_Lote.TabIndex = 86;
+            this.labelCodPocilga_Lote.Text = "Código Pocilga";
+            this.labelCodPocilga_Lote.Visible = false;
+            // 
+            // campoCodPocilga_Lote
+            // 
+            this.campoCodPocilga_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodPocilga_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoCodPocilga_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoCodPocilga_Lote.Location = new System.Drawing.Point(670, 285);
+            this.campoCodPocilga_Lote.Margin = new System.Windows.Forms.Padding(2);
+            this.campoCodPocilga_Lote.Name = "campoCodPocilga_Lote";
+            this.campoCodPocilga_Lote.Size = new System.Drawing.Size(111, 19);
+            this.campoCodPocilga_Lote.TabIndex = 85;
+            this.campoCodPocilga_Lote.Visible = false;
             // 
             // dateTPValidade_Produto
             // 
@@ -1362,7 +1493,7 @@
             this.dateTPValidade_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPValidade_Produto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTPValidade_Produto.Location = new System.Drawing.Point(299, 281);
-            this.dateTPValidade_Produto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPValidade_Produto.Margin = new System.Windows.Forms.Padding(2);
             this.dateTPValidade_Produto.Name = "dateTPValidade_Produto";
             this.dateTPValidade_Produto.Size = new System.Drawing.Size(125, 23);
             this.dateTPValidade_Produto.TabIndex = 84;
@@ -1447,7 +1578,7 @@
             this.campoNome_Produto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoNome_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoNome_Produto.Location = new System.Drawing.Point(298, 198);
-            this.campoNome_Produto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoNome_Produto.Margin = new System.Windows.Forms.Padding(2);
             this.campoNome_Produto.Name = "campoNome_Produto";
             this.campoNome_Produto.Size = new System.Drawing.Size(483, 19);
             this.campoNome_Produto.TabIndex = 78;
@@ -1471,7 +1602,7 @@
             this.campoCodigoProdutor_Propriedade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodigoProdutor_Propriedade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodigoProdutor_Propriedade.Location = new System.Drawing.Point(842, 198);
-            this.campoCodigoProdutor_Propriedade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodigoProdutor_Propriedade.Margin = new System.Windows.Forms.Padding(2);
             this.campoCodigoProdutor_Propriedade.Name = "campoCodigoProdutor_Propriedade";
             this.campoCodigoProdutor_Propriedade.Size = new System.Drawing.Size(110, 19);
             this.campoCodigoProdutor_Propriedade.TabIndex = 74;
@@ -1495,7 +1626,7 @@
             this.campoNome_Propriedade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoNome_Propriedade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoNome_Propriedade.Location = new System.Drawing.Point(298, 199);
-            this.campoNome_Propriedade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoNome_Propriedade.Margin = new System.Windows.Forms.Padding(2);
             this.campoNome_Propriedade.Name = "campoNome_Propriedade";
             this.campoNome_Propriedade.Size = new System.Drawing.Size(483, 19);
             this.campoNome_Propriedade.TabIndex = 72;
@@ -1531,7 +1662,7 @@
             this.campoCodPocilga_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodPocilga_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodPocilga_Visita.Location = new System.Drawing.Point(842, 284);
-            this.campoCodPocilga_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodPocilga_Visita.Margin = new System.Windows.Forms.Padding(2);
             this.campoCodPocilga_Visita.Name = "campoCodPocilga_Visita";
             this.campoCodPocilga_Visita.Size = new System.Drawing.Size(131, 19);
             this.campoCodPocilga_Visita.TabIndex = 69;
@@ -1555,7 +1686,7 @@
             this.campoCodPessoa_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodPessoa_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodPessoa_Visita.Location = new System.Drawing.Point(670, 284);
-            this.campoCodPessoa_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodPessoa_Visita.Margin = new System.Windows.Forms.Padding(2);
             this.campoCodPessoa_Visita.Name = "campoCodPessoa_Visita";
             this.campoCodPessoa_Visita.Size = new System.Drawing.Size(111, 19);
             this.campoCodPessoa_Visita.TabIndex = 47;
@@ -1566,7 +1697,7 @@
             this.textObservacoes_Visita.BackColor = System.Drawing.SystemColors.MenuBar;
             this.textObservacoes_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textObservacoes_Visita.Location = new System.Drawing.Point(300, 373);
-            this.textObservacoes_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textObservacoes_Visita.Margin = new System.Windows.Forms.Padding(2);
             this.textObservacoes_Visita.Multiline = true;
             this.textObservacoes_Visita.Name = "textObservacoes_Visita";
             this.textObservacoes_Visita.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1604,7 +1735,7 @@
             this.campoCodUlt_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodUlt_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodUlt_Visita.Location = new System.Drawing.Point(472, 284);
-            this.campoCodUlt_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodUlt_Visita.Margin = new System.Windows.Forms.Padding(2);
             this.campoCodUlt_Visita.Name = "campoCodUlt_Visita";
             this.campoCodUlt_Visita.Size = new System.Drawing.Size(111, 19);
             this.campoCodUlt_Visita.TabIndex = 61;
@@ -1617,7 +1748,7 @@
             this.dateTPUlt_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPUlt_Visita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTPUlt_Visita.Location = new System.Drawing.Point(298, 282);
-            this.dateTPUlt_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPUlt_Visita.Margin = new System.Windows.Forms.Padding(2);
             this.dateTPUlt_Visita.Name = "dateTPUlt_Visita";
             this.dateTPUlt_Visita.Size = new System.Drawing.Size(125, 23);
             this.dateTPUlt_Visita.TabIndex = 60;
@@ -1642,7 +1773,7 @@
             this.campoFinalidade_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoFinalidade_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoFinalidade_Visita.Location = new System.Drawing.Point(474, 198);
-            this.campoFinalidade_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoFinalidade_Visita.Margin = new System.Windows.Forms.Padding(2);
             this.campoFinalidade_Visita.Name = "campoFinalidade_Visita";
             this.campoFinalidade_Visita.Size = new System.Drawing.Size(499, 19);
             this.campoFinalidade_Visita.TabIndex = 58;
@@ -1667,7 +1798,7 @@
             this.dateTPData_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPData_Visita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTPData_Visita.Location = new System.Drawing.Point(298, 196);
-            this.dateTPData_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPData_Visita.Margin = new System.Windows.Forms.Padding(2);
             this.dateTPData_Visita.Name = "dateTPData_Visita";
             this.dateTPData_Visita.Size = new System.Drawing.Size(125, 23);
             this.dateTPData_Visita.TabIndex = 56;
@@ -1705,7 +1836,7 @@
             this.campoCodPropriedade_Pocilga.Enabled = false;
             this.campoCodPropriedade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodPropriedade_Pocilga.Location = new System.Drawing.Point(298, 284);
-            this.campoCodPropriedade_Pocilga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodPropriedade_Pocilga.Margin = new System.Windows.Forms.Padding(2);
             this.campoCodPropriedade_Pocilga.Name = "campoCodPropriedade_Pocilga";
             this.campoCodPropriedade_Pocilga.Size = new System.Drawing.Size(110, 19);
             this.campoCodPropriedade_Pocilga.TabIndex = 76;
@@ -1716,7 +1847,7 @@
             this.textoDescricao_Pocilga.BackColor = System.Drawing.SystemColors.MenuBar;
             this.textoDescricao_Pocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textoDescricao_Pocilga.Location = new System.Drawing.Point(298, 373);
-            this.textoDescricao_Pocilga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textoDescricao_Pocilga.Margin = new System.Windows.Forms.Padding(2);
             this.textoDescricao_Pocilga.Multiline = true;
             this.textoDescricao_Pocilga.Name = "textoDescricao_Pocilga";
             this.textoDescricao_Pocilga.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1742,7 +1873,7 @@
             this.campoCapacidade_Pocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCapacidade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCapacidade_Pocilga.Location = new System.Drawing.Point(298, 198);
-            this.campoCapacidade_Pocilga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCapacidade_Pocilga.Margin = new System.Windows.Forms.Padding(2);
             this.campoCapacidade_Pocilga.Name = "campoCapacidade_Pocilga";
             this.campoCapacidade_Pocilga.Size = new System.Drawing.Size(125, 19);
             this.campoCapacidade_Pocilga.TabIndex = 50;
@@ -1765,7 +1896,7 @@
             this.textoObservacoes_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
             this.textoObservacoes_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textoObservacoes_Lote.Location = new System.Drawing.Point(300, 373);
-            this.textoObservacoes_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textoObservacoes_Lote.Margin = new System.Windows.Forms.Padding(2);
             this.textoObservacoes_Lote.Multiline = true;
             this.textoObservacoes_Lote.Name = "textoObservacoes_Lote";
             this.textoObservacoes_Lote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -1803,7 +1934,7 @@
             this.campoCodGerente_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodGerente_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodGerente_Lote.Location = new System.Drawing.Point(842, 284);
-            this.campoCodGerente_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodGerente_Lote.Margin = new System.Windows.Forms.Padding(2);
             this.campoCodGerente_Lote.Name = "campoCodGerente_Lote";
             this.campoCodGerente_Lote.Size = new System.Drawing.Size(131, 19);
             this.campoCodGerente_Lote.TabIndex = 43;
@@ -1816,7 +1947,7 @@
             this.dateTPEstCarregamento_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPEstCarregamento_Lote.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTPEstCarregamento_Lote.Location = new System.Drawing.Point(473, 282);
-            this.dateTPEstCarregamento_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPEstCarregamento_Lote.Margin = new System.Windows.Forms.Padding(2);
             this.dateTPEstCarregamento_Lote.Name = "dateTPEstCarregamento_Lote";
             this.dateTPEstCarregamento_Lote.Size = new System.Drawing.Size(125, 23);
             this.dateTPEstCarregamento_Lote.TabIndex = 41;
@@ -1842,7 +1973,7 @@
             this.dateTPDataAloj_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPDataAloj_Lote.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTPDataAloj_Lote.Location = new System.Drawing.Point(298, 282);
-            this.dateTPDataAloj_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPDataAloj_Lote.Margin = new System.Windows.Forms.Padding(2);
             this.dateTPDataAloj_Lote.Name = "dateTPDataAloj_Lote";
             this.dateTPDataAloj_Lote.Size = new System.Drawing.Size(125, 23);
             this.dateTPDataAloj_Lote.TabIndex = 38;
@@ -1873,7 +2004,7 @@
             this.campoQuantidade_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoQuantidade_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoQuantidade_Lote.Location = new System.Drawing.Point(298, 198);
-            this.campoQuantidade_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoQuantidade_Lote.Margin = new System.Windows.Forms.Padding(2);
             this.campoQuantidade_Lote.Name = "campoQuantidade_Lote";
             this.campoQuantidade_Lote.Size = new System.Drawing.Size(125, 19);
             this.campoQuantidade_Lote.TabIndex = 36;
@@ -1885,7 +2016,7 @@
             this.campoPesoTotal_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoPesoTotal_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoPesoTotal_Lote.Location = new System.Drawing.Point(473, 198);
-            this.campoPesoTotal_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoPesoTotal_Lote.Margin = new System.Windows.Forms.Padding(2);
             this.campoPesoTotal_Lote.Name = "campoPesoTotal_Lote";
             this.campoPesoTotal_Lote.Size = new System.Drawing.Size(110, 19);
             this.campoPesoTotal_Lote.TabIndex = 35;
@@ -1933,7 +2064,7 @@
             this.campoPesoMedio_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoPesoMedio_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoPesoMedio_Lote.Location = new System.Drawing.Point(670, 198);
-            this.campoPesoMedio_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoPesoMedio_Lote.Margin = new System.Windows.Forms.Padding(2);
             this.campoPesoMedio_Lote.Name = "campoPesoMedio_Lote";
             this.campoPesoMedio_Lote.Size = new System.Drawing.Size(111, 19);
             this.campoPesoMedio_Lote.TabIndex = 27;
@@ -1962,7 +2093,7 @@
             this.btnGravarFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGravarFazenda.IconSize = 23;
             this.btnGravarFazenda.Location = new System.Drawing.Point(730, 455);
-            this.btnGravarFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGravarFazenda.Margin = new System.Windows.Forms.Padding(2);
             this.btnGravarFazenda.Name = "btnGravarFazenda";
             this.btnGravarFazenda.Size = new System.Drawing.Size(106, 30);
             this.btnGravarFazenda.TabIndex = 23;
@@ -1982,7 +2113,7 @@
             this.btnIncluirFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnIncluirFazenda.IconSize = 23;
             this.btnIncluirFazenda.Location = new System.Drawing.Point(868, 455);
-            this.btnIncluirFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIncluirFazenda.Margin = new System.Windows.Forms.Padding(2);
             this.btnIncluirFazenda.Name = "btnIncluirFazenda";
             this.btnIncluirFazenda.Size = new System.Drawing.Size(106, 30);
             this.btnIncluirFazenda.TabIndex = 22;
@@ -2009,7 +2140,7 @@
             this.campoCodigoFazenda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodigoFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodigoFazenda.Location = new System.Drawing.Point(472, 117);
-            this.campoCodigoFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodigoFazenda.Margin = new System.Windows.Forms.Padding(2);
             this.campoCodigoFazenda.Name = "campoCodigoFazenda";
             this.campoCodigoFazenda.ReadOnly = true;
             this.campoCodigoFazenda.Size = new System.Drawing.Size(110, 19);
@@ -2068,135 +2199,6 @@
             this.labelDadosFazenda.TabIndex = 1;
             this.labelDadosFazenda.Text = "Dados Fazenda";
             // 
-            // labelCodPocilga_Lote
-            // 
-            this.labelCodPocilga_Lote.AutoSize = true;
-            this.labelCodPocilga_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCodPocilga_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodPocilga_Lote.Location = new System.Drawing.Point(666, 258);
-            this.labelCodPocilga_Lote.Name = "labelCodPocilga_Lote";
-            this.labelCodPocilga_Lote.Size = new System.Drawing.Size(114, 20);
-            this.labelCodPocilga_Lote.TabIndex = 86;
-            this.labelCodPocilga_Lote.Text = "Código Pocilga";
-            this.labelCodPocilga_Lote.Visible = false;
-            // 
-            // campoCodPocilga_Lote
-            // 
-            this.campoCodPocilga_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.campoCodPocilga_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoCodPocilga_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodPocilga_Lote.Location = new System.Drawing.Point(670, 285);
-            this.campoCodPocilga_Lote.Margin = new System.Windows.Forms.Padding(2);
-            this.campoCodPocilga_Lote.Name = "campoCodPocilga_Lote";
-            this.campoCodPocilga_Lote.Size = new System.Drawing.Size(111, 19);
-            this.campoCodPocilga_Lote.TabIndex = 85;
-            this.campoCodPocilga_Lote.Visible = false;
-            // 
-            // labelLotesAssociados_Pocilga
-            // 
-            this.labelLotesAssociados_Pocilga.AutoSize = true;
-            this.labelLotesAssociados_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLotesAssociados_Pocilga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelLotesAssociados_Pocilga.Location = new System.Drawing.Point(470, 173);
-            this.labelLotesAssociados_Pocilga.Name = "labelLotesAssociados_Pocilga";
-            this.labelLotesAssociados_Pocilga.Size = new System.Drawing.Size(135, 20);
-            this.labelLotesAssociados_Pocilga.TabIndex = 87;
-            this.labelLotesAssociados_Pocilga.Text = "Lotes Associados";
-            this.labelLotesAssociados_Pocilga.Visible = false;
-            // 
-            // dataGridLotesAssociados_Pocilga
-            // 
-            this.dataGridLotesAssociados_Pocilga.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridLotesAssociados_Pocilga.Location = new System.Drawing.Point(473, 198);
-            this.dataGridLotesAssociados_Pocilga.Name = "dataGridLotesAssociados_Pocilga";
-            this.dataGridLotesAssociados_Pocilga.Size = new System.Drawing.Size(500, 106);
-            this.dataGridLotesAssociados_Pocilga.TabIndex = 88;
-            this.dataGridLotesAssociados_Pocilga.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(448, 455);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 30);
-            this.button1.TabIndex = 89;
-            this.button1.Text = "Limpar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnExcluirFazenda
-            // 
-            this.btnExcluirFazenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.btnExcluirFazenda.FlatAppearance.BorderSize = 0;
-            this.btnExcluirFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirFazenda.ForeColor = System.Drawing.Color.White;
-            this.btnExcluirFazenda.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnExcluirFazenda.IconColor = System.Drawing.Color.White;
-            this.btnExcluirFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExcluirFazenda.IconSize = 20;
-            this.btnExcluirFazenda.Location = new System.Drawing.Point(587, 455);
-            this.btnExcluirFazenda.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExcluirFazenda.Name = "btnExcluirFazenda";
-            this.btnExcluirFazenda.Size = new System.Drawing.Size(106, 30);
-            this.btnExcluirFazenda.TabIndex = 90;
-            this.btnExcluirFazenda.Text = "Excluir";
-            this.btnExcluirFazenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluirFazenda.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnExcluirFazenda.UseVisualStyleBackColor = false;
-            // 
-            // btnExcluirEntidade
-            // 
-            this.btnExcluirEntidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(10)))), ((int)(((byte)(0)))));
-            this.btnExcluirEntidade.FlatAppearance.BorderSize = 0;
-            this.btnExcluirEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirEntidade.ForeColor = System.Drawing.Color.White;
-            this.btnExcluirEntidade.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnExcluirEntidade.IconColor = System.Drawing.Color.White;
-            this.btnExcluirEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExcluirEntidade.IconSize = 20;
-            this.btnExcluirEntidade.Location = new System.Drawing.Point(590, 354);
-            this.btnExcluirEntidade.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExcluirEntidade.Name = "btnExcluirEntidade";
-            this.btnExcluirEntidade.Size = new System.Drawing.Size(106, 30);
-            this.btnExcluirEntidade.TabIndex = 91;
-            this.btnExcluirEntidade.Text = "Excluir";
-            this.btnExcluirEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluirEntidade.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnExcluirEntidade.UseVisualStyleBackColor = false;
-            // 
-            // flowLayoutFiltroAcoes
-            // 
-            this.flowLayoutFiltroAcoes.Controls.Add(this.btnFiltroAco1);
-            this.flowLayoutFiltroAcoes.Controls.Add(this.btnFiltroAco2);
-            this.flowLayoutFiltroAcoes.Controls.Add(this.btnFiltroAco3);
-            this.flowLayoutFiltroAcoes.Location = new System.Drawing.Point(289, 170);
-            this.flowLayoutFiltroAcoes.Name = "flowLayoutFiltroAcoes";
-            this.flowLayoutFiltroAcoes.Size = new System.Drawing.Size(419, 30);
-            this.flowLayoutFiltroAcoes.TabIndex = 11;
-            // 
-            // flowLayoutFiltroFazenda
-            // 
-            this.flowLayoutFiltroFazenda.Controls.Add(this.btnFiltroFaz2);
-            this.flowLayoutFiltroFazenda.Controls.Add(this.btnFiltroFaz1);
-            this.flowLayoutFiltroFazenda.Controls.Add(this.btnFiltroFaz3);
-            this.flowLayoutFiltroFazenda.Location = new System.Drawing.Point(289, 170);
-            this.flowLayoutFiltroFazenda.Name = "flowLayoutFiltroFazenda";
-            this.flowLayoutFiltroFazenda.Size = new System.Drawing.Size(419, 30);
-            this.flowLayoutFiltroFazenda.TabIndex = 12;
-            // 
-            // flowLayoutFiltroEntidade
-            // 
-            this.flowLayoutFiltroEntidade.Controls.Add(this.btnFiltroEnt2);
-            this.flowLayoutFiltroEntidade.Controls.Add(this.btnFiltroEnt1);
-            this.flowLayoutFiltroEntidade.Controls.Add(this.btnFiltroEnt3);
-            this.flowLayoutFiltroEntidade.Location = new System.Drawing.Point(289, 170);
-            this.flowLayoutFiltroEntidade.Name = "flowLayoutFiltroEntidade";
-            this.flowLayoutFiltroEntidade.Size = new System.Drawing.Size(419, 30);
-            this.flowLayoutFiltroEntidade.TabIndex = 13;
-            // 
             // FormCadastros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2212,13 +2214,19 @@
             this.panel3Botoes.ResumeLayout(false);
             this.panelFiltroEntidade.ResumeLayout(false);
             this.panelFiltroEntidade.PerformLayout();
+            this.flowLayoutFiltroEntidade.ResumeLayout(false);
+            this.flowLayoutFiltroEntidade.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEntidade)).EndInit();
             this.panelFiltros.ResumeLayout(false);
             this.panelFiltroFazenda.ResumeLayout(false);
             this.panelFiltroFazenda.PerformLayout();
+            this.flowLayoutFiltroFazenda.ResumeLayout(false);
+            this.flowLayoutFiltroFazenda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFazenda)).EndInit();
             this.panelFiltroAcoes.ResumeLayout(false);
             this.panelFiltroAcoes.PerformLayout();
+            this.flowLayoutFiltroAcoes.ResumeLayout(false);
+            this.flowLayoutFiltroAcoes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAcoes)).EndInit();
             this.panelCadastroEntidade.ResumeLayout(false);
             this.panelCadastroEntidade.PerformLayout();
@@ -2226,12 +2234,6 @@
             this.panelCadastroFazenda.ResumeLayout(false);
             this.panelCadastroFazenda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLotesAssociados_Pocilga)).EndInit();
-            this.flowLayoutFiltroAcoes.ResumeLayout(false);
-            this.flowLayoutFiltroAcoes.PerformLayout();
-            this.flowLayoutFiltroFazenda.ResumeLayout(false);
-            this.flowLayoutFiltroFazenda.PerformLayout();
-            this.flowLayoutFiltroEntidade.ResumeLayout(false);
-            this.flowLayoutFiltroEntidade.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2371,7 +2373,7 @@
         private System.Windows.Forms.DataGridView dataGridLotesAssociados_Pocilga;
         private System.Windows.Forms.Label labelLotesAssociados_Pocilga;
         private FontAwesome.Sharp.IconButton btnExcluirFazenda;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLimparDadosFazenda;
         private FontAwesome.Sharp.IconButton btnExcluirEntidade;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutFiltroAcoes;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutFiltroEntidade;
