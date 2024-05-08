@@ -778,6 +778,7 @@ namespace fazendaSuinos
 
             // Query de inserção completa
             string queryInsercao = queryBuilder.ToString();
+            Console.WriteLine(queryInsercao);
 
             //Cria e executa comando com uma conexão válida.
             using (DatabaseConnection connection = new DatabaseConnection(connectionString))
@@ -1051,12 +1052,6 @@ namespace fazendaSuinos
             // Verifica se o clique foi em uma célula válida
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                // Obtém o valor da célula na coluna de código da linha clicada
-                string valorCelula = dataGridEntidade.Rows[e.RowIndex].Cells[0].Value.ToString();
-
-                // Envia o valor da célula para a TextBox de sua preferência
-                campoCodigoEntidade.Text = valorCelula;
-
                 if (entidadeSelecionada == "Tecnico")
                 {
                     comboTipoEntidade.Text = "Técnico";
@@ -1067,9 +1062,56 @@ namespace fazendaSuinos
                 }
             }
 
-
+            preencherCamposEntidade(entidadeSelecionada, e);
 
             ResumeLayout();
+        }
+
+        private void preencherCamposEntidade(string entidadeSelecionada, DataGridViewCellEventArgs e)
+        {
+            if(entidadeSelecionada == "Administrador" || entidadeSelecionada == "Visitante" || entidadeSelecionada == "Gerente" || entidadeSelecionada == "Produtor" || entidadeSelecionada == "Tecnico")
+            {
+                object codigo = dataGridEntidade.Rows[e.RowIndex].Cells[0].Value;
+                campoCodigoEntidade.Text = codigo.ToString();
+
+                object nome = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["Nome"].Index].Value;
+                campoNome.Text = nome.ToString();
+
+                object cpf = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["CPF"].Index].Value;
+                campoCPF.Text = cpf.ToString();
+
+                object telefone = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["Telefone"].Index].Value;
+                campoTelefone.Text = telefone.ToString();
+            }
+            if(entidadeSelecionada == "Fornecedor")
+            {
+                object codigo = dataGridEntidade.Rows[e.RowIndex].Cells[0].Value;
+                campoCodigoEntidade.Text = codigo.ToString();
+
+                object razaoSocial = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["Razao_Social"].Index].Value;
+                campoRazaoSocial.Text = razaoSocial.ToString();
+
+                object cnpj = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["CNPJ"].Index].Value;
+                campoCNPJ.Text = cnpj.ToString();
+
+                object telefone = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["Telefone"].Index].Value;
+                campoTelefone.Text = telefone.ToString();
+            }
+            if(entidadeSelecionada == "Fornecedor" || entidadeSelecionada == "Produtor")
+            {
+                object cep = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["CEP"].Index].Value;
+                campoCEP.Text = cep.ToString();
+            }
+            if(entidadeSelecionada == "Gerente")
+            {
+                object setor = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["Setor"].Index].Value;
+                comboSetor.Text = setor.ToString();
+            }
+            if(entidadeSelecionada == "Tecnico")
+            {
+                object especialidade = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["Especialidade"].Index].Value;
+                comboEspecialidade.Text = especialidade.ToString();
+            }
         }
     }
 }
