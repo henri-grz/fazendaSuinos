@@ -59,11 +59,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>fazendaSuinosDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="fazendaSuinosDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>fazendaSuinosDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="FormDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,17 +108,6 @@
     </None>
     <None Include="fazendaSuinosDataSet.xss">
       <DependentUpon>fazendaSuinosDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="fazendaSuinosDBDataSet.xsc">
-      <DependentUpon>fazendaSuinosDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="fazendaSuinosDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>fazendaSuinosDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="fazendaSuinosDBDataSet.xss">
-      <DependentUpon>fazendaSuinosDBDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

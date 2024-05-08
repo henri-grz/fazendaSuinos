@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 public class DatabaseConnection : IDisposable
 {
@@ -16,18 +13,34 @@ public class DatabaseConnection : IDisposable
 
     public void Open()
     {
-        if (connection.State != System.Data.ConnectionState.Open)
+        try
         {
-            connection.Open();
+            if (connection.State != System.Data.ConnectionState.Open)
+            {
+                connection.Open();
+            }
         }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Ocorreu um erro ao conectar-se com o banco de dados.\n" + ex.ToString(), "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
 
     public void Close()
     {
-        if (connection.State != System.Data.ConnectionState.Closed)
+        try
         {
-            connection.Close();
+            if (connection.State != System.Data.ConnectionState.Closed)
+            {
+                connection.Close();
+            }
         }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Ocorreu um erro ao fechar a conexão com o banco de dados.\n" + ex.ToString(), "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
 
     public SqlCommand CreateCommand(string query)

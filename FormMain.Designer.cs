@@ -39,13 +39,13 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.comboLoteMenu = new System.Windows.Forms.ComboBox();
             this.logoMenu = new System.Windows.Forms.PictureBox();
-            this.fazendaSuinosDBDataSet = new fazendaSuinos.fazendaSuinosDBDataSet();
+            this.fazendaSuinosDataSet = new fazendaSuinos.fazendaSuinosDataSet();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelTable = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).BeginInit();
             this.panelTable.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -271,8 +271,8 @@
             // 
             // fazendaSuinosDBDataSet
             // 
-            this.fazendaSuinosDBDataSet.DataSetName = "fazendaSuinosDBDataSet";
-            this.fazendaSuinosDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.fazendaSuinosDataSet.DataSetName = "fazendaSuinosDBDataSet";
+            this.fazendaSuinosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panelMain
             // 
@@ -308,7 +308,7 @@
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).EndInit();
             this.panelTable.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -327,7 +327,7 @@
         private FontAwesome.Sharp.IconButton btnDashboard;
         private System.Windows.Forms.PictureBox logoMenu;
         private System.Windows.Forms.ComboBox comboLoteMenu;
-        private fazendaSuinosDBDataSet fazendaSuinosDBDataSet;
+        private fazendaSuinosDataSet fazendaSuinosDataSet;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelTable;
     }
