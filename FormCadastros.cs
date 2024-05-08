@@ -1,7 +1,7 @@
 ﻿using FontAwesome.Sharp;
 using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -18,11 +18,13 @@ namespace fazendaSuinos
         private List<string[]> filtrosFaz = new List<string[]>();
         private List<string[]> filtrosAco = new List<string[]>();
 
+        private string entidadeSelecionada;
+
         private List<IconButton> tagsFiltrosEnt = new List<IconButton>();
         private List<IconButton> tagsFiltrosFaz = new List<IconButton>();
         private List<IconButton> tagsFiltrosAco = new List<IconButton>();
 
-        private String[] listaTipoEntidade = { "Administrador", "Fornecedor", "Gerente", "Produtor", "Tecnico", "Visitante" };
+        private string[] listaTipoEntidade = { "Administrador", "Fornecedor", "Gerente", "Produtor", "Tecnico", "Visitante" };
 
         public FormCadastros()
         {
@@ -48,7 +50,6 @@ namespace fazendaSuinos
             tagsFiltrosAco.Add(btnFiltroAco1);
             tagsFiltrosAco.Add(btnFiltroAco2);
             tagsFiltrosAco.Add(btnFiltroAco3);
-
         }
 
         private void btnEntidades_Click(object sender, EventArgs e)
@@ -213,11 +214,12 @@ namespace fazendaSuinos
             }
 
             // Obtém os valores selecionados na ComboBox e no TextBox
-            string atributo = comboAtributoEntidade.SelectedItem.ToString();
+            string atributo = transformaItemParaCampo(comboAtributoEntidade.Text);
             string valor = campoValorEntidade.Text;
 
             // Adiciona o filtro à lista de filtrosEnt
             filtrosEnt.Add(new string[] { atributo, valor });
+            Console.WriteLine("Atributo: " + atributo + " | Valor: " + valor);
 
             //Mostra tag correspondente
             tagsFiltrosEnt[0].Text = atributo;
@@ -228,6 +230,26 @@ namespace fazendaSuinos
             comboAtributoEntidade.SelectedIndex = -1;
             campoValorEntidade.Clear();
 
+        }
+
+        private string transformaItemParaCampo(string text)
+        {
+            if (text == "Código")
+            {
+                return "Cod";
+            }
+            else if (text == "Razão Social")
+            {
+                return "Razao_Social";
+            }
+            else if (text == "Privilégios")
+            {
+                return "Privilegios";
+            }
+            else
+            {
+                return text;
+            }
         }
 
         private void btnAdicionarFiltroFazenda_Click(object sender, EventArgs e)
@@ -717,7 +739,7 @@ namespace fazendaSuinos
             //Gera a lista com o valor dos devidos campos
             List<string> listaValores = null;
 
-            while(listaValores == null)
+            while (listaValores == null)
             {
                 listaValores = verificaCamposEntidade();
             }
@@ -758,7 +780,7 @@ namespace fazendaSuinos
             string queryInsercao = queryBuilder.ToString();
 
             //Cria e executa comando com uma conexão válida.
-            using(DatabaseConnection connection = new DatabaseConnection(connectionString))
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
             {
                 try
                 {
@@ -895,11 +917,159 @@ namespace fazendaSuinos
             }
         }
 
-        private void FormCadastros_Load(object sender, EventArgs e)
+        private void btnConsultarEntidade_Click(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'fazendaSuinosDataSet.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
-            this.fornecedorTableAdapter.Fill(this.fazendaSuinosDataSet.Fornecedor);
+            if (entidadeSelecionada == null)
+            {
+                MessageBox.Show("Selecione um tipo de entidade.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else if (filtrosEnt.Count == 0)
+            {
+                MessageBox.Show("Defina no mínimo um filtro.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
+            // Inicia a query de select
+            StringBuilder queryBuilder = new StringBuilder("SELECT * FROM " + entidadeSelecionada + " WHERE ");
+
+            // Loop pelos filtros para adicionar as condições WHERE à query
+            for (int i = 0; i < filtrosEnt.Count; i++)
+            {
+                queryBuilder.Append(filtrosEnt[i][0]); // Adiciona o nome do atributo
+                queryBuilder.Append(" LIKE '%");
+                queryBuilder.Append(filtrosEnt[i][1]); // Adiciona o valor do atributo
+                queryBuilder.Append("%'");
+
+                // Adiciona o operador lógico AND entre as condições, exceto para a última condição
+                if (i < filtrosEnt.Count - 1)
+                {
+                    queryBuilder.Append(" AND ");
+                }
+            }
+
+            // Completa a query de seleção
+            string querySelecao = queryBuilder.ToString();
+            Console.WriteLine(querySelecao);
+
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    Console.WriteLine("Abriu com " + entidadeSelecionada);
+
+                    // Cria um adaptador de dados para executar a query
+                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
+
+                    // Cria um DataTable para armazenar os resultados
+                    DataTable dataTable = new DataTable();
+
+                    // Preenche o DataTable com os resultados da consulta
+                    adapter.Fill(dataTable);
+
+                    // Define o DataTable como a fonte de dados do DataGridView
+                    dataGridEntidade.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar entidade: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+
+        }
+
+        private void radio_Entidade_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+
+            if (radioButton != null && radioButton.Checked)
+            {
+                entidadeSelecionada = radioButton.Text;
+            }
+        }
+
+        private void radio_Tecnico_Entidade_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+
+            if (radioButton != null && radioButton.Checked)
+            {
+                entidadeSelecionada = "Tecnico";
+            }
+        }
+
+        private void dataGridEntidade_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            // Renomeia a coluna de acordo com o nome desejado
+            dataGridEntidade.Columns[0].HeaderText = "Código";
+
+            if (dataGridEntidade.Columns["Razao_Social"] != null)
+            {
+                dataGridEntidade.Columns["Razao_Social"].HeaderText = "Razão Social";
+            }
+
+            // Define o tamanho das colunas
+            dataGridEntidade.Columns[0].Width = 80;
+            if (dataGridEntidade.Columns["CPF"] != null)
+            {
+                dataGridEntidade.Columns["CPF"].Width = 140;
+            }
+            if (dataGridEntidade.Columns["CNPJ"] != null)
+            {
+                dataGridEntidade.Columns["CNPJ"].Width = 180;
+            }
+            if (dataGridEntidade.Columns["Telefone"] != null)
+            {
+                dataGridEntidade.Columns["Telefone"].Width = 140;
+            }
+            if (dataGridEntidade.Columns["CEP"] != null)
+            {
+                dataGridEntidade.Columns["CEP"].Width = 100;
+            }
+            if (dataGridEntidade.Columns["Setor"] != null)
+            {
+                dataGridEntidade.Columns["Setor"].Width = 200;
+            }
+            if (dataGridEntidade.Columns["Especialidade"] != null)
+            {
+                dataGridEntidade.Columns["Especialidade"].Width = 200;
+            }
+        }
+
+        private void btnLimparEntidade_Click(object sender, EventArgs e)
+        {
+            comboAtributoEntidade.Text = "";
+            campoValorEntidade.Text = "";
+            dataGridEntidade.DataSource = null;
+        }
+
+        private void dataGridEntidade_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SuspendLayout();
+            // Verifica se o clique foi em uma célula válida
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                // Obtém o valor da célula na coluna de código da linha clicada
+                string valorCelula = dataGridEntidade.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                // Envia o valor da célula para a TextBox de sua preferência
+                campoCodigoEntidade.Text = valorCelula;
+
+                if (entidadeSelecionada == "Tecnico")
+                {
+                    comboTipoEntidade.Text = "Técnico";
+                }
+                else
+                {
+                    comboTipoEntidade.Text = entidadeSelecionada;
+                }
+            }
+
+
+
+            ResumeLayout();
         }
     }
 }
