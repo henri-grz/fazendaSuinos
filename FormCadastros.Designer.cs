@@ -166,6 +166,8 @@
             this.comboTipoFazenda = new System.Windows.Forms.ComboBox();
             this.labelTipoFazenda = new System.Windows.Forms.Label();
             this.labelDadosFazenda = new System.Windows.Forms.Label();
+            this.fazendaSuinosDataSet = new fazendaSuinos.fazendaSuinosDataSet();
+            this.fornecedorTableAdapter = new fazendaSuinos.fazendaSuinosDataSetTableAdapters.FornecedorTableAdapter();
             this.panel3Botoes.SuspendLayout();
             this.panelFiltroEntidade.SuspendLayout();
             this.flowLayoutFiltroEntidade.SuspendLayout();
@@ -181,6 +183,7 @@
             this.panelCadastros.SuspendLayout();
             this.panelCadastroFazenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLotesAssociados_Pocilga)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEntidades
@@ -348,10 +351,13 @@
             // 
             // dataGridEntidade
             // 
+            this.dataGridEntidade.AllowUserToAddRows = false;
+            this.dataGridEntidade.AllowUserToDeleteRows = false;
             this.dataGridEntidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridEntidade.Location = new System.Drawing.Point(385, 284);
             this.dataGridEntidade.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridEntidade.Name = "dataGridEntidade";
+            this.dataGridEntidade.ReadOnly = true;
             this.dataGridEntidade.RowHeadersWidth = 51;
             this.dataGridEntidade.Size = new System.Drawing.Size(913, 185);
             this.dataGridEntidade.TabIndex = 8;
@@ -435,6 +441,7 @@
             this.comboAtributoEntidade.Items.AddRange(new object[] {
             "Código",
             "Nome",
+            "Razão Social",
             "CPF",
             "CNPJ",
             "Telefone",
@@ -2289,6 +2296,15 @@
             this.labelDadosFazenda.TabIndex = 1;
             this.labelDadosFazenda.Text = "Dados Fazenda";
             // 
+            // fazendaSuinosDataSet
+            // 
+            this.fazendaSuinosDataSet.DataSetName = "fazendaSuinosDataSet";
+            this.fazendaSuinosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fornecedorTableAdapter
+            // 
+            this.fornecedorTableAdapter.ClearBeforeFill = true;
+            // 
             // FormCadastros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2302,6 +2318,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCadastros";
             this.Text = "Cadastros";
+            this.Load += new System.EventHandler(this.FormCadastros_Load);
             this.panel3Botoes.ResumeLayout(false);
             this.panelFiltroEntidade.ResumeLayout(false);
             this.panelFiltroEntidade.PerformLayout();
@@ -2325,6 +2342,7 @@
             this.panelCadastroFazenda.ResumeLayout(false);
             this.panelCadastroFazenda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLotesAssociados_Pocilga)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2469,5 +2487,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutFiltroAcoes;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutFiltroEntidade;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutFiltroFazenda;
+        private fazendaSuinosDataSet fazendaSuinosDataSet;
+        private fazendaSuinosDataSetTableAdapters.FornecedorTableAdapter fornecedorTableAdapter;
     }
 }

@@ -28,6 +28,16 @@ namespace fazendaSuinos
         {
             InitializeComponent();
 
+            SuspendLayout();
+            //AJUSTA PANELS DE FILTRO
+            panelFiltroFazenda.Visible = false;
+            panelFiltroAcoes.Visible = false;
+            panelFiltroEntidade.Visible = true;
+            //AJUSTA CAMPOS DE CADASTRO
+            panelCadastroFazenda.Visible = false;
+            panelCadastroEntidade.Visible = true;
+            ResumeLayout();
+
             //Lista das tags disponíveis para uso
             tagsFiltrosEnt.Add(btnFiltroEnt1);
             tagsFiltrosEnt.Add(btnFiltroEnt2);
@@ -883,6 +893,13 @@ namespace fazendaSuinos
                     }
                 }
             }
+        }
+
+        private void FormCadastros_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'fazendaSuinosDataSet.Fornecedor'. Você pode movê-la ou removê-la conforme necessário.
+            this.fornecedorTableAdapter.Fill(this.fazendaSuinosDataSet.Fornecedor);
+
         }
     }
 }
