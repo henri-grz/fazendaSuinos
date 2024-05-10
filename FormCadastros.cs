@@ -737,11 +737,12 @@ namespace fazendaSuinos
             StringBuilder queryBuilder = new StringBuilder("INSERT INTO " + entidadeTabela + "(");
 
             //Gera a lista com o valor dos devidos campos
-            List<string> listaValores = null;
+            List<string> listaValores = verificaCamposEntidade();
 
-            while (listaValores == null)
+            if(listaValores == null)
             {
-                listaValores = verificaCamposEntidade();
+                MessageBox.Show("Há campos obrigatórios em branco.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             //Gera automaticamente a estrutura que vincula o campo da tabela ao valor da Text Box
@@ -794,6 +795,7 @@ namespace fazendaSuinos
                         command.ExecuteNonQuery();
 
                         Console.WriteLine("Inserção bem-sucedida!");
+                        MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception ex)
@@ -801,8 +803,6 @@ namespace fazendaSuinos
                     Console.WriteLine("Erro ao inserir dados: " + ex.Message);
                 }
             }
-
-            MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             limpaCamposCadastro();
 
@@ -836,8 +836,7 @@ namespace fazendaSuinos
                 }
                 else if (campo.Visible && campo.Text == "")
                 {
-                    MessageBox.Show("Há campos obrigatórios em branco.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
+                    return null;
                 }
             }
             foreach (ComboBox combo in comboBoxes)
@@ -848,8 +847,7 @@ namespace fazendaSuinos
                 }
                 else if (combo.Visible && combo.Text == "")
                 {
-                    MessageBox.Show("Há campos obrigatórios em branco.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    break;
+                    return null;
                 }
             }
 
@@ -982,6 +980,7 @@ namespace fazendaSuinos
                         command.ExecuteNonQuery();
 
                         Console.WriteLine("Alteração bem-sucedida!");
+                        MessageBox.Show("Alteração realizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception ex)
@@ -989,10 +988,6 @@ namespace fazendaSuinos
                     Console.WriteLine("Erro ao alterar dados: " + ex.Message);
                 }
             }
-
-            MessageBox.Show("Alteração realizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
         }
 
         private void btnConsultarEntidade_Click(object sender, EventArgs e)
@@ -1195,5 +1190,46 @@ namespace fazendaSuinos
             }
         }
 
+        private void btnExcluirEntidade_Click(object sender, EventArgs e)
+        {
+            //Exibe mensagem de confirmação da exclusão
+            DialogResult result = MessageBox.Show("Confirma a exclusão do registro?.", "Atenção", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            //Vê o índice da Combo Box e atribui o valor a uma string.
+            String entidadeTabela = listaTipoEntidade[comboTipoEntidade.SelectedIndex];
+
+            //Verifica o botão que foi clicado e executa de acordo
+            if (result == DialogResult.OK)
+            {
+                string queryExclusao = "DELETE FROM " + entidadeTabela + " WHERE Cod" + entidadeSelecionada + " = " + campoCodigoEntidade.Text;
+
+                //Cria e executa a exclusão com uma conexão válida.
+                using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+                {
+                    try
+                    {
+                        connection.Open();
+
+                        // Cria o comando SQL
+                        using (SqlCommand command = connection.CreateCommand(queryExclusao))
+                        {
+                            // Executa o comando SQL
+                            command.ExecuteNonQuery();
+
+                            Console.WriteLine("Exclusão realizada");
+                            MessageBox.Show("Exclusão realizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Erro ao excluir registro: " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
     }
 }

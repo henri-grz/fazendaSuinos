@@ -1109,6 +1109,7 @@ namespace fazendaSuinos
             this.btnExcluirEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluirEntidade.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnExcluirEntidade.UseVisualStyleBackColor = false;
+            this.btnExcluirEntidade.Click += new System.EventHandler(this.btnExcluirEntidade_Click);
             // 
             // campoCEP
             // 
