@@ -18,7 +18,7 @@ namespace fazendaSuinos
         private List<string[]> filtrosFaz = new List<string[]>();
         private List<string[]> filtrosAco = new List<string[]>();
 
-        private string entidadeSelecionada;
+        private string entidadeSelecionada, fazendaSelecionada;
 
         private List<IconButton> tagsFiltrosEnt = new List<IconButton>();
         private List<IconButton> tagsFiltrosFaz = new List<IconButton>();
@@ -51,6 +51,8 @@ namespace fazendaSuinos
             tagsFiltrosAco.Add(btnFiltroAco2);
             tagsFiltrosAco.Add(btnFiltroAco3);
         }
+
+        //BOTOES SUPERIORES
 
         private void btnEntidades_Click(object sender, EventArgs e)
         {
@@ -92,111 +94,7 @@ namespace fazendaSuinos
             ResumeLayout();
         }
 
-        private void comboTipoEntidade_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            if (comboTipoEntidade.SelectedItem.ToString() == "Fornecedor")
-            {
-                escondeTodosCadastroEntidade();
-                limpaCamposCadastro();
-
-                campoRazaoSocial.Visible = true;
-                labelRazaoSocial.Visible = true;
-                campoCNPJ.Visible = true;
-                labelCNPJ.Visible = true;
-                campoTelefone.Visible = true;
-                labelTelefone.Visible = true;
-                comboPrivilegios.Visible = true;
-                labelPrivilegios.Visible = true;
-                campoCEP.Visible = true;
-                labelCEP.Visible = true;
-            }
-            else if (comboTipoEntidade.SelectedItem.ToString() == "Gerente")
-            {
-                escondeTodosCadastroEntidade();
-                limpaCamposCadastro();
-
-                campoNome.Visible = true;
-                labelNome.Visible = true;
-                campoCPF.Visible = true;
-                labelCPF.Visible = true;
-                campoTelefone.Visible = true;
-                labelTelefone.Visible = true;
-                comboPrivilegios.Visible = true;
-                labelPrivilegios.Visible = true;
-                comboSetor.Visible = true;
-                labelSetor.Visible = true;
-            }
-            else if (comboTipoEntidade.SelectedItem.ToString() == "Técnico")
-            {
-                escondeTodosCadastroEntidade();
-                limpaCamposCadastro();
-
-                campoNome.Visible = true;
-                labelNome.Visible = true;
-                campoCPF.Visible = true;
-                labelCPF.Visible = true;
-                campoTelefone.Visible = true;
-                labelTelefone.Visible = true;
-                comboPrivilegios.Visible = true;
-                labelPrivilegios.Visible = true;
-                comboEspecialidade.Visible = true;
-                labelEspecialidade.Visible = true;
-            }
-            else if (comboTipoEntidade.SelectedItem.ToString() == "Produtor")
-            {
-                escondeTodosCadastroEntidade();
-                limpaCamposCadastro();
-
-                campoNome.Visible = true;
-                labelNome.Visible = true;
-                campoCPF.Visible = true;
-                labelCPF.Visible = true;
-                campoTelefone.Visible = true;
-                labelTelefone.Visible = true;
-                campoCEP.Visible = true;
-                labelCEP.Visible = true;
-                comboPrivilegios.Visible = true;
-                labelPrivilegios.Visible = true;
-            }
-            else
-            {
-                escondeTodosCadastroEntidade();
-                limpaCamposCadastro();
-
-                campoNome.Visible = true;
-                labelNome.Visible = true;
-                campoCPF.Visible = true;
-                labelCPF.Visible = true;
-                campoTelefone.Visible = true;
-                labelTelefone.Visible = true;
-                comboPrivilegios.Visible = true;
-                labelPrivilegios.Visible = true;
-            }
-        }
-
-        private void btnLimparCadastro_Click(object sender, EventArgs e)
-        {
-            limpaCamposCadastro();
-        }
-
-        private void limpaCamposCadastro()
-        {
-            campoCodigoEntidade.Text = "";
-            campoNome.Text = "";
-            campoRazaoSocial.Text = "";
-            campoCPF.Text = "";
-            campoCNPJ.Text = "";
-            campoTelefone.Text = "";
-            campoCEP.Text = "";
-            comboSetor.Text = "";
-            comboSetor.SelectedIndex = -1;
-            comboEspecialidade.Text = "";
-            comboEspecialidade.SelectedIndex = -1;
-            comboPrivilegios.Text = "";
-            comboPrivilegios.SelectedIndex = -1;
-        }
-
+        //FILTROS
         private void btnAdicionarFiltroEntidade_Click(object sender, EventArgs e)
         {
             // Verifica se já existem 3 filtrosEnt adicionados
@@ -527,6 +425,630 @@ namespace fazendaSuinos
             }
         }
 
+        //RADIO
+
+        private void radio_Entidade_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+
+            if (radioButton != null && radioButton.Checked)
+            {
+                entidadeSelecionada = radioButton.Text;
+            }
+        }
+
+        private void radio_Tecnico_Entidade_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+
+            if (radioButton != null && radioButton.Checked)
+            {
+                entidadeSelecionada = "Tecnico";
+            }
+        }
+
+        private void radio_Fazenda_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+
+            if (radioButton != null && radioButton.Checked)
+            {
+                fazendaSelecionada = radioButton.Text;
+            }
+        }
+
+        //LIMPAR
+
+        private void btnLimparEntidade_Click(object sender, EventArgs e)
+        {
+            comboAtributoEntidade.Text = "";
+            campoValorEntidade.Text = "";
+            dataGridEntidade.DataSource = null;
+        }
+
+        //CONSULTAR
+
+        private void btnConsultarFazenda_Click(object sender, EventArgs e)
+        {
+            string querySelecao;
+
+            if (fazendaSelecionada == null)
+            {
+                MessageBox.Show("Selecione um objeto da fazenda.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else if (filtrosFaz.Count == 0)
+            {
+                querySelecao = "SELECT * FROM " + fazendaSelecionada;
+            }
+            else
+            {
+                // Inicia a query de select
+                StringBuilder queryBuilder = new StringBuilder("SELECT * FROM " + fazendaSelecionada + " WHERE ");
+
+                // Loop pelos filtros para adicionar as condições WHERE à query
+                for (int i = 0; i < filtrosFaz.Count; i++)
+                {
+                    queryBuilder.Append(filtrosFaz[i][0]); // Adiciona o nome do atributo
+                    queryBuilder.Append(" LIKE '%");
+                    queryBuilder.Append(filtrosFaz[i][1]); // Adiciona o valor do atributo
+                    queryBuilder.Append("%'");
+
+                    // Adiciona o operador lógico AND entre as condições, exceto para a última condição
+                    if (i < filtrosFaz.Count - 1)
+                    {
+                        queryBuilder.Append(" AND ");
+                    }
+                }
+
+                // Completa a query de seleção
+                querySelecao = queryBuilder.ToString();
+            }
+
+            Console.WriteLine(querySelecao);
+
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    Console.WriteLine("Abriu com " + fazendaSelecionada);
+
+                    // Cria um adaptador de dados para executar a query
+                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
+
+                    // Cria um DataTable para armazenar os resultados
+                    DataTable dataTable = new DataTable();
+
+                    // Preenche o DataTable com os resultados da consulta
+                    adapter.Fill(dataTable);
+
+                    // Define o DataTable como a fonte de dados do DataGridView
+                    dataGridFazenda.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar objeto: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void btnConsultarEntidade_Click(object sender, EventArgs e)
+        {
+            string querySelecao;
+
+            if (entidadeSelecionada == null)
+            {
+                MessageBox.Show("Selecione um tipo de entidade.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else if (filtrosEnt.Count == 0)
+            {
+                querySelecao = "SELECT * FROM " + entidadeSelecionada;
+            }
+            else
+            {
+                // Inicia a query de select
+                StringBuilder queryBuilder = new StringBuilder("SELECT * FROM " + entidadeSelecionada + " WHERE ");
+
+                // Loop pelos filtros para adicionar as condições WHERE à query
+                for (int i = 0; i < filtrosEnt.Count; i++)
+                {
+                    queryBuilder.Append(filtrosEnt[i][0]); // Adiciona o nome do atributo
+                    queryBuilder.Append(" LIKE '%");
+                    queryBuilder.Append(filtrosEnt[i][1]); // Adiciona o valor do atributo
+                    queryBuilder.Append("%'");
+
+                    // Adiciona o operador lógico AND entre as condições, exceto para a última condição
+                    if (i < filtrosEnt.Count - 1)
+                    {
+                        queryBuilder.Append(" AND ");
+                    }
+                }
+
+                // Completa a query de seleção
+                querySelecao = queryBuilder.ToString();
+            }
+
+            Console.WriteLine(querySelecao);
+
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    Console.WriteLine("Abriu com " + entidadeSelecionada);
+
+                    // Cria um adaptador de dados para executar a query
+                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
+
+                    // Cria um DataTable para armazenar os resultados
+                    DataTable dataTable = new DataTable();
+
+                    // Preenche o DataTable com os resultados da consulta
+                    adapter.Fill(dataTable);
+
+                    // Define o DataTable como a fonte de dados do DataGridView
+                    dataGridEntidade.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar entidade: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+
+        }
+
+        //CADASTRO ENTIDADES
+
+        private void comboTipoEntidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (comboTipoEntidade.SelectedItem.ToString() == "Fornecedor")
+            {
+                escondeTodosCadastroEntidade();
+                limpaCamposCadastroEntidade();
+
+                campoRazaoSocial.Visible = true;
+                labelRazaoSocial.Visible = true;
+                campoCNPJ.Visible = true;
+                labelCNPJ.Visible = true;
+                campoTelefone.Visible = true;
+                labelTelefone.Visible = true;
+                comboPrivilegios.Visible = true;
+                labelPrivilegios.Visible = true;
+                campoCEP.Visible = true;
+                labelCEP.Visible = true;
+            }
+            else if (comboTipoEntidade.SelectedItem.ToString() == "Gerente")
+            {
+                escondeTodosCadastroEntidade();
+                limpaCamposCadastroEntidade();
+
+                campoNome.Visible = true;
+                labelNome.Visible = true;
+                campoCPF.Visible = true;
+                labelCPF.Visible = true;
+                campoTelefone.Visible = true;
+                labelTelefone.Visible = true;
+                comboPrivilegios.Visible = true;
+                labelPrivilegios.Visible = true;
+                comboSetor.Visible = true;
+                labelSetor.Visible = true;
+            }
+            else if (comboTipoEntidade.SelectedItem.ToString() == "Técnico")
+            {
+                escondeTodosCadastroEntidade();
+                limpaCamposCadastroEntidade();
+
+                campoNome.Visible = true;
+                labelNome.Visible = true;
+                campoCPF.Visible = true;
+                labelCPF.Visible = true;
+                campoTelefone.Visible = true;
+                labelTelefone.Visible = true;
+                comboPrivilegios.Visible = true;
+                labelPrivilegios.Visible = true;
+                comboEspecialidade.Visible = true;
+                labelEspecialidade.Visible = true;
+            }
+            else if (comboTipoEntidade.SelectedItem.ToString() == "Produtor")
+            {
+                escondeTodosCadastroEntidade();
+                limpaCamposCadastroEntidade();
+
+                campoNome.Visible = true;
+                labelNome.Visible = true;
+                campoCPF.Visible = true;
+                labelCPF.Visible = true;
+                campoTelefone.Visible = true;
+                labelTelefone.Visible = true;
+                campoCEP.Visible = true;
+                labelCEP.Visible = true;
+                comboPrivilegios.Visible = true;
+                labelPrivilegios.Visible = true;
+            }
+            else
+            {
+                escondeTodosCadastroEntidade();
+                limpaCamposCadastroEntidade();
+
+                campoNome.Visible = true;
+                labelNome.Visible = true;
+                campoCPF.Visible = true;
+                labelCPF.Visible = true;
+                campoTelefone.Visible = true;
+                labelTelefone.Visible = true;
+                comboPrivilegios.Visible = true;
+                labelPrivilegios.Visible = true;
+            }
+        }
+
+        //INCLUIR
+        private void btnIncluirEntidade_Click(object sender, EventArgs e)
+        {
+            //Vê o índice da Combo Box e atribui o valor a uma string.
+            String entidadeTabela = listaTipoEntidade[comboTipoEntidade.SelectedIndex];
+
+            //Inicia a Query SQL
+            StringBuilder queryBuilder = new StringBuilder("INSERT INTO " + entidadeTabela + "(");
+
+            //Gera a lista com o valor dos devidos campos
+            List<string> listaValores = verificaCamposEntidade();
+
+            if (listaValores == null)
+            {
+                MessageBox.Show("Há campos obrigatórios em branco.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            //Gera automaticamente a estrutura que vincula o campo da tabela ao valor da Text Box
+            Dictionary<string, string> dados = geraDadosQueryEntidade(entidadeTabela, listaValores);
+
+            // Adiciona os nomes dos campos à consulta SQL
+            queryBuilder.Append(string.Join(",", dados.Keys));
+            queryBuilder.Append(") VALUES (");
+
+            // Adiciona os valores à consulta SQL
+            foreach (var valor in dados.Values)
+            {
+                // Se o valor for uma string, adiciona aspas simples à volta
+                if (valor != null)
+                {
+                    queryBuilder.Append("'");
+                    queryBuilder.Append(valor);
+                    queryBuilder.Append("'");
+                }
+                else
+                {
+                    // Se o valor for nulo, insere NULL na consulta
+                    queryBuilder.Append("NULL");
+                }
+
+                // Adiciona uma vírgula para separar os valores, exceto o último
+                if (!valor.Equals(dados.Values.Last()))
+                {
+                    queryBuilder.Append(",");
+                }
+            }
+
+            queryBuilder.Append(")");
+
+            // Query de inserção completa
+            string queryInsercao = queryBuilder.ToString();
+            Console.WriteLine(queryInsercao);
+
+            //Cria e executa comando com uma conexão válida.
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Cria o comando SQL
+                    using (SqlCommand command = connection.CreateCommand(queryInsercao))
+                    {
+                        // Executa o comando SQL
+                        command.ExecuteNonQuery();
+
+                        Console.WriteLine("Inserção bem-sucedida!");
+                        MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erro ao inserir dados: " + ex.Message);
+                }
+            }
+
+            limpaCamposCadastroEntidade();
+
+            comboTipoEntidade.Focus();
+        }
+
+        private List<string> verificaCamposEntidade()
+        {
+            List<string> listaValores = new List<string>();
+
+            TextBox[] textboxes =
+            {
+                campoNome,campoCNPJ,
+                campoCPF, campoRazaoSocial,
+                campoCEP, campoTelefone
+            };
+
+            ComboBox[] comboBoxes =
+            {
+                comboSetor, comboEspecialidade
+
+                //NECESSÁRIO AJUSTAR BANCO DE DADOS PARA QUE O CAMPO PRIVILÉGIOS EXISTA
+                //comboSetor, comboEspecialidade, comboPrivilegios
+            };
+
+            foreach (TextBox campo in textboxes)
+            {
+                if (campo.Visible && campo.Text != "")
+                {
+                    listaValores.Add(campo.Text);
+                }
+                else if (campo.Visible && campo.Text == "")
+                {
+                    return null;
+                }
+            }
+            foreach (ComboBox combo in comboBoxes)
+            {
+                if (combo.Visible && combo.Text != "")
+                {
+                    listaValores.Add(combo.Text);
+                }
+                else if (combo.Visible && combo.Text == "")
+                {
+                    return null;
+                }
+            }
+
+            foreach (string valor in listaValores)
+            {
+                Console.WriteLine(valor);
+            }
+
+            return listaValores;
+        }
+
+        private Dictionary<string, string> geraDadosQueryEntidade(string tabela, List<string> listaValores)
+        {
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                connection.Open();
+
+                Console.WriteLine("Abriu com " + tabela);
+
+                // Query para obter os nomes dos campos da tabela
+                string query = $"SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{tabela}' AND LEFT(COLUMN_NAME, 3) != 'Cod'";
+
+                using (SqlCommand command = connection.CreateCommand(query))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Lista para armazenar os nomes dos campos
+                        var nomesCampos = new List<string>();
+
+                        // Lê os nomes dos campos retornados pela consulta
+                        while (reader.Read())
+                        {
+                            string nomeCampo = reader.GetString(0);
+                            nomesCampos.Add(nomeCampo);
+
+                            Console.WriteLine($"{nomeCampo}");
+                        }
+
+                        Dictionary<string, string> dados = new Dictionary<string, string>();
+
+                        // Verifica se as listas têm o mesmo comprimento
+                        if (nomesCampos.Count == listaValores.Count)
+                        {
+                            // Adiciona os valores e nomes de campo ao dicionário
+                            for (int i = 0; i < nomesCampos.Count; i++)
+                            {
+                                dados.Add(nomesCampos[i], listaValores[i]);
+                            }
+
+                            // Exibe os dados no dicionário
+                            foreach (var kvp in dados)
+                            {
+                                Console.WriteLine($"Campo: {kvp.Key}, Valor: {kvp.Value}");
+                            }
+
+                            return dados;
+                        }
+                        else
+                        {
+                            Console.WriteLine("As listas de nomes de campos e valores têm comprimentos diferentes.");
+                            Console.WriteLine("Quantidade de campos: " + nomesCampos.Count + " Quantidade de valores: " + listaValores.Count);
+
+                            return null;
+                        }
+                    }
+                }
+            }
+        }
+
+        //GRAVAR
+        private void btnGravarEntidade_Click(object sender, EventArgs e)
+        {
+            //Vê o índice da Combo Box e atribui o valor a uma string.
+            String entidadeTabela = listaTipoEntidade[comboTipoEntidade.SelectedIndex];
+
+            //Inicia a Query SQL
+            StringBuilder queryBuilder = new StringBuilder("UPDATE " + entidadeTabela + " SET ");
+
+            Console.WriteLine(entidadeSelecionada);
+
+            //Gera a lista com o valor dos devidos campos
+            List<string> listaValores = null;
+
+            while (listaValores == null)
+            {
+                listaValores = verificaCamposEntidade();
+            }
+
+            //Gera automaticamente a estrutura que vincula o campo da tabela ao valor da Text Box
+            Dictionary<string, string> dados = geraDadosQueryEntidade(entidadeTabela, listaValores);
+
+            //Insere a atualização de valores na query
+            foreach (var kvp in dados)
+            {
+                var valor = kvp.Value;
+                var campo = kvp.Key;
+
+                // Se o valor for uma string, adiciona aspas simples à volta
+                if (campo != null)
+                {
+                    queryBuilder.Append(campo);
+                    queryBuilder.Append(" = '");
+                    queryBuilder.Append(valor);
+                    queryBuilder.Append("'");
+                }
+
+                // Adiciona uma vírgula para separar os valores, exceto o último
+                if (!valor.Equals(dados.Values.Last()))
+                {
+                    queryBuilder.Append(",");
+                }
+            }
+
+            queryBuilder.Append(" WHERE Cod" + entidadeTabela + " = " + campoCodigoEntidade.Text + ";");
+
+            // Query de alteração completa
+            string queryInsercao = queryBuilder.ToString();
+            Console.WriteLine(queryInsercao);
+
+            //Cria e executa comando com uma conexão válida.
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Cria o comando SQL
+                    using (SqlCommand command = connection.CreateCommand(queryInsercao))
+                    {
+                        // Executa o comando SQL
+                        command.ExecuteNonQuery();
+
+                        Console.WriteLine("Alteração bem-sucedida!");
+                        MessageBox.Show("Alteração realizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erro ao alterar dados: " + ex.Message);
+                }
+            }
+        }
+
+        //EXCLUIR
+        private void btnExcluirEntidade_Click(object sender, EventArgs e)
+        {
+            //Exibe mensagem de confirmação da exclusão
+            DialogResult result = MessageBox.Show("Confirma a exclusão do registro?.", "Atenção", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            //Vê o índice da Combo Box e atribui o valor a uma string.
+            String entidadeTabela = listaTipoEntidade[comboTipoEntidade.SelectedIndex];
+
+            //Verifica o botão que foi clicado e executa de acordo
+            if (result == DialogResult.OK)
+            {
+                string queryExclusao = "DELETE FROM " + entidadeTabela + " WHERE Cod" + entidadeSelecionada + " = " + campoCodigoEntidade.Text;
+
+                //Cria e executa a exclusão com uma conexão válida.
+                using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+                {
+                    try
+                    {
+                        connection.Open();
+
+                        // Cria o comando SQL
+                        using (SqlCommand command = connection.CreateCommand(queryExclusao))
+                        {
+                            // Executa o comando SQL
+                            command.ExecuteNonQuery();
+
+                            Console.WriteLine("Exclusão realizada");
+                            MessageBox.Show("Exclusão realizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Erro ao excluir registro: " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        //LIMPAR
+        private void btnLimparCadastro_Click(object sender, EventArgs e)
+        {
+            limpaCamposCadastroEntidade();
+        }
+
+        private void limpaCamposCadastroEntidade()
+        {
+            campoCodigoEntidade.Text = "";
+            campoNome.Text = "";
+            campoRazaoSocial.Text = "";
+            campoCPF.Text = "";
+            campoCNPJ.Text = "";
+            campoTelefone.Text = "";
+            campoCEP.Text = "";
+            comboSetor.Text = "";
+            comboSetor.SelectedIndex = -1;
+            comboEspecialidade.Text = "";
+            comboEspecialidade.SelectedIndex = -1;
+            comboPrivilegios.Text = "";
+            comboPrivilegios.SelectedIndex = -1;
+        }
+
+        private void escondeTodosCadastroEntidade()
+        {
+            //Dados Comuns
+            campoNome.Visible = false;
+            labelNome.Visible = false;
+            campoCPF.Visible = false;
+            labelCPF.Visible = false;
+            campoTelefone.Visible = false;
+            labelTelefone.Visible = false;
+            comboPrivilegios.Visible = false;
+            labelPrivilegios.Visible = false;
+
+            //Dados de ADMINISTRADOR
+
+            //Dados de GERENTE
+            comboSetor.Visible = false;
+            labelSetor.Visible = false;
+
+            //Dados de TECNICO
+            comboEspecialidade.Visible = false;
+            labelEspecialidade.Visible = false;
+
+            //Dados de FORNECEDOR
+            campoRazaoSocial.Visible = false;
+            labelRazaoSocial.Visible = false;
+            campoCNPJ.Visible = false;
+            labelCNPJ.Visible = false;
+            campoCEP.Visible = false;
+            labelCEP.Visible = false;
+        }
+
+        //CADASTRO DE FAZENDA
+
         private void comboTipoFazenda_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Verifica o item selecionado, esconde todos os campos e mostra
@@ -695,387 +1217,9 @@ namespace fazendaSuinos
             dateTPValidade_Produto.Visible = false;
             labelValidade_Produto.Visible = false;
 
-        }
+        }     
 
-        private void escondeTodosCadastroEntidade()
-        {
-            //Dados Comuns
-            campoNome.Visible = false;
-            labelNome.Visible = false;
-            campoCPF.Visible = false;
-            labelCPF.Visible = false;
-            campoTelefone.Visible = false;
-            labelTelefone.Visible = false;
-            comboPrivilegios.Visible = false;
-            labelPrivilegios.Visible = false;
-
-            //Dados de ADMINISTRADOR
-
-            //Dados de GERENTE
-            comboSetor.Visible = false;
-            labelSetor.Visible = false;
-
-            //Dados de TECNICO
-            comboEspecialidade.Visible = false;
-            labelEspecialidade.Visible = false;
-
-            //Dados de FORNECEDOR
-            campoRazaoSocial.Visible = false;
-            labelRazaoSocial.Visible = false;
-            campoCNPJ.Visible = false;
-            labelCNPJ.Visible = false;
-            campoCEP.Visible = false;
-            labelCEP.Visible = false;
-        }
-
-        private void btnIncluirEntidade_Click(object sender, EventArgs e)
-        {
-            //Vê o índice da Combo Box e atribui o valor a uma string.
-            String entidadeTabela = listaTipoEntidade[comboTipoEntidade.SelectedIndex];
-
-            //Inicia a Query SQL
-            StringBuilder queryBuilder = new StringBuilder("INSERT INTO " + entidadeTabela + "(");
-
-            //Gera a lista com o valor dos devidos campos
-            List<string> listaValores = verificaCamposEntidade();
-
-            if(listaValores == null)
-            {
-                MessageBox.Show("Há campos obrigatórios em branco.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            //Gera automaticamente a estrutura que vincula o campo da tabela ao valor da Text Box
-            Dictionary<string, string> dados = geraDadosQueryEntidade(entidadeTabela, listaValores);
-
-            // Adiciona os nomes dos campos à consulta SQL
-            queryBuilder.Append(string.Join(",", dados.Keys));
-            queryBuilder.Append(") VALUES (");
-
-            // Adiciona os valores à consulta SQL
-            foreach (var valor in dados.Values)
-            {
-                // Se o valor for uma string, adiciona aspas simples à volta
-                if (valor != null)
-                {
-                    queryBuilder.Append("'");
-                    queryBuilder.Append(valor);
-                    queryBuilder.Append("'");
-                }
-                else
-                {
-                    // Se o valor for nulo, insere NULL na consulta
-                    queryBuilder.Append("NULL");
-                }
-
-                // Adiciona uma vírgula para separar os valores, exceto o último
-                if (!valor.Equals(dados.Values.Last()))
-                {
-                    queryBuilder.Append(",");
-                }
-            }
-
-            queryBuilder.Append(")");
-
-            // Query de inserção completa
-            string queryInsercao = queryBuilder.ToString();
-            Console.WriteLine(queryInsercao);
-
-            //Cria e executa comando com uma conexão válida.
-            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-
-                    // Cria o comando SQL
-                    using (SqlCommand command = connection.CreateCommand(queryInsercao))
-                    {
-                        // Executa o comando SQL
-                        command.ExecuteNonQuery();
-
-                        Console.WriteLine("Inserção bem-sucedida!");
-                        MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Erro ao inserir dados: " + ex.Message);
-                }
-            }
-
-            limpaCamposCadastro();
-
-            comboTipoEntidade.Focus();
-        }
-
-        private List<string> verificaCamposEntidade()
-        {
-            List<string> listaValores = new List<string>();
-
-            TextBox[] textboxes =
-            {
-                campoNome,campoCNPJ,
-                campoCPF, campoRazaoSocial,
-                campoCEP, campoTelefone
-            };
-
-            ComboBox[] comboBoxes =
-            {
-                comboSetor, comboEspecialidade
-
-                //NECESSÁRIO AJUSTAR BANCO DE DADOS PARA QUE O CAMPO PRIVILÉGIOS EXISTA
-                //comboSetor, comboEspecialidade, comboPrivilegios
-            };
-
-            foreach (TextBox campo in textboxes)
-            {
-                if (campo.Visible && campo.Text != "")
-                {
-                    listaValores.Add(campo.Text);
-                }
-                else if (campo.Visible && campo.Text == "")
-                {
-                    return null;
-                }
-            }
-            foreach (ComboBox combo in comboBoxes)
-            {
-                if (combo.Visible && combo.Text != "")
-                {
-                    listaValores.Add(combo.Text);
-                }
-                else if (combo.Visible && combo.Text == "")
-                {
-                    return null;
-                }
-            }
-
-            foreach (string valor in listaValores)
-            {
-                Console.WriteLine(valor);
-            }
-
-            return listaValores;
-        }
-
-        private Dictionary<string, string> geraDadosQueryEntidade(string tabela, List<string> listaValores)
-        {
-            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
-            {
-                connection.Open();
-
-                Console.WriteLine("Abriu com " + tabela);
-
-                // Query para obter os nomes dos campos da tabela
-                string query = $"SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{tabela}' AND LEFT(COLUMN_NAME, 3) != 'Cod'";
-
-                using (SqlCommand command = connection.CreateCommand(query))
-                {
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        // Lista para armazenar os nomes dos campos
-                        var nomesCampos = new List<string>();
-
-                        // Lê os nomes dos campos retornados pela consulta
-                        while (reader.Read())
-                        {
-                            string nomeCampo = reader.GetString(0);
-                            nomesCampos.Add(nomeCampo);
-
-                            Console.WriteLine($"{nomeCampo}");
-                        }
-
-                        Dictionary<string, string> dados = new Dictionary<string, string>();
-
-                        // Verifica se as listas têm o mesmo comprimento
-                        if (nomesCampos.Count == listaValores.Count)
-                        {
-                            // Adiciona os valores e nomes de campo ao dicionário
-                            for (int i = 0; i < nomesCampos.Count; i++)
-                            {
-                                dados.Add(nomesCampos[i], listaValores[i]);
-                            }
-
-                            // Exibe os dados no dicionário
-                            foreach (var kvp in dados)
-                            {
-                                Console.WriteLine($"Campo: {kvp.Key}, Valor: {kvp.Value}");
-                            }
-
-                            return dados;
-                        }
-                        else
-                        {
-                            Console.WriteLine("As listas de nomes de campos e valores têm comprimentos diferentes.");
-                            Console.WriteLine("Quantidade de campos: " + nomesCampos.Count + " Quantidade de valores: " + listaValores.Count);
-
-                            return null;
-                        }
-                    }
-                }
-            }
-        }
-
-        private void btnGravarEntidade_Click(object sender, EventArgs e)
-        {
-            //Vê o índice da Combo Box e atribui o valor a uma string.
-            String entidadeTabela = listaTipoEntidade[comboTipoEntidade.SelectedIndex];
-
-            //Inicia a Query SQL
-            StringBuilder queryBuilder = new StringBuilder("UPDATE " + entidadeTabela + " SET ");
-
-            Console.WriteLine(entidadeSelecionada);
-
-            //Gera a lista com o valor dos devidos campos
-            List<string> listaValores = null;
-
-            while (listaValores == null)
-            {
-                listaValores = verificaCamposEntidade();
-            }
-
-            //Gera automaticamente a estrutura que vincula o campo da tabela ao valor da Text Box
-            Dictionary<string, string> dados = geraDadosQueryEntidade(entidadeTabela, listaValores);
-
-            //Insere a atualização de valores na query
-            foreach (var kvp in dados)
-            {
-                var valor = kvp.Value;
-                var campo = kvp.Key;
-
-                // Se o valor for uma string, adiciona aspas simples à volta
-                if (campo != null)
-                {
-                    queryBuilder.Append(campo);
-                    queryBuilder.Append(" = '");
-                    queryBuilder.Append(valor);
-                    queryBuilder.Append("'");
-                }
-
-                // Adiciona uma vírgula para separar os valores, exceto o último
-                if (!valor.Equals(dados.Values.Last()))
-                {
-                    queryBuilder.Append(",");
-                }
-            }
-
-            queryBuilder.Append( " WHERE Cod" + entidadeTabela + " = " + campoCodigoEntidade.Text + ";");
-
-            // Query de alteração completa
-            string queryInsercao = queryBuilder.ToString();
-            Console.WriteLine(queryInsercao);
-
-            //Cria e executa comando com uma conexão válida.
-            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-
-                    // Cria o comando SQL
-                    using (SqlCommand command = connection.CreateCommand(queryInsercao))
-                    {
-                        // Executa o comando SQL
-                        command.ExecuteNonQuery();
-
-                        Console.WriteLine("Alteração bem-sucedida!");
-                        MessageBox.Show("Alteração realizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Erro ao alterar dados: " + ex.Message);
-                }
-            }
-        }
-
-        private void btnConsultarEntidade_Click(object sender, EventArgs e)
-        {
-            string querySelecao;
-
-            if (entidadeSelecionada == null)
-            {
-                MessageBox.Show("Selecione um tipo de entidade.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            else if (filtrosEnt.Count == 0)
-            {
-                querySelecao = "SELECT * FROM " + entidadeSelecionada;
-            }
-            else
-            {
-                // Inicia a query de select
-                StringBuilder queryBuilder = new StringBuilder("SELECT * FROM " + entidadeSelecionada + " WHERE ");
-
-                // Loop pelos filtros para adicionar as condições WHERE à query
-                for (int i = 0; i < filtrosEnt.Count; i++)
-                {
-                    queryBuilder.Append(filtrosEnt[i][0]); // Adiciona o nome do atributo
-                    queryBuilder.Append(" LIKE '%");
-                    queryBuilder.Append(filtrosEnt[i][1]); // Adiciona o valor do atributo
-                    queryBuilder.Append("%'");
-
-                    // Adiciona o operador lógico AND entre as condições, exceto para a última condição
-                    if (i < filtrosEnt.Count - 1)
-                    {
-                        queryBuilder.Append(" AND ");
-                    }
-                }
-
-                // Completa a query de seleção
-                querySelecao = queryBuilder.ToString();
-            }
-            
-            Console.WriteLine(querySelecao);
-
-            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    Console.WriteLine("Abriu com " + entidadeSelecionada);
-
-                    // Cria um adaptador de dados para executar a query
-                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
-
-                    // Cria um DataTable para armazenar os resultados
-                    DataTable dataTable = new DataTable();
-
-                    // Preenche o DataTable com os resultados da consulta
-                    adapter.Fill(dataTable);
-
-                    // Define o DataTable como a fonte de dados do DataGridView
-                    dataGridEntidade.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao consultar entidade: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-
-        }
-
-        private void radio_Entidade_CheckedChanged(object sender, EventArgs e)
-        {
-            RadioButton radioButton = sender as RadioButton;
-
-            if (radioButton != null && radioButton.Checked)
-            {
-                entidadeSelecionada = radioButton.Text;
-            }
-        }
-
-        private void radio_Tecnico_Entidade_CheckedChanged(object sender, EventArgs e)
-        {
-            RadioButton radioButton = sender as RadioButton;
-
-            if (radioButton != null && radioButton.Checked)
-            {
-                entidadeSelecionada = "Tecnico";
-            }
-        }
+        //DATA GRIDS FILTRO
 
         private void dataGridEntidade_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -1115,13 +1259,6 @@ namespace fazendaSuinos
             }
         }
 
-        private void btnLimparEntidade_Click(object sender, EventArgs e)
-        {
-            comboAtributoEntidade.Text = "";
-            campoValorEntidade.Text = "";
-            dataGridEntidade.DataSource = null;
-        }
-
         private void dataGridEntidade_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             SuspendLayout();
@@ -1145,7 +1282,7 @@ namespace fazendaSuinos
 
         private void preencherCamposEntidade(string entidadeSelecionada, DataGridViewCellEventArgs e)
         {
-            if(entidadeSelecionada == "Administrador" || entidadeSelecionada == "Visitante" || entidadeSelecionada == "Gerente" || entidadeSelecionada == "Produtor" || entidadeSelecionada == "Tecnico")
+            if (entidadeSelecionada == "Administrador" || entidadeSelecionada == "Visitante" || entidadeSelecionada == "Gerente" || entidadeSelecionada == "Produtor" || entidadeSelecionada == "Tecnico")
             {
                 object codigo = dataGridEntidade.Rows[e.RowIndex].Cells[0].Value;
                 campoCodigoEntidade.Text = codigo.ToString();
@@ -1159,7 +1296,7 @@ namespace fazendaSuinos
                 object telefone = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["Telefone"].Index].Value;
                 campoTelefone.Text = telefone.ToString();
             }
-            if(entidadeSelecionada == "Fornecedor")
+            if (entidadeSelecionada == "Fornecedor")
             {
                 object codigo = dataGridEntidade.Rows[e.RowIndex].Cells[0].Value;
                 campoCodigoEntidade.Text = codigo.ToString();
@@ -1173,63 +1310,90 @@ namespace fazendaSuinos
                 object telefone = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["Telefone"].Index].Value;
                 campoTelefone.Text = telefone.ToString();
             }
-            if(entidadeSelecionada == "Fornecedor" || entidadeSelecionada == "Produtor")
+            if (entidadeSelecionada == "Fornecedor" || entidadeSelecionada == "Produtor")
             {
                 object cep = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["CEP"].Index].Value;
                 campoCEP.Text = cep.ToString();
             }
-            if(entidadeSelecionada == "Gerente")
+            if (entidadeSelecionada == "Gerente")
             {
                 object setor = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["Setor"].Index].Value;
                 comboSetor.Text = setor.ToString();
             }
-            if(entidadeSelecionada == "Tecnico")
+            if (entidadeSelecionada == "Tecnico")
             {
                 object especialidade = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["Especialidade"].Index].Value;
                 comboEspecialidade.Text = especialidade.ToString();
             }
         }
 
-        private void btnExcluirEntidade_Click(object sender, EventArgs e)
+        private void dataGridFazenda_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            //Exibe mensagem de confirmação da exclusão
-            DialogResult result = MessageBox.Show("Confirma a exclusão do registro?.", "Atenção", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-
-            //Vê o índice da Combo Box e atribui o valor a uma string.
-            String entidadeTabela = listaTipoEntidade[comboTipoEntidade.SelectedIndex];
-
-            //Verifica o botão que foi clicado e executa de acordo
-            if (result == DialogResult.OK)
+            if (dataGridFazenda.Columns["CodProdutor"] != null)
             {
-                string queryExclusao = "DELETE FROM " + entidadeTabela + " WHERE Cod" + entidadeSelecionada + " = " + campoCodigoEntidade.Text;
-
-                //Cria e executa a exclusão com uma conexão válida.
-                using (DatabaseConnection connection = new DatabaseConnection(connectionString))
-                {
-                    try
-                    {
-                        connection.Open();
-
-                        // Cria o comando SQL
-                        using (SqlCommand command = connection.CreateCommand(queryExclusao))
-                        {
-                            // Executa o comando SQL
-                            command.ExecuteNonQuery();
-
-                            Console.WriteLine("Exclusão realizada");
-                            MessageBox.Show("Exclusão realizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("Erro ao excluir registro: " + ex.Message);
-                    }
-                }
+                dataGridFazenda.Columns["CodProdutor"].HeaderText = "Código do Produtor";
             }
-            else
+            if (dataGridFazenda.Columns["CodPropriedade"] != null)
             {
-                return;
+                dataGridFazenda.Columns["CodPropriedade"].HeaderText = "Código da Propr.";
             }
+            if (dataGridFazenda.Columns["Quantidade"] != null)
+            {
+                dataGridFazenda.Columns["Quantidade"].HeaderText = "Quant.";
+            }
+            if (dataGridFazenda.Columns["Peso_Total"] != null)
+            {
+                dataGridFazenda.Columns["Peso_Total"].HeaderText = "Peso Total";
+            }
+            if (dataGridFazenda.Columns["Peso_Medio"] != null)
+            {
+                dataGridFazenda.Columns["Peso_Medio"].HeaderText = "Peso Medio";
+            }
+            if (dataGridFazenda.Columns["Observacoes"] != null)
+            {
+                dataGridFazenda.Columns["Observacoes"].HeaderText = "Obs.";
+            }
+            if (dataGridFazenda.Columns["Situacao"] != null)
+            {
+                dataGridFazenda.Columns["Situacao"].HeaderText = "Situação";
+            }
+            if (dataGridFazenda.Columns["Data_Alojamento"] != null)
+            {
+                dataGridFazenda.Columns["Data_Alojamento"].HeaderText = "Data de Aloj.";
+            }
+            if (dataGridFazenda.Columns["Estimativa_Carregamento"] != null)
+            {
+                dataGridFazenda.Columns["Estimativa_Carregamento"].HeaderText = "Est. Carreg.";
+            }
+            if (dataGridFazenda.Columns["CodGerente"] != null)
+            {
+                dataGridFazenda.Columns["CodGerente"].HeaderText = "Código do Gerente";
+            }
+            if (dataGridFazenda.Columns["Data_Ult"] != null)
+            {
+                dataGridFazenda.Columns["Data_Ult"].HeaderText = "Data Últ. Visita";
+            }
+            if (dataGridFazenda.Columns["Cod_Ult"] != null)
+            {
+                dataGridFazenda.Columns["Cod_Ult"].HeaderText = "Código Últ. Visita";
+            }
+            if (dataGridFazenda.Columns["CodVisitante"] != null)
+            {
+                dataGridFazenda.Columns["CodVisitante"].HeaderText = "Código do Visitante";
+            }
+            if (dataGridFazenda.Columns["CodPocilga"] != null)
+            {
+                dataGridFazenda.Columns["CodPocilga"].HeaderText = "Código da Pocilga";
+            }
+
+            // Renomeia a coluna de acordo com o nome desejado
+            dataGridFazenda.Columns[0].HeaderText = "Código";
+
+            // Define o tamanho das colunas
+            dataGridFazenda.Columns[0].Width = 80;
+
         }
+
+
     }
 }
