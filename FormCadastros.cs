@@ -866,6 +866,7 @@ namespace fazendaSuinos
             using (DatabaseConnection connection = new DatabaseConnection(connectionString))
             {
                 connection.Open();
+
                 Console.WriteLine("Abriu com " + tabela);
 
                 // Query para obter os nomes dos campos da tabela
@@ -918,8 +919,86 @@ namespace fazendaSuinos
             }
         }
 
+        private void btnGravarEntidade_Click(object sender, EventArgs e)
+        {
+            //Vê o índice da Combo Box e atribui o valor a uma string.
+            String entidadeTabela = listaTipoEntidade[comboTipoEntidade.SelectedIndex];
+
+            //Inicia a Query SQL
+            StringBuilder queryBuilder = new StringBuilder("UPDATE " + entidadeTabela + " SET ");
+
+            Console.WriteLine(entidadeSelecionada);
+
+            //Gera a lista com o valor dos devidos campos
+            List<string> listaValores = null;
+
+            while (listaValores == null)
+            {
+                listaValores = verificaCamposEntidade();
+            }
+
+            //Gera automaticamente a estrutura que vincula o campo da tabela ao valor da Text Box
+            Dictionary<string, string> dados = geraDadosQueryEntidade(entidadeTabela, listaValores);
+
+            //Insere a atualização de valores na query
+            foreach (var kvp in dados)
+            {
+                var valor = kvp.Value;
+                var campo = kvp.Key;
+
+                // Se o valor for uma string, adiciona aspas simples à volta
+                if (campo != null)
+                {
+                    queryBuilder.Append(campo);
+                    queryBuilder.Append(" = '");
+                    queryBuilder.Append(valor);
+                    queryBuilder.Append("'");
+                }
+
+                // Adiciona uma vírgula para separar os valores, exceto o último
+                if (!valor.Equals(dados.Values.Last()))
+                {
+                    queryBuilder.Append(",");
+                }
+            }
+
+            queryBuilder.Append( " WHERE Cod" + entidadeTabela + " = " + campoCodigoEntidade.Text + ";");
+
+            // Query de alteração completa
+            string queryInsercao = queryBuilder.ToString();
+            Console.WriteLine(queryInsercao);
+
+            //Cria e executa comando com uma conexão válida.
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Cria o comando SQL
+                    using (SqlCommand command = connection.CreateCommand(queryInsercao))
+                    {
+                        // Executa o comando SQL
+                        command.ExecuteNonQuery();
+
+                        Console.WriteLine("Alteração bem-sucedida!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erro ao alterar dados: " + ex.Message);
+                }
+            }
+
+            MessageBox.Show("Alteração realizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+        }
+
         private void btnConsultarEntidade_Click(object sender, EventArgs e)
         {
+            string querySelecao;
+
             if (entidadeSelecionada == null)
             {
                 MessageBox.Show("Selecione um tipo de entidade.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -927,30 +1006,32 @@ namespace fazendaSuinos
             }
             else if (filtrosEnt.Count == 0)
             {
-                MessageBox.Show("Defina no mínimo um filtro.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                querySelecao = "SELECT * FROM " + entidadeSelecionada;
             }
-
-            // Inicia a query de select
-            StringBuilder queryBuilder = new StringBuilder("SELECT * FROM " + entidadeSelecionada + " WHERE ");
-
-            // Loop pelos filtros para adicionar as condições WHERE à query
-            for (int i = 0; i < filtrosEnt.Count; i++)
+            else
             {
-                queryBuilder.Append(filtrosEnt[i][0]); // Adiciona o nome do atributo
-                queryBuilder.Append(" LIKE '%");
-                queryBuilder.Append(filtrosEnt[i][1]); // Adiciona o valor do atributo
-                queryBuilder.Append("%'");
+                // Inicia a query de select
+                StringBuilder queryBuilder = new StringBuilder("SELECT * FROM " + entidadeSelecionada + " WHERE ");
 
-                // Adiciona o operador lógico AND entre as condições, exceto para a última condição
-                if (i < filtrosEnt.Count - 1)
+                // Loop pelos filtros para adicionar as condições WHERE à query
+                for (int i = 0; i < filtrosEnt.Count; i++)
                 {
-                    queryBuilder.Append(" AND ");
-                }
-            }
+                    queryBuilder.Append(filtrosEnt[i][0]); // Adiciona o nome do atributo
+                    queryBuilder.Append(" LIKE '%");
+                    queryBuilder.Append(filtrosEnt[i][1]); // Adiciona o valor do atributo
+                    queryBuilder.Append("%'");
 
-            // Completa a query de seleção
-            string querySelecao = queryBuilder.ToString();
+                    // Adiciona o operador lógico AND entre as condições, exceto para a última condição
+                    if (i < filtrosEnt.Count - 1)
+                    {
+                        queryBuilder.Append(" AND ");
+                    }
+                }
+
+                // Completa a query de seleção
+                querySelecao = queryBuilder.ToString();
+            }
+            
             Console.WriteLine(querySelecao);
 
             using (DatabaseConnection connection = new DatabaseConnection(connectionString))
@@ -1113,5 +1194,6 @@ namespace fazendaSuinos
                 comboEspecialidade.Text = especialidade.ToString();
             }
         }
+
     }
 }
