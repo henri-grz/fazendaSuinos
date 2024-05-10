@@ -25,6 +25,8 @@ namespace fazendaSuinos
         private List<IconButton> tagsFiltrosAco = new List<IconButton>();
 
         private string[] listaTipoEntidade = { "Administrador", "Fornecedor", "Gerente", "Produtor", "Tecnico", "Visitante" };
+        private string[] listaTipoFazenda = { "Propriedade", "Pocilga", "Lote", "Visita", "Produto" };
+
 
         public FormCadastros()
         {
@@ -464,6 +466,13 @@ namespace fazendaSuinos
             comboAtributoEntidade.Text = "";
             campoValorEntidade.Text = "";
             dataGridEntidade.DataSource = null;
+        }
+
+        private void btnLimparFazenda_Click(object sender, EventArgs e)
+        {
+            comboAtributoFazenda.Text = "";
+            campoValorFazenda.Text = "";
+            dataGridFazenda.DataSource = null;
         }
 
         //CONSULTAR
@@ -1114,8 +1123,8 @@ namespace fazendaSuinos
                 campoCodUlt_Visita.Visible = true;
                 labelObservacoes_Visita.Visible = true;
                 textObservacoes_Visita.Visible = true;
-                labelCodPessoa_Visita.Visible = true;
-                campoCodPessoa_Visita.Visible = true;
+                labelCodVisitante_Visita.Visible = true;
+                campoCodVisitante_Visita.Visible = true;
                 labelCodPocilga_Visita.Visible = true;
                 campoCodPocilga_Visita.Visible = true;
 
@@ -1186,8 +1195,8 @@ namespace fazendaSuinos
             campoCodUlt_Visita.Visible = false;
             labelObservacoes_Visita.Visible = false;
             textObservacoes_Visita.Visible = false;
-            labelCodPessoa_Visita.Visible = false;
-            campoCodPessoa_Visita.Visible = false;
+            labelCodVisitante_Visita.Visible = false;
+            campoCodVisitante_Visita.Visible = false;
             labelCodPocilga_Visita.Visible = false;
             campoCodPocilga_Visita.Visible = false;
 
@@ -1217,7 +1226,303 @@ namespace fazendaSuinos
             dateTPValidade_Produto.Visible = false;
             labelValidade_Produto.Visible = false;
 
-        }     
+        }
+
+        //INCLUIR
+
+        private void btnIncluirFazenda_Click(object sender, EventArgs e)
+        {
+            //Vê o índice da Combo Box e atribui o valor a uma string.
+            String fazendaTabela = listaTipoFazenda[comboTipoFazenda.SelectedIndex];
+
+            //Inicia a Query SQL
+            StringBuilder queryBuilder = new StringBuilder("INSERT INTO " + fazendaTabela + "(");
+
+
+            //PAREI NO MÉTODO ABAIXO
+
+
+            //Gera a lista com o valor dos devidos campos
+            List<string> listaValores = verificaCamposFazenda();
+
+            if (listaValores == null)
+            {
+                MessageBox.Show("Há campos obrigatórios em branco.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            //Gera automaticamente a estrutura que vincula o campo da tabela ao valor da Text Box
+            Dictionary<string, string> dados = geraDadosQueryFazenda(fazendaTabela, listaValores);
+
+            // Adiciona os nomes dos campos à consulta SQL
+            queryBuilder.Append(string.Join(",", dados.Keys));
+            queryBuilder.Append(") VALUES (");
+
+            // Adiciona os valores à consulta SQL
+            foreach (var valor in dados.Values)
+            {
+                // Se o valor for uma string, adiciona aspas simples à volta
+                if (valor != null)
+                {
+                    queryBuilder.Append("'");
+                    queryBuilder.Append(valor);
+                    queryBuilder.Append("'");
+                }
+                else
+                {
+                    // Se o valor for nulo, insere NULL na consulta
+                    queryBuilder.Append("NULL");
+                }
+
+                // Adiciona uma vírgula para separar os valores, exceto o último
+                if (!valor.Equals(dados.Values.Last()))
+                {
+                    queryBuilder.Append(",");
+                }
+            }
+
+            queryBuilder.Append(")");
+
+            // Query de inserção completa
+            string queryInsercao = queryBuilder.ToString();
+            Console.WriteLine(queryInsercao);
+
+            //Cria e executa comando com uma conexão válida.
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Cria o comando SQL
+                    using (SqlCommand command = connection.CreateCommand(queryInsercao))
+                    {
+                        // Executa o comando SQL
+                        command.ExecuteNonQuery();
+
+                        Console.WriteLine("Inserção bem-sucedida!");
+
+                        if (comboTipoFazenda.Text == "Lote")
+                        {
+                            try
+                            {
+                                // Obtém o último Código inserido
+                                command.CommandText = "SELECT SCOPE_IDENTITY()";
+                                int ultimoIDInserido = Convert.ToInt32(command.ExecuteScalar());
+
+                                command.CommandText = $"INSERT INTO LotePocilga (CodPocilga, CodLote) VALUES ({campoCodPocilga_Lote.Text}, {ultimoIDInserido});";
+                                Console.WriteLine(command.CommandText);
+
+                                command.ExecuteNonQuery();
+
+                                Console.WriteLine("Vinculação bem-sucedida!");
+                                MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                limpaCamposCadastroFazenda();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Não foi possível vincular lote à pocilga.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cadastro realizado com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            limpaCamposCadastroFazenda();
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erro ao inserir dados: " + ex.Message);
+                    MessageBox.Show("Não foi possível cadastrar objeto.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            comboTipoFazenda.Focus();
+        }
+
+        private void limpaCamposCadastroFazenda()
+        {
+            //Propriedade
+            campoNome_Propriedade.Text = "";
+            campoCodigoProdutor_Propriedade.Text = "";
+            //Pocilga
+            campoCapacidade_Pocilga.Text = "";
+            textoDescricao_Pocilga.Text = "";
+            campoCodPropriedade_Pocilga.Text = "";
+            //Lote
+            campoQuantidade_Lote.Text = "";
+            campoPesoTotal_Lote.Text = "";
+            campoPesoMedio_Lote.Text = ""; 
+            campoCodPocilga_Lote.Text = ""; 
+            campoCodGerente_Lote.Text = ""; 
+            textoObservacoes_Lote.Text = "";
+            //Visita
+            campoFinalidade_Visita.Text = "";
+            campoCodUlt_Visita.Text = ""; 
+            campoCodVisitante_Visita.Text = "";
+            campoCodPocilga_Visita.Text = ""; 
+            textObservacoes_Visita.Text = "";
+            //Produto
+            campoNome_Produto.Text = "";
+
+            comboSituacao_Lote.Text = "";
+            comboCategoria_Produto.Text = "";
+            comboTipo_Produto.Text = "";
+
+            dateTPDataAloj_Lote.Text = "01/01/2001";
+            dateTPEstCarregamento_Lote.Text = "01/01/2001";
+            dateTPData_Visita.Text = "01/01/2001";
+            dateTPUlt_Visita.Text = "01/01/2001";
+            dateTPValidade_Produto.Text = "01/01/2001";
+
+        }
+
+        private Dictionary<string, string> geraDadosQueryFazenda(string tabela, List<string> listaValores)
+        {
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                connection.Open();
+
+                Console.WriteLine("Abriu com " + tabela);
+
+                // Query para obter os nomes dos campos da tabela
+                string query = $"SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{tabela}'";
+
+                using (SqlCommand command = connection.CreateCommand(query))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Lista para armazenar os nomes dos campos
+                        var nomesCampos = new List<string>();
+
+                        // Lê os nomes dos campos retornados pela consulta
+                        while (reader.Read())
+                        {
+                            string nomeCampo = reader.GetString(0);
+
+                            if (nomeCampo == "Cod" + tabela)
+                            {
+
+                            }
+                            else
+                            {
+                                nomesCampos.Add(nomeCampo);
+                            }
+
+                            Console.WriteLine($"{nomeCampo}");
+                        }
+
+                        Dictionary<string, string> dados = new Dictionary<string, string>();
+
+                        // Verifica se as listas têm o mesmo comprimento
+                        if (nomesCampos.Count == listaValores.Count)
+                        {
+                            // Adiciona os valores e nomes de campo ao dicionário
+                            for (int i = 0; i < nomesCampos.Count; i++)
+                            {
+                                dados.Add(nomesCampos[i], listaValores[i]);
+                            }
+
+                            // Exibe os dados no dicionário
+                            foreach (var kvp in dados)
+                            {
+                                Console.WriteLine($"Campo: {kvp.Key}, Valor: {kvp.Value}");
+                            }
+
+                            return dados;
+                        }
+                        else
+                        {
+                            Console.WriteLine("As listas de nomes de campos e valores têm comprimentos diferentes.");
+                            Console.WriteLine("Quantidade de campos: " + nomesCampos.Count + " Quantidade de valores: " + listaValores.Count);
+
+                            return null;
+                        }
+                    }
+                }
+            }
+        }
+
+        private List<string> verificaCamposFazenda()
+        {
+            List<string> listaValores = new List<string>();
+
+            TextBox[] textboxes =
+            {
+                //Propriedade
+                campoNome_Propriedade,campoCodigoProdutor_Propriedade,
+                //Pocilga
+                campoCapacidade_Pocilga, textoDescricao_Pocilga, campoCodPropriedade_Pocilga,
+                //Lote
+                campoQuantidade_Lote, campoPesoTotal_Lote, campoPesoMedio_Lote, textoObservacoes_Lote, campoCodPocilga_Lote, campoCodGerente_Lote,
+                //Visita
+                campoFinalidade_Visita, campoCodUlt_Visita, textObservacoes_Visita, campoCodVisitante_Visita, campoCodPocilga_Visita,
+                //Produto
+                campoNome_Produto
+            };
+
+            ComboBox[] comboBoxes =
+            {
+                comboSituacao_Lote, comboCategoria_Produto, comboTipo_Produto
+
+            };
+
+            DateTimePicker[] datePickers =
+            {
+                dateTPDataAloj_Lote, dateTPEstCarregamento_Lote, dateTPUlt_Visita, dateTPData_Visita, dateTPValidade_Produto
+            };
+
+            //PAREI AQUI
+
+            foreach (TextBox campo in textboxes)
+            {
+                if (campo.Visible && campo.Text == "")
+                {
+                    return null;
+                }
+                else if (campo.Visible && campo.Text != "" && campo.Name == "campoCodPocilga_Lote")
+                {
+
+                }
+                else if (campo.Visible && campo.Text != "")
+                {
+                    listaValores.Add(campo.Text);
+                }
+            }
+            foreach (ComboBox combo in comboBoxes)
+            {
+                if (combo.Visible && combo.Text != "")
+                {
+                    listaValores.Add(combo.Text);
+                }
+                else if (combo.Visible && combo.Text == "")
+                {
+                    return null;
+                }
+            }
+            foreach (DateTimePicker dateTimePicker in datePickers)
+            {
+                if (dateTimePicker.Visible && dateTimePicker.Text != "01/01/2001")
+                {
+                    listaValores.Add(dateTimePicker.Text);
+                }
+                else if (dateTimePicker.Visible && dateTimePicker.Text == "01/01/2001")
+                {
+                    return null;
+                }
+            }
+
+            foreach (string valor in listaValores)
+            {
+                Console.WriteLine(valor);
+            }
+
+            return listaValores;
+        }
+
+
 
         //DATA GRIDS FILTRO
 
