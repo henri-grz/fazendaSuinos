@@ -11,6 +11,11 @@ public class DatabaseConnection : IDisposable
         connection = new SqlConnection(connectionString);
     }
 
+    public SqlConnection GetConnection()
+    {
+        return connection;
+    }
+
     public void Open()
     {
         try

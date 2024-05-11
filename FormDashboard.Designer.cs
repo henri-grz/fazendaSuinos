@@ -32,6 +32,7 @@
             this.panelAcoesCorretivas = new System.Windows.Forms.Panel();
             this.labelDashAcoes = new System.Windows.Forms.Label();
             this.panelDetalhesLote = new System.Windows.Forms.Panel();
+            this.detDomainCod = new System.Windows.Forms.DomainUpDown();
             this.campoDetCodGerente = new System.Windows.Forms.TextBox();
             this.campoDetDataCarreg = new System.Windows.Forms.TextBox();
             this.campoDetDataAloj = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.campoDetPesoMedio = new System.Windows.Forms.TextBox();
             this.campoDetPesoTotal = new System.Windows.Forms.TextBox();
             this.campoDetQuant = new System.Windows.Forms.TextBox();
-            this.campoDetCod = new System.Windows.Forms.TextBox();
             this.labelDetCodGerente = new System.Windows.Forms.Label();
             this.labelDetDataCarreg = new System.Windows.Forms.Label();
             this.labelDetDataAloj = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDashboard.Location = new System.Drawing.Point(0, 0);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(1355, 845);
+            this.panelDashboard.Size = new System.Drawing.Size(1155, 687);
             this.panelDashboard.TabIndex = 0;
             // 
             // panelAcoesCorretivas
@@ -91,6 +91,7 @@
             // panelDetalhesLote
             // 
             this.panelDetalhesLote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panelDetalhesLote.Controls.Add(this.detDomainCod);
             this.panelDetalhesLote.Controls.Add(this.campoDetCodGerente);
             this.panelDetalhesLote.Controls.Add(this.campoDetDataCarreg);
             this.panelDetalhesLote.Controls.Add(this.campoDetDataAloj);
@@ -98,7 +99,6 @@
             this.panelDetalhesLote.Controls.Add(this.campoDetPesoMedio);
             this.panelDetalhesLote.Controls.Add(this.campoDetPesoTotal);
             this.panelDetalhesLote.Controls.Add(this.campoDetQuant);
-            this.panelDetalhesLote.Controls.Add(this.campoDetCod);
             this.panelDetalhesLote.Controls.Add(this.labelDetCodGerente);
             this.panelDetalhesLote.Controls.Add(this.labelDetDataCarreg);
             this.panelDetalhesLote.Controls.Add(this.labelDetDataAloj);
@@ -112,6 +112,18 @@
             this.panelDetalhesLote.Name = "panelDetalhesLote";
             this.panelDetalhesLote.Size = new System.Drawing.Size(496, 316);
             this.panelDetalhesLote.TabIndex = 1;
+            // 
+            // detDomainCod
+            // 
+            this.detDomainCod.BackColor = System.Drawing.Color.White;
+            this.detDomainCod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.detDomainCod.Location = new System.Drawing.Point(377, 34);
+            this.detDomainCod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.detDomainCod.Name = "detDomainCod";
+            this.detDomainCod.ReadOnly = true;
+            this.detDomainCod.Size = new System.Drawing.Size(76, 20);
+            this.detDomainCod.TabIndex = 18;
+            this.detDomainCod.SelectedItemChanged += new System.EventHandler(this.detDomainCod_SelectedItemChanged);
             // 
             // campoDetCodGerente
             // 
@@ -196,15 +208,6 @@
             this.campoDetQuant.Size = new System.Drawing.Size(174, 19);
             this.campoDetQuant.TabIndex = 11;
             this.campoDetQuant.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // campoDetCod
-            // 
-            this.campoDetCod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoDetCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetCod.Location = new System.Drawing.Point(377, 34);
-            this.campoDetCod.Name = "campoDetCod";
-            this.campoDetCod.Size = new System.Drawing.Size(76, 19);
-            this.campoDetCod.TabIndex = 10;
             // 
             // labelDetCodGerente
             // 
@@ -322,7 +325,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1355, 845);
+            this.ClientSize = new System.Drawing.Size(1155, 687);
             this.Controls.Add(this.panelDashboard);
             this.Name = "FormDashboard";
             this.Text = "FormDashboard";
@@ -349,7 +352,6 @@
         private System.Windows.Forms.Label labelDetPesoTotal;
         private System.Windows.Forms.Label labelDetQuant;
         private System.Windows.Forms.Label labelDetCod;
-        private System.Windows.Forms.TextBox campoDetCod;
         private System.Windows.Forms.Label labelDetCodGerente;
         private System.Windows.Forms.Label labelDetDataCarreg;
         private System.Windows.Forms.Label labelDetDataAloj;
@@ -362,5 +364,6 @@
         private System.Windows.Forms.TextBox campoDetPesoMedio;
         private System.Windows.Forms.TextBox campoDetPesoTotal;
         private System.Windows.Forms.TextBox campoDetQuant;
+        private System.Windows.Forms.DomainUpDown detDomainCod;
     }
 }
