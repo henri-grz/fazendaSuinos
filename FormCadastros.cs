@@ -3,9 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace fazendaSuinos
 {
@@ -455,6 +458,13 @@ namespace fazendaSuinos
             {
                 entidadeSelecionada = radioButton.Text;
             }
+
+            string query = "SELECT * FROM " + entidadeSelecionada;
+
+            SuspendLayout();
+            dataGridEntidade.DataSource = null;
+            preencheDataGridEntidade(query);
+            ResumeLayout();
         }
 
         private void radio_Tecnico_Entidade_CheckedChanged(object sender, EventArgs e)
@@ -465,6 +475,13 @@ namespace fazendaSuinos
             {
                 entidadeSelecionada = "Tecnico";
             }
+
+            string query = "SELECT * FROM " + entidadeSelecionada;
+
+            SuspendLayout();
+            dataGridEntidade.DataSource = null;
+            preencheDataGridEntidade(query);
+            ResumeLayout();
         }
 
         private void radio_Fazenda_CheckedChanged(object sender, EventArgs e)
@@ -478,7 +495,10 @@ namespace fazendaSuinos
 
             string querySelecao = "SELECT * FROM " + fazendaSelecionada;
 
+            SuspendLayout();
+            dataGridFazenda.DataSource = null;
             preencheDataGridFazenda(querySelecao);
+            ResumeLayout();
         }
 
         //LIMPAR
@@ -487,16 +507,21 @@ namespace fazendaSuinos
         {
             comboAtributoEntidade.Text = "";
             campoValorEntidade.Text = "";
-            dataGridEntidade.DataSource = null;
+
+            // Remove todas as linhas, exceto a primeira (que contém os headers)
+            while (dataGridEntidade.Rows.Count > 0)
+            {
+                dataGridEntidade.Rows.RemoveAt(0);
+            }
         }
 
         private void btnLimparFazenda_Click(object sender, EventArgs e)
         {
             comboAtributoFazenda.Text = "";
             campoValorFazenda.Text = "";
-            
+
             // Remove todas as linhas, exceto a primeira (que contém os headers)
-            while (dataGridFazenda.Rows.Count > 1)
+            while (dataGridFazenda.Rows.Count > 0)
             {
                 dataGridFazenda.Rows.RemoveAt(0);
             }
@@ -561,21 +586,6 @@ namespace fazendaSuinos
             }
         }
 
-        private void preencheDataGridFazenda(string querySelecao)
-        {
-            // Cria um adaptador de dados para executar a query
-            SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
-
-            // Cria um DataTable para armazenar os resultados
-            DataTable dataTable = new DataTable();
-
-            // Preenche o DataTable com os resultados da consulta
-            adapter.Fill(dataTable);
-
-            // Define o DataTable como a fonte de dados do DataGridView
-            dataGridFazenda.DataSource = dataTable;
-        }
-
         private void btnConsultarEntidade_Click(object sender, EventArgs e)
         {
             string querySelecao;
@@ -622,17 +632,7 @@ namespace fazendaSuinos
                     connection.Open();
                     Console.WriteLine("Abriu com " + entidadeSelecionada);
 
-                    // Cria um adaptador de dados para executar a query
-                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
-
-                    // Cria um DataTable para armazenar os resultados
-                    DataTable dataTable = new DataTable();
-
-                    // Preenche o DataTable com os resultados da consulta
-                    adapter.Fill(dataTable);
-
-                    // Define o DataTable como a fonte de dados do DataGridView
-                    dataGridEntidade.DataSource = dataTable;
+                    preencheDataGridEntidade(querySelecao);
                 }
                 catch (Exception ex)
                 {
@@ -642,6 +642,7 @@ namespace fazendaSuinos
             }
 
         }
+
 
         //CADASTRO ENTIDADES
 
@@ -728,11 +729,40 @@ namespace fazendaSuinos
             }
         }
 
+        private void campoCodigoEntidade_TextChanged(object sender, EventArgs e)
+        {
+            if (campoCodigoEntidade.Text != "")
+            {
+                btnIncluirEntidade.Enabled = false;
+                btnIncluirEntidade.Visible = false;
+                btnGravarEntidade.Enabled = true;
+                btnGravarEntidade.Visible = true;
+            }
+            else if (campoCodigoEntidade.Text == "")
+            {
+                btnIncluirEntidade.Enabled = true;
+                btnIncluirEntidade.Visible = true;
+                btnGravarEntidade.Enabled = false;
+                btnGravarEntidade.Visible = false;
+
+            }
+        }
+
         //INCLUIR
         private void btnIncluirEntidade_Click(object sender, EventArgs e)
         {
+            string entidadeTabela;
+            
             //Vê o índice da Combo Box e atribui o valor a uma string.
-            String entidadeTabela = listaTipoEntidade[comboTipoEntidade.SelectedIndex];
+            if (comboTipoEntidade.SelectedIndex >= 0)
+            {
+                entidadeTabela = listaTipoEntidade[comboTipoEntidade.SelectedIndex];
+            }
+            else
+            {
+                MessageBox.Show("Selecione um tipo de entidade para incluir.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             //Inicia a Query SQL
             StringBuilder queryBuilder = new StringBuilder("INSERT INTO " + entidadeTabela + "(");
@@ -921,8 +951,18 @@ namespace fazendaSuinos
         //GRAVAR
         private void btnGravarEntidade_Click(object sender, EventArgs e)
         {
+            string entidadeTabela;
+
             //Vê o índice da Combo Box e atribui o valor a uma string.
-            String entidadeTabela = listaTipoEntidade[comboTipoEntidade.SelectedIndex];
+            if (comboTipoEntidade.SelectedIndex >= 0)
+            {
+                entidadeTabela = listaTipoEntidade[comboTipoEntidade.SelectedIndex];
+            }
+            else
+            {
+                MessageBox.Show("Selecione um tipo de entidade para gravar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             //Inicia a Query SQL
             StringBuilder queryBuilder = new StringBuilder("UPDATE " + entidadeTabela + " SET ");
@@ -1088,6 +1128,7 @@ namespace fazendaSuinos
             campoCEP.Visible = false;
             labelCEP.Visible = false;
         }
+
 
         //CADASTRO DE FAZENDA
 
@@ -1261,12 +1302,41 @@ namespace fazendaSuinos
 
         }
 
+        private void campoCodigoFazenda_TextChanged(object sender, EventArgs e)
+        {
+            if (campoCodigoFazenda.Text != "")
+            {
+                btnIncluirFazenda.Enabled = false;
+                btnIncluirFazenda.Visible = false;
+                btnGravarFazenda.Visible = true;
+                btnGravarFazenda.Enabled = true;
+            }
+            else if (campoCodigoFazenda.Text == "")
+            {
+                btnIncluirFazenda.Enabled = true;
+                btnIncluirFazenda.Visible = true;
+                btnGravarFazenda.Enabled = false;
+                btnGravarFazenda.Visible = false;
+            }
+        }
+
+
         //INCLUIR
 
         private void btnIncluirFazenda_Click(object sender, EventArgs e)
         {
+            string fazendaTabela;
+
             //Vê o índice da Combo Box e atribui o valor a uma string.
-            String fazendaTabela = listaTipoFazenda[comboTipoFazenda.SelectedIndex];
+            if (comboTipoEntidade.SelectedIndex >= 0)
+            {
+                fazendaTabela = listaTipoFazenda[comboTipoFazenda.SelectedIndex];
+            }
+            else
+            {
+                MessageBox.Show("Selecione um objeto da fazenda para incluir.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             //Inicia a Query SQL
             StringBuilder queryBuilder = new StringBuilder("INSERT INTO " + fazendaTabela + "(");
@@ -1373,43 +1443,6 @@ namespace fazendaSuinos
             }
 
             comboTipoFazenda.Focus();
-        }
-
-        private void limpaCamposCadastroFazenda()
-        {
-            //Propriedade
-            campoNome_Propriedade.Text = "";
-            campoCodigoProdutor_Propriedade.Text = "";
-            //Pocilga
-            campoCapacidade_Pocilga.Text = "";
-            textoDescricao_Pocilga.Text = "";
-            campoCodPropriedade_Pocilga.Text = "";
-            //Lote
-            campoQuantidade_Lote.Text = "";
-            campoPesoTotal_Lote.Text = "";
-            campoPesoMedio_Lote.Text = ""; 
-            campoCodPocilga_Lote.Text = ""; 
-            campoCodGerente_Lote.Text = ""; 
-            textoObservacoes_Lote.Text = "";
-            //Visita
-            campoFinalidade_Visita.Text = "";
-            campoCodUlt_Visita.Text = ""; 
-            campoCodVisitante_Visita.Text = "";
-            campoCodPocilga_Visita.Text = ""; 
-            textObservacoes_Visita.Text = "";
-            //Produto
-            campoNome_Produto.Text = "";
-
-            comboSituacao_Lote.Text = "";
-            comboCategoria_Produto.Text = "";
-            comboTipo_Produto.Text = "";
-
-            dateTPDataAloj_Lote.Text = "01/01/2001";
-            dateTPEstCarregamento_Lote.Text = "01/01/2001";
-            dateTPData_Visita.Text = "01/01/2001";
-            dateTPUlt_Visita.Text = "01/01/2001";
-            dateTPValidade_Produto.Text = "01/01/2001";
-
         }
 
         private Dictionary<string, string> geraDadosQueryFazenda(string tabela, List<string> listaValores)
@@ -1555,7 +1588,141 @@ namespace fazendaSuinos
             return listaValores;
         }
 
+        //GRAVAR
+        private void btnGravarFazenda_Click(object sender, EventArgs e)
+        {
+            string fazendaTabela;
 
+            //Vê o índice da Combo Box e atribui o valor a uma string.
+            if (comboTipoFazenda.SelectedIndex >= 0)
+            {
+                fazendaTabela = listaTipoFazenda[comboTipoFazenda.SelectedIndex];
+            }
+            else
+            {
+                MessageBox.Show("Selecione um objeto da fazenda para gravar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            //Inicia a Query SQL
+            StringBuilder queryBuilder = new StringBuilder("UPDATE " + fazendaTabela + " SET ");
+
+            Console.WriteLine(fazendaSelecionada);
+
+            //Gera a lista com o valor dos devidos campos
+            List<string> listaValores = null;
+
+            while (listaValores == null)
+            {
+                listaValores = verificaCamposFazenda();
+            }
+
+            //Gera automaticamente a estrutura que vincula o campo da tabela ao valor da Text Box
+            Dictionary<string, string> dados = geraDadosQueryFazenda(fazendaTabela, listaValores);
+
+            //Insere a atualização de valores na query
+            foreach (var kvp in dados)
+            {
+                var valor = kvp.Value;
+                var campo = kvp.Key;
+
+                // Se o valor for uma string, adiciona aspas simples à volta
+                if (campo != null)
+                {
+                    queryBuilder.Append(campo);
+                    queryBuilder.Append(" = '");
+                    queryBuilder.Append(valor);
+                    queryBuilder.Append("'");
+                }
+
+                // Adiciona uma vírgula para separar os valores, exceto o último
+                if (!valor.Equals(dados.Values.Last()))
+                {
+                    queryBuilder.Append(",");
+                }
+            }
+
+            queryBuilder.Append(" WHERE Cod" + fazendaTabela + " = " + campoCodigoFazenda.Text + ";");
+
+            // Query de alteração completa
+            string queryInsercao = queryBuilder.ToString();
+            Console.WriteLine(queryInsercao);
+
+            //Cria e executa comando com uma conexão válida.
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Cria o comando SQL
+                    using (SqlCommand command = connection.CreateCommand(queryInsercao))
+                    {
+                        // Executa o comando SQL
+                        command.ExecuteNonQuery();
+
+                        Console.WriteLine("Alteração bem-sucedida!");
+                        MessageBox.Show("Alteração realizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erro ao alterar dados: " + ex.Message);
+                }
+            }
+        }
+
+        //LIMPAR
+
+        private void btnLimparDadosFazenda_Click(object sender, EventArgs e)
+        {
+            limpaCamposCadastroFazenda();
+        }
+
+        private void limpaCamposCadastroFazenda()
+        {
+            campoCodigoFazenda.Text = "";
+
+            //Propriedade
+            campoNome_Propriedade.Text = "";
+            campoCodigoProdutor_Propriedade.Text = "";
+            //Pocilga
+            campoCapacidade_Pocilga.Text = "";
+            textoDescricao_Pocilga.Text = "";
+            campoCodPropriedade_Pocilga.Text = "";
+            // Remove todas as linhas, exceto a primeira (que contém os headers)
+            while (dataGridLotesAssociados_Pocilga.Rows.Count > 0)
+            {
+                dataGridLotesAssociados_Pocilga.Rows.RemoveAt(0);
+            }
+
+            //Lote
+            campoQuantidade_Lote.Text = "";
+            campoPesoTotal_Lote.Text = "";
+            campoPesoMedio_Lote.Text = "";
+            campoCodPocilga_Lote.Text = "";
+            campoCodGerente_Lote.Text = "";
+            textoObservacoes_Lote.Text = "";
+            //Visita
+            campoFinalidade_Visita.Text = "";
+            campoCodUlt_Visita.Text = "";
+            campoCodVisitante_Visita.Text = "";
+            campoCodPocilga_Visita.Text = "";
+            textObservacoes_Visita.Text = "";
+            //Produto
+            campoNome_Produto.Text = "";
+
+            comboSituacao_Lote.Text = "";
+            comboCategoria_Produto.Text = "";
+            comboTipo_Produto.Text = "";
+
+            dateTPDataAloj_Lote.Text = "01/01/2001";
+            dateTPEstCarregamento_Lote.Text = "01/01/2001";
+            dateTPData_Visita.Text = "01/01/2001";
+            dateTPUlt_Visita.Text = "01/01/2001";
+            dateTPValidade_Produto.Text = "01/01/2001";
+
+        }
 
         //DATA GRIDS FILTRO
 
@@ -1618,6 +1785,21 @@ namespace fazendaSuinos
             ResumeLayout();
         }
 
+        private void preencheDataGridEntidade(string querySelecao)
+        {
+            // Cria um adaptador de dados para executar a query
+            SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
+
+            // Cria um DataTable para armazenar os resultados
+            DataTable dataTable = new DataTable();
+
+            // Preenche o DataTable com os resultados da consulta
+            adapter.Fill(dataTable);
+
+            // Define o DataTable como a fonte de dados do DataGridView
+            dataGridEntidade.DataSource = dataTable;
+        }
+
         private void preencherCamposEntidade(string entidadeSelecionada, DataGridViewCellEventArgs e)
         {
             if (entidadeSelecionada == "Administrador" || entidadeSelecionada == "Visitante" || entidadeSelecionada == "Gerente" || entidadeSelecionada == "Produtor" || entidadeSelecionada == "Tecnico")
@@ -1663,6 +1845,187 @@ namespace fazendaSuinos
                 object especialidade = dataGridEntidade.Rows[e.RowIndex].Cells[dataGridEntidade.Columns["Especialidade"].Index].Value;
                 comboEspecialidade.Text = especialidade.ToString();
             }
+        }
+
+        private void dataGridFazenda_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SuspendLayout();
+            // Verifica se o clique foi em uma célula válida
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                comboTipoFazenda.Text = fazendaSelecionada;
+            }
+
+            preencherCamposFazenda(fazendaSelecionada, e);
+
+            ResumeLayout();
+        }
+
+        private void preencherCamposFazenda(string fazendaSelecionada, DataGridViewCellEventArgs e)
+        {
+            if (fazendaSelecionada == "Propriedade")
+            {
+                object codigo = dataGridFazenda.Rows[e.RowIndex].Cells[0].Value;
+                campoCodigoFazenda.Text = codigo.ToString();
+
+                object nome = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Nome"].Index].Value;
+                campoNome_Propriedade.Text = nome.ToString();
+
+                object codProdutor = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["CodProdutor"].Index].Value;
+                campoCodigoProdutor_Propriedade.Text = codProdutor.ToString();
+            }
+            if (fazendaSelecionada == "Pocilga")
+            {
+                object codigo = dataGridFazenda.Rows[e.RowIndex].Cells[0].Value;
+                campoCodigoFazenda.Text = codigo.ToString();
+
+                object capacidade = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Capacidade"].Index].Value;
+                campoCapacidade_Pocilga.Text = capacidade.ToString();
+
+                object codPropriedade = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["CodPropriedade"].Index].Value;
+                campoCodPropriedade_Pocilga.Text = codPropriedade.ToString();
+
+                object descricao = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Descricao"].Index].Value;
+                textoDescricao_Pocilga.Text = descricao.ToString();
+
+                try
+                {
+                    using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        string query = "SELECT * FROM LotePocilga WHERE CodPocilga = " + codigo.ToString();
+
+                        // Cria um adaptador de dados para executar a query
+                        SqlDataAdapter adapter = new SqlDataAdapter(query, connectionString);
+
+                        // Cria um DataTable para armazenar os resultados
+                        DataTable dataTable = new DataTable();
+
+                        // Preenche o DataTable com os resultados da consulta
+                        adapter.Fill(dataTable);
+
+                        // Define o DataTable como a fonte de dados do DataGridView
+                        dataGridLotesAssociados_Pocilga.DataSource = dataTable;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar lotes associados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            if(fazendaSelecionada == "Lote")
+            {
+                object codigo = dataGridFazenda.Rows[e.RowIndex].Cells[0].Value;
+                campoCodigoFazenda.Text = codigo.ToString();
+
+                object quantidade = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Quantidade"].Index].Value;
+                campoQuantidade_Lote.Text = quantidade.ToString();
+
+                object pesoTotal = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Peso_Total"].Index].Value;
+                campoPesoTotal_Lote.Text = pesoTotal.ToString();
+
+                object pesoMedio = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Peso_Medio"].Index].Value;
+                campoPesoMedio_Lote.Text = pesoMedio.ToString();
+
+                object situacao = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Situacao"].Index].Value;
+                comboSituacao_Lote.Text = situacao.ToString();
+
+                object dataAloj = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Data_Alojamento"].Index].Value;
+                dateTPDataAloj_Lote.Text = dataAloj.ToString();
+
+                object dataCarreg = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Estimativa_Carregamento"].Index].Value;
+                dateTPEstCarregamento_Lote.Text = dataCarreg.ToString();
+
+                //CodPocilga com consulta a outra tabela
+                try
+                {
+                    using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        string query = "SELECT CodPocilga FROM LotePocilga WHERE CodLote = " + codigo.ToString();
+
+                        SqlCommand command = connection.CreateCommand(query);
+                        object codPocilga = command.ExecuteScalar();
+
+                        if(codPocilga != null)
+                        {
+                            campoCodPocilga_Lote.Text = codPocilga.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Não há uma pocilga associada a este lote.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            campoCodPocilga_Lote.Text = "";
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar pocilga associada: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                object codGerente = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["CodGerente"].Index].Value;
+                campoCodGerente_Lote.Text = codGerente.ToString();
+
+                object observacoes = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Observacoes"].Index].Value;
+                textoObservacoes_Lote.Text = observacoes.ToString();
+            }
+            if(fazendaSelecionada == "Visita")
+            {
+                object codigo = dataGridFazenda.Rows[e.RowIndex].Cells[0].Value;
+                campoCodigoFazenda.Text = codigo.ToString();
+
+                object data = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Data"].Index].Value;
+                dateTPData_Visita.Text = data.ToString();
+
+                object dataUlt = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Data_Ult"].Index].Value;
+                dateTPUlt_Visita.Text = dataUlt.ToString();
+
+                object codUlt = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Cod_Ult"].Index].Value;
+                campoCodUlt_Visita.Text = codUlt.ToString();
+
+                object codVisitante = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["CodVisitante"].Index].Value;
+                campoCodVisitante_Visita.Text = codVisitante.ToString();
+
+                object codPocilga = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["CodPocilga"].Index].Value;
+                campoCodPocilga_Visita.Text = codPocilga.ToString();
+
+                object observas = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Observacoes"].Index].Value;
+                textObservacoes_Visita.Text = observas.ToString();
+            }
+            if(fazendaSelecionada == "Produto")
+            {
+                object codigo = dataGridFazenda.Rows[e.RowIndex].Cells[0].Value;
+                campoCodigoFazenda.Text = codigo.ToString();
+
+                object nome = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Nome"].Index].Value;
+                campoNome_Produto.Text = nome.ToString();
+
+                object categoria = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Categoria"].Index].Value;
+                comboCategoria_Produto.Text = categoria.ToString();
+
+                object dataValidade = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Data_Validade"].Index].Value;
+                dateTPValidade_Produto.Text = dataValidade.ToString();
+
+                object tipo = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Tipo"].Index].Value;
+                comboTipo_Produto.Text = tipo.ToString();
+            }
+        }
+
+        private void preencheDataGridFazenda(string querySelecao)
+        {
+            // Cria um adaptador de dados para executar a query
+            SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
+
+            // Cria um DataTable para armazenar os resultados
+            DataTable dataTable = new DataTable();
+
+            // Preenche o DataTable com os resultados da consulta
+            adapter.Fill(dataTable);
+
+            // Define o DataTable como a fonte de dados do DataGridView
+            dataGridFazenda.DataSource = dataTable;
         }
 
         private void dataGridFazenda_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

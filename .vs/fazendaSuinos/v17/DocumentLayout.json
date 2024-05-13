@@ -11,12 +11,8 @@
       "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formcadastros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|d:\\projeto integrador\\fazendasuinos\\formdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|d:\\projeto integrador\\fazendasuinos\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|d:\\projeto integrador\\fazendasuinos\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,27 +39,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormDashboard.Designer.cs",
-              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\FormDashboard.Designer.cs",
-              "RelativeDocumentMoniker": "FormDashboard.Designer.cs",
-              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormDashboard.Designer.cs",
-              "RelativeToolTip": "FormDashboard.Designer.cs",
-              "ViewState": "AQIAAEIBAAAAAAAAAAAQwE8BAAAoAAAA",
+              "Title": "FormMain.cs",
+              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\FormMain.cs",
+              "RelativeDocumentMoniker": "FormMain.cs",
+              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormMain.cs",
+              "RelativeToolTip": "FormMain.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T11:34:47.492Z",
+              "WhenOpened": "2024-05-13T18:42:09.329Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormMain.cs [Design]",
-              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\FormMain.cs",
-              "RelativeDocumentMoniker": "FormMain.cs",
-              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormMain.cs [Design]",
-              "RelativeToolTip": "FormMain.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "FormCadastros.cs",
+              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\FormCadastros.cs",
+              "RelativeDocumentMoniker": "FormCadastros.cs",
+              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormCadastros.cs",
+              "RelativeToolTip": "FormCadastros.cs",
+              "ViewState": "AQIAABACAAAAAAAAAAAAANoCAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T11:06:07.514Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-23T12:12:59.739Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -76,19 +73,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-12T23:11:46.109Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormCadastros.cs",
-              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\FormCadastros.cs",
-              "RelativeDocumentMoniker": "FormCadastros.cs",
-              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormCadastros.cs",
-              "RelativeToolTip": "FormCadastros.cs",
-              "ViewState": "AQIAAJoAAAAAAAAAAAAAALAAAABoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T12:12:59.739Z",
-              "EditorCaption": ""
             }
           ]
         }
