@@ -32,7 +32,7 @@
             this.panelAcoesCorretivas = new System.Windows.Forms.Panel();
             this.labelDashAcoes = new System.Windows.Forms.Label();
             this.panelDetalhesLote = new System.Windows.Forms.Panel();
-            this.detDomainCod = new System.Windows.Forms.DomainUpDown();
+            this.comboCodLote_Det = new System.Windows.Forms.ComboBox();
             this.campoDetCodGerente = new System.Windows.Forms.TextBox();
             this.campoDetDataCarreg = new System.Windows.Forms.TextBox();
             this.campoDetDataAloj = new System.Windows.Forms.TextBox();
@@ -51,10 +51,12 @@
             this.labelDashDetalhes = new System.Windows.Forms.Label();
             this.panelHoje = new System.Windows.Forms.Panel();
             this.labelDashHoje = new System.Windows.Forms.Label();
+            this.fazendaSuinosDataSet = new fazendaSuinos.fazendaSuinosDataSet();
             this.panelDashboard.SuspendLayout();
             this.panelAcoesCorretivas.SuspendLayout();
             this.panelDetalhesLote.SuspendLayout();
             this.panelHoje.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDashboard
@@ -65,7 +67,7 @@
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDashboard.Location = new System.Drawing.Point(0, 0);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(1155, 687);
+            this.panelDashboard.Size = new System.Drawing.Size(1324, 806);
             this.panelDashboard.TabIndex = 0;
             // 
             // panelAcoesCorretivas
@@ -91,7 +93,7 @@
             // panelDetalhesLote
             // 
             this.panelDetalhesLote.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.panelDetalhesLote.Controls.Add(this.detDomainCod);
+            this.panelDetalhesLote.Controls.Add(this.comboCodLote_Det);
             this.panelDetalhesLote.Controls.Add(this.campoDetCodGerente);
             this.panelDetalhesLote.Controls.Add(this.campoDetDataCarreg);
             this.panelDetalhesLote.Controls.Add(this.campoDetDataAloj);
@@ -113,17 +115,15 @@
             this.panelDetalhesLote.Size = new System.Drawing.Size(496, 316);
             this.panelDetalhesLote.TabIndex = 1;
             // 
-            // detDomainCod
+            // comboCodLote_Det
             // 
-            this.detDomainCod.BackColor = System.Drawing.Color.White;
-            this.detDomainCod.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.detDomainCod.Location = new System.Drawing.Point(377, 34);
-            this.detDomainCod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.detDomainCod.Name = "detDomainCod";
-            this.detDomainCod.ReadOnly = true;
-            this.detDomainCod.Size = new System.Drawing.Size(76, 20);
-            this.detDomainCod.TabIndex = 18;
-            this.detDomainCod.SelectedItemChanged += new System.EventHandler(this.detDomainCod_SelectedItemChanged);
+            this.comboCodLote_Det.FormattingEnabled = true;
+            this.comboCodLote_Det.Location = new System.Drawing.Point(377, 35);
+            this.comboCodLote_Det.Name = "comboCodLote_Det";
+            this.comboCodLote_Det.Size = new System.Drawing.Size(76, 21);
+            this.comboCodLote_Det.TabIndex = 19;
+            this.comboCodLote_Det.SelectedIndexChanged += new System.EventHandler(this.comboCodLote_Det_SelectedIndexChanged);
+            this.comboCodLote_Det.TextUpdate += new System.EventHandler(this.comboCodLote_Det_SelectedIndexChanged);
             // 
             // campoDetCodGerente
             // 
@@ -320,12 +320,17 @@
             this.labelDashHoje.TabIndex = 0;
             this.labelDashHoje.Text = "Hoje";
             // 
+            // fazendaSuinosDataSet
+            // 
+            this.fazendaSuinosDataSet.DataSetName = "fazendaSuinosDataSet";
+            this.fazendaSuinosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // FormDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1155, 687);
+            this.ClientSize = new System.Drawing.Size(1324, 806);
             this.Controls.Add(this.panelDashboard);
             this.Name = "FormDashboard";
             this.Text = "FormDashboard";
@@ -336,6 +341,7 @@
             this.panelDetalhesLote.PerformLayout();
             this.panelHoje.ResumeLayout(false);
             this.panelHoje.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -364,6 +370,7 @@
         private System.Windows.Forms.TextBox campoDetPesoMedio;
         private System.Windows.Forms.TextBox campoDetPesoTotal;
         private System.Windows.Forms.TextBox campoDetQuant;
-        private System.Windows.Forms.DomainUpDown detDomainCod;
+        private System.Windows.Forms.ComboBox comboCodLote_Det;
+        private fazendaSuinosDataSet fazendaSuinosDataSet;
     }
 }

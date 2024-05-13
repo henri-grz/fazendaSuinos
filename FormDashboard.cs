@@ -19,13 +19,13 @@ namespace fazendaSuinos
         public FormDashboard()
         {
             InitializeComponent();
-            fillDomainUpDown();
+            fillComboCodLote();
         }
 
-        private void fillDomainUpDown()
+        private void fillComboCodLote()
         {
             String query = "SELECT CodLote FROM Lote";
-            detDomainCod.Items.Clear();
+            comboCodLote_Det.Items.Clear();
 
             using (DatabaseConnection connection = new DatabaseConnection(connectionString))
             {
@@ -39,13 +39,13 @@ namespace fazendaSuinos
                         {
                             while (reader.Read())
                             {
-                                detDomainCod.Items.Add(reader["CodLote"].ToString());
-                                Console.WriteLine("Codigos encontrados " + detDomainCod.Items);
+                                comboCodLote_Det.Items.Add(reader["CodLote"].ToString());
+                                Console.WriteLine("Codigos encontrados " + comboCodLote_Det.Items);
                             }
                         }
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show("Erro ao ler códigos: " + ex.Message);
                 }
@@ -54,7 +54,7 @@ namespace fazendaSuinos
 
         private void fillLoteFields(String Lote)
         {
-            string codigoLote = detDomainCod.Text;
+            string codigoLote = comboCodLote_Det.Text;
 
             string query ="SELECT * FROM Lote WHERE CodLote = " + codigoLote;
 
@@ -91,9 +91,9 @@ namespace fazendaSuinos
             }
         }
 
-        private void detDomainCod_SelectedItemChanged(object sender, EventArgs e)
+        private void comboCodLote_Det_SelectedIndexChanged(object sender, EventArgs e)
         {
-            fillLoteFields(detDomainCod.Text);
+            fillLoteFields(comboCodLote_Det.Text);
         }
     }
 }

@@ -18,6 +18,8 @@ namespace fazendaSuinos
         private List<string[]> filtrosFaz = new List<string[]>();
         private List<string[]> filtrosAco = new List<string[]>();
 
+        private string[] listaAtributoFazenda = { "Cod", "Nome", "Situacao", "Quantidade", "Peso_Total", "Peso_Medio", "Observacoes", "Data_Alojamento", "Estimativa_Carregamento" };
+
         private string entidadeSelecionada, fazendaSelecionada;
 
         private List<IconButton> tagsFiltrosEnt = new List<IconButton>();
@@ -169,7 +171,15 @@ namespace fazendaSuinos
             }
 
             // Obtém os valores selecionados na ComboBox e no TextBox
-            string atributo = comboAtributoFazenda.SelectedItem.ToString();
+            string atributo;
+            if (comboAtributoFazenda.SelectedIndex == 0)
+            {
+                atributo = listaAtributoFazenda[comboAtributoFazenda.SelectedIndex] + fazendaSelecionada;
+            }
+            else
+            {
+                atributo = listaAtributoFazenda[comboAtributoFazenda.SelectedIndex];
+            }
             string valor = campoValorFazenda.Text;
 
             // Adiciona o filtro à lista de filtrosEnt
@@ -427,6 +437,14 @@ namespace fazendaSuinos
             }
         }
 
+        private void comboAtributoFazenda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboAtributoFazenda.SelectedIndex == 0)
+            {
+                MessageBox.Show("Mantenha selecionada a entidade desejada antes de adicionar (+) o filtro.");
+            }
+        }
+
         //RADIO
 
         private void radio_Entidade_CheckedChanged(object sender, EventArgs e)
@@ -457,6 +475,10 @@ namespace fazendaSuinos
             {
                 fazendaSelecionada = radioButton.Text;
             }
+
+            string querySelecao = "SELECT * FROM " + fazendaSelecionada;
+
+            preencheDataGridFazenda(querySelecao);
         }
 
         //LIMPAR
@@ -472,7 +494,12 @@ namespace fazendaSuinos
         {
             comboAtributoFazenda.Text = "";
             campoValorFazenda.Text = "";
-            dataGridFazenda.DataSource = null;
+            
+            // Remove todas as linhas, exceto a primeira (que contém os headers)
+            while (dataGridFazenda.Rows.Count > 1)
+            {
+                dataGridFazenda.Rows.RemoveAt(0);
+            }
         }
 
         //CONSULTAR
@@ -523,17 +550,8 @@ namespace fazendaSuinos
                     connection.Open();
                     Console.WriteLine("Abriu com " + fazendaSelecionada);
 
-                    // Cria um adaptador de dados para executar a query
-                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
+                    preencheDataGridFazenda(querySelecao);
 
-                    // Cria um DataTable para armazenar os resultados
-                    DataTable dataTable = new DataTable();
-
-                    // Preenche o DataTable com os resultados da consulta
-                    adapter.Fill(dataTable);
-
-                    // Define o DataTable como a fonte de dados do DataGridView
-                    dataGridFazenda.DataSource = dataTable;
                 }
                 catch (Exception ex)
                 {
@@ -541,6 +559,21 @@ namespace fazendaSuinos
                 }
 
             }
+        }
+
+        private void preencheDataGridFazenda(string querySelecao)
+        {
+            // Cria um adaptador de dados para executar a query
+            SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
+
+            // Cria um DataTable para armazenar os resultados
+            DataTable dataTable = new DataTable();
+
+            // Preenche o DataTable com os resultados da consulta
+            adapter.Fill(dataTable);
+
+            // Define o DataTable como a fonte de dados do DataGridView
+            dataGridFazenda.DataSource = dataTable;
         }
 
         private void btnConsultarEntidade_Click(object sender, EventArgs e)
@@ -1321,7 +1354,7 @@ namespace fazendaSuinos
                             }
                             catch (Exception ex)
                             {
-                                MessageBox.Show("Não foi possível vincular lote à pocilga.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("Não foi possível vincular lote à pocilga.\n" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                         else
