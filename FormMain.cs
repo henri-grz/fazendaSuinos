@@ -110,6 +110,7 @@ namespace fazendaSuinos
         private void btnMedicacao_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.verdeClaro);
+            OpenChildForm(new FormMedicacao());
         }
 
         private void btnPesoMedio_Click(object sender, EventArgs e)
@@ -120,6 +121,7 @@ namespace fazendaSuinos
         private void btnMortalidade_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.verdeClaro);
+            OpenChildForm(new FormMortalidade());
         }
 
         private void btnCadastros_Click(object sender, EventArgs e)
