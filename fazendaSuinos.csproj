@@ -95,6 +95,12 @@
     <Compile Include="FormMortalidade.Designer.cs">
       <DependentUpon>FormMortalidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMortalidade_LoteMossa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMortalidade_LoteMossa.Designer.cs">
+      <DependentUpon>FormMortalidade_LoteMossa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormDashboard.resx">
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMortalidade.resx">
       <DependentUpon>FormMortalidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMortalidade_LoteMossa.resx">
+      <DependentUpon>FormMortalidade_LoteMossa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -155,6 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo rodolfo horizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mossa.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,41 +21,8 @@ namespace fazendaSuinos
         public FormMortalidade()
         {
             InitializeComponent();
-
-            panel1.Visible = false;
-
         }
 
-        
-
-        private void LoadLote()
-        {
-            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    string querySelecao = "SELECT * FROM Lote";
-
-                    // Cria um adaptador de dados para executar a query
-                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
-
-                    // Cria um DataTable para armazenar os resultados
-                    DataTable dataTable = new DataTable();
-
-                    // Preenche o DataTable com os resultados da consulta
-                    adapter.Fill(dataTable);
-
-                    // Define o DataTable como a fonte de dados do DataGridView
-                    dataGridView1.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao consultar objeto: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-        }
         private void SalvarDados()
         {
             try
@@ -96,58 +63,39 @@ namespace fazendaSuinos
                 MessageBox.Show("Erro ao salvar dados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void btnConsultarCodigoLote_Click(object sender, EventArgs e)
         {
-            LoadLote();
+            FormMortalidade_LoteMossa formAux = new FormMortalidade_LoteMossa(this);
+            formAux.LoadLote();
+            formAux.setVisibleimgMossa(false);
+            formAux.setVisibledataGridLote(true);
+            formAux.ShowDialog();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             SalvarDados();
         }
-    
+
+        public void setCodigoLote(String codigo)
+        {
+            txtCodigoLote.Text = codigo;
+        }
+
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             txtCodigoLote.Clear();
             txtMossa.Clear();
             txtPeso.Clear();           
-
         }
 
-        private void FormMortalidade_Load(object sender, EventArgs e)
+        private void btnConsultarMossa_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void txtMossa_MouseClick(object sender, MouseEventArgs e)
-        {
-           
-            
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            panel1.Visible = true;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCodigoLote_TextChanged(object sender, EventArgs e)
-        {
-
+            FormMortalidade_LoteMossa formAux = new FormMortalidade_LoteMossa(this);
+            formAux.setVisibleimgMossa(true);
+            formAux.setVisibledataGridLote(false);
+            formAux.ShowDialog();
         }
     }
 }
