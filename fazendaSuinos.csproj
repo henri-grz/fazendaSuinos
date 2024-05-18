@@ -83,6 +83,12 @@
     <Compile Include="FormMedicacao.Designer.cs">
       <DependentUpon>FormMedicacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMedicacao_LoteCarencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMedicacao_LoteCarencia.Designer.cs">
+      <DependentUpon>FormMedicacao_LoteCarencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMortalidade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMedicacao.resx">
       <DependentUpon>FormMedicacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMedicacao_LoteCarencia.resx">
+      <DependentUpon>FormMedicacao_LoteCarencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMortalidade.resx">
       <DependentUpon>FormMortalidade.cs</DependentUpon>

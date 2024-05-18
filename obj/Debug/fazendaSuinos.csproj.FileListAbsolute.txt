@@ -26,3 +26,6 @@ D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.pdb
 D:\Projeto Integrador\fazendaSuinos\obj\Debug\fazendaSuinos.FormDashboard.resources
 D:\Projeto Integrador\fazendaSuinos\obj\Debug\fazendaSuinos.FormMainMenu.resources
 C:\Users\henri\Documents\Projeto integrador 3\fazendaSuinos\obj\Debug\fazendaSuinos.FormDashboard.resources
+D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormMedicacao.resources
+D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormMortalidade.resources
+D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormMedicacao_LoteCarencia.resources

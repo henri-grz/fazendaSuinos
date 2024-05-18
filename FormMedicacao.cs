@@ -18,36 +18,6 @@ namespace fazendaSuinos
         public FormMedicacao()
         {
             InitializeComponent();
-            pcbMeicamentos.Visible = false;
-        }
-
-        private void LoadLote()
-        {
-            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    string querySelecao = "SELECT * FROM Lote";
-
-                    // Cria um adaptador de dados para executar a query
-                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
-
-                    // Cria um DataTable para armazenar os resultados
-                    DataTable dataTable = new DataTable();
-
-                    // Preenche o DataTable com os resultados da consulta
-                    adapter.Fill(dataTable);
-
-                    // Define o DataTable como a fonte de dados do DataGridView
-                    dataGridViewLote.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao consultar objeto: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
         }
 
         private void SalvarDados()
@@ -100,7 +70,11 @@ namespace fazendaSuinos
 
         private void btnConsultarCodigoLote_Click(object sender, EventArgs e)
         {
-            LoadLote();
+            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
+            formAux.LoadLote();
+            formAux.setVisiblepcbMedicamentos(false);
+            formAux.setVisibledataGridLote(true);
+            formAux.ShowDialog();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -110,7 +84,15 @@ namespace fazendaSuinos
 
         private void btnConsultarCarencia_Click(object sender, EventArgs e)
         {
-            pcbMeicamentos.Visible = true;
+            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
+            formAux.setVisiblepcbMedicamentos(true);
+            formAux.setVisibledataGridLote(false);
+            formAux.ShowDialog();
+        }
+
+        public void setCodigoLote(String codigo)
+        {
+            txtCodigoLote.Text = codigo;
         }
     }
 }
