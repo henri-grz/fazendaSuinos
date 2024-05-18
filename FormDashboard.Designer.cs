@@ -49,13 +49,16 @@
             this.labelDetQuant = new System.Windows.Forms.Label();
             this.labelDetCod = new System.Windows.Forms.Label();
             this.labelDashDetalhes = new System.Windows.Forms.Label();
-            this.panelHoje = new System.Windows.Forms.Panel();
+            this.panelAgenda = new System.Windows.Forms.Panel();
+            this.btnAtualizarAgenda = new FontAwesome.Sharp.IconButton();
+            this.dataGridAgenda = new System.Windows.Forms.DataGridView();
             this.labelDashHoje = new System.Windows.Forms.Label();
             this.fazendaSuinosDataSet = new fazendaSuinos.fazendaSuinosDataSet();
             this.panelDashboard.SuspendLayout();
             this.panelAcoesCorretivas.SuspendLayout();
             this.panelDetalhesLote.SuspendLayout();
-            this.panelHoje.SuspendLayout();
+            this.panelAgenda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAgenda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,20 +66,22 @@
             // 
             this.panelDashboard.Controls.Add(this.panelAcoesCorretivas);
             this.panelDashboard.Controls.Add(this.panelDetalhesLote);
-            this.panelDashboard.Controls.Add(this.panelHoje);
+            this.panelDashboard.Controls.Add(this.panelAgenda);
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDashboard.Location = new System.Drawing.Point(0, 0);
+            this.panelDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(1324, 806);
+            this.panelDashboard.Size = new System.Drawing.Size(1765, 992);
             this.panelDashboard.TabIndex = 0;
             // 
             // panelAcoesCorretivas
             // 
             this.panelAcoesCorretivas.BackColor = System.Drawing.SystemColors.MenuBar;
             this.panelAcoesCorretivas.Controls.Add(this.labelDashAcoes);
-            this.panelAcoesCorretivas.Location = new System.Drawing.Point(85, 428);
+            this.panelAcoesCorretivas.Location = new System.Drawing.Point(113, 527);
+            this.panelAcoesCorretivas.Margin = new System.Windows.Forms.Padding(4);
             this.panelAcoesCorretivas.Name = "panelAcoesCorretivas";
-            this.panelAcoesCorretivas.Size = new System.Drawing.Size(1043, 306);
+            this.panelAcoesCorretivas.Size = new System.Drawing.Size(1391, 377);
             this.panelAcoesCorretivas.TabIndex = 2;
             // 
             // labelDashAcoes
@@ -84,9 +89,10 @@
             this.labelDashAcoes.AutoSize = true;
             this.labelDashAcoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDashAcoes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelDashAcoes.Location = new System.Drawing.Point(35, 32);
+            this.labelDashAcoes.Location = new System.Drawing.Point(47, 39);
+            this.labelDashAcoes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDashAcoes.Name = "labelDashAcoes";
-            this.labelDashAcoes.Size = new System.Drawing.Size(276, 37);
+            this.labelDashAcoes.Size = new System.Drawing.Size(341, 46);
             this.labelDashAcoes.TabIndex = 1;
             this.labelDashAcoes.Text = "Ações Corretivas";
             // 
@@ -110,17 +116,19 @@
             this.panelDetalhesLote.Controls.Add(this.labelDetQuant);
             this.panelDetalhesLote.Controls.Add(this.labelDetCod);
             this.panelDetalhesLote.Controls.Add(this.labelDashDetalhes);
-            this.panelDetalhesLote.Location = new System.Drawing.Point(632, 65);
+            this.panelDetalhesLote.Location = new System.Drawing.Point(843, 80);
+            this.panelDetalhesLote.Margin = new System.Windows.Forms.Padding(4);
             this.panelDetalhesLote.Name = "panelDetalhesLote";
-            this.panelDetalhesLote.Size = new System.Drawing.Size(496, 316);
+            this.panelDetalhesLote.Size = new System.Drawing.Size(661, 389);
             this.panelDetalhesLote.TabIndex = 1;
             // 
             // comboCodLote_Det
             // 
             this.comboCodLote_Det.FormattingEnabled = true;
-            this.comboCodLote_Det.Location = new System.Drawing.Point(377, 35);
+            this.comboCodLote_Det.Location = new System.Drawing.Point(503, 43);
+            this.comboCodLote_Det.Margin = new System.Windows.Forms.Padding(4);
             this.comboCodLote_Det.Name = "comboCodLote_Det";
-            this.comboCodLote_Det.Size = new System.Drawing.Size(76, 21);
+            this.comboCodLote_Det.Size = new System.Drawing.Size(100, 24);
             this.comboCodLote_Det.TabIndex = 19;
             this.comboCodLote_Det.SelectedIndexChanged += new System.EventHandler(this.comboCodLote_Det_SelectedIndexChanged);
             this.comboCodLote_Det.TextUpdate += new System.EventHandler(this.comboCodLote_Det_SelectedIndexChanged);
@@ -130,10 +138,11 @@
             this.campoDetCodGerente.BackColor = System.Drawing.Color.White;
             this.campoDetCodGerente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetCodGerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetCodGerente.Location = new System.Drawing.Point(279, 253);
+            this.campoDetCodGerente.Location = new System.Drawing.Point(372, 311);
+            this.campoDetCodGerente.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetCodGerente.Name = "campoDetCodGerente";
             this.campoDetCodGerente.ReadOnly = true;
-            this.campoDetCodGerente.Size = new System.Drawing.Size(174, 19);
+            this.campoDetCodGerente.Size = new System.Drawing.Size(232, 23);
             this.campoDetCodGerente.TabIndex = 17;
             this.campoDetCodGerente.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -142,10 +151,11 @@
             this.campoDetDataCarreg.BackColor = System.Drawing.Color.White;
             this.campoDetDataCarreg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetDataCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetDataCarreg.Location = new System.Drawing.Point(279, 225);
+            this.campoDetDataCarreg.Location = new System.Drawing.Point(372, 277);
+            this.campoDetDataCarreg.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetDataCarreg.Name = "campoDetDataCarreg";
             this.campoDetDataCarreg.ReadOnly = true;
-            this.campoDetDataCarreg.Size = new System.Drawing.Size(174, 19);
+            this.campoDetDataCarreg.Size = new System.Drawing.Size(232, 23);
             this.campoDetDataCarreg.TabIndex = 16;
             this.campoDetDataCarreg.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -154,10 +164,11 @@
             this.campoDetDataAloj.BackColor = System.Drawing.Color.White;
             this.campoDetDataAloj.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetDataAloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetDataAloj.Location = new System.Drawing.Point(279, 197);
+            this.campoDetDataAloj.Location = new System.Drawing.Point(372, 242);
+            this.campoDetDataAloj.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetDataAloj.Name = "campoDetDataAloj";
             this.campoDetDataAloj.ReadOnly = true;
-            this.campoDetDataAloj.Size = new System.Drawing.Size(174, 19);
+            this.campoDetDataAloj.Size = new System.Drawing.Size(232, 23);
             this.campoDetDataAloj.TabIndex = 15;
             this.campoDetDataAloj.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -166,10 +177,11 @@
             this.campoDetSituacao.BackColor = System.Drawing.Color.White;
             this.campoDetSituacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetSituacao.Location = new System.Drawing.Point(279, 169);
+            this.campoDetSituacao.Location = new System.Drawing.Point(372, 208);
+            this.campoDetSituacao.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetSituacao.Name = "campoDetSituacao";
             this.campoDetSituacao.ReadOnly = true;
-            this.campoDetSituacao.Size = new System.Drawing.Size(174, 19);
+            this.campoDetSituacao.Size = new System.Drawing.Size(232, 23);
             this.campoDetSituacao.TabIndex = 14;
             this.campoDetSituacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -178,10 +190,11 @@
             this.campoDetPesoMedio.BackColor = System.Drawing.Color.White;
             this.campoDetPesoMedio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetPesoMedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetPesoMedio.Location = new System.Drawing.Point(279, 141);
+            this.campoDetPesoMedio.Location = new System.Drawing.Point(372, 174);
+            this.campoDetPesoMedio.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetPesoMedio.Name = "campoDetPesoMedio";
             this.campoDetPesoMedio.ReadOnly = true;
-            this.campoDetPesoMedio.Size = new System.Drawing.Size(174, 19);
+            this.campoDetPesoMedio.Size = new System.Drawing.Size(232, 23);
             this.campoDetPesoMedio.TabIndex = 13;
             this.campoDetPesoMedio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -190,10 +203,11 @@
             this.campoDetPesoTotal.BackColor = System.Drawing.Color.White;
             this.campoDetPesoTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetPesoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetPesoTotal.Location = new System.Drawing.Point(279, 113);
+            this.campoDetPesoTotal.Location = new System.Drawing.Point(372, 139);
+            this.campoDetPesoTotal.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetPesoTotal.Name = "campoDetPesoTotal";
             this.campoDetPesoTotal.ReadOnly = true;
-            this.campoDetPesoTotal.Size = new System.Drawing.Size(174, 19);
+            this.campoDetPesoTotal.Size = new System.Drawing.Size(232, 23);
             this.campoDetPesoTotal.TabIndex = 12;
             this.campoDetPesoTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -202,10 +216,11 @@
             this.campoDetQuant.BackColor = System.Drawing.Color.White;
             this.campoDetQuant.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.campoDetQuant.Location = new System.Drawing.Point(279, 84);
+            this.campoDetQuant.Location = new System.Drawing.Point(372, 103);
+            this.campoDetQuant.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetQuant.Name = "campoDetQuant";
             this.campoDetQuant.ReadOnly = true;
-            this.campoDetQuant.Size = new System.Drawing.Size(174, 19);
+            this.campoDetQuant.Size = new System.Drawing.Size(232, 23);
             this.campoDetQuant.TabIndex = 11;
             this.campoDetQuant.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -213,9 +228,10 @@
             // 
             this.labelDetCodGerente.AutoSize = true;
             this.labelDetCodGerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetCodGerente.Location = new System.Drawing.Point(47, 253);
+            this.labelDetCodGerente.Location = new System.Drawing.Point(63, 311);
+            this.labelDetCodGerente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDetCodGerente.Name = "labelDetCodGerente";
-            this.labelDetCodGerente.Size = new System.Drawing.Size(138, 18);
+            this.labelDetCodGerente.Size = new System.Drawing.Size(176, 24);
             this.labelDetCodGerente.TabIndex = 9;
             this.labelDetCodGerente.Text = "Código do Gerente:";
             // 
@@ -223,9 +239,10 @@
             // 
             this.labelDetDataCarreg.AutoSize = true;
             this.labelDetDataCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetDataCarreg.Location = new System.Drawing.Point(47, 225);
+            this.labelDetDataCarreg.Location = new System.Drawing.Point(63, 277);
+            this.labelDetDataCarreg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDetDataCarreg.Name = "labelDetDataCarreg";
-            this.labelDetDataCarreg.Size = new System.Drawing.Size(162, 18);
+            this.labelDetDataCarreg.Size = new System.Drawing.Size(204, 24);
             this.labelDetDataCarreg.TabIndex = 8;
             this.labelDetDataCarreg.Text = "Data de Carregamento:";
             // 
@@ -233,9 +250,10 @@
             // 
             this.labelDetDataAloj.AutoSize = true;
             this.labelDetDataAloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetDataAloj.Location = new System.Drawing.Point(47, 197);
+            this.labelDetDataAloj.Location = new System.Drawing.Point(63, 242);
+            this.labelDetDataAloj.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDetDataAloj.Name = "labelDetDataAloj";
-            this.labelDetDataAloj.Size = new System.Drawing.Size(141, 18);
+            this.labelDetDataAloj.Size = new System.Drawing.Size(179, 24);
             this.labelDetDataAloj.TabIndex = 7;
             this.labelDetDataAloj.Text = "Data de Alojamento:";
             // 
@@ -243,9 +261,10 @@
             // 
             this.labelDetSituacao.AutoSize = true;
             this.labelDetSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetSituacao.Location = new System.Drawing.Point(47, 169);
+            this.labelDetSituacao.Location = new System.Drawing.Point(63, 208);
+            this.labelDetSituacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDetSituacao.Name = "labelDetSituacao";
-            this.labelDetSituacao.Size = new System.Drawing.Size(70, 18);
+            this.labelDetSituacao.Size = new System.Drawing.Size(87, 24);
             this.labelDetSituacao.TabIndex = 6;
             this.labelDetSituacao.Text = "Situação:";
             // 
@@ -253,9 +272,10 @@
             // 
             this.labelDetPesoMedio.AutoSize = true;
             this.labelDetPesoMedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetPesoMedio.Location = new System.Drawing.Point(47, 141);
+            this.labelDetPesoMedio.Location = new System.Drawing.Point(63, 174);
+            this.labelDetPesoMedio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDetPesoMedio.Name = "labelDetPesoMedio";
-            this.labelDetPesoMedio.Size = new System.Drawing.Size(92, 18);
+            this.labelDetPesoMedio.Size = new System.Drawing.Size(116, 24);
             this.labelDetPesoMedio.TabIndex = 5;
             this.labelDetPesoMedio.Text = "Peso Médio:";
             // 
@@ -263,9 +283,10 @@
             // 
             this.labelDetPesoTotal.AutoSize = true;
             this.labelDetPesoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetPesoTotal.Location = new System.Drawing.Point(47, 113);
+            this.labelDetPesoTotal.Location = new System.Drawing.Point(63, 139);
+            this.labelDetPesoTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDetPesoTotal.Name = "labelDetPesoTotal";
-            this.labelDetPesoTotal.Size = new System.Drawing.Size(84, 18);
+            this.labelDetPesoTotal.Size = new System.Drawing.Size(104, 24);
             this.labelDetPesoTotal.TabIndex = 4;
             this.labelDetPesoTotal.Text = "Peso Total:";
             // 
@@ -273,9 +294,10 @@
             // 
             this.labelDetQuant.AutoSize = true;
             this.labelDetQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetQuant.Location = new System.Drawing.Point(47, 85);
+            this.labelDetQuant.Location = new System.Drawing.Point(63, 105);
+            this.labelDetQuant.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDetQuant.Name = "labelDetQuant";
-            this.labelDetQuant.Size = new System.Drawing.Size(87, 18);
+            this.labelDetQuant.Size = new System.Drawing.Size(113, 24);
             this.labelDetQuant.TabIndex = 3;
             this.labelDetQuant.Text = "Quantidade:";
             // 
@@ -283,9 +305,10 @@
             // 
             this.labelDetCod.AutoSize = true;
             this.labelDetCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.labelDetCod.Location = new System.Drawing.Point(311, 34);
+            this.labelDetCod.Location = new System.Drawing.Point(415, 42);
+            this.labelDetCod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDetCod.Name = "labelDetCod";
-            this.labelDetCod.Size = new System.Drawing.Size(60, 18);
+            this.labelDetCod.Size = new System.Drawing.Size(76, 24);
             this.labelDetCod.TabIndex = 2;
             this.labelDetCod.Text = "Código:";
             // 
@@ -294,31 +317,72 @@
             this.labelDashDetalhes.AutoSize = true;
             this.labelDashDetalhes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDashDetalhes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelDashDetalhes.Location = new System.Drawing.Point(34, 25);
+            this.labelDashDetalhes.Location = new System.Drawing.Point(45, 31);
+            this.labelDashDetalhes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDashDetalhes.Name = "labelDashDetalhes";
-            this.labelDashDetalhes.Size = new System.Drawing.Size(150, 37);
+            this.labelDashDetalhes.Size = new System.Drawing.Size(185, 46);
             this.labelDashDetalhes.TabIndex = 1;
             this.labelDashDetalhes.Text = "Detalhes";
             // 
-            // panelHoje
+            // panelAgenda
             // 
-            this.panelHoje.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.panelHoje.Controls.Add(this.labelDashHoje);
-            this.panelHoje.Location = new System.Drawing.Point(85, 65);
-            this.panelHoje.Name = "panelHoje";
-            this.panelHoje.Size = new System.Drawing.Size(496, 316);
-            this.panelHoje.TabIndex = 0;
+            this.panelAgenda.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panelAgenda.Controls.Add(this.btnAtualizarAgenda);
+            this.panelAgenda.Controls.Add(this.dataGridAgenda);
+            this.panelAgenda.Controls.Add(this.labelDashHoje);
+            this.panelAgenda.Location = new System.Drawing.Point(113, 80);
+            this.panelAgenda.Margin = new System.Windows.Forms.Padding(4);
+            this.panelAgenda.Name = "panelAgenda";
+            this.panelAgenda.Size = new System.Drawing.Size(661, 389);
+            this.panelAgenda.TabIndex = 0;
+            // 
+            // btnAtualizarAgenda
+            // 
+            this.btnAtualizarAgenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnAtualizarAgenda.FlatAppearance.BorderSize = 0;
+            this.btnAtualizarAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizarAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnAtualizarAgenda.ForeColor = System.Drawing.Color.White;
+            this.btnAtualizarAgenda.IconChar = FontAwesome.Sharp.IconChar.Rotate;
+            this.btnAtualizarAgenda.IconColor = System.Drawing.Color.White;
+            this.btnAtualizarAgenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAtualizarAgenda.IconSize = 30;
+            this.btnAtualizarAgenda.Location = new System.Drawing.Point(506, 43);
+            this.btnAtualizarAgenda.Name = "btnAtualizarAgenda";
+            this.btnAtualizarAgenda.Size = new System.Drawing.Size(106, 39);
+            this.btnAtualizarAgenda.TabIndex = 2;
+            this.btnAtualizarAgenda.Text = "Atualizar";
+            this.btnAtualizarAgenda.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAtualizarAgenda.UseVisualStyleBackColor = false;
+            this.btnAtualizarAgenda.Click += new System.EventHandler(this.btnAtualizarAgenda_Click);
+            // 
+            // dataGridAgenda
+            // 
+            this.dataGridAgenda.AllowUserToAddRows = false;
+            this.dataGridAgenda.AllowUserToDeleteRows = false;
+            this.dataGridAgenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAgenda.Location = new System.Drawing.Point(55, 103);
+            this.dataGridAgenda.Name = "dataGridAgenda";
+            this.dataGridAgenda.RowHeadersVisible = false;
+            this.dataGridAgenda.RowHeadersWidth = 51;
+            this.dataGridAgenda.RowTemplate.Height = 24;
+            this.dataGridAgenda.Size = new System.Drawing.Size(557, 256);
+            this.dataGridAgenda.TabIndex = 1;
+            this.dataGridAgenda.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAgenda_CellValueChanged);
+            this.dataGridAgenda.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridAgenda_DataBindingComplete);
             // 
             // labelDashHoje
             // 
             this.labelDashHoje.AutoSize = true;
             this.labelDashHoje.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDashHoje.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelDashHoje.Location = new System.Drawing.Point(35, 25);
+            this.labelDashHoje.Location = new System.Drawing.Point(47, 31);
+            this.labelDashHoje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDashHoje.Name = "labelDashHoje";
-            this.labelDashHoje.Size = new System.Drawing.Size(86, 37);
+            this.labelDashHoje.Size = new System.Drawing.Size(163, 46);
             this.labelDashHoje.TabIndex = 0;
-            this.labelDashHoje.Text = "Hoje";
+            this.labelDashHoje.Text = "Agenda";
             // 
             // fazendaSuinosDataSet
             // 
@@ -327,11 +391,12 @@
             // 
             // FormDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1324, 806);
+            this.ClientSize = new System.Drawing.Size(1765, 992);
             this.Controls.Add(this.panelDashboard);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDashboard";
             this.Text = "FormDashboard";
             this.panelDashboard.ResumeLayout(false);
@@ -339,8 +404,9 @@
             this.panelAcoesCorretivas.PerformLayout();
             this.panelDetalhesLote.ResumeLayout(false);
             this.panelDetalhesLote.PerformLayout();
-            this.panelHoje.ResumeLayout(false);
-            this.panelHoje.PerformLayout();
+            this.panelAgenda.ResumeLayout(false);
+            this.panelAgenda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAgenda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).EndInit();
             this.ResumeLayout(false);
 
@@ -349,7 +415,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelDashboard;
-        private System.Windows.Forms.Panel panelHoje;
+        private System.Windows.Forms.Panel panelAgenda;
         private System.Windows.Forms.Panel panelAcoesCorretivas;
         private System.Windows.Forms.Panel panelDetalhesLote;
         private System.Windows.Forms.Label labelDashHoje;
@@ -372,5 +438,7 @@
         private System.Windows.Forms.TextBox campoDetQuant;
         private System.Windows.Forms.ComboBox comboCodLote_Det;
         private fazendaSuinosDataSet fazendaSuinosDataSet;
+        private System.Windows.Forms.DataGridView dataGridAgenda;
+        private FontAwesome.Sharp.IconButton btnAtualizarAgenda;
     }
 }

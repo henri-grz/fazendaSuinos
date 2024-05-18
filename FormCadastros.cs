@@ -3,12 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Text;
 using System.Windows.Forms;
-using System.Windows.Media;
 
 namespace fazendaSuinos
 {
@@ -752,7 +749,7 @@ namespace fazendaSuinos
         private void btnIncluirEntidade_Click(object sender, EventArgs e)
         {
             string entidadeTabela;
-            
+
             //Vê o índice da Combo Box e atribui o valor a uma string.
             if (comboTipoEntidade.SelectedIndex >= 0)
             {
@@ -1914,7 +1911,7 @@ namespace fazendaSuinos
                     MessageBox.Show("Erro ao consultar lotes associados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            if(fazendaSelecionada == "Lote")
+            if (fazendaSelecionada == "Lote")
             {
                 object codigo = dataGridFazenda.Rows[e.RowIndex].Cells[0].Value;
                 campoCodigoFazenda.Text = codigo.ToString();
@@ -1949,7 +1946,7 @@ namespace fazendaSuinos
                         SqlCommand command = connection.CreateCommand(query);
                         object codPocilga = command.ExecuteScalar();
 
-                        if(codPocilga != null)
+                        if (codPocilga != null)
                         {
                             campoCodPocilga_Lote.Text = codPocilga.ToString();
                         }
@@ -1971,7 +1968,7 @@ namespace fazendaSuinos
                 object observacoes = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Observacoes"].Index].Value;
                 textoObservacoes_Lote.Text = observacoes.ToString();
             }
-            if(fazendaSelecionada == "Visita")
+            if (fazendaSelecionada == "Visita")
             {
                 object codigo = dataGridFazenda.Rows[e.RowIndex].Cells[0].Value;
                 campoCodigoFazenda.Text = codigo.ToString();
@@ -1994,7 +1991,7 @@ namespace fazendaSuinos
                 object observas = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Observacoes"].Index].Value;
                 textObservacoes_Visita.Text = observas.ToString();
             }
-            if(fazendaSelecionada == "Produto")
+            if (fazendaSelecionada == "Produto")
             {
                 object codigo = dataGridFazenda.Rows[e.RowIndex].Cells[0].Value;
                 campoCodigoFazenda.Text = codigo.ToString();

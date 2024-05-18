@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Media;
-using FontAwesome.Sharp;
 using Color = System.Drawing.Color;
 
 namespace fazendaSuinos
@@ -26,7 +19,7 @@ namespace fazendaSuinos
             leftBorderPnl = new Panel();
             leftBorderPnl.Size = new Size(7, 74);
             panelMenu.Controls.Add(leftBorderPnl);
-            
+
             OpenChildForm(new FormDashboard());
             ActivateButton(btnDashboard, RGBColors.verdeClaro);
         }
@@ -49,7 +42,7 @@ namespace fazendaSuinos
                 DisableButton();
                 //botao
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(0,50,50);
+                currentBtn.BackColor = Color.FromArgb(0, 50, 50);
                 //currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
@@ -91,7 +84,7 @@ namespace fazendaSuinos
             panelMain.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            
+
         }
         private void btnDashboard_Click(object sender, EventArgs e)
         {
@@ -139,6 +132,6 @@ namespace fazendaSuinos
 
         }
 
-        
+
     }
 }

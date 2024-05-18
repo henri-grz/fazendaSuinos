@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using FontAwesome.Sharp;
 
 
 
@@ -29,7 +21,7 @@ namespace fazendaSuinos
             {
                 // Obtém os valores dos controles
                 DateTime Data = dateTimePickerData.Value;
-                double Peso = Convert.ToDouble(txtPeso.Text);                
+                double Peso = Convert.ToDouble(txtPeso.Text);
                 int CodLote = Convert.ToInt32(txtCodigoLote.Text);
                 int Mossa = Convert.ToInt32(txtMossa.Text);
                 string Sexo = comboBoxSexo.SelectedItem.ToString();
@@ -87,7 +79,7 @@ namespace fazendaSuinos
         {
             txtCodigoLote.Clear();
             txtMossa.Clear();
-            txtPeso.Clear();           
+            txtPeso.Clear();
         }
 
         private void btnConsultarMossa_Click(object sender, EventArgs e)
