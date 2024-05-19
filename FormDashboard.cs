@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -14,18 +15,29 @@ namespace fazendaSuinos
             InitializeComponent();
             fillComboCodLote();
             LoadAgenda();
+            InitializeDataGridView();
+
         }
 
         public void LoadAgenda()
         {
-            // Define a coluna de Check
-            DataGridViewCheckBoxColumn checkColumn = new DataGridViewCheckBoxColumn();
-            checkColumn.Name = "Status";
-            checkColumn.HeaderText = "Status";
-            checkColumn.Width = 80;
-            checkColumn.FillWeight = 10;
+            // Remove todas as linhas, exceto a primeira (que contém os headers)
+            while (dataGridAgenda.Rows.Count > 0)
+            {
+                dataGridAgenda.Rows.RemoveAt(0);
+            }
 
-            dataGridAgenda.Columns.Add(checkColumn);
+            if (dataGridAgenda.Columns["Status"] == null)
+            {
+                // Define a coluna de Check
+                DataGridViewCheckBoxColumn checkColumn = new DataGridViewCheckBoxColumn();
+                checkColumn.Name = "Status";
+                checkColumn.HeaderText = "Status";
+                checkColumn.Width = 80;
+                checkColumn.FillWeight = 10;
+
+                dataGridAgenda.Columns.Add(checkColumn);
+            }
 
             using (DatabaseConnection connection = new DatabaseConnection(connectionString))
             {
@@ -45,12 +57,27 @@ namespace fazendaSuinos
 
                     // Define o DataTable como a fonte de dados do DataGridView
                     dataGridAgenda.DataSource = dataTable;
+
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Erro ao consultar objeto: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+            // Define a coluna de status como editável
+            dataGridAgenda.Columns["Status"].ReadOnly = false;
+
+            // Ordena pela coluna DataAtividade em ordem crescente
+            dataGridAgenda.Sort(dataGridAgenda.Columns["DataAtividade"], ListSortDirection.Ascending);
+
+            sincronizaStatus();
+        }
+
+        private void InitializeDataGridView()
+        {
+            dataGridAgenda.CellValueChanged += new DataGridViewCellEventHandler(dataGridAgenda_CellValueChanged);
+            dataGridAgenda.CurrentCellDirtyStateChanged += new EventHandler(dataGridAgenda_CurrentCellDirtyStateChanged);
         }
 
         private void fillComboCodLote()
@@ -127,6 +154,26 @@ namespace fazendaSuinos
             fillLoteFields(comboCodLote_Det.Text);
         }
 
+        private void sincronizaStatus()
+        {
+            SuspendLayout();
+
+            // Configura as células de checkbox de acordo com o valor da coluna 'Finalizada'
+            foreach (DataGridViewRow row in dataGridAgenda.Rows)
+            {
+                bool finalizada = (bool)row.Cells["Finalizada"].Value;
+
+                if (finalizada)
+                {
+                    row.Cells["Status"].Value = true;
+                    Console.WriteLine("Marcando");
+                }
+
+            }
+
+            ResumeLayout();
+        }
+
         private void dataGridAgenda_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             // Renomeia a coluna de acordo com o nome desejado
@@ -169,6 +216,8 @@ namespace fazendaSuinos
             dataGridAgenda.Columns["CodMortalidade"].Visible = false;
             dataGridAgenda.Columns["CodRacao"].Visible = false;
 
+            sincronizaStatus();
+
         }
 
         private void btnAtualizarAgenda_Click(object sender, EventArgs e)
@@ -178,48 +227,34 @@ namespace fazendaSuinos
 
         private void atualizarAgenda()
         {
+            SuspendLayout();
             using (DatabaseConnection connection = new DatabaseConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
 
-                    // Limpar a tabela Agenda antes de atualizar (opcional)
-                    string queryLimparAgenda = "DELETE FROM Agenda";
-                    using (SqlCommand command = connection.CreateCommand(queryLimparAgenda))
-                    {
-                        command.ExecuteNonQuery();
-                    }
-
-                    // Inserir dados de Controle_Mortalidade na Agenda
+                    // Inserir dados de Controle_Mortalidade na Agenda, apenas se ainda não existem
                     string queryMortalidade = @"
                         INSERT INTO Agenda (Atividade, DataAtividade, CodMortalidade, CodLote)
                         SELECT 'Mortalidade', Data, CodMortalidade, CodLote
-                        FROM Controle_Mortalidade";
+                        FROM Controle_Mortalidade
+                        WHERE CodMortalidade NOT IN (SELECT CodMortalidade FROM Agenda WHERE CodMortalidade IS NOT NULL)";
                     using (SqlCommand command = connection.CreateCommand(queryMortalidade))
                     {
                         command.ExecuteNonQuery();
                     }
 
-                    // Inserir dados de Controle_Vacinacao na Agenda
+                    // Inserir dados de Controle_Vacinacao na Agenda, apenas se ainda não existem
                     string queryVacinacao = @"
                         INSERT INTO Agenda (Atividade, DataAtividade, CodVacinacao, CodLote)
                         SELECT 'Vacinação', Data_Inicial, CodPrescricao, CodLote
-                        FROM Controle_Vacinacao";
+                        FROM Controle_Vacinacao
+                        WHERE CodPrescricao NOT IN (SELECT CodVacinacao FROM Agenda WHERE CodVacinacao IS NOT NULL)";
                     using (SqlCommand command = connection.CreateCommand(queryVacinacao))
                     {
                         command.ExecuteNonQuery();
                     }
-
-                    // Inserir dados de Consumo_Racao na Agenda
-                    /*string queryRacao = @"
-                        INSERT INTO Agenda (Atividade, DataAtividade, CodRacao, CodLote)
-                        SELECT 'Consumo de Ração', DataConsumo, CodConsumo, CodLote
-                        FROM Consumo_Racao";
-                    using (SqlCommand command = new SqlCommand(queryRacao, connection))
-                    {
-                        command.ExecuteNonQuery();
-                    }*/
 
                     MessageBox.Show("Agenda atualizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -228,6 +263,10 @@ namespace fazendaSuinos
                     MessageBox.Show("Erro ao atualizar agenda: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+            LoadAgenda();
+
+            ResumeLayout();
         }
 
         private void dataGridAgenda_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -254,6 +293,7 @@ namespace fazendaSuinos
                             command.Parameters.AddWithValue("@Finalizada", isChecked);
                             command.Parameters.AddWithValue("@CodAtividade", codAtividade);
                             command.ExecuteNonQuery();
+
                         }
                     }
                     catch (Exception ex)
@@ -261,6 +301,7 @@ namespace fazendaSuinos
                         MessageBox.Show("Erro ao atualizar status: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                MessageBox.Show("Atividade setada como " + (isChecked ? "Finalizada" : "Não Finalizada"), "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
