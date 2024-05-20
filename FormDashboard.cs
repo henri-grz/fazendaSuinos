@@ -57,6 +57,17 @@ namespace fazendaSuinos
                         command.ExecuteNonQuery();
                     }
 
+                    // Inserir dados de Controle_Vacinacao na Agenda, apenas se ainda não existem
+                    string queryVisita = @"
+                        INSERT INTO Agenda (Atividade, DataAtividade, CodVisita)
+                        SELECT 'Visita', Data, CodVisita
+                        FROM Visita
+                        WHERE CodVisita NOT IN (SELECT CodVisita FROM Agenda WHERE CodVisita IS NOT NULL)";
+                    using (SqlCommand command = connection.CreateCommand(queryVisita))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+
                     MessageBox.Show("Agenda atualizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -190,6 +201,7 @@ namespace fazendaSuinos
             dataGridAgenda.Columns["CodVacinacao"].Visible = false;
             dataGridAgenda.Columns["CodMortalidade"].Visible = false;
             dataGridAgenda.Columns["CodRacao"].Visible = false;
+            dataGridAgenda.Columns["CodVisita"].Visible = false;
 
             // Define o foco para a célula desejada após atualizar a agenda
             if (dataGridAgenda.Rows.Count > 1)
@@ -262,10 +274,14 @@ namespace fazendaSuinos
                     codAtividade = dataGridAgenda.Rows[e.RowIndex].Cells["CodMortalidade"].Value.ToString();
                     Console.WriteLine(codAtividade);
                 }
-
                 else if (dataGridAgenda.Rows[e.RowIndex].Cells["CodVacinacao"].Value != DBNull.Value)
                 {
                     codAtividade = dataGridAgenda.Rows[e.RowIndex].Cells["CodVacinacao"].Value.ToString();
+                    Console.WriteLine(codAtividade);
+                }
+                else if (dataGridAgenda.Rows[e.RowIndex].Cells["CodVisita"].Value != DBNull.Value)
+                {
+                    codAtividade = dataGridAgenda.Rows[e.RowIndex].Cells["CodVisita"].Value.ToString();
                     Console.WriteLine(codAtividade);
                 }
                 else

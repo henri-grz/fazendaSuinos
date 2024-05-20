@@ -1688,7 +1688,7 @@ namespace fazendaSuinos
                         {
                             // Executa o comando SQL
                             command.ExecuteNonQuery();
-                        }catch(SqlException sqle)
+                        }catch(SqlException)
                         {
                             MessageBox.Show("Verifique se todas as entidades estrangeiras estão cadastradas.\n", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;

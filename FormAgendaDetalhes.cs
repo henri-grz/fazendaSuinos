@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -8,11 +9,74 @@ namespace fazendaSuinos
     {
         private string connectionString = Properties.Settings.Default.fazendaSuinosConnectionString;
 
+        List<Control> listaPanels = new List<Control> {};
+
+        string tipoAtividade = "";
+
         public FormAgendaDetalhes(string codAgenda, string CodAtividade)
         {
             InitializeComponent();
+
+            listaPanels.Add(panelMedicacao);
+            listaPanels.Add(panelVisita);
+            listaPanels.Add(panelMortalidade);
+
             LoadForm(codAgenda, CodAtividade);
+
+            //Seleciona o panel que ficará visível
+            definePanelVisivel();
+
+            // Ajusta o tamanho da Dialog após definir quais painéis estão visíveis
+            //ajustarTamanhoDialog();
         }
+
+        private void definePanelVisivel()
+        {
+            foreach(Panel panel in listaPanels)
+            {
+                panel.Visible = false;
+            }
+
+            if (tipoAtividade == "Mortalidade")
+            {
+                panelMortalidade.Visible = true;
+            }else if(tipoAtividade == "Vacinação")
+            {
+                panelMedicacao.Visible = true;
+            }else if(tipoAtividade == "Visita")
+            {
+                panelVisita.Visible = true;
+            }
+        }
+
+        private void ajustarTamanhoDialog()
+        {
+            int larguraDialog = this.Width; // Pode ser fixo ou calculado conforme necessário
+            int alturaNecessaria = 0;
+
+            //Calcular o tamanho dos panels visíveis
+            foreach (Panel panel in listaPanels)
+            {
+                Console.WriteLine("Altura do painel " + panel.Name + ": " + panel.Height);
+                Console.WriteLine("Visível: " + panel.Visible);
+
+                if (panel.Visible)
+                {
+                    alturaNecessaria += panel.Height;
+                    
+                    Console.WriteLine("Altura acumulada: " + alturaNecessaria);
+                }
+            }
+
+            // Adiciona algum espaço extra para margens e padding
+            alturaNecessaria += panelDetalhes.Height; // 50 é um valor arbitrário, ajuste conforme necessário
+
+            Console.WriteLine("Largura: " + larguraDialog + " Altura total necessária: " + alturaNecessaria);
+
+            // Ajusta o tamanho da Dialog
+            this.ClientSize = new System.Drawing.Size(larguraDialog, alturaNecessaria);
+        }
+
 
         private void LoadForm(string codAgenda, string codAtividade)
         {
@@ -24,7 +88,6 @@ namespace fazendaSuinos
 
                     //Preenche campos do Agendamento
                     string queryAgenda = "SELECT * FROM AGENDA WHERE CodAtividade = " + codAgenda;
-                    string tipoAtividade = "";
 
                     using(SqlCommand command = connection.CreateCommand(queryAgenda))
                     {
@@ -99,8 +162,31 @@ namespace fazendaSuinos
                             }
                         }
                     }
+                    else if (tipoAtividade == "Visita")
+                    {
+                        queryAtividade = "SELECT * FROM Visita WHERE CodVisita = " + codAtividade;
 
-
+                        using (SqlCommand command = connection.CreateCommand(queryAtividade))
+                        {
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    campoCodAtividade.Text = codAtividade.ToString();
+                                    campoFinalidade.Text = reader["Finalidade"].ToString();
+                                    campoCodUlt.Text = reader["Cod_Ult"].ToString();
+                                    campoDataUlt.Text = Convert.ToDateTime(reader["Data_Ult"]).ToString("dd/MM/yyyy");
+                                    campoVisitante.Text = reader["CodVisitante"].ToString();
+                                    campoPocilga.Text = reader["CodPocilga"].ToString();
+                                    campoObservacaoVisita.Text = reader["Observacoes"].ToString();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Nenhum registro encontrado");
+                                }
+                            }
+                        }
+                    }
                 }
             }catch (Exception ex)
             {
