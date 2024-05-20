@@ -565,6 +565,7 @@ namespace fazendaSuinos
             this.comboAtributoEntidade.Name = "comboAtributoEntidade";
             this.comboAtributoEntidade.Size = new System.Drawing.Size(223, 32);
             this.comboAtributoEntidade.TabIndex = 2;
+            this.comboAtributoEntidade.SelectedIndexChanged += new System.EventHandler(this.comboAtributoEntidade_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -1202,6 +1203,7 @@ namespace fazendaSuinos
             this.btnExcluirEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluirEntidade.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnExcluirEntidade.UseVisualStyleBackColor = false;
+            this.btnExcluirEntidade.Visible = false;
             this.btnExcluirEntidade.Click += new System.EventHandler(this.btnExcluirEntidade_Click);
             // 
             // campoCEP
@@ -1298,6 +1300,7 @@ namespace fazendaSuinos
             this.btnGravarEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGravarEntidade.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnGravarEntidade.UseVisualStyleBackColor = false;
+            this.btnGravarEntidade.Visible = false;
             this.btnGravarEntidade.Click += new System.EventHandler(this.btnGravarEntidade_Click);
             // 
             // btnIncluirEntidade
@@ -1684,6 +1687,7 @@ namespace fazendaSuinos
             this.btnExcluirFazenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluirFazenda.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnExcluirFazenda.UseVisualStyleBackColor = false;
+            this.btnExcluirFazenda.Visible = false;
             // 
             // btnLimparDadosFazenda
             // 
@@ -2084,7 +2088,7 @@ namespace fazendaSuinos
             this.dateTPData_Visita.Name = "dateTPData_Visita";
             this.dateTPData_Visita.Size = new System.Drawing.Size(165, 26);
             this.dateTPData_Visita.TabIndex = 56;
-            this.dateTPData_Visita.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
+            this.dateTPData_Visita.Value = new System.DateTime(2024, 5, 19, 0, 0, 0, 0);
             this.dateTPData_Visita.Visible = false;
             // 
             // labelData_Visita
@@ -2394,6 +2398,7 @@ namespace fazendaSuinos
             this.btnGravarFazenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGravarFazenda.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnGravarFazenda.UseVisualStyleBackColor = false;
+            this.btnGravarFazenda.Visible = false;
             this.btnGravarFazenda.Click += new System.EventHandler(this.btnGravarFazenda_Click);
             // 
             // btnIncluirFazenda

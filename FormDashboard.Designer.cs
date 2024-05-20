@@ -69,7 +69,7 @@
             this.panelDashboard.Controls.Add(this.panelAgenda);
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDashboard.Location = new System.Drawing.Point(0, 0);
-            this.panelDashboard.Margin = new System.Windows.Forms.Padding(4);
+            this.panelDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDashboard.Name = "panelDashboard";
             this.panelDashboard.Size = new System.Drawing.Size(1765, 992);
             this.panelDashboard.TabIndex = 0;
@@ -79,7 +79,7 @@
             this.panelAcoesCorretivas.BackColor = System.Drawing.SystemColors.MenuBar;
             this.panelAcoesCorretivas.Controls.Add(this.labelDashAcoes);
             this.panelAcoesCorretivas.Location = new System.Drawing.Point(113, 527);
-            this.panelAcoesCorretivas.Margin = new System.Windows.Forms.Padding(4);
+            this.panelAcoesCorretivas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelAcoesCorretivas.Name = "panelAcoesCorretivas";
             this.panelAcoesCorretivas.Size = new System.Drawing.Size(1391, 377);
             this.panelAcoesCorretivas.TabIndex = 2;
@@ -117,7 +117,7 @@
             this.panelDetalhesLote.Controls.Add(this.labelDetCod);
             this.panelDetalhesLote.Controls.Add(this.labelDashDetalhes);
             this.panelDetalhesLote.Location = new System.Drawing.Point(843, 80);
-            this.panelDetalhesLote.Margin = new System.Windows.Forms.Padding(4);
+            this.panelDetalhesLote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDetalhesLote.Name = "panelDetalhesLote";
             this.panelDetalhesLote.Size = new System.Drawing.Size(661, 389);
             this.panelDetalhesLote.TabIndex = 1;
@@ -126,7 +126,7 @@
             // 
             this.comboCodLote_Det.FormattingEnabled = true;
             this.comboCodLote_Det.Location = new System.Drawing.Point(503, 43);
-            this.comboCodLote_Det.Margin = new System.Windows.Forms.Padding(4);
+            this.comboCodLote_Det.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboCodLote_Det.Name = "comboCodLote_Det";
             this.comboCodLote_Det.Size = new System.Drawing.Size(100, 24);
             this.comboCodLote_Det.TabIndex = 19;
@@ -139,7 +139,7 @@
             this.campoDetCodGerente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetCodGerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetCodGerente.Location = new System.Drawing.Point(372, 311);
-            this.campoDetCodGerente.Margin = new System.Windows.Forms.Padding(4);
+            this.campoDetCodGerente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoDetCodGerente.Name = "campoDetCodGerente";
             this.campoDetCodGerente.ReadOnly = true;
             this.campoDetCodGerente.Size = new System.Drawing.Size(232, 23);
@@ -152,7 +152,7 @@
             this.campoDetDataCarreg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetDataCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetDataCarreg.Location = new System.Drawing.Point(372, 277);
-            this.campoDetDataCarreg.Margin = new System.Windows.Forms.Padding(4);
+            this.campoDetDataCarreg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoDetDataCarreg.Name = "campoDetDataCarreg";
             this.campoDetDataCarreg.ReadOnly = true;
             this.campoDetDataCarreg.Size = new System.Drawing.Size(232, 23);
@@ -165,7 +165,7 @@
             this.campoDetDataAloj.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetDataAloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetDataAloj.Location = new System.Drawing.Point(372, 242);
-            this.campoDetDataAloj.Margin = new System.Windows.Forms.Padding(4);
+            this.campoDetDataAloj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoDetDataAloj.Name = "campoDetDataAloj";
             this.campoDetDataAloj.ReadOnly = true;
             this.campoDetDataAloj.Size = new System.Drawing.Size(232, 23);
@@ -178,7 +178,7 @@
             this.campoDetSituacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetSituacao.Location = new System.Drawing.Point(372, 208);
-            this.campoDetSituacao.Margin = new System.Windows.Forms.Padding(4);
+            this.campoDetSituacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoDetSituacao.Name = "campoDetSituacao";
             this.campoDetSituacao.ReadOnly = true;
             this.campoDetSituacao.Size = new System.Drawing.Size(232, 23);
@@ -191,7 +191,7 @@
             this.campoDetPesoMedio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetPesoMedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetPesoMedio.Location = new System.Drawing.Point(372, 174);
-            this.campoDetPesoMedio.Margin = new System.Windows.Forms.Padding(4);
+            this.campoDetPesoMedio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoDetPesoMedio.Name = "campoDetPesoMedio";
             this.campoDetPesoMedio.ReadOnly = true;
             this.campoDetPesoMedio.Size = new System.Drawing.Size(232, 23);
@@ -204,7 +204,7 @@
             this.campoDetPesoTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetPesoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetPesoTotal.Location = new System.Drawing.Point(372, 139);
-            this.campoDetPesoTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.campoDetPesoTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoDetPesoTotal.Name = "campoDetPesoTotal";
             this.campoDetPesoTotal.ReadOnly = true;
             this.campoDetPesoTotal.Size = new System.Drawing.Size(232, 23);
@@ -217,7 +217,7 @@
             this.campoDetQuant.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetQuant.Location = new System.Drawing.Point(372, 103);
-            this.campoDetQuant.Margin = new System.Windows.Forms.Padding(4);
+            this.campoDetQuant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoDetQuant.Name = "campoDetQuant";
             this.campoDetQuant.ReadOnly = true;
             this.campoDetQuant.Size = new System.Drawing.Size(232, 23);
@@ -331,7 +331,7 @@
             this.panelAgenda.Controls.Add(this.dataGridAgenda);
             this.panelAgenda.Controls.Add(this.labelDashHoje);
             this.panelAgenda.Location = new System.Drawing.Point(113, 80);
-            this.panelAgenda.Margin = new System.Windows.Forms.Padding(4);
+            this.panelAgenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelAgenda.Name = "panelAgenda";
             this.panelAgenda.Size = new System.Drawing.Size(661, 389);
             this.panelAgenda.TabIndex = 0;
@@ -347,9 +347,10 @@
             this.btnAtualizarAgenda.IconColor = System.Drawing.Color.White;
             this.btnAtualizarAgenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAtualizarAgenda.IconSize = 30;
-            this.btnAtualizarAgenda.Location = new System.Drawing.Point(506, 43);
+            this.btnAtualizarAgenda.Location = new System.Drawing.Point(507, 43);
+            this.btnAtualizarAgenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAtualizarAgenda.Name = "btnAtualizarAgenda";
-            this.btnAtualizarAgenda.Size = new System.Drawing.Size(106, 39);
+            this.btnAtualizarAgenda.Size = new System.Drawing.Size(107, 39);
             this.btnAtualizarAgenda.TabIndex = 2;
             this.btnAtualizarAgenda.Text = "Atualizar";
             this.btnAtualizarAgenda.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -363,12 +364,14 @@
             this.dataGridAgenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAgenda.Location = new System.Drawing.Point(55, 103);
+            this.dataGridAgenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridAgenda.Name = "dataGridAgenda";
             this.dataGridAgenda.RowHeadersVisible = false;
             this.dataGridAgenda.RowHeadersWidth = 51;
             this.dataGridAgenda.RowTemplate.Height = 24;
             this.dataGridAgenda.Size = new System.Drawing.Size(557, 256);
             this.dataGridAgenda.TabIndex = 1;
+            this.dataGridAgenda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAgenda_CellDoubleClick);
             this.dataGridAgenda.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAgenda_CellValueChanged);
             this.dataGridAgenda.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridAgenda_DataBindingComplete);
             // 
@@ -396,7 +399,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1765, 992);
             this.Controls.Add(this.panelDashboard);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormDashboard";
             this.Text = "FormDashboard";
             this.panelDashboard.ResumeLayout(false);

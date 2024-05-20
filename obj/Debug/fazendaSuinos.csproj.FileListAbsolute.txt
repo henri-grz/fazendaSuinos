@@ -30,3 +30,4 @@ D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormMedicacao.resour
 D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormMortalidade.resources
 D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormMedicacao_LoteCarencia.resources
 D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormMortalidade_LoteMossa.resources
+D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormAgendaDetalhes.resources

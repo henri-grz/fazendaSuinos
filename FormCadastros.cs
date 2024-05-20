@@ -116,7 +116,17 @@ namespace fazendaSuinos
             }
 
             // Obtém os valores selecionados na ComboBox e no TextBox
-            string atributo = transformaItemParaCampo(comboAtributoEntidade.Text);
+            string atributo;
+
+            if (comboAtributoEntidade.SelectedIndex == 0)
+            {
+                atributo = transformaItemParaCampo(comboAtributoEntidade.Text) + entidadeSelecionada;
+            }
+            else
+            {
+                atributo = transformaItemParaCampo(comboAtributoEntidade.Text);
+            }
+
             string valor = campoValorEntidade.Text;
 
             // Adiciona o filtro à lista de filtrosEnt
@@ -441,7 +451,15 @@ namespace fazendaSuinos
         {
             if (comboAtributoFazenda.SelectedIndex == 0)
             {
-                MessageBox.Show("Mantenha selecionada a entidade desejada antes de adicionar (+) o filtro.");
+                MessageBox.Show("Mantenha selecionada a entidade desejada antes de adicionar (+) o filtro.", "Aviso", MessageBoxButtons.OK);
+            }
+        }
+
+        private void comboAtributoEntidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboAtributoEntidade.SelectedIndex == 0)
+            {
+                MessageBox.Show("Mantenha selecionada a entidade desejada antes de adicionar (+) o filtro.", "Aviso", MessageBoxButtons.OK);
             }
         }
 
@@ -734,6 +752,8 @@ namespace fazendaSuinos
                 btnIncluirEntidade.Visible = false;
                 btnGravarEntidade.Enabled = true;
                 btnGravarEntidade.Visible = true;
+                btnExcluirEntidade.Enabled = true;
+                btnExcluirEntidade.Visible = true;
             }
             else if (campoCodigoEntidade.Text == "")
             {
@@ -741,7 +761,8 @@ namespace fazendaSuinos
                 btnIncluirEntidade.Visible = true;
                 btnGravarEntidade.Enabled = false;
                 btnGravarEntidade.Visible = false;
-
+                btnExcluirEntidade.Enabled = false;
+                btnExcluirEntidade.Visible = false;
             }
         }
 
@@ -1307,6 +1328,8 @@ namespace fazendaSuinos
                 btnIncluirFazenda.Visible = false;
                 btnGravarFazenda.Visible = true;
                 btnGravarFazenda.Enabled = true;
+                btnExcluirFazenda.Enabled = true;
+                btnExcluirFazenda.Visible = true;
             }
             else if (campoCodigoFazenda.Text == "")
             {
@@ -1314,6 +1337,8 @@ namespace fazendaSuinos
                 btnIncluirFazenda.Visible = true;
                 btnGravarFazenda.Enabled = false;
                 btnGravarFazenda.Visible = false;
+                btnExcluirFazenda.Enabled = false;
+                btnExcluirFazenda.Visible = false;
             }
         }
 
@@ -1325,7 +1350,7 @@ namespace fazendaSuinos
             string fazendaTabela;
 
             //Vê o índice da Combo Box e atribui o valor a uma string.
-            if (comboTipoEntidade.SelectedIndex >= 0)
+            if (comboTipoFazenda.SelectedIndex >= 0)
             {
                 fazendaTabela = listaTipoFazenda[comboTipoFazenda.SelectedIndex];
             }
@@ -1337,10 +1362,6 @@ namespace fazendaSuinos
 
             //Inicia a Query SQL
             StringBuilder queryBuilder = new StringBuilder("INSERT INTO " + fazendaTabela + "(");
-
-
-            //PAREI NO MÉTODO ABAIXO
-
 
             //Gera a lista com o valor dos devidos campos
             List<string> listaValores = verificaCamposFazenda();
@@ -1359,6 +1380,9 @@ namespace fazendaSuinos
             queryBuilder.Append(") VALUES (");
 
             // Adiciona os valores à consulta SQL
+            int count = 0;
+            int total = dados.Values.Count;
+
             foreach (var valor in dados.Values)
             {
                 // Se o valor for uma string, adiciona aspas simples à volta
@@ -1374,8 +1398,9 @@ namespace fazendaSuinos
                     queryBuilder.Append("NULL");
                 }
 
+                count++;
                 // Adiciona uma vírgula para separar os valores, exceto o último
-                if (!valor.Equals(dados.Values.Last()))
+                if (count < total)
                 {
                     queryBuilder.Append(",");
                 }
@@ -1591,7 +1616,7 @@ namespace fazendaSuinos
             string fazendaTabela;
 
             //Vê o índice da Combo Box e atribui o valor a uma string.
-            if (comboTipoFazenda.SelectedIndex >= 0)
+            if (comboTipoFazenda.SelectedIndex >= 0 && campoCodigoFazenda.Text != "")
             {
                 fazendaTabela = listaTipoFazenda[comboTipoFazenda.SelectedIndex];
             }
@@ -1617,7 +1642,10 @@ namespace fazendaSuinos
             //Gera automaticamente a estrutura que vincula o campo da tabela ao valor da Text Box
             Dictionary<string, string> dados = geraDadosQueryFazenda(fazendaTabela, listaValores);
 
-            //Insere a atualização de valores na query
+            // Adiciona os valores à consulta SQL
+            int count = 0;
+            int total = dados.Values.Count;
+
             foreach (var kvp in dados)
             {
                 var valor = kvp.Value;
@@ -1632,8 +1660,9 @@ namespace fazendaSuinos
                     queryBuilder.Append("'");
                 }
 
+                count++;
                 // Adiciona uma vírgula para separar os valores, exceto o último
-                if (!valor.Equals(dados.Values.Last()))
+                if (count < total)
                 {
                     queryBuilder.Append(",");
                 }
@@ -1655,9 +1684,70 @@ namespace fazendaSuinos
                     // Cria o comando SQL
                     using (SqlCommand command = connection.CreateCommand(queryInsercao))
                     {
-                        // Executa o comando SQL
-                        command.ExecuteNonQuery();
+                        try
+                        {
+                            // Executa o comando SQL
+                            command.ExecuteNonQuery();
+                        }catch(SqlException sqle)
+                        {
+                            MessageBox.Show("Verifique se todas as entidades estrangeiras estão cadastradas.\n", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
 
+
+                        if (comboTipoFazenda.Text == "Lote")
+                        {
+                            // Verifica se existe uma associação entre o Lote e a Pocilga
+                            string checkQuery = "SELECT COUNT(*) FROM LotePocilga WHERE CodLote = @CodLote";
+                            command.CommandText = checkQuery;
+                            command.Parameters.Clear();
+                            command.Parameters.AddWithValue("@CodLote", campoCodigoFazenda.Text);
+
+                            int contador = (int)command.ExecuteScalar();
+
+                            if (contador == 0)
+                            {
+                                // Se não existe, faz a inserção
+                                try
+                                {
+                                    command.CommandText = "INSERT INTO LotePocilga (CodPocilga, CodLote) VALUES (@CodPocilga, @CodLote)";
+                                    command.Parameters.Clear();
+                                    command.Parameters.AddWithValue("@CodPocilga", campoCodPocilga_Lote.Text);
+                                    command.Parameters.AddWithValue("@CodLote", campoCodigoFazenda.Text);
+
+                                    command.ExecuteNonQuery();
+
+                                    Console.WriteLine("Vinculação bem-sucedida!");
+                                    MessageBox.Show("Vínculo de Lote e Pocilga criado com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    limpaCamposCadastroFazenda();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("Não foi possível vincular lote à pocilga.\n" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                // Se já existe, faz a atualização
+                                try
+                                {
+                                    command.CommandText = "UPDATE LotePocilga SET CodPocilga = @CodPocilga WHERE CodLote = @CodLote";
+                                    command.Parameters.Clear();
+                                    command.Parameters.AddWithValue("@CodPocilga", campoCodPocilga_Lote.Text);
+                                    command.Parameters.AddWithValue("@CodLote", campoCodigoFazenda.Text);
+
+                                    command.ExecuteNonQuery();
+
+                                    Console.WriteLine("Atualização de vínculo bem-sucedida!");
+                                    MessageBox.Show("Atualização realizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    limpaCamposCadastroFazenda();
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("Não foi possível atualizar vinculação do lote à pocilga.\n" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                        }
                         Console.WriteLine("Alteração bem-sucedida!");
                         MessageBox.Show("Alteração realizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -1851,9 +1941,8 @@ namespace fazendaSuinos
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 comboTipoFazenda.Text = fazendaSelecionada;
+                preencherCamposFazenda(fazendaSelecionada, e);
             }
-
-            preencherCamposFazenda(fazendaSelecionada, e);
 
             ResumeLayout();
         }
@@ -1972,6 +2061,9 @@ namespace fazendaSuinos
             {
                 object codigo = dataGridFazenda.Rows[e.RowIndex].Cells[0].Value;
                 campoCodigoFazenda.Text = codigo.ToString();
+
+                object finalidade = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Finalidade"].Index].Value;
+                campoFinalidade_Visita.Text = finalidade.ToString();
 
                 object data = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Data"].Index].Value;
                 dateTPData_Visita.Text = data.ToString();

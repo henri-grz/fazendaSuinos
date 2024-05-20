@@ -1,5 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using System;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 using Color = System.Drawing.Color;
@@ -8,18 +9,19 @@ namespace fazendaSuinos
 {
     public partial class FormMainMenu : Form
     {
-        //campos
+        private string connectionString = Properties.Settings.Default.fazendaSuinosConnectionString;
+
         private IconButton currentBtn;
         private Panel leftBorderPnl;
         private Form currentChildForm;
-        //constructor
+
         public FormMainMenu()
         {
             InitializeComponent();
             leftBorderPnl = new Panel();
             leftBorderPnl.Size = new Size(7, 74);
             panelMenu.Controls.Add(leftBorderPnl);
-
+            
             OpenChildForm(new FormDashboard());
             ActivateButton(btnDashboard, RGBColors.verdeClaro);
         }
@@ -32,8 +34,6 @@ namespace fazendaSuinos
             //public static Color color4 = Color.FromArgb(95, 77, 221);
             //public static Color color5 = Color.FromArgb(249, 88, 155);
         }
-
-        //Funcoes
 
         private void ActivateButton(object senderBtn, Color color)
         {
