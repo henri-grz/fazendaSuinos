@@ -40,6 +40,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,6 +65,12 @@
     </Compile>
     <Compile Include="FormAgendaDetalhes.Designer.cs">
       <DependentUpon>FormAgendaDetalhes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConsumo_Racao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsumo_Racao.Designer.cs">
+      <DependentUpon>FormConsumo_Racao.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDashboard.cs">
       <SubType>Form</SubType>
@@ -107,10 +114,19 @@
     <Compile Include="FormMortalidade_LoteMossa.Designer.cs">
       <DependentUpon>FormMortalidade_LoteMossa.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPeso_Medio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPeso_Medio.Designer.cs">
+      <DependentUpon>FormPeso_Medio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAgendaDetalhes.resx">
       <DependentUpon>FormAgendaDetalhes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsumo_Racao.resx">
+      <DependentUpon>FormConsumo_Racao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
@@ -132,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMortalidade_LoteMossa.resx">
       <DependentUpon>FormMortalidade_LoteMossa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPeso_Medio.resx">
+      <DependentUpon>FormPeso_Medio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

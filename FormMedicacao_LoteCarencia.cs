@@ -16,6 +16,10 @@ namespace fazendaSuinos
             _parentForm = parentForm;
         }
 
+        public FormMedicacao_LoteCarencia(FormPeso_Medio formPeso_Medio)
+        {
+        }
+
         public void setVisiblepcbMedicamentos(bool b)
         {
             if (b)

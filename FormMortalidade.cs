@@ -89,5 +89,10 @@ namespace fazendaSuinos
             formAux.setVisibledataGridLote(false);
             formAux.ShowDialog();
         }
+
+        private void FormMortalidade_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
