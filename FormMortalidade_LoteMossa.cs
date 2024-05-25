@@ -16,6 +16,10 @@ namespace fazendaSuinos
             _parentForm = parentForm;
         }
 
+        public FormMortalidade_LoteMossa(FormPeso_Medio formPeso_Medio)
+        {
+        }
+
         public void setVisibledataGridLote(bool b)
         {
             if (b)
@@ -76,6 +80,11 @@ namespace fazendaSuinos
             _parentForm.setCodigoLote(codigo.ToString());
 
             this.Close();
+        }
+
+        private void FormMortalidade_LoteMossa_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

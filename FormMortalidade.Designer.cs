@@ -52,10 +52,9 @@
             this.txtCodigoLote.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtCodigoLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCodigoLote.Location = new System.Drawing.Point(558, 198);
-            this.txtCodigoLote.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoLote.Location = new System.Drawing.Point(418, 161);
             this.txtCodigoLote.Name = "txtCodigoLote";
-            this.txtCodigoLote.Size = new System.Drawing.Size(132, 23);
+            this.txtCodigoLote.Size = new System.Drawing.Size(99, 19);
             this.txtCodigoLote.TabIndex = 32;
             // 
             // label7
@@ -63,10 +62,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label7.Location = new System.Drawing.Point(553, 169);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(415, 137);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 25);
+            this.label7.Size = new System.Drawing.Size(117, 20);
             this.label7.TabIndex = 31;
             this.label7.Text = "Código do Lote";
             // 
@@ -75,10 +73,9 @@
             this.txtMossa.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtMossa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMossa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtMossa.Location = new System.Drawing.Point(717, 300);
-            this.txtMossa.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMossa.Location = new System.Drawing.Point(538, 244);
             this.txtMossa.Name = "txtMossa";
-            this.txtMossa.Size = new System.Drawing.Size(132, 23);
+            this.txtMossa.Size = new System.Drawing.Size(99, 19);
             this.txtMossa.TabIndex = 30;
             // 
             // txtPeso
@@ -86,10 +83,9 @@
             this.txtPeso.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtPeso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPeso.Location = new System.Drawing.Point(558, 300);
-            this.txtPeso.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPeso.Location = new System.Drawing.Point(418, 244);
             this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(132, 23);
+            this.txtPeso.Size = new System.Drawing.Size(99, 19);
             this.txtPeso.TabIndex = 28;
             // 
             // label3
@@ -97,10 +93,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label3.Location = new System.Drawing.Point(712, 271);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(534, 220);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 25);
+            this.label3.Size = new System.Drawing.Size(56, 20);
             this.label3.TabIndex = 25;
             this.label3.Text = "Mossa";
             // 
@@ -109,10 +104,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label2.Location = new System.Drawing.Point(553, 271);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(415, 220);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 25);
+            this.label2.Size = new System.Drawing.Size(45, 20);
             this.label2.TabIndex = 24;
             this.label2.Text = "Peso";
             // 
@@ -121,10 +115,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label1.Location = new System.Drawing.Point(380, 269);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(285, 219);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.Size = new System.Drawing.Size(55, 20);
             this.label1.TabIndex = 23;
             this.label1.Text = "Causa";
             // 
@@ -135,10 +128,9 @@
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLimpar.Location = new System.Drawing.Point(832, 391);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpar.Location = new System.Drawing.Point(624, 318);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(141, 37);
+            this.btnLimpar.Size = new System.Drawing.Size(106, 30);
             this.btnLimpar.TabIndex = 22;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
@@ -151,10 +143,9 @@
             this.btnConsultarCodigoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarCodigoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCodigoLote.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarCodigoLote.Location = new System.Drawing.Point(717, 195);
-            this.btnConsultarCodigoLote.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultarCodigoLote.Location = new System.Drawing.Point(538, 158);
             this.btnConsultarCodigoLote.Name = "btnConsultarCodigoLote";
-            this.btnConsultarCodigoLote.Size = new System.Drawing.Size(97, 27);
+            this.btnConsultarCodigoLote.Size = new System.Drawing.Size(73, 22);
             this.btnConsultarCodigoLote.TabIndex = 21;
             this.btnConsultarCodigoLote.Text = "Consultar";
             this.btnConsultarCodigoLote.UseVisualStyleBackColor = false;
@@ -165,10 +156,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label4.Location = new System.Drawing.Point(1015, 269);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(761, 219);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 25);
+            this.label4.Size = new System.Drawing.Size(45, 20);
             this.label4.TabIndex = 20;
             this.label4.Text = "Sexo";
             // 
@@ -177,10 +167,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label5.Location = new System.Drawing.Point(380, 169);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(285, 137);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 25);
+            this.label5.Size = new System.Drawing.Size(44, 20);
             this.label5.TabIndex = 19;
             this.label5.Text = "Data";
             // 
@@ -189,10 +178,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label6.Location = new System.Drawing.Point(629, 66);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(472, 54);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(239, 46);
+            this.label6.Size = new System.Drawing.Size(195, 37);
             this.label6.TabIndex = 18;
             this.label6.Text = "Mortalidade";
             // 
@@ -215,10 +203,9 @@
             "Torção",
             "Caudofagia",
             "Artrite"});
-            this.textBoxCausa.Location = new System.Drawing.Point(385, 298);
-            this.textBoxCausa.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxCausa.Location = new System.Drawing.Point(289, 242);
             this.textBoxCausa.Name = "textBoxCausa";
-            this.textBoxCausa.Size = new System.Drawing.Size(132, 24);
+            this.textBoxCausa.Size = new System.Drawing.Size(100, 21);
             this.textBoxCausa.TabIndex = 33;
             // 
             // btnSalvar
@@ -228,10 +215,9 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(1011, 391);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalvar.Location = new System.Drawing.Point(758, 318);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(141, 37);
+            this.btnSalvar.Size = new System.Drawing.Size(106, 30);
             this.btnSalvar.TabIndex = 35;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -240,10 +226,9 @@
             // dateTimePickerData
             // 
             this.dateTimePickerData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerData.Location = new System.Drawing.Point(385, 198);
-            this.dateTimePickerData.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerData.Location = new System.Drawing.Point(289, 161);
             this.dateTimePickerData.Name = "dateTimePickerData";
-            this.dateTimePickerData.Size = new System.Drawing.Size(132, 22);
+            this.dateTimePickerData.Size = new System.Drawing.Size(100, 20);
             this.dateTimePickerData.TabIndex = 36;
             // 
             // comboBoxSexo
@@ -255,10 +240,9 @@
             this.comboBoxSexo.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.comboBoxSexo.Location = new System.Drawing.Point(1020, 298);
-            this.comboBoxSexo.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxSexo.Location = new System.Drawing.Point(765, 242);
             this.comboBoxSexo.Name = "comboBoxSexo";
-            this.comboBoxSexo.Size = new System.Drawing.Size(132, 24);
+            this.comboBoxSexo.Size = new System.Drawing.Size(100, 21);
             this.comboBoxSexo.TabIndex = 37;
             // 
             // btnConsultarMossa
@@ -268,10 +252,9 @@
             this.btnConsultarMossa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarMossa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarMossa.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarMossa.Location = new System.Drawing.Point(874, 298);
-            this.btnConsultarMossa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultarMossa.Location = new System.Drawing.Point(656, 242);
             this.btnConsultarMossa.Name = "btnConsultarMossa";
-            this.btnConsultarMossa.Size = new System.Drawing.Size(99, 27);
+            this.btnConsultarMossa.Size = new System.Drawing.Size(74, 22);
             this.btnConsultarMossa.TabIndex = 39;
             this.btnConsultarMossa.Text = "Consultar";
             this.btnConsultarMossa.UseVisualStyleBackColor = false;
@@ -279,10 +262,10 @@
             // 
             // FormMortalidade
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1765, 874);
+            this.ClientSize = new System.Drawing.Size(1324, 609);
             this.Controls.Add(this.btnConsultarMossa);
             this.Controls.Add(this.comboBoxSexo);
             this.Controls.Add(this.dateTimePickerData);
@@ -300,10 +283,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMortalidade";
             this.ShowIcon = false;
             this.Text = "FormMortalidade";
+            this.Load += new System.EventHandler(this.FormMortalidade_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

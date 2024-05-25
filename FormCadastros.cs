@@ -790,7 +790,6 @@ namespace fazendaSuinos
 
             if (listaValores == null)
             {
-                MessageBox.Show("Há campos obrigatórios em branco.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -872,30 +871,70 @@ namespace fazendaSuinos
             ComboBox[] comboBoxes =
             {
                 comboSetor, comboEspecialidade
-
+                
                 //NECESSÁRIO AJUSTAR BANCO DE DADOS PARA QUE O CAMPO PRIVILÉGIOS EXISTA
-                //comboSetor, comboEspecialidade, comboPrivilegios
             };
 
             foreach (TextBox campo in textboxes)
             {
-                if (campo.Visible && campo.Text != "")
+                if (campo.Visible && !string.IsNullOrWhiteSpace(campo.Text))
                 {
+                    switch (campo.Name)
+                    {
+                        case "campoCPF":
+                            if (!Validador.ValidarCPF(campo.Text))
+                            {
+                                MessageBox.Show("CPF inválido!", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return null;
+                            }
+                            break;
+                        case "campoCNPJ":
+                            if (!Validador.ValidarCNPJ(campo.Text))
+                            {
+                                MessageBox.Show("CNPJ inválido!", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return null;
+                            }
+                            break;
+                        case "campoTelefone":
+                            if (!Validador.ValidarTelefone(campo.Text))
+                            {
+                                MessageBox.Show("Telefone inválido!\nFormato esperado: 0000000-0000", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return null;
+                            }
+                            break;
+                        case "campoNome":
+                            if (!Validador.ValidarNome(campo.Text))
+                            {
+                                MessageBox.Show("Nome inválido!", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return null;
+                            }
+                            break;
+                        case "campoCEP":
+                            if (!Validador.ValidarCEP(campo.Text))
+                            {
+                                MessageBox.Show("CEP inválido!", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return null;
+                            }
+                            break;
+                    }
                     listaValores.Add(campo.Text);
                 }
-                else if (campo.Visible && campo.Text == "")
+                else if (campo.Visible)
                 {
+                    MessageBox.Show("Há campos obrigatórios em branco.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return null;
                 }
             }
+
             foreach (ComboBox combo in comboBoxes)
             {
-                if (combo.Visible && combo.Text != "")
+                if (combo.Visible && !string.IsNullOrWhiteSpace(combo.Text))
                 {
                     listaValores.Add(combo.Text);
                 }
-                else if (combo.Visible && combo.Text == "")
+                else if (combo.Visible)
                 {
+                    MessageBox.Show("Há campos obrigatórios em branco.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return null;
                 }
             }
@@ -988,11 +1027,11 @@ namespace fazendaSuinos
             Console.WriteLine(entidadeSelecionada);
 
             //Gera a lista com o valor dos devidos campos
-            List<string> listaValores = null;
+            List<string> listaValores = verificaCamposEntidade();
 
-            while (listaValores == null)
+            if (listaValores == null)
             {
-                listaValores = verificaCamposEntidade();
+                return;
             }
 
             //Gera automaticamente a estrutura que vincula o campo da tabela ao valor da Text Box
@@ -1091,6 +1130,9 @@ namespace fazendaSuinos
             {
                 return;
             }
+
+            limpaCamposCadastroEntidade();
+
         }
 
         //LIMPAR
@@ -1562,8 +1604,6 @@ namespace fazendaSuinos
                 dateTPDataAloj_Lote, dateTPEstCarregamento_Lote, dateTPUlt_Visita, dateTPData_Visita, dateTPValidade_Produto
             };
 
-            //PAREI AQUI
-
             foreach (TextBox campo in textboxes)
             {
                 if (campo.Visible && campo.Text == "")
@@ -1576,6 +1616,16 @@ namespace fazendaSuinos
                 }
                 else if (campo.Visible && campo.Text != "")
                 {
+                    if(campo.Name == "campoPesoMedio_Lote")
+                    {
+                        int pesoMedio = Int32.Parse(campoPesoMedio_Lote.Text);
+                        int pesoTotal = Int32.Parse(campoPesoTotal_Lote.Text);
+                        if (pesoMedio > pesoTotal)
+                        {
+                            MessageBox.Show("O peso médio não pode ser maior que o peso total.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return null;
+                        }
+                    }
                     listaValores.Add(campo.Text);
                 }
             }
@@ -1594,6 +1644,28 @@ namespace fazendaSuinos
             {
                 if (dateTimePicker.Visible && dateTimePicker.Text != "01/01/2001")
                 {
+                    if(dateTimePicker.Name == "dateTPDataAloj_Lote")
+                    {
+                        DateTime dataAloj = dateTPDataAloj_Lote.Value;
+                        DateTime dataCarreg = dateTPEstCarregamento_Lote.Value;
+
+                        if(dataAloj > dataCarreg)
+                        {
+                            MessageBox.Show("A data de alojamento não pode ser maior que a data de carregamento.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return null;
+                        }
+                    }
+                    if (dateTimePicker.Name == "dateTPData_Visita")
+                    {
+                        DateTime dataVisita = dateTPData_Visita.Value;
+                        DateTime dataUltVisita = dateTPUlt_Visita.Value;
+
+                        if (dataUltVisita > dataVisita)
+                        {
+                            MessageBox.Show("A data da última visita não pode ser maior que a data da visita atual.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return null;
+                        }
+                    }
                     listaValores.Add(dateTimePicker.Text);
                 }
                 else if (dateTimePicker.Visible && dateTimePicker.Text == "01/01/2001")
@@ -1632,11 +1704,11 @@ namespace fazendaSuinos
             Console.WriteLine(fazendaSelecionada);
 
             //Gera a lista com o valor dos devidos campos
-            List<string> listaValores = null;
+            List<string> listaValores = verificaCamposFazenda();
 
-            while (listaValores == null)
+            if(listaValores == null)
             {
-                listaValores = verificaCamposFazenda();
+                return;
             }
 
             //Gera automaticamente a estrutura que vincula o campo da tabela ao valor da Text Box
@@ -1688,7 +1760,8 @@ namespace fazendaSuinos
                         {
                             // Executa o comando SQL
                             command.ExecuteNonQuery();
-                        }catch(SqlException)
+                        }
+                        catch (SqlException)
                         {
                             MessageBox.Show("Verifique se todas as entidades estrangeiras estão cadastradas.\n", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
@@ -2094,7 +2167,7 @@ namespace fazendaSuinos
                 object categoria = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Categoria"].Index].Value;
                 comboCategoria_Produto.Text = categoria.ToString();
 
-                object dataValidade = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Data_Validade"].Index].Value;
+                object dataValidade = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Validade"].Index].Value;
                 dateTPValidade_Produto.Text = dataValidade.ToString();
 
                 object tipo = dataGridFazenda.Rows[e.RowIndex].Cells[dataGridFazenda.Columns["Tipo"].Index].Value;

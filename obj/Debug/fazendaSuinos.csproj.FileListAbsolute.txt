@@ -31,3 +31,24 @@ D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormMortalidade.reso
 D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormMedicacao_LoteCarencia.resources
 D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormMortalidade_LoteMossa.resources
 D:\Projeto Integrador\FazendaSuinos\obj\Debug\fazendaSuinos.FormAgendaDetalhes.resources
+C:\Users\User\source\repos\fazendaSuinos\bin\Debug\fazendaSuinos.exe.config
+C:\Users\User\source\repos\fazendaSuinos\bin\Debug\fazendaSuinos.exe
+C:\Users\User\source\repos\fazendaSuinos\bin\Debug\fazendaSuinos.pdb
+C:\Users\User\source\repos\fazendaSuinos\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.FormAgendaDetalhes.resources
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.FormDashboard.resources
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.FormMainMenu.resources
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.FormCadastros.resources
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.FormMedicacao.resources
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.FormMedicacao_LoteCarencia.resources
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.FormMortalidade.resources
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.FormMortalidade_LoteMossa.resources
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.FormPeso_Medio.resources
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.Properties.Resources.resources
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.csproj.GenerateResource.cache
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaS.78FEBE0B.Up2Date
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.exe
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.pdb
+C:\Users\User\source\repos\fazendaSuinos\obj\Debug\fazendaSuinos.FormConsumo_Racao.resources
