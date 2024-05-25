@@ -1,43 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace fazendaSuinos
 {
-    public partial class FormMortalidade_LoteMossa : Form
+    public partial class FormConsumo_Racao_Lote : Form
     {
         private string connectionString = Properties.Settings.Default.fazendaSuinosConnectionString;
-        private FormMortalidade _parentForm;
+        private FormConsumo_Racao _parentForm;
 
-        public FormMortalidade_LoteMossa(FormMortalidade parentForm)
+        public FormConsumo_Racao_Lote(FormConsumo_Racao parentForm)
         {
             InitializeComponent();
             _parentForm = parentForm;
-        }
-
-        public void setVisibledataGridLote(bool b)
-        {
-            if (b)
-            {
-                dataGridViewLote.Visible = true;
-            }
-            else
-            {
-                dataGridViewLote.Visible = false;
-            }
-        }
-
-        public void setVisibleimgMossa(bool b)
-        {
-            if (b)
-            {
-                imgMossa.Visible = true;
-            }
-            else
-            {
-                imgMossa.Visible = false;
-            }
         }
 
         public void LoadLote()
@@ -76,11 +58,6 @@ namespace fazendaSuinos
             _parentForm.setCodigoLote(codigo.ToString());
 
             this.Close();
-        }
-
-        private void FormMortalidade_LoteMossa_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

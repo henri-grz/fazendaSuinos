@@ -21,7 +21,6 @@ namespace fazendaSuinos
 
         }
 
-
         private void SalvarDados()
         {
             try
@@ -61,44 +60,15 @@ namespace fazendaSuinos
             }
         }
 
-        private void LoadLote()
-        {
-            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    string querySelecao = "SELECT * FROM Lote";
-
-                    // Cria um adaptador de dados para executar a query
-                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
-
-                    // Cria um DataTable para armazenar os resultados
-                    DataTable dataTable = new DataTable();
-
-                    // Preenche o DataTable com os resultados da consulta
-                    adapter.Fill(dataTable);
-
-                    // Define o DataTable como a fonte de dados do DataGridView
-                    dataGridViewLote.DataSource = dataTable;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao consultar objeto: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-        }
-
-
-        private void FormPeso_Medio_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnConsultarCodigoLote_Click_1(object sender, EventArgs e)
         {
-            LoadLote();  
+            FormPeso_Medio_Lote formAux = new FormPeso_Medio_Lote(this);
+            formAux.LoadLote();
+            formAux.ShowDialog();
+        }
+        public void setCodigoLote(String codigo)
+        {
+            txtCodigoLote.Text = codigo;
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

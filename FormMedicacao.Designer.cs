@@ -54,8 +54,8 @@
             this.dtpVacinacao.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
             this.dtpVacinacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.dtpVacinacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpVacinacao.Location = new System.Drawing.Point(321, 287);
-            this.dtpVacinacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpVacinacao.Location = new System.Drawing.Point(383, 330);
+            this.dtpVacinacao.Margin = new System.Windows.Forms.Padding(4);
             this.dtpVacinacao.Name = "dtpVacinacao";
             this.dtpVacinacao.Size = new System.Drawing.Size(177, 24);
             this.dtpVacinacao.TabIndex = 53;
@@ -67,8 +67,8 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(1018, 504);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalvar.Location = new System.Drawing.Point(1080, 547);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(141, 37);
             this.btnSalvar.TabIndex = 52;
@@ -101,8 +101,8 @@
             "B-lacmox",
             "Lincospecmax",
             ""});
-            this.txtMedicamento.Location = new System.Drawing.Point(321, 211);
-            this.txtMedicamento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMedicamento.Location = new System.Drawing.Point(383, 254);
+            this.txtMedicamento.Margin = new System.Windows.Forms.Padding(4);
             this.txtMedicamento.Name = "txtMedicamento";
             this.txtMedicamento.Size = new System.Drawing.Size(177, 24);
             this.txtMedicamento.TabIndex = 50;
@@ -112,8 +112,8 @@
             this.txtCodigoLote.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtCodigoLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCodigoLote.Location = new System.Drawing.Point(794, 212);
-            this.txtCodigoLote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigoLote.Location = new System.Drawing.Point(856, 255);
+            this.txtCodigoLote.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoLote.Name = "txtCodigoLote";
             this.txtCodigoLote.Size = new System.Drawing.Size(177, 23);
             this.txtCodigoLote.TabIndex = 49;
@@ -123,7 +123,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label7.Location = new System.Drawing.Point(789, 183);
+            this.label7.Location = new System.Drawing.Point(851, 226);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(145, 25);
@@ -135,8 +135,8 @@
             this.txtDiasUso.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtDiasUso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDiasUso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtDiasUso.Location = new System.Drawing.Point(542, 288);
-            this.txtDiasUso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiasUso.Location = new System.Drawing.Point(604, 331);
+            this.txtDiasUso.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiasUso.Name = "txtDiasUso";
             this.txtDiasUso.Size = new System.Drawing.Size(177, 23);
             this.txtDiasUso.TabIndex = 46;
@@ -146,7 +146,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label3.Location = new System.Drawing.Point(789, 259);
+            this.label3.Location = new System.Drawing.Point(851, 302);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 25);
@@ -158,7 +158,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label2.Location = new System.Drawing.Point(537, 259);
+            this.label2.Location = new System.Drawing.Point(599, 302);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 25);
@@ -170,7 +170,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label1.Location = new System.Drawing.Point(316, 182);
+            this.label1.Location = new System.Drawing.Point(378, 225);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 25);
@@ -184,8 +184,8 @@
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLimpar.Location = new System.Drawing.Point(838, 504);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpar.Location = new System.Drawing.Point(900, 547);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(141, 37);
             this.btnLimpar.TabIndex = 42;
@@ -199,8 +199,8 @@
             this.btnConsultarCodigoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarCodigoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCodigoLote.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarCodigoLote.Location = new System.Drawing.Point(1014, 208);
-            this.btnConsultarCodigoLote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConsultarCodigoLote.Location = new System.Drawing.Point(1076, 251);
+            this.btnConsultarCodigoLote.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultarCodigoLote.Name = "btnConsultarCodigoLote";
             this.btnConsultarCodigoLote.Size = new System.Drawing.Size(145, 27);
             this.btnConsultarCodigoLote.TabIndex = 41;
@@ -213,7 +213,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label5.Location = new System.Drawing.Point(316, 258);
+            this.label5.Location = new System.Drawing.Point(378, 301);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 25);
@@ -225,7 +225,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label6.Location = new System.Drawing.Point(629, 66);
+            this.label6.Location = new System.Drawing.Point(691, 109);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(224, 46);
@@ -235,8 +235,8 @@
             // txtObservacao
             // 
             this.txtObservacao.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtObservacao.Location = new System.Drawing.Point(321, 374);
-            this.txtObservacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtObservacao.Location = new System.Drawing.Point(383, 417);
+            this.txtObservacao.Margin = new System.Windows.Forms.Padding(4);
             this.txtObservacao.Multiline = true;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(838, 82);
@@ -247,7 +247,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label4.Location = new System.Drawing.Point(316, 345);
+            this.label4.Location = new System.Drawing.Point(378, 388);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(119, 25);
@@ -259,8 +259,8 @@
             this.txtQntVac.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtQntVac.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQntVac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtQntVac.Location = new System.Drawing.Point(542, 212);
-            this.txtQntVac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQntVac.Location = new System.Drawing.Point(604, 255);
+            this.txtQntVac.Margin = new System.Windows.Forms.Padding(4);
             this.txtQntVac.Name = "txtQntVac";
             this.txtQntVac.Size = new System.Drawing.Size(177, 23);
             this.txtQntVac.TabIndex = 57;
@@ -270,7 +270,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label8.Location = new System.Drawing.Point(537, 182);
+            this.label8.Location = new System.Drawing.Point(599, 225);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(212, 25);
@@ -282,8 +282,8 @@
             this.txtDiasCarencia.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtDiasCarencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDiasCarencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtDiasCarencia.Location = new System.Drawing.Point(794, 288);
-            this.txtDiasCarencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiasCarencia.Location = new System.Drawing.Point(856, 331);
+            this.txtDiasCarencia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiasCarencia.Name = "txtDiasCarencia";
             this.txtDiasCarencia.Size = new System.Drawing.Size(177, 23);
             this.txtDiasCarencia.TabIndex = 58;
@@ -295,8 +295,8 @@
             this.btnConsultarCarencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarCarencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCarencia.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarCarencia.Location = new System.Drawing.Point(1011, 284);
-            this.btnConsultarCarencia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConsultarCarencia.Location = new System.Drawing.Point(1073, 327);
+            this.btnConsultarCarencia.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultarCarencia.Name = "btnConsultarCarencia";
             this.btnConsultarCarencia.Size = new System.Drawing.Size(148, 27);
             this.btnConsultarCarencia.TabIndex = 59;
@@ -329,7 +329,7 @@
             this.Controls.Add(this.btnConsultarCodigoLote);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMedicacao";
             this.Text = "FormMedicacao";
             this.Load += new System.EventHandler(this.FormMedicacao_Load);

@@ -72,6 +72,12 @@
     <Compile Include="FormConsumo_Racao.Designer.cs">
       <DependentUpon>FormConsumo_Racao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConsumo_Racao_Lote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConsumo_Racao_Lote.Designer.cs">
+      <DependentUpon>FormConsumo_Racao_Lote.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     <Compile Include="FormPeso_Medio.Designer.cs">
       <DependentUpon>FormPeso_Medio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPeso_Medio_Lote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPeso_Medio_Lote.Designer.cs">
+      <DependentUpon>FormPeso_Medio_Lote.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validador.cs" />
@@ -128,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsumo_Racao.resx">
       <DependentUpon>FormConsumo_Racao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConsumo_Racao_Lote.resx">
+      <DependentUpon>FormConsumo_Racao_Lote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDashboard.resx">
       <DependentUpon>FormDashboard.cs</DependentUpon>
@@ -152,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPeso_Medio.resx">
       <DependentUpon>FormPeso_Medio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPeso_Medio_Lote.resx">
+      <DependentUpon>FormPeso_Medio_Lote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
