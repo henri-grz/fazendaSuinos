@@ -108,6 +108,7 @@ namespace fazendaSuinos
             this.labelSetor = new System.Windows.Forms.Label();
             this.campoTelefone = new System.Windows.Forms.TextBox();
             this.labelTelefone = new System.Windows.Forms.Label();
+            this.campoCPF = new System.Windows.Forms.TextBox();
             this.labelCPF = new System.Windows.Forms.Label();
             this.campoNome = new System.Windows.Forms.TextBox();
             this.labelNome = new System.Windows.Forms.Label();
@@ -182,7 +183,6 @@ namespace fazendaSuinos
             this.fazendaSuinosDataSet = new fazendaSuinos.fazendaSuinosDataSet();
             this.lotePocilgaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lotePocilgaTableAdapter = new fazendaSuinos.fazendaSuinosDataSetTableAdapters.LotePocilgaTableAdapter();
-            this.campoCPF = new System.Windows.Forms.TextBox();
             this.panel3Botoes.SuspendLayout();
             this.panelFiltroEntidade.SuspendLayout();
             this.flowLayoutFiltroEntidade.SuspendLayout();
@@ -1465,6 +1465,18 @@ namespace fazendaSuinos
             this.labelTelefone.Text = "Telefone";
             this.labelTelefone.Visible = false;
             // 
+            // campoCPF
+            // 
+            this.campoCPF.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.campoCPF.Location = new System.Drawing.Point(880, 244);
+            this.campoCPF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.campoCPF.Name = "campoCPF";
+            this.campoCPF.Size = new System.Drawing.Size(179, 23);
+            this.campoCPF.TabIndex = 92;
+            this.campoCPF.Visible = false;
+            // 
             // labelCPF
             // 
             this.labelCPF.AutoSize = true;
@@ -2506,18 +2518,6 @@ namespace fazendaSuinos
             // lotePocilgaTableAdapter
             // 
             this.lotePocilgaTableAdapter.ClearBeforeFill = true;
-            // 
-            // campoCPF
-            // 
-            this.campoCPF.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.campoCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.campoCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCPF.Location = new System.Drawing.Point(880, 244);
-            this.campoCPF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.campoCPF.Name = "campoCPF";
-            this.campoCPF.Size = new System.Drawing.Size(179, 23);
-            this.campoCPF.TabIndex = 92;
-            this.campoCPF.Visible = false;
             // 
             // FormCadastros
             // 

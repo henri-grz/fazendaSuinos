@@ -21,6 +21,11 @@ namespace fazendaSuinos
         {
             InitializeComponent();
             fillComboCodLote();
+
+            SuspendLayout();
+            panelFornecimento.Visible = false;
+            panelConsumo.Visible = true;
+            ResumeLayout();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -104,34 +109,39 @@ namespace fazendaSuinos
             int codLote = Convert.ToInt32(comboLoteGrafico.Text);
             int intervaloDias = calcularIntervaloDias(codLote);
 
-            // Obtém os dados do banco de dados
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-                string query = "SELECT Dia_Ciclo, Quantidade_Consumo FROM Consumo_Racao WHERE CodLote = @CodLote ORDER BY Dia_Ciclo";
-                SqlCommand command = new SqlCommand(query, connection);
-
-                command.Parameters.AddWithValue("@CodLote", Convert.ToInt32(comboLoteGrafico.Text));
-
-                SqlDataReader reader = command.ExecuteReader();
-
-                int maxDia = 0;
-                while (reader.Read())
+                // Obtém os dados do banco de dados
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    int dia = reader.GetInt32(0);
-                    double consumo = reader.GetDouble(1);
-                    series.Points.AddXY(dia, consumo);
+                    connection.Open();
+                    string query = "SELECT Dia_Ciclo, Quantidade_Consumo FROM Consumo_Racao WHERE CodLote = @CodLote ORDER BY Dia_Ciclo";
+                    SqlCommand command = new SqlCommand(query, connection);
 
-                    if (dia > maxDia)
+                    command.Parameters.AddWithValue("@CodLote", Convert.ToInt32(comboLoteGrafico.Text));
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    int maxDia = 0;
+                    while (reader.Read())
                     {
-                        maxDia = dia;
+                        int dia = reader.GetInt32(0);
+                        double consumo = reader.GetDouble(1);
+                        series.Points.AddXY(dia, consumo);
+
+                        if (dia > maxDia)
+                        {
+                            maxDia = dia;
+                        }
                     }
+
+                    reader.Close();
+
+                    // Configura o valor máximo do eixo X
+                    chartArea.AxisX.Maximum = intervaloDias;
                 }
-
-                reader.Close();
-
-                // Configura o valor máximo do eixo X
-                chartArea.AxisX.Maximum = intervaloDias;
+            }catch(Exception ex){
+                MessageBox.Show("Erro ao gerar gráfico.\n" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -197,10 +207,25 @@ namespace fazendaSuinos
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao ler códigos: " + ex.Message);
+                    MessageBox.Show("Erro ao consultar lotes: " + ex.Message);
                 }
             }
         }
 
+        private void btnConsumo_Click(object sender, EventArgs e)
+        {
+            SuspendLayout();
+            panelFornecimento.Visible = false;
+            panelConsumo.Visible = true;
+            ResumeLayout();
+        }
+
+        private void btnFornecimento_Click(object sender, EventArgs e)
+        {
+            SuspendLayout();
+            panelConsumo.Visible = false;
+            panelFornecimento.Visible = true;
+            ResumeLayout();
+        }
     }
 }

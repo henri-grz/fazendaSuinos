@@ -10,6 +10,11 @@ namespace fazendaSuinos
         public FormMedicacao()
         {
             InitializeComponent();
+
+            SuspendLayout();
+            panelFornecimento.Visible = false;
+            panelConsumo.Visible = true;
+            ResumeLayout();
         }
 
         private void SalvarDados()
@@ -55,11 +60,6 @@ namespace fazendaSuinos
             }
         }
 
-        private void FormMedicacao_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnConsultarCodigoLote_Click(object sender, EventArgs e)
         {
             FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
@@ -85,6 +85,22 @@ namespace fazendaSuinos
         public void setCodigoLote(String codigo)
         {
             txtCodigoLote.Text = codigo;
+        }
+
+        private void btnConsumo_Click(object sender, EventArgs e)
+        {
+            SuspendLayout();
+            panelFornecimento.Visible = false;
+            panelConsumo.Visible = true;
+            ResumeLayout();
+        }
+
+        private void btnFornecimento_Click(object sender, EventArgs e)
+        {
+            SuspendLayout();
+            panelConsumo.Visible = false;
+            panelFornecimento.Visible = true;
+            ResumeLayout();
         }
     }
 }
