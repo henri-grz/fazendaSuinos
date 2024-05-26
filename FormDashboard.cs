@@ -14,6 +14,7 @@ namespace fazendaSuinos
         {
             InitializeComponent();
             fillComboCodLote();
+            fillComboCodProp();
             InitializeDataGridView();
 
             LoadAgenda();
@@ -170,7 +171,7 @@ namespace fazendaSuinos
             dataGridAgenda.CurrentCellDirtyStateChanged += new EventHandler(dataGridAgenda_CurrentCellDirtyStateChanged);
             dataGridAgenda.DataBindingComplete += new DataGridViewBindingCompleteEventHandler(dataGridAgenda_DataBindingComplete);
         }
-        
+
         private void dataGridAgenda_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             // Renomeia a coluna de acordo com o nome desejado
@@ -219,9 +220,6 @@ namespace fazendaSuinos
             {
                 dataGridAgenda.CurrentCell = null; // Foca na célula da primeira coluna na segunda linha
             }
-
-            // Ordena pela coluna DataAtividade em ordem crescente
-            dataGridAgenda.Sort(dataGridAgenda.Columns["DataAtividade"], ListSortDirection.Ascending);
         }
 
         //Verifica marcação dos Check Boxes
@@ -312,6 +310,7 @@ namespace fazendaSuinos
             }
         }
 
+
         //DETALHES DO LOTE
 
         private void fillComboCodLote()
@@ -344,7 +343,12 @@ namespace fazendaSuinos
             }
         }
 
-        private void fillLoteFields(String Lote)
+        private void comboCodLote_Det_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            fillLoteFields();
+        }
+
+        private void fillLoteFields()
         {
             string codigoLote = comboCodLote_Det.Text;
 
@@ -383,9 +387,172 @@ namespace fazendaSuinos
             }
         }
 
-        private void comboCodLote_Det_SelectedIndexChanged(object sender, EventArgs e)
+        
+        //DETALHES DA PROPRIEDADE
+        private void fillComboCodProp()
         {
-            fillLoteFields(comboCodLote_Det.Text);
+            String query = "SELECT CodPropriedade FROM Propriedade";
+            comboCodProp.Items.Clear();
+
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection.GetConnection()))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                comboCodProp.Items.Add(reader["CodPropriedade"].ToString());
+                                Console.WriteLine("Codigos encontrados " + comboCodProp.Items);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao ler códigos: " + ex.Message);
+                }
+            }
+        }
+
+        private void fillPropFields()
+        {
+            string codigoProp = comboCodProp.Text;
+
+            // Obtém nome da propriedade e código do produtor
+            string query = "SELECT * FROM Propriedade WHERE CodPropriedade = " + codigoProp;
+            int codProdutor = 0;
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection.GetConnection()))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                campoNomeProp.Text = reader["Nome"].ToString();
+                                codProdutor = Convert.ToInt32(reader["CodProdutor"].ToString());
+                            }
+                            else
+                            {
+                                MessageBox.Show("Nenhum registro encontrado");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar dados" + ex.Message);
+                }
+            }
+
+            // Através do código do produtor, consulta seu nome
+            string queryProdutor = "SELECT Nome FROM Produtor WHERE CodProdutor = " + codProdutor;
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(queryProdutor, connection.GetConnection()))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                campoNomeProd.Text = reader["Nome"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Nenhum registro encontrado");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar dados" + ex.Message);
+                }
+            }
+
+            // Consulta quantidade de pocilgas, lotes e lotes abertos contidos na propriedade
+            string queryPocilgas = "SELECT COUNT(*) FROM Pocilga WHERE CodPropriedade = @codigoProp";
+            string queryLotes = @"
+                SELECT COUNT(*)
+                FROM LotePocilga lp
+                JOIN Lote l ON lp.CodLote = l.CodLote
+                WHERE lp.CodPocilga IN (SELECT CodPocilga FROM Pocilga WHERE CodPropriedade = @codigoProp)";
+            string queryLotesAbertos = @"
+                SELECT COUNT(*)
+                FROM LotePocilga lp
+                JOIN Lote l ON lp.CodLote = l.CodLote
+                WHERE lp.CodPocilga IN (SELECT CodPocilga FROM Pocilga WHERE CodPropriedade = @codigoProp) AND l.Situacao = 'Aberto'";
+            string queryQuantidadeSuinos = @"
+                SELECT SUM(l.Quantidade)
+                FROM LotePocilga lp
+                JOIN Lote l ON lp.CodLote = l.CodLote
+                WHERE lp.CodPocilga IN (SELECT CodPocilga FROM Pocilga WHERE CodPropriedade = @codigoProp)";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Contar Pocilgas
+                    using (SqlCommand command = new SqlCommand(queryPocilgas, connection))
+                    {
+                        command.Parameters.AddWithValue("@codigoProp", codigoProp);
+                        int countPocilgas = (int)command.ExecuteScalar();
+                        campoPocilgas.Text = countPocilgas.ToString();
+                    }
+
+                    // Contar Lotes
+                    using (SqlCommand command = new SqlCommand(queryLotes, connection))
+                    {
+                        command.Parameters.AddWithValue("@codigoProp", codigoProp);
+                        int countLotes = (int)command.ExecuteScalar();
+                        campoLotes.Text = countLotes.ToString();
+                    }
+
+                    // Contar Lotes com Situação "Aberto"
+                    using (SqlCommand command = new SqlCommand(queryLotesAbertos, connection))
+                    {
+                        command.Parameters.AddWithValue("@codigoProp", codigoProp);
+                        int countLotesAbertos = (int)command.ExecuteScalar();
+                        campoLotesAbertos.Text = countLotesAbertos.ToString();
+                    }
+
+                    // Somar Quantidade de Suínos
+                    using (SqlCommand command = new SqlCommand(queryQuantidadeSuinos, connection))
+                    {
+                        command.Parameters.AddWithValue("@codigoProp", codigoProp);
+                        object result = command.ExecuteScalar();
+                        int quantidadeSuinos = result != DBNull.Value ? Convert.ToInt32(result) : 0;
+                        campoQuant.Text = quantidadeSuinos.ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar dados: " + ex.Message);
+                }
+            }
+        }
+
+        private void comboCodProp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            fillPropFields();
+        }
+
+        private void dataGridAgenda_Sorted(object sender, EventArgs e)
+        {
+            sincronizaStatus();
         }
     }
 }

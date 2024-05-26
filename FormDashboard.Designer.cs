@@ -54,6 +54,20 @@
             this.dataGridAgenda = new System.Windows.Forms.DataGridView();
             this.labelDashHoje = new System.Windows.Forms.Label();
             this.fazendaSuinosDataSet = new fazendaSuinos.fazendaSuinosDataSet();
+            this.campoQuant = new System.Windows.Forms.TextBox();
+            this.campoLotesAbertos = new System.Windows.Forms.TextBox();
+            this.campoLotes = new System.Windows.Forms.TextBox();
+            this.campoPocilgas = new System.Windows.Forms.TextBox();
+            this.campoNomeProd = new System.Windows.Forms.TextBox();
+            this.campoNomeProp = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboCodProp = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panelDashboard.SuspendLayout();
             this.panelAcoesCorretivas.SuspendLayout();
             this.panelDetalhesLote.SuspendLayout();
@@ -76,6 +90,20 @@
             // panelAcoesCorretivas
             // 
             this.panelAcoesCorretivas.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panelAcoesCorretivas.Controls.Add(this.comboCodProp);
+            this.panelAcoesCorretivas.Controls.Add(this.label8);
+            this.panelAcoesCorretivas.Controls.Add(this.campoQuant);
+            this.panelAcoesCorretivas.Controls.Add(this.campoLotesAbertos);
+            this.panelAcoesCorretivas.Controls.Add(this.campoLotes);
+            this.panelAcoesCorretivas.Controls.Add(this.campoPocilgas);
+            this.panelAcoesCorretivas.Controls.Add(this.campoNomeProd);
+            this.panelAcoesCorretivas.Controls.Add(this.campoNomeProp);
+            this.panelAcoesCorretivas.Controls.Add(this.label2);
+            this.panelAcoesCorretivas.Controls.Add(this.label3);
+            this.panelAcoesCorretivas.Controls.Add(this.label4);
+            this.panelAcoesCorretivas.Controls.Add(this.label5);
+            this.panelAcoesCorretivas.Controls.Add(this.label6);
+            this.panelAcoesCorretivas.Controls.Add(this.label7);
             this.panelAcoesCorretivas.Controls.Add(this.labelDashAcoes);
             this.panelAcoesCorretivas.Location = new System.Drawing.Point(632, 428);
             this.panelAcoesCorretivas.Name = "panelAcoesCorretivas";
@@ -89,9 +117,9 @@
             this.labelDashAcoes.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelDashAcoes.Location = new System.Drawing.Point(35, 32);
             this.labelDashAcoes.Name = "labelDashAcoes";
-            this.labelDashAcoes.Size = new System.Drawing.Size(276, 37);
+            this.labelDashAcoes.Size = new System.Drawing.Size(219, 37);
             this.labelDashAcoes.TabIndex = 1;
-            this.labelDashAcoes.Text = "Ações Corretivas";
+            this.labelDashAcoes.Text = "Propriedades";
             // 
             // panelDetalhesLote
             // 
@@ -299,9 +327,9 @@
             this.labelDashDetalhes.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelDashDetalhes.Location = new System.Drawing.Point(34, 25);
             this.labelDashDetalhes.Name = "labelDashDetalhes";
-            this.labelDashDetalhes.Size = new System.Drawing.Size(150, 37);
+            this.labelDashDetalhes.Size = new System.Drawing.Size(100, 37);
             this.labelDashDetalhes.TabIndex = 1;
-            this.labelDashDetalhes.Text = "Detalhes";
+            this.labelDashDetalhes.Text = "Lotes";
             // 
             // panelAgenda
             // 
@@ -352,6 +380,7 @@
             this.dataGridAgenda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAgenda_CellDoubleClick);
             this.dataGridAgenda.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAgenda_CellValueChanged);
             this.dataGridAgenda.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridAgenda_DataBindingComplete);
+            this.dataGridAgenda.Sorted += new System.EventHandler(this.dataGridAgenda_Sorted);
             // 
             // labelDashHoje
             // 
@@ -368,6 +397,157 @@
             // 
             this.fazendaSuinosDataSet.DataSetName = "fazendaSuinosDataSet";
             this.fazendaSuinosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // campoQuant
+            // 
+            this.campoQuant.BackColor = System.Drawing.Color.White;
+            this.campoQuant.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.campoQuant.Location = new System.Drawing.Point(279, 236);
+            this.campoQuant.Name = "campoQuant";
+            this.campoQuant.ReadOnly = true;
+            this.campoQuant.Size = new System.Drawing.Size(174, 19);
+            this.campoQuant.TabIndex = 30;
+            this.campoQuant.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // campoLotesAbertos
+            // 
+            this.campoLotesAbertos.BackColor = System.Drawing.Color.White;
+            this.campoLotesAbertos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoLotesAbertos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.campoLotesAbertos.Location = new System.Drawing.Point(279, 208);
+            this.campoLotesAbertos.Name = "campoLotesAbertos";
+            this.campoLotesAbertos.ReadOnly = true;
+            this.campoLotesAbertos.Size = new System.Drawing.Size(174, 19);
+            this.campoLotesAbertos.TabIndex = 29;
+            this.campoLotesAbertos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // campoLotes
+            // 
+            this.campoLotes.BackColor = System.Drawing.Color.White;
+            this.campoLotes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoLotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.campoLotes.Location = new System.Drawing.Point(279, 180);
+            this.campoLotes.Name = "campoLotes";
+            this.campoLotes.ReadOnly = true;
+            this.campoLotes.Size = new System.Drawing.Size(174, 19);
+            this.campoLotes.TabIndex = 28;
+            this.campoLotes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // campoPocilgas
+            // 
+            this.campoPocilgas.BackColor = System.Drawing.Color.White;
+            this.campoPocilgas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoPocilgas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.campoPocilgas.Location = new System.Drawing.Point(279, 152);
+            this.campoPocilgas.Name = "campoPocilgas";
+            this.campoPocilgas.ReadOnly = true;
+            this.campoPocilgas.Size = new System.Drawing.Size(174, 19);
+            this.campoPocilgas.TabIndex = 27;
+            this.campoPocilgas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // campoNomeProd
+            // 
+            this.campoNomeProd.BackColor = System.Drawing.Color.White;
+            this.campoNomeProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoNomeProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.campoNomeProd.Location = new System.Drawing.Point(279, 124);
+            this.campoNomeProd.Name = "campoNomeProd";
+            this.campoNomeProd.ReadOnly = true;
+            this.campoNomeProd.Size = new System.Drawing.Size(174, 19);
+            this.campoNomeProd.TabIndex = 26;
+            this.campoNomeProd.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // campoNomeProp
+            // 
+            this.campoNomeProp.BackColor = System.Drawing.Color.White;
+            this.campoNomeProp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.campoNomeProp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.campoNomeProp.Location = new System.Drawing.Point(279, 95);
+            this.campoNomeProp.Name = "campoNomeProp";
+            this.campoNomeProp.ReadOnly = true;
+            this.campoNomeProp.Size = new System.Drawing.Size(174, 19);
+            this.campoNomeProp.TabIndex = 25;
+            this.campoNomeProp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label2.Location = new System.Drawing.Point(47, 236);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 18);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Quantidade de Suínos:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label3.Location = new System.Drawing.Point(47, 208);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 18);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Lotes Abertos:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label4.Location = new System.Drawing.Point(47, 180);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 18);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Lotes:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label5.Location = new System.Drawing.Point(47, 152);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 18);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Pocilgas:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label6.Location = new System.Drawing.Point(47, 124);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 18);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Produtor:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label7.Location = new System.Drawing.Point(47, 96);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 18);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Nome:";
+            // 
+            // comboCodProp
+            // 
+            this.comboCodProp.FormattingEnabled = true;
+            this.comboCodProp.Location = new System.Drawing.Point(377, 47);
+            this.comboCodProp.Name = "comboCodProp";
+            this.comboCodProp.Size = new System.Drawing.Size(76, 21);
+            this.comboCodProp.TabIndex = 33;
+            this.comboCodProp.SelectedIndexChanged += new System.EventHandler(this.comboCodProp_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label8.Location = new System.Drawing.Point(311, 46);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 18);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Código:";
             // 
             // FormDashboard
             // 
@@ -419,5 +599,19 @@
         private fazendaSuinosDataSet fazendaSuinosDataSet;
         private System.Windows.Forms.DataGridView dataGridAgenda;
         private FontAwesome.Sharp.IconButton btnAtualizarAgenda;
+        private System.Windows.Forms.ComboBox comboCodProp;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox campoQuant;
+        private System.Windows.Forms.TextBox campoLotesAbertos;
+        private System.Windows.Forms.TextBox campoLotes;
+        private System.Windows.Forms.TextBox campoPocilgas;
+        private System.Windows.Forms.TextBox campoNomeProd;
+        private System.Windows.Forms.TextBox campoNomeProp;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
