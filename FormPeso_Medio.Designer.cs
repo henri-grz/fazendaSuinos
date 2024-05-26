@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dateTimePickerData = new System.Windows.Forms.DateTimePicker();
-            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnIncluir = new System.Windows.Forms.Button();
             this.txtCodigoLote = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtSemana = new System.Windows.Forms.TextBox();
+            this.txtDiaCiclo = new System.Windows.Forms.TextBox();
             this.txtPesoMedio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,42 +41,54 @@
             this.btnConsultarCodigoLote = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.dataGridPesoMedio = new System.Windows.Forms.DataGridView();
+            this.codPesoMedioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesoMedioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaCicloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codLoteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pesoMedioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fazendaSuinosDataSet = new fazendaSuinos.fazendaSuinosDataSet();
+            this.peso_MedioTableAdapter = new fazendaSuinos.fazendaSuinosDataSetTableAdapters.Peso_MedioTableAdapter();
+            this.txtCodPesagem = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnGravar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPesoMedio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesoMedioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePickerData
             // 
             this.dateTimePickerData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerData.Location = new System.Drawing.Point(386, 268);
-            this.dateTimePickerData.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerData.Location = new System.Drawing.Point(290, 237);
             this.dateTimePickerData.Name = "dateTimePickerData";
-            this.dateTimePickerData.Size = new System.Drawing.Size(132, 22);
+            this.dateTimePickerData.Size = new System.Drawing.Size(100, 20);
             this.dateTimePickerData.TabIndex = 54;
             // 
-            // btnSalvar
+            // btnIncluir
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnSalvar.FlatAppearance.BorderSize = 0;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(1060, 362);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(141, 37);
-            this.btnSalvar.TabIndex = 53;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnIncluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnIncluir.FlatAppearance.BorderSize = 0;
+            this.btnIncluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluir.ForeColor = System.Drawing.Color.White;
+            this.btnIncluir.Location = new System.Drawing.Point(795, 294);
+            this.btnIncluir.Name = "btnIncluir";
+            this.btnIncluir.Size = new System.Drawing.Size(106, 30);
+            this.btnIncluir.TabIndex = 53;
+            this.btnIncluir.Text = "Incluir";
+            this.btnIncluir.UseVisualStyleBackColor = false;
+            this.btnIncluir.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtCodigoLote
             // 
             this.txtCodigoLote.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtCodigoLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCodigoLote.Location = new System.Drawing.Point(558, 268);
-            this.txtCodigoLote.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoLote.Location = new System.Drawing.Point(418, 237);
             this.txtCodigoLote.Name = "txtCodigoLote";
-            this.txtCodigoLote.Size = new System.Drawing.Size(132, 23);
+            this.txtCodigoLote.Size = new System.Drawing.Size(99, 19);
             this.txtCodigoLote.TabIndex = 51;
             // 
             // label7
@@ -83,33 +96,30 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label7.Location = new System.Drawing.Point(554, 238);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(416, 212);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 25);
+            this.label7.Size = new System.Drawing.Size(117, 20);
             this.label7.TabIndex = 50;
             this.label7.Text = "Código do Lote";
             // 
-            // txtSemana
+            // txtDiaCiclo
             // 
-            this.txtSemana.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtSemana.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSemana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtSemana.Location = new System.Drawing.Point(1069, 268);
-            this.txtSemana.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSemana.Name = "txtSemana";
-            this.txtSemana.Size = new System.Drawing.Size(132, 23);
-            this.txtSemana.TabIndex = 49;
+            this.txtDiaCiclo.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtDiaCiclo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiaCiclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtDiaCiclo.Location = new System.Drawing.Point(802, 237);
+            this.txtDiaCiclo.Name = "txtDiaCiclo";
+            this.txtDiaCiclo.Size = new System.Drawing.Size(99, 19);
+            this.txtDiaCiclo.TabIndex = 49;
             // 
             // txtPesoMedio
             // 
             this.txtPesoMedio.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtPesoMedio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPesoMedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPesoMedio.Location = new System.Drawing.Point(896, 267);
-            this.txtPesoMedio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPesoMedio.Location = new System.Drawing.Point(672, 236);
             this.txtPesoMedio.Name = "txtPesoMedio";
-            this.txtPesoMedio.Size = new System.Drawing.Size(132, 23);
+            this.txtPesoMedio.Size = new System.Drawing.Size(99, 19);
             this.txtPesoMedio.TabIndex = 48;
             // 
             // label3
@@ -117,24 +127,22 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label3.Location = new System.Drawing.Point(1064, 239);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(798, 213);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 25);
+            this.label3.Size = new System.Drawing.Size(93, 20);
             this.label3.TabIndex = 47;
-            this.label3.Text = "Semana";
+            this.label3.Text = "Dia do Ciclo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label2.Location = new System.Drawing.Point(890, 239);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(668, 213);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 25);
+            this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 46;
-            this.label2.Text = "Peso médio";
+            this.label2.Text = "Peso Médio";
             // 
             // btnLimpar
             // 
@@ -143,10 +151,9 @@
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLimpar.Location = new System.Drawing.Point(876, 362);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpar.Location = new System.Drawing.Point(534, 294);
             this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(141, 37);
+            this.btnLimpar.Size = new System.Drawing.Size(106, 30);
             this.btnLimpar.TabIndex = 44;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
@@ -159,10 +166,9 @@
             this.btnConsultarCodigoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarCodigoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCodigoLote.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarCodigoLote.Location = new System.Drawing.Point(718, 264);
-            this.btnConsultarCodigoLote.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultarCodigoLote.Location = new System.Drawing.Point(538, 233);
             this.btnConsultarCodigoLote.Name = "btnConsultarCodigoLote";
-            this.btnConsultarCodigoLote.Size = new System.Drawing.Size(136, 27);
+            this.btnConsultarCodigoLote.Size = new System.Drawing.Size(102, 22);
             this.btnConsultarCodigoLote.TabIndex = 43;
             this.btnConsultarCodigoLote.Text = "Consultar Lote";
             this.btnConsultarCodigoLote.UseVisualStyleBackColor = false;
@@ -173,10 +179,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label5.Location = new System.Drawing.Point(380, 238);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(285, 212);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 25);
+            this.label5.Size = new System.Drawing.Size(44, 20);
             this.label5.TabIndex = 41;
             this.label5.Text = "Data";
             // 
@@ -185,24 +190,137 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label6.Location = new System.Drawing.Point(666, 111);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(500, 90);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(242, 46);
+            this.label6.Size = new System.Drawing.Size(194, 37);
             this.label6.TabIndex = 40;
             this.label6.Text = "Peso Médio";
             // 
+            // dataGridPesoMedio
+            // 
+            this.dataGridPesoMedio.AllowUserToAddRows = false;
+            this.dataGridPesoMedio.AllowUserToDeleteRows = false;
+            this.dataGridPesoMedio.AutoGenerateColumns = false;
+            this.dataGridPesoMedio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridPesoMedio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridPesoMedio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codPesoMedioDataGridViewTextBoxColumn,
+            this.dataDataGridViewTextBoxColumn,
+            this.pesoMedioDataGridViewTextBoxColumn,
+            this.diaCicloDataGridViewTextBoxColumn,
+            this.codLoteDataGridViewTextBoxColumn});
+            this.dataGridPesoMedio.DataSource = this.pesoMedioBindingSource;
+            this.dataGridPesoMedio.Location = new System.Drawing.Point(277, 367);
+            this.dataGridPesoMedio.Name = "dataGridPesoMedio";
+            this.dataGridPesoMedio.ReadOnly = true;
+            this.dataGridPesoMedio.RowHeadersVisible = false;
+            this.dataGridPesoMedio.Size = new System.Drawing.Size(624, 268);
+            this.dataGridPesoMedio.TabIndex = 55;
+            this.dataGridPesoMedio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPesoMedio_CellContentClick);
+            this.dataGridPesoMedio.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridPesoMedio_DataBindingComplete);
+            // 
+            // codPesoMedioDataGridViewTextBoxColumn
+            // 
+            this.codPesoMedioDataGridViewTextBoxColumn.DataPropertyName = "CodPeso_Medio";
+            this.codPesoMedioDataGridViewTextBoxColumn.HeaderText = "CodPeso_Medio";
+            this.codPesoMedioDataGridViewTextBoxColumn.Name = "codPesoMedioDataGridViewTextBoxColumn";
+            this.codPesoMedioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataDataGridViewTextBoxColumn
+            // 
+            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
+            this.dataDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
+            this.dataDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pesoMedioDataGridViewTextBoxColumn
+            // 
+            this.pesoMedioDataGridViewTextBoxColumn.DataPropertyName = "PesoMedio";
+            this.pesoMedioDataGridViewTextBoxColumn.HeaderText = "PesoMedio";
+            this.pesoMedioDataGridViewTextBoxColumn.Name = "pesoMedioDataGridViewTextBoxColumn";
+            this.pesoMedioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // diaCicloDataGridViewTextBoxColumn
+            // 
+            this.diaCicloDataGridViewTextBoxColumn.DataPropertyName = "Dia_Ciclo";
+            this.diaCicloDataGridViewTextBoxColumn.HeaderText = "Dia_Ciclo";
+            this.diaCicloDataGridViewTextBoxColumn.Name = "diaCicloDataGridViewTextBoxColumn";
+            this.diaCicloDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codLoteDataGridViewTextBoxColumn
+            // 
+            this.codLoteDataGridViewTextBoxColumn.DataPropertyName = "CodLote";
+            this.codLoteDataGridViewTextBoxColumn.HeaderText = "CodLote";
+            this.codLoteDataGridViewTextBoxColumn.Name = "codLoteDataGridViewTextBoxColumn";
+            this.codLoteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pesoMedioBindingSource
+            // 
+            this.pesoMedioBindingSource.DataMember = "Peso_Medio";
+            this.pesoMedioBindingSource.DataSource = this.fazendaSuinosDataSet;
+            // 
+            // fazendaSuinosDataSet
+            // 
+            this.fazendaSuinosDataSet.DataSetName = "fazendaSuinosDataSet";
+            this.fazendaSuinosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // peso_MedioTableAdapter
+            // 
+            this.peso_MedioTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtCodPesagem
+            // 
+            this.txtCodPesagem.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodPesagem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodPesagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCodPesagem.Location = new System.Drawing.Point(290, 173);
+            this.txtCodPesagem.Name = "txtCodPesagem";
+            this.txtCodPesagem.ReadOnly = true;
+            this.txtCodPesagem.Size = new System.Drawing.Size(99, 19);
+            this.txtCodPesagem.TabIndex = 57;
+            this.txtCodPesagem.TextChanged += new System.EventHandler(this.txtCodPesagem_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label1.Location = new System.Drawing.Point(285, 147);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(152, 20);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Código da Pesagem";
+            // 
+            // btnGravar
+            // 
+            this.btnGravar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnGravar.FlatAppearance.BorderSize = 0;
+            this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGravar.ForeColor = System.Drawing.Color.White;
+            this.btnGravar.Location = new System.Drawing.Point(665, 294);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(106, 30);
+            this.btnGravar.TabIndex = 58;
+            this.btnGravar.Text = "Gravar";
+            this.btnGravar.UseVisualStyleBackColor = false;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
+            // 
             // FormPeso_Medio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1769, 993);
+            this.ClientSize = new System.Drawing.Size(1327, 807);
+            this.Controls.Add(this.btnGravar);
+            this.Controls.Add(this.txtCodPesagem);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridPesoMedio);
             this.Controls.Add(this.dateTimePickerData);
-            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnIncluir);
             this.Controls.Add(this.txtCodigoLote);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtSemana);
+            this.Controls.Add(this.txtDiaCiclo);
             this.Controls.Add(this.txtPesoMedio);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -210,9 +328,12 @@
             this.Controls.Add(this.btnConsultarCodigoLote);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPeso_Medio";
             this.Text = "FormPeso_Medio";
+            this.Load += new System.EventHandler(this.FormPeso_Medio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPesoMedio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesoMedioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,10 +341,10 @@
 
         #endregion
         private System.Windows.Forms.DateTimePicker dateTimePickerData;
-        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnIncluir;
         private System.Windows.Forms.TextBox txtCodigoLote;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtSemana;
+        private System.Windows.Forms.TextBox txtDiaCiclo;
         private System.Windows.Forms.TextBox txtPesoMedio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -231,5 +352,17 @@
         private System.Windows.Forms.Button btnConsultarCodigoLote;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dataGridPesoMedio;
+        private fazendaSuinosDataSet fazendaSuinosDataSet;
+        private System.Windows.Forms.BindingSource pesoMedioBindingSource;
+        private fazendaSuinosDataSetTableAdapters.Peso_MedioTableAdapter peso_MedioTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codPesoMedioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pesoMedioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaCicloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codLoteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtCodPesagem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnGravar;
     }
 }

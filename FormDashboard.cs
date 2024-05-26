@@ -68,6 +68,17 @@ namespace fazendaSuinos
                         command.ExecuteNonQuery();
                     }
 
+                    // Inserir dados de Consumo_Racao na Agenda, apenas se ainda não existem
+                    string queryRacao = @"
+                        INSERT INTO Agenda (Atividade, DataAtividade, CodRacao, CodLote)
+                        SELECT 'Alimentação', Data, CodConsumo, CodLote
+                        FROM Consumo_Racao
+                        WHERE CodConsumo NOT IN (SELECT CodRacao FROM Agenda WHERE CodRacao IS NOT NULL)";
+                    using (SqlCommand command = connection.CreateCommand(queryRacao))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+
                     MessageBox.Show("Agenda atualizada com sucesso.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
@@ -282,6 +293,11 @@ namespace fazendaSuinos
                 else if (dataGridAgenda.Rows[e.RowIndex].Cells["CodVisita"].Value != DBNull.Value)
                 {
                     codAtividade = dataGridAgenda.Rows[e.RowIndex].Cells["CodVisita"].Value.ToString();
+                    Console.WriteLine(codAtividade);
+                }
+                else if (dataGridAgenda.Rows[e.RowIndex].Cells["CodRacao"].Value != DBNull.Value)
+                {
+                    codAtividade = dataGridAgenda.Rows[e.RowIndex].Cells["CodRacao"].Value.ToString();
                     Console.WriteLine(codAtividade);
                 }
                 else

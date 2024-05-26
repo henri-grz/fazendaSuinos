@@ -47,6 +47,10 @@ namespace fazendaSuinos
             {
                 panelVisita.Visible = true;
             }
+            else if (tipoAtividade == "Alimentação")
+            {
+                panelAlimentacao.Visible = true;
+            }
         }
 
         private void ajustarTamanhoDialog()
@@ -179,6 +183,28 @@ namespace fazendaSuinos
                                     campoVisitante.Text = reader["CodVisitante"].ToString();
                                     campoPocilga.Text = reader["CodPocilga"].ToString();
                                     campoObservacaoVisita.Text = reader["Observacoes"].ToString();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Nenhum registro encontrado");
+                                }
+                            }
+                        }
+                    }
+                    else if (tipoAtividade == "Alimentação")
+                    {
+                        queryAtividade = "SELECT * FROM Consumo_Racao WHERE CodConsumo = " + codAtividade;
+
+                        using (SqlCommand command = connection.CreateCommand(queryAtividade))
+                        {
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    campoCodAtividade.Text = codAtividade.ToString();
+                                    campoCodigoLote.Text = reader["CodLote"].ToString();
+                                    campoDiaCiclo.Text = reader["Dia_Ciclo"].ToString();
+                                    campoConsumo.Text = reader["Quantidade_Consumo"].ToString();
                                 }
                                 else
                                 {
