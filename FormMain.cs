@@ -95,6 +95,7 @@ namespace fazendaSuinos
         private void btnDetalhes_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.verdeClaro);
+            OpenChildForm(new FormRelatorios());
         }
 
         private void btnRacao_Click(object sender, EventArgs e)

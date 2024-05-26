@@ -61,9 +61,9 @@
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(267, 1040);
+            this.panelMenu.Size = new System.Drawing.Size(200, 845);
             this.panelMenu.TabIndex = 0;
             // 
             // btnCadastros
@@ -78,11 +78,11 @@
             this.btnCadastros.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCadastros.IconSize = 34;
             this.btnCadastros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastros.Location = new System.Drawing.Point(0, 684);
-            this.btnCadastros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCadastros.Location = new System.Drawing.Point(0, 555);
+            this.btnCadastros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCadastros.Name = "btnCadastros";
-            this.btnCadastros.Padding = new System.Windows.Forms.Padding(40, 0, 11, 0);
-            this.btnCadastros.Size = new System.Drawing.Size(267, 74);
+            this.btnCadastros.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
+            this.btnCadastros.Size = new System.Drawing.Size(200, 60);
             this.btnCadastros.TabIndex = 6;
             this.btnCadastros.Text = "Cadastros";
             this.btnCadastros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,11 +102,11 @@
             this.btnMortalidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMortalidade.IconSize = 34;
             this.btnMortalidade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMortalidade.Location = new System.Drawing.Point(0, 610);
-            this.btnMortalidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMortalidade.Location = new System.Drawing.Point(0, 495);
+            this.btnMortalidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMortalidade.Name = "btnMortalidade";
-            this.btnMortalidade.Padding = new System.Windows.Forms.Padding(40, 0, 11, 0);
-            this.btnMortalidade.Size = new System.Drawing.Size(267, 74);
+            this.btnMortalidade.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
+            this.btnMortalidade.Size = new System.Drawing.Size(200, 60);
             this.btnMortalidade.TabIndex = 5;
             this.btnMortalidade.Text = "Mortalidade";
             this.btnMortalidade.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,11 +126,11 @@
             this.btnPesoMedio.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPesoMedio.IconSize = 34;
             this.btnPesoMedio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesoMedio.Location = new System.Drawing.Point(0, 536);
-            this.btnPesoMedio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPesoMedio.Location = new System.Drawing.Point(0, 435);
+            this.btnPesoMedio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPesoMedio.Name = "btnPesoMedio";
-            this.btnPesoMedio.Padding = new System.Windows.Forms.Padding(40, 0, 11, 0);
-            this.btnPesoMedio.Size = new System.Drawing.Size(267, 74);
+            this.btnPesoMedio.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
+            this.btnPesoMedio.Size = new System.Drawing.Size(200, 60);
             this.btnPesoMedio.TabIndex = 4;
             this.btnPesoMedio.Text = "Peso Médio";
             this.btnPesoMedio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -150,11 +150,11 @@
             this.btnMedicacao.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMedicacao.IconSize = 34;
             this.btnMedicacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMedicacao.Location = new System.Drawing.Point(0, 462);
-            this.btnMedicacao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMedicacao.Location = new System.Drawing.Point(0, 375);
+            this.btnMedicacao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMedicacao.Name = "btnMedicacao";
-            this.btnMedicacao.Padding = new System.Windows.Forms.Padding(40, 0, 11, 0);
-            this.btnMedicacao.Size = new System.Drawing.Size(267, 74);
+            this.btnMedicacao.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
+            this.btnMedicacao.Size = new System.Drawing.Size(200, 60);
             this.btnMedicacao.TabIndex = 3;
             this.btnMedicacao.Text = "Medicação";
             this.btnMedicacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -174,11 +174,11 @@
             this.btnRacao.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRacao.IconSize = 34;
             this.btnRacao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRacao.Location = new System.Drawing.Point(0, 388);
-            this.btnRacao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRacao.Location = new System.Drawing.Point(0, 315);
+            this.btnRacao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRacao.Name = "btnRacao";
-            this.btnRacao.Padding = new System.Windows.Forms.Padding(40, 0, 11, 0);
-            this.btnRacao.Size = new System.Drawing.Size(267, 74);
+            this.btnRacao.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
+            this.btnRacao.Size = new System.Drawing.Size(200, 60);
             this.btnRacao.TabIndex = 2;
             this.btnRacao.Text = "Ração";
             this.btnRacao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -198,13 +198,13 @@
             this.btnDetalhes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDetalhes.IconSize = 34;
             this.btnDetalhes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDetalhes.Location = new System.Drawing.Point(0, 314);
-            this.btnDetalhes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDetalhes.Location = new System.Drawing.Point(0, 255);
+            this.btnDetalhes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDetalhes.Name = "btnDetalhes";
-            this.btnDetalhes.Padding = new System.Windows.Forms.Padding(40, 0, 11, 0);
-            this.btnDetalhes.Size = new System.Drawing.Size(267, 74);
+            this.btnDetalhes.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
+            this.btnDetalhes.Size = new System.Drawing.Size(200, 60);
             this.btnDetalhes.TabIndex = 1;
-            this.btnDetalhes.Text = "Detalhes";
+            this.btnDetalhes.Text = "Relatórios";
             this.btnDetalhes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDetalhes.UseVisualStyleBackColor = true;
             this.btnDetalhes.Click += new System.EventHandler(this.btnDetalhes_Click);
@@ -221,11 +221,11 @@
             this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDashboard.IconSize = 34;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 240);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 195);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Padding = new System.Windows.Forms.Padding(40, 0, 11, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(267, 74);
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(30, 0, 8, 0);
+            this.btnDashboard.Size = new System.Drawing.Size(200, 60);
             this.btnDashboard.TabIndex = 7;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -239,18 +239,17 @@
             this.panelLogo.Controls.Add(this.logoMenu);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(267, 240);
+            this.panelLogo.Size = new System.Drawing.Size(200, 195);
             this.panelLogo.TabIndex = 0;
             // 
             // logoMenu
             // 
             this.logoMenu.Image = global::fazendaSuinos.Properties.Resources.logo_rodolfo_horizontal;
-            this.logoMenu.Location = new System.Drawing.Point(-3, 37);
-            this.logoMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logoMenu.Location = new System.Drawing.Point(-2, 30);
             this.logoMenu.Name = "logoMenu";
-            this.logoMenu.Size = new System.Drawing.Size(265, 113);
+            this.logoMenu.Size = new System.Drawing.Size(199, 92);
             this.logoMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoMenu.TabIndex = 0;
             this.logoMenu.TabStop = false;
@@ -264,10 +263,9 @@
             // 
             this.panelMain.AutoScroll = true;
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMain.Location = new System.Drawing.Point(267, 0);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMain.Location = new System.Drawing.Point(200, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1787, 1040);
+            this.panelMain.Size = new System.Drawing.Size(1340, 845);
             this.panelMain.TabIndex = 1;
             // 
             // panelTable
@@ -276,19 +274,18 @@
             this.panelTable.Controls.Add(this.panelMenu);
             this.panelTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTable.Location = new System.Drawing.Point(0, 0);
-            this.panelTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelTable.Name = "panelTable";
-            this.panelTable.Size = new System.Drawing.Size(1924, 1040);
+            this.panelTable.Size = new System.Drawing.Size(1443, 845);
             this.panelTable.TabIndex = 0;
             // 
             // FormMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1924, 1040);
+            this.ClientSize = new System.Drawing.Size(1443, 845);
             this.Controls.Add(this.panelTable);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMainMenu";
             this.Text = "Rodolfo - Gestão de Fazendas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
