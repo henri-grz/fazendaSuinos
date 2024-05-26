@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Projeto Integrador\\fazendaSuinos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|d:\\projeto integrador\\fazendasuinos\\relatorios\\formrelatorioentidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:relatorios\\formrelatorioentidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|D:\\Projeto Integrador\\fazendaSuinos\\formrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|d:\\projeto integrador\\fazendasuinos\\formcadastros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formcadastros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|d:\\projeto integrador\\fazendasuinos\\relatorios\\relatorioentidades.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:relatorios\\relatorioentidades.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|d:\\projeto integrador\\fazendasuinos\\formrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:formrelatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|d:\\projeto integrador\\fazendasuinos\\relatorios\\formrelatorioentidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E9CEBB12-3D6E-4987-8D66-9C7E9EDE9F46}|fazendaSuinos.csproj|solutionrelative:relatorios\\formrelatorioentidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,41 +54,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormCadastros.cs",
-              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\FormCadastros.cs",
-              "RelativeDocumentMoniker": "FormCadastros.cs",
-              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormCadastros.cs",
-              "RelativeToolTip": "FormCadastros.cs",
-              "ViewState": "AQIAAKoDAAAAAAAAAAAqwLcDAAAjAAAA",
+              "DocumentIndex": 0,
+              "Title": "FormRelatorioEntidade.cs",
+              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\Relatorios\\FormRelatorioEntidade.cs",
+              "RelativeDocumentMoniker": "Relatorios\\FormRelatorioEntidade.cs",
+              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\Relatorios\\FormRelatorioEntidade.cs",
+              "RelativeToolTip": "Relatorios\\FormRelatorioEntidade.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABcAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-26T00:17:28.928Z",
+              "WhenOpened": "2024-05-26T17:17:31.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "FormRelatorioEntidade.cs [Design]",
+              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\Relatorios\\FormRelatorioEntidade.cs",
+              "RelativeDocumentMoniker": "Relatorios\\FormRelatorioEntidade.cs",
+              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\Relatorios\\FormRelatorioEntidade.cs [Design]",
+              "RelativeToolTip": "Relatorios\\FormRelatorioEntidade.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T16:49:35.659Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RelatorioEntidades.rdlc [Criar]",
+              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\Relatorios\\RelatorioEntidades.rdlc",
+              "RelativeDocumentMoniker": "Relatorios\\RelatorioEntidades.rdlc",
+              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\Relatorios\\RelatorioEntidades.rdlc [Criar]",
+              "RelativeToolTip": "Relatorios\\RelatorioEntidades.rdlc [Criar]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2024-05-26T16:35:18.973Z",
+              "EditorCaption": " [Criar]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FormRelatorios.cs",
               "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\FormRelatorios.cs",
               "RelativeDocumentMoniker": "FormRelatorios.cs",
               "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormRelatorios.cs",
               "RelativeToolTip": "FormRelatorios.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAAAEQAAAAVAAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAgwCgAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T23:01:14.722Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormRelatorios.cs [Design]",
-              "DocumentMoniker": "D:\\Projeto Integrador\\fazendaSuinos\\FormRelatorios.cs",
-              "RelativeDocumentMoniker": "FormRelatorios.cs",
-              "ToolTip": "D:\\Projeto Integrador\\fazendaSuinos\\FormRelatorios.cs [Design]",
-              "RelativeToolTip": "FormRelatorios.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T22:23:04.013Z",
-              "EditorCaption": " [Design]"
             }
           ]
         },

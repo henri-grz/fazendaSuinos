@@ -37,12 +37,12 @@
             this.btnSelecionarTodos = new System.Windows.Forms.Button();
             this.btnDesmarcarTodos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -108,12 +108,13 @@
             this.btnGerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerar.ForeColor = System.Drawing.Color.White;
-            this.btnGerar.Location = new System.Drawing.Point(519, 111);
+            this.btnGerar.Location = new System.Drawing.Point(519, 127);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(141, 30);
             this.btnGerar.TabIndex = 80;
             this.btnGerar.Text = "Gerar Relatório";
             this.btnGerar.UseVisualStyleBackColor = false;
+            this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
             // 
             // clbSelecaoRelatorio
             // 
@@ -133,7 +134,7 @@
             this.btnSelecionarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelecionarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnSelecionarTodos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSelecionarTodos.Location = new System.Drawing.Point(3, 111);
+            this.btnSelecionarTodos.Location = new System.Drawing.Point(3, 127);
             this.btnSelecionarTodos.Name = "btnSelecionarTodos";
             this.btnSelecionarTodos.Size = new System.Drawing.Size(112, 30);
             this.btnSelecionarTodos.TabIndex = 82;
@@ -148,7 +149,7 @@
             this.btnDesmarcarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDesmarcarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnDesmarcarTodos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDesmarcarTodos.Location = new System.Drawing.Point(121, 111);
+            this.btnDesmarcarTodos.Location = new System.Drawing.Point(121, 127);
             this.btnDesmarcarTodos.Name = "btnDesmarcarTodos";
             this.btnDesmarcarTodos.Size = new System.Drawing.Size(112, 30);
             this.btnDesmarcarTodos.TabIndex = 82;
@@ -166,15 +167,13 @@
             this.panel1.Size = new System.Drawing.Size(663, 400);
             this.panel1.TabIndex = 83;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.comboModelo);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(663, 66);
-            this.panel2.TabIndex = 84;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 250);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(663, 87);
+            this.panel4.TabIndex = 85;
             // 
             // panel3
             // 
@@ -185,16 +184,18 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 66);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(663, 152);
+            this.panel3.Size = new System.Drawing.Size(663, 184);
             this.panel3.TabIndex = 84;
             // 
-            // panel4
+            // panel2
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 218);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(663, 87);
-            this.panel4.TabIndex = 85;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.comboModelo);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(663, 66);
+            this.panel2.TabIndex = 84;
             // 
             // FormRelatorios
             // 
@@ -207,10 +208,11 @@
             this.Controls.Add(this.label6);
             this.Name = "FormRelatorios";
             this.Text = "FormRelatorios";
+            this.Load += new System.EventHandler(this.FormRelatorios_Load);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

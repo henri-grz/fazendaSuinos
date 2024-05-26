@@ -108,3 +108,4 @@ D:\Projeto Integrador\fazendaSuinos\bin\Debug\pt\Microsoft.ReportViewer.WinForms
 D:\Projeto Integrador\fazendaSuinos\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Projeto Integrador\fazendaSuinos\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\Projeto Integrador\fazendaSuinos\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Projeto Integrador\fazendaSuinos\obj\Debug\fazendaSuinos.FormRelatorioEntidade.resources
