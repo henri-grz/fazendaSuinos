@@ -108,7 +108,7 @@
             this.btnGerar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerar.ForeColor = System.Drawing.Color.White;
-            this.btnGerar.Location = new System.Drawing.Point(519, 127);
+            this.btnGerar.Location = new System.Drawing.Point(519, 133);
             this.btnGerar.Name = "btnGerar";
             this.btnGerar.Size = new System.Drawing.Size(141, 30);
             this.btnGerar.TabIndex = 80;
@@ -124,7 +124,7 @@
             this.clbSelecaoRelatorio.MultiColumn = true;
             this.clbSelecaoRelatorio.Name = "clbSelecaoRelatorio";
             this.clbSelecaoRelatorio.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.clbSelecaoRelatorio.Size = new System.Drawing.Size(657, 94);
+            this.clbSelecaoRelatorio.Size = new System.Drawing.Size(657, 109);
             this.clbSelecaoRelatorio.TabIndex = 81;
             // 
             // btnSelecionarTodos
@@ -134,7 +134,7 @@
             this.btnSelecionarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelecionarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnSelecionarTodos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSelecionarTodos.Location = new System.Drawing.Point(3, 127);
+            this.btnSelecionarTodos.Location = new System.Drawing.Point(3, 133);
             this.btnSelecionarTodos.Name = "btnSelecionarTodos";
             this.btnSelecionarTodos.Size = new System.Drawing.Size(112, 30);
             this.btnSelecionarTodos.TabIndex = 82;
@@ -149,7 +149,7 @@
             this.btnDesmarcarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDesmarcarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnDesmarcarTodos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDesmarcarTodos.Location = new System.Drawing.Point(121, 127);
+            this.btnDesmarcarTodos.Location = new System.Drawing.Point(121, 133);
             this.btnDesmarcarTodos.Name = "btnDesmarcarTodos";
             this.btnDesmarcarTodos.Size = new System.Drawing.Size(112, 30);
             this.btnDesmarcarTodos.TabIndex = 82;

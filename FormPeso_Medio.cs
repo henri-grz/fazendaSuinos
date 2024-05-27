@@ -25,7 +25,7 @@ namespace fazendaSuinos
         {
             if (dataGridPesoMedio.Columns["Editar"] == null)
             {
-                // Define a coluna de Check
+                // Define a coluna de Editar
                 DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn();
                 btnColumn.Name = "Editar";
                 btnColumn.HeaderText = "";
@@ -36,7 +36,7 @@ namespace fazendaSuinos
             }
             if (dataGridPesoMedio.Columns["Excluir"] == null)
             {
-                // Define a coluna de Check
+                // Define a coluna de Excluir
                 DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn();
                 btnColumn.Name = "Excluir";
                 btnColumn.HeaderText = "";
@@ -144,7 +144,7 @@ namespace fazendaSuinos
         {
             SuspendLayout();
             // TODO: esta linha de código carrega dados na tabela 'fazendaSuinosDataSet.Peso_Medio'. Você pode movê-la ou removê-la conforme necessário.
-            this.peso_MedioTableAdapter.Fill(this.fazendaSuinosDataSet.Peso_Medio);
+            //this.peso_MedioTableAdapter.Fill(this.fazendaSuinosDataSet.Peso_Medio);
             ResumeLayout();
 
         }

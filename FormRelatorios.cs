@@ -49,6 +49,7 @@ namespace fazendaSuinos
                 // Abrir o formulário de visualização do relatório
                 FormRelatorioEntidade formRelatorioViewer = new FormRelatorioEntidade(dados);
                 formRelatorioViewer.Show();
+
             }
             catch (Exception ex)
             {
