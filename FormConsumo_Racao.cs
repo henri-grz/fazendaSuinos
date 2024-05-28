@@ -227,5 +227,173 @@ namespace fazendaSuinos
             panelFornecimento.Visible = true;
             ResumeLayout();
         }
+
+        private void panelConsumo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void consultarValoresProdutos()
+        {
+
+        }
+        private void SalvarDadosFornRacao()
+        {
+            try
+            {
+                // Obtém os valores dos controles
+                                
+                int CodLoteForn = Convert.ToInt32(txtCodigoloteFRacao.Text);
+                int CodProdForn = Convert.ToInt32(txtCodigoProdFRacao.Text);
+                int CodFornecedorProd = Convert.ToInt32(txtCodFornecedorRacao.Text);
+
+                DateTime DataForn = dtpFornRacao.Value;
+                string NomeProduto = txtProdutoRacao.Text;
+                string Categoria = txtCategoriaRacao.Text;
+                string TipoRacao = txtTipoRacao.Text;
+                DateTime DataValidade = dtpValidadeRacao.Value;              
+                double QuantRacao = Convert.ToDouble(txtQuantidadeRacao.Text);
+                string UnidadeRacao = txtUnidadeRacao.Text;
+
+
+                // Abre a conexão com o banco de dados
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Cria o comando SQL para inserir os dados na tabela
+                    string queryInsercao = "INSERT INTO FornecimentoRacao (CodProduto, CodFornecedor, CodLote, DataForn, NomeProduto, Categoria, Tipo, Validade, Quantidade, Unidade) VALUES (@CodProduto, @CodFornecedor, @CodLote, @DataForn, @NomeProduto, @Categoria, @Tipo, @Validade, @Quantidade, @Unidade)";
+                    SqlCommand command = new SqlCommand(queryInsercao, connection);
+
+                    // Adiciona os parâmetros ao comando SQL
+                    
+                    command.Parameters.AddWithValue("@CodLote", CodLoteForn);
+                    command.Parameters.AddWithValue("@CodProduto", CodProdForn);
+                    command.Parameters.AddWithValue("@CodFornecedor", CodFornecedorProd);
+
+                    command.Parameters.AddWithValue("@DataForn", DataForn);
+                    command.Parameters.AddWithValue("@NomeProduto", NomeProduto);
+                    command.Parameters.AddWithValue("@Categoria", Categoria);
+                    command.Parameters.AddWithValue("@Tipo", TipoRacao);
+                    command.Parameters.AddWithValue("@Validade", DataValidade);
+                    command.Parameters.AddWithValue("@Quantidade", QuantRacao);
+                    command.Parameters.AddWithValue("@Unidade", UnidadeRacao);
+
+
+                    // Executa o comando SQL
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar dados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        
+    }
+        private void btnSalvarFornRacao_Click(object sender, EventArgs e)
+        {
+            SalvarDadosFornRacao();
+        }
+
+
+        private void btnConsultarProdutoForn_Click(object sender, EventArgs e)
+        {
+            string query = "SELECT CodProduto, Nome, Categoria, Tipo, Validade FROM Produto";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    dataGridViewProdutos.DataSource = dataTable;
+                    dataGridViewProdutos.CellClick += new DataGridViewCellEventHandler(dataGridViewProdutos_CellClick);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar produtos: " + ex.Message);
+                }
+            }
+        }
+        private void btnConsultarFornecedorForn_Click_1(object sender, EventArgs e)
+        {
+            string query = "SELECT CodFornecedor, CNPJ, Razao_Social, CEP, Telefone FROM Fornecedor";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    dataGridViewFornecedor.DataSource = dataTable;
+                    dataGridViewFornecedor.CellClick += new DataGridViewCellEventHandler(dataGridViewFornecedor_CellClick);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar produtos: " + ex.Message);
+                }
+            }
+        }
+
+
+        private void btnConsultarLoteForn_Click(object sender, EventArgs e)
+        {
+            FormConsumo_Racao_Lote formAux = new FormConsumo_Racao_Lote(this);
+            formAux.LoadLote();
+            formAux.ShowDialog();
+        }
+
+        
+
+        
+
+        private void dataGridViewProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewProdutos.Rows[e.RowIndex];
+                txtCodigoProdFRacao.Text = row.Cells["CodProduto"].Value.ToString();
+                txtProdutoRacao.Text = row.Cells["Nome"].Value.ToString();
+                txtCategoriaRacao.Text = row.Cells["Categoria"].Value.ToString();
+                txtTipoRacao.Text = row.Cells["Tipo"].Value.ToString();
+                dtpValidadeRacao.Value = Convert.ToDateTime(row.Cells["Validade"].Value);
+                
+            }
+            
+        }
+        private void dataGridViewFornecedor_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewFornecedor.Rows[e.RowIndex];
+                txtCodFornecedorRacao.Text = row.Cells["CodFornecedor"].Value.ToString();
+                
+            }
+            
+        }
+
+        private void btnLimparcampos_Click(object sender, EventArgs e)
+        {
+            txtCodigoloteFRacao.Clear();
+            txtCategoriaRacao.Clear();
+            txtCodFornecedorRacao.Clear();
+            txtCodigoProdFRacao.Clear();
+            txtQuantidadeRacao.Clear();
+            txtUnidadeRacao.Clear();
+            txtTipoRacao.Clear();
+            txtProdutoRacao.Clear();
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        
     }
 }

@@ -35,28 +35,30 @@
             // dataGridViewLote
             // 
             this.dataGridViewLote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewLote.Location = new System.Drawing.Point(25, 76);
-            this.dataGridViewLote.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewLote.Location = new System.Drawing.Point(19, 62);
             this.dataGridViewLote.Name = "dataGridViewLote";
             this.dataGridViewLote.ReadOnly = true;
             this.dataGridViewLote.RowHeadersWidth = 51;
-            this.dataGridViewLote.Size = new System.Drawing.Size(797, 398);
+            this.dataGridViewLote.Size = new System.Drawing.Size(598, 323);
             this.dataGridViewLote.TabIndex = 65;
+            this.dataGridViewLote.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLote_CellClick);
             this.dataGridViewLote.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLote_CellDoubleClick);
             // 
             // FormConsumo_Racao_Lote
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 550);
+            this.ClientSize = new System.Drawing.Size(635, 447);
             this.Controls.Add(this.dataGridViewLote);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormConsumo_Racao_Lote";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lote";
+            this.Load += new System.EventHandler(this.FormConsumo_Racao_Lote_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLote)).EndInit();
             this.ResumeLayout(false);
 

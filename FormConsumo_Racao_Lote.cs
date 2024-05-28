@@ -59,5 +59,15 @@ namespace fazendaSuinos
 
             this.Close();
         }
+
+        private void FormConsumo_Racao_Lote_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewLote_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
     }
 }

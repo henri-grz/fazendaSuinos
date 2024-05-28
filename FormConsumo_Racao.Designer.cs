@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dateTimePickerData = new System.Windows.Forms.DateTimePicker();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtCodigoLote = new System.Windows.Forms.TextBox();
@@ -51,10 +52,42 @@
             this.btnFornecimento = new System.Windows.Forms.Button();
             this.btnConsumo = new System.Windows.Forms.Button();
             this.panelFornecimento = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtUnidadeRacao = new System.Windows.Forms.TextBox();
+            this.btnConsultarProdutoForn = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtTipoRacao = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtCategoriaRacao = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtProdutoRacao = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.dtpFornRacao = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnConsultarLoteForn = new System.Windows.Forms.Button();
+            this.btnLimparcampos = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnSalvarFornRacao = new System.Windows.Forms.Button();
+            this.txtCodigoloteFRacao = new System.Windows.Forms.TextBox();
+            this.txtQuantidadeRacao = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCodigoProdFRacao = new System.Windows.Forms.TextBox();
             this.panelBotoes = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCodFornecedorRacao = new System.Windows.Forms.TextBox();
+            this.dtpValidadeRacao = new System.Windows.Forms.DateTimePicker();
+            this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
+            this.dataGridViewFornecedor = new System.Windows.Forms.DataGridView();
+            this.btnConsultarFornecedorForn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartConsumo)).BeginInit();
             this.panelConsumo.SuspendLayout();
+            this.panelFornecimento.SuspendLayout();
             this.panelBotoes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFornecedor)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePickerData
@@ -198,17 +231,17 @@
             // chartConsumo
             // 
             this.chartConsumo.BackColor = System.Drawing.SystemColors.MenuBar;
-            chartArea1.Name = "ChartArea1";
-            this.chartConsumo.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend3";
-            this.chartConsumo.Legends.Add(legend1);
+            chartArea7.Name = "ChartArea1";
+            this.chartConsumo.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend3";
+            this.chartConsumo.Legends.Add(legend7);
             this.chartConsumo.Location = new System.Drawing.Point(303, 319);
             this.chartConsumo.Name = "chartConsumo";
             this.chartConsumo.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend3";
-            series1.Name = "Consumo de Ração";
-            this.chartConsumo.Series.Add(series1);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend3";
+            series7.Name = "Consumo de Ração";
+            this.chartConsumo.Series.Add(series7);
             this.chartConsumo.Size = new System.Drawing.Size(618, 300);
             this.chartConsumo.TabIndex = 67;
             this.chartConsumo.Text = "Gráfico de Consumo";
@@ -270,11 +303,12 @@
             this.panelConsumo.Controls.Add(this.label7);
             this.panelConsumo.Controls.Add(this.txtDiaCiclo);
             this.panelConsumo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConsumo.Location = new System.Drawing.Point(0, 150);
-            this.panelConsumo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelConsumo.Location = new System.Drawing.Point(0, 827);
+            this.panelConsumo.Margin = new System.Windows.Forms.Padding(2);
             this.panelConsumo.Name = "panelConsumo";
             this.panelConsumo.Size = new System.Drawing.Size(1327, 643);
             this.panelConsumo.TabIndex = 71;
+            this.panelConsumo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelConsumo_Paint);
             // 
             // btnFornecimento
             // 
@@ -306,12 +340,288 @@
             // 
             // panelFornecimento
             // 
+            this.panelFornecimento.Controls.Add(this.btnConsultarFornecedorForn);
+            this.panelFornecimento.Controls.Add(this.dataGridViewFornecedor);
+            this.panelFornecimento.Controls.Add(this.dataGridViewProdutos);
+            this.panelFornecimento.Controls.Add(this.dtpValidadeRacao);
+            this.panelFornecimento.Controls.Add(this.label10);
+            this.panelFornecimento.Controls.Add(this.txtCodFornecedorRacao);
+            this.panelFornecimento.Controls.Add(this.label17);
+            this.panelFornecimento.Controls.Add(this.txtUnidadeRacao);
+            this.panelFornecimento.Controls.Add(this.btnConsultarProdutoForn);
+            this.panelFornecimento.Controls.Add(this.label16);
+            this.panelFornecimento.Controls.Add(this.label15);
+            this.panelFornecimento.Controls.Add(this.txtTipoRacao);
+            this.panelFornecimento.Controls.Add(this.label14);
+            this.panelFornecimento.Controls.Add(this.txtCategoriaRacao);
+            this.panelFornecimento.Controls.Add(this.label13);
+            this.panelFornecimento.Controls.Add(this.txtProdutoRacao);
+            this.panelFornecimento.Controls.Add(this.label12);
+            this.panelFornecimento.Controls.Add(this.dtpFornRacao);
+            this.panelFornecimento.Controls.Add(this.label4);
+            this.panelFornecimento.Controls.Add(this.label8);
+            this.panelFornecimento.Controls.Add(this.btnConsultarLoteForn);
+            this.panelFornecimento.Controls.Add(this.btnLimparcampos);
+            this.panelFornecimento.Controls.Add(this.label9);
+            this.panelFornecimento.Controls.Add(this.btnSalvarFornRacao);
+            this.panelFornecimento.Controls.Add(this.txtCodigoloteFRacao);
+            this.panelFornecimento.Controls.Add(this.txtQuantidadeRacao);
+            this.panelFornecimento.Controls.Add(this.label11);
+            this.panelFornecimento.Controls.Add(this.txtCodigoProdFRacao);
             this.panelFornecimento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFornecimento.Location = new System.Drawing.Point(0, 793);
-            this.panelFornecimento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelFornecimento.Location = new System.Drawing.Point(0, 187);
+            this.panelFornecimento.Margin = new System.Windows.Forms.Padding(2);
             this.panelFornecimento.Name = "panelFornecimento";
             this.panelFornecimento.Size = new System.Drawing.Size(1327, 640);
             this.panelFornecimento.TabIndex = 72;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label17.Location = new System.Drawing.Point(317, 262);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(69, 20);
+            this.label17.TabIndex = 89;
+            this.label17.Text = "Unidade";
+            // 
+            // txtUnidadeRacao
+            // 
+            this.txtUnidadeRacao.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtUnidadeRacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUnidadeRacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUnidadeRacao.Location = new System.Drawing.Point(322, 293);
+            this.txtUnidadeRacao.Name = "txtUnidadeRacao";
+            this.txtUnidadeRacao.Size = new System.Drawing.Size(99, 19);
+            this.txtUnidadeRacao.TabIndex = 90;
+            // 
+            // btnConsultarProdutoForn
+            // 
+            this.btnConsultarProdutoForn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnConsultarProdutoForn.FlatAppearance.BorderSize = 0;
+            this.btnConsultarProdutoForn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarProdutoForn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarProdutoForn.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarProdutoForn.Location = new System.Drawing.Point(709, 153);
+            this.btnConsultarProdutoForn.Name = "btnConsultarProdutoForn";
+            this.btnConsultarProdutoForn.Size = new System.Drawing.Size(125, 22);
+            this.btnConsultarProdutoForn.TabIndex = 88;
+            this.btnConsultarProdutoForn.Text = "Consultar Produto";
+            this.btnConsultarProdutoForn.UseVisualStyleBackColor = false;
+            this.btnConsultarProdutoForn.Click += new System.EventHandler(this.btnConsultarProdutoForn_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label16.Location = new System.Drawing.Point(586, 197);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(71, 20);
+            this.label16.TabIndex = 86;
+            this.label16.Text = "Validade";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label15.Location = new System.Drawing.Point(446, 197);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(39, 20);
+            this.label15.TabIndex = 84;
+            this.label15.Text = "Tipo";
+            // 
+            // txtTipoRacao
+            // 
+            this.txtTipoRacao.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtTipoRacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTipoRacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTipoRacao.Location = new System.Drawing.Point(450, 220);
+            this.txtTipoRacao.Name = "txtTipoRacao";
+            this.txtTipoRacao.Size = new System.Drawing.Size(99, 19);
+            this.txtTipoRacao.TabIndex = 85;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label14.Location = new System.Drawing.Point(317, 197);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(78, 20);
+            this.label14.TabIndex = 82;
+            this.label14.Text = "Categoria";
+            // 
+            // txtCategoriaRacao
+            // 
+            this.txtCategoriaRacao.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCategoriaRacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCategoriaRacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCategoriaRacao.Location = new System.Drawing.Point(321, 220);
+            this.txtCategoriaRacao.Name = "txtCategoriaRacao";
+            this.txtCategoriaRacao.Size = new System.Drawing.Size(99, 19);
+            this.txtCategoriaRacao.TabIndex = 83;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label13.Location = new System.Drawing.Point(187, 197);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 20);
+            this.label13.TabIndex = 80;
+            this.label13.Text = "Produto";
+            // 
+            // txtProdutoRacao
+            // 
+            this.txtProdutoRacao.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtProdutoRacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProdutoRacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtProdutoRacao.Location = new System.Drawing.Point(191, 220);
+            this.txtProdutoRacao.Name = "txtProdutoRacao";
+            this.txtProdutoRacao.Size = new System.Drawing.Size(99, 19);
+            this.txtProdutoRacao.TabIndex = 81;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label12.Location = new System.Drawing.Point(586, 131);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(141, 20);
+            this.label12.TabIndex = 79;
+            this.label12.Text = "Código do Produto";
+            // 
+            // dtpFornRacao
+            // 
+            this.dtpFornRacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFornRacao.Location = new System.Drawing.Point(191, 155);
+            this.dtpFornRacao.Name = "dtpFornRacao";
+            this.dtpFornRacao.Size = new System.Drawing.Size(100, 20);
+            this.dtpFornRacao.TabIndex = 78;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label4.Location = new System.Drawing.Point(187, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(228, 24);
+            this.label4.TabIndex = 67;
+            this.label4.Text = "Fornecimento de ração";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label8.Location = new System.Drawing.Point(187, 131);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 20);
+            this.label8.TabIndex = 68;
+            this.label8.Text = "Data";
+            // 
+            // btnConsultarLoteForn
+            // 
+            this.btnConsultarLoteForn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnConsultarLoteForn.FlatAppearance.BorderSize = 0;
+            this.btnConsultarLoteForn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarLoteForn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarLoteForn.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarLoteForn.Location = new System.Drawing.Point(440, 152);
+            this.btnConsultarLoteForn.Name = "btnConsultarLoteForn";
+            this.btnConsultarLoteForn.Size = new System.Drawing.Size(102, 22);
+            this.btnConsultarLoteForn.TabIndex = 69;
+            this.btnConsultarLoteForn.Text = "Consultar Lote";
+            this.btnConsultarLoteForn.UseVisualStyleBackColor = false;
+            this.btnConsultarLoteForn.Click += new System.EventHandler(this.btnConsultarLoteForn_Click);
+            // 
+            // btnLimparcampos
+            // 
+            this.btnLimparcampos.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnLimparcampos.FlatAppearance.BorderSize = 0;
+            this.btnLimparcampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimparcampos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimparcampos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLimparcampos.Location = new System.Drawing.Point(472, 282);
+            this.btnLimparcampos.Name = "btnLimparcampos";
+            this.btnLimparcampos.Size = new System.Drawing.Size(106, 30);
+            this.btnLimparcampos.TabIndex = 70;
+            this.btnLimparcampos.Text = "Limpar";
+            this.btnLimparcampos.UseVisualStyleBackColor = false;
+            this.btnLimparcampos.Click += new System.EventHandler(this.btnLimparcampos_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label9.Location = new System.Drawing.Point(187, 262);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 20);
+            this.label9.TabIndex = 71;
+            this.label9.Text = "Quantidade (kg)";
+            // 
+            // btnSalvarFornRacao
+            // 
+            this.btnSalvarFornRacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnSalvarFornRacao.FlatAppearance.BorderSize = 0;
+            this.btnSalvarFornRacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvarFornRacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarFornRacao.ForeColor = System.Drawing.Color.White;
+            this.btnSalvarFornRacao.Location = new System.Drawing.Point(597, 282);
+            this.btnSalvarFornRacao.Name = "btnSalvarFornRacao";
+            this.btnSalvarFornRacao.Size = new System.Drawing.Size(106, 30);
+            this.btnSalvarFornRacao.TabIndex = 77;
+            this.btnSalvarFornRacao.Text = "Salvar";
+            this.btnSalvarFornRacao.UseVisualStyleBackColor = false;
+            this.btnSalvarFornRacao.Click += new System.EventHandler(this.btnSalvarFornRacao_Click);
+            // 
+            // txtCodigoloteFRacao
+            // 
+            this.txtCodigoloteFRacao.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodigoloteFRacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodigoloteFRacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCodigoloteFRacao.Location = new System.Drawing.Point(320, 155);
+            this.txtCodigoloteFRacao.Name = "txtCodigoloteFRacao";
+            this.txtCodigoloteFRacao.Size = new System.Drawing.Size(99, 19);
+            this.txtCodigoloteFRacao.TabIndex = 76;
+            // 
+            // txtQuantidadeRacao
+            // 
+            this.txtQuantidadeRacao.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtQuantidadeRacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtQuantidadeRacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtQuantidadeRacao.Location = new System.Drawing.Point(192, 293);
+            this.txtQuantidadeRacao.Name = "txtQuantidadeRacao";
+            this.txtQuantidadeRacao.Size = new System.Drawing.Size(99, 19);
+            this.txtQuantidadeRacao.TabIndex = 73;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label11.Location = new System.Drawing.Point(317, 131);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(117, 20);
+            this.label11.TabIndex = 75;
+            this.label11.Text = "Código do Lote";
+            // 
+            // txtCodigoProdFRacao
+            // 
+            this.txtCodigoProdFRacao.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodigoProdFRacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodigoProdFRacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCodigoProdFRacao.Location = new System.Drawing.Point(590, 156);
+            this.txtCodigoProdFRacao.Name = "txtCodigoProdFRacao";
+            this.txtCodigoProdFRacao.Size = new System.Drawing.Size(99, 19);
+            this.txtCodigoProdFRacao.TabIndex = 74;
             // 
             // panelBotoes
             // 
@@ -319,26 +629,100 @@
             this.panelBotoes.Controls.Add(this.btnConsumo);
             this.panelBotoes.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBotoes.Location = new System.Drawing.Point(0, 0);
-            this.panelBotoes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelBotoes.Margin = new System.Windows.Forms.Padding(2);
             this.panelBotoes.Name = "panelBotoes";
-            this.panelBotoes.Size = new System.Drawing.Size(1327, 150);
+            this.panelBotoes.Size = new System.Drawing.Size(1327, 187);
             this.panelBotoes.TabIndex = 74;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label10.Location = new System.Drawing.Point(856, 131);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(167, 20);
+            this.label10.TabIndex = 92;
+            this.label10.Text = "Código do Fornecedor";
+            // 
+            // txtCodFornecedorRacao
+            // 
+            this.txtCodFornecedorRacao.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodFornecedorRacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodFornecedorRacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCodFornecedorRacao.Location = new System.Drawing.Point(860, 156);
+            this.txtCodFornecedorRacao.Name = "txtCodFornecedorRacao";
+            this.txtCodFornecedorRacao.Size = new System.Drawing.Size(99, 19);
+            this.txtCodFornecedorRacao.TabIndex = 91;
+            // 
+            // dtpValidadeRacao
+            // 
+            this.dtpValidadeRacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpValidadeRacao.Location = new System.Drawing.Point(589, 220);
+            this.dtpValidadeRacao.Name = "dtpValidadeRacao";
+            this.dtpValidadeRacao.Size = new System.Drawing.Size(100, 20);
+            this.dtpValidadeRacao.TabIndex = 94;
+            // 
+            // dataGridViewProdutos
+            // 
+            this.dataGridViewProdutos.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProdutos.Location = new System.Drawing.Point(660, 365);
+            this.dataGridViewProdutos.Name = "dataGridViewProdutos";
+            this.dataGridViewProdutos.Size = new System.Drawing.Size(465, 150);
+            this.dataGridViewProdutos.TabIndex = 95;
+            this.dataGridViewProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdutos_CellClick);
+            this.dataGridViewProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // dataGridViewFornecedor
+            // 
+            this.dataGridViewFornecedor.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFornecedor.Location = new System.Drawing.Point(191, 365);
+            this.dataGridViewFornecedor.Name = "dataGridViewFornecedor";
+            this.dataGridViewFornecedor.Size = new System.Drawing.Size(454, 150);
+            this.dataGridViewFornecedor.TabIndex = 96;
+            this.dataGridViewFornecedor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFornecedor_CellClick);
+            // 
+            // btnConsultarFornecedorForn
+            // 
+            this.btnConsultarFornecedorForn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnConsultarFornecedorForn.FlatAppearance.BorderSize = 0;
+            this.btnConsultarFornecedorForn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFornecedorForn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarFornecedorForn.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarFornecedorForn.Location = new System.Drawing.Point(978, 156);
+            this.btnConsultarFornecedorForn.Name = "btnConsultarFornecedorForn";
+            this.btnConsultarFornecedorForn.Size = new System.Drawing.Size(147, 22);
+            this.btnConsultarFornecedorForn.TabIndex = 97;
+            this.btnConsultarFornecedorForn.Text = "Consultar Fornecedor";
+            this.btnConsultarFornecedorForn.UseVisualStyleBackColor = false;
+            this.btnConsultarFornecedorForn.Click += new System.EventHandler(this.btnConsultarFornecedorForn_Click_1);
             // 
             // FormConsumo_Racao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1327, 807);
-            this.Controls.Add(this.panelFornecimento);
+            this.ClientSize = new System.Drawing.Size(1327, 749);
             this.Controls.Add(this.panelConsumo);
+            this.Controls.Add(this.panelFornecimento);
             this.Controls.Add(this.panelBotoes);
             this.Name = "FormConsumo_Racao";
             this.Text = "FormConsumo_Racao";
             ((System.ComponentModel.ISupportInitialize)(this.chartConsumo)).EndInit();
             this.panelConsumo.ResumeLayout(false);
             this.panelConsumo.PerformLayout();
+            this.panelFornecimento.ResumeLayout(false);
+            this.panelFornecimento.PerformLayout();
             this.panelBotoes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFornecedor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -366,5 +750,34 @@
         private System.Windows.Forms.Button btnConsumo;
         private System.Windows.Forms.Panel panelFornecimento;
         private System.Windows.Forms.Panel panelBotoes;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker dtpFornRacao;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnConsultarLoteForn;
+        private System.Windows.Forms.Button btnLimparcampos;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnSalvarFornRacao;
+        private System.Windows.Forms.TextBox txtCodigoloteFRacao;
+        private System.Windows.Forms.TextBox txtQuantidadeRacao;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtCodigoProdFRacao;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtUnidadeRacao;
+        private System.Windows.Forms.Button btnConsultarProdutoForn;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtTipoRacao;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtCategoriaRacao;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtProdutoRacao;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtCodFornecedorRacao;
+        private System.Windows.Forms.DateTimePicker dtpValidadeRacao;
+        private System.Windows.Forms.DataGridView dataGridViewProdutos;
+        private System.Windows.Forms.DataGridView dataGridViewFornecedor;
+        private System.Windows.Forms.Button btnConsultarFornecedorForn;
     }
 }
