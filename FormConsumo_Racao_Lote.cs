@@ -60,14 +60,110 @@ namespace fazendaSuinos
             this.Close();
         }
 
-        private void FormConsumo_Racao_Lote_Load(object sender, EventArgs e)
+        private void dataGridViewFornecedor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            object codigo = dataGridViewFornecedor.Rows[e.RowIndex].Cells[0].Value;
 
+            _parentForm.setCodigoFornecedor(codigo.ToString());
+
+            this.Close();
         }
 
-        private void dataGridViewLote_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridViewProdutos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            object codigo = dataGridViewProdutos.Rows[e.RowIndex].Cells[0].Value;
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewProdutos.Rows[e.RowIndex];
+                _parentForm.txtCodigoProdFRacao.Text = row.Cells["CodProduto"].Value.ToString();
+                _parentForm.txtProdutoRacao.Text = row.Cells["Nome"].Value.ToString();
+                _parentForm.txtCategoriaRacao.Text = row.Cells["Categoria"].Value.ToString();
+                _parentForm.txtTipoRacao.Text = row.Cells["Tipo"].Value.ToString();
+                _parentForm.dtpValidadeRacao.Value = Convert.ToDateTime(row.Cells["Validade"].Value);
+
+            }
+
+            _parentForm.setCodigoProduto(codigo.ToString());
+
+            this.Close();
+        }
+
+        internal void LoadProduto()
+        {
+            string query = "SELECT CodProduto, Nome, Categoria, Tipo, Validade FROM Produto";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    dataGridViewProdutos.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar produtos: " + ex.Message);
+                }
+            }
+        }
+
+        internal void LoadFornecedor()
+        {
+            string query = "SELECT CodFornecedor, CNPJ, Razao_Social, CEP, Telefone FROM Fornecedor";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    dataGridViewFornecedor.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar produtos: " + ex.Message);
+                }
+            }
+        }
+
+        internal void setVisibleDataGridLote(bool v)
+        {
+            if (v)
+            {
+                dataGridViewLote.Visible = true;
+            }
+            else
+            {
+                dataGridViewLote.Visible = false;
+            }
+        }
+
+        internal void setVisibleDataGridFornecedor(bool v)
+        {
+            if (v)
+            {
+                dataGridViewFornecedor.Visible = true;
+            }
+            else
+            {
+                dataGridViewFornecedor.Visible = false;
+            }
+        }
+
+        internal void setVisibleDataGridProduto(bool v)
+        {
+            if (v)
+            {
+                dataGridViewProdutos.Visible = true;
+            }
+            else
+            {
+                dataGridViewProdutos.Visible = false;
+            }
         }
     }
 }
