@@ -53,8 +53,6 @@
             this.panelConsumo = new System.Windows.Forms.Panel();
             this.panelFornecimento = new System.Windows.Forms.Panel();
             this.btnConsultarFornecedorForn = new System.Windows.Forms.Button();
-            this.dataGridViewFornecedor = new System.Windows.Forms.DataGridView();
-            this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
             this.dtpValidadeMed = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCodFornecedorMed = new System.Windows.Forms.TextBox();
@@ -83,8 +81,6 @@
             this.panelBotoes.SuspendLayout();
             this.panelConsumo.SuspendLayout();
             this.panelFornecimento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFornecedor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpVacinacao
@@ -392,8 +388,6 @@
             // panelFornecimento
             // 
             this.panelFornecimento.Controls.Add(this.btnConsultarFornecedorForn);
-            this.panelFornecimento.Controls.Add(this.dataGridViewFornecedor);
-            this.panelFornecimento.Controls.Add(this.dataGridViewProdutos);
             this.panelFornecimento.Controls.Add(this.dtpValidadeMed);
             this.panelFornecimento.Controls.Add(this.label10);
             this.panelFornecimento.Controls.Add(this.txtCodFornecedorMed);
@@ -432,7 +426,7 @@
             this.btnConsultarFornecedorForn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarFornecedorForn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarFornecedorForn.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarFornecedorForn.Location = new System.Drawing.Point(978, 155);
+            this.btnConsultarFornecedorForn.Location = new System.Drawing.Point(770, 278);
             this.btnConsultarFornecedorForn.Name = "btnConsultarFornecedorForn";
             this.btnConsultarFornecedorForn.Size = new System.Drawing.Size(147, 22);
             this.btnConsultarFornecedorForn.TabIndex = 125;
@@ -440,32 +434,12 @@
             this.btnConsultarFornecedorForn.UseVisualStyleBackColor = false;
             this.btnConsultarFornecedorForn.Click += new System.EventHandler(this.btnConsultarFornecedorForn_Click);
             // 
-            // dataGridViewFornecedor
-            // 
-            this.dataGridViewFornecedor.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewFornecedor.Location = new System.Drawing.Point(191, 364);
-            this.dataGridViewFornecedor.Name = "dataGridViewFornecedor";
-            this.dataGridViewFornecedor.Size = new System.Drawing.Size(454, 150);
-            this.dataGridViewFornecedor.TabIndex = 124;
-            this.dataGridViewFornecedor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFornecedor_CellClick);
-            // 
-            // dataGridViewProdutos
-            // 
-            this.dataGridViewProdutos.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProdutos.Location = new System.Drawing.Point(660, 364);
-            this.dataGridViewProdutos.Name = "dataGridViewProdutos";
-            this.dataGridViewProdutos.Size = new System.Drawing.Size(465, 150);
-            this.dataGridViewProdutos.TabIndex = 123;
-            this.dataGridViewProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdutos_CellClick);
-            // 
             // dtpValidadeMed
             // 
             this.dtpValidadeMed.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpValidadeMed.Location = new System.Drawing.Point(589, 219);
+            this.dtpValidadeMed.Location = new System.Drawing.Point(783, 192);
             this.dtpValidadeMed.Name = "dtpValidadeMed";
-            this.dtpValidadeMed.Size = new System.Drawing.Size(100, 20);
+            this.dtpValidadeMed.Size = new System.Drawing.Size(133, 20);
             this.dtpValidadeMed.TabIndex = 122;
             // 
             // label10
@@ -473,7 +447,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label10.Location = new System.Drawing.Point(856, 130);
+            this.label10.Location = new System.Drawing.Point(618, 255);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(167, 20);
             this.label10.TabIndex = 121;
@@ -484,9 +458,9 @@
             this.txtCodFornecedorMed.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtCodFornecedorMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodFornecedorMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCodFornecedorMed.Location = new System.Drawing.Point(860, 155);
+            this.txtCodFornecedorMed.Location = new System.Drawing.Point(622, 280);
             this.txtCodFornecedorMed.Name = "txtCodFornecedorMed";
-            this.txtCodFornecedorMed.Size = new System.Drawing.Size(99, 19);
+            this.txtCodFornecedorMed.Size = new System.Drawing.Size(133, 19);
             this.txtCodFornecedorMed.TabIndex = 120;
             // 
             // label17
@@ -494,7 +468,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label17.Location = new System.Drawing.Point(317, 261);
+            this.label17.Location = new System.Drawing.Point(447, 249);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(69, 20);
             this.label17.TabIndex = 118;
@@ -505,9 +479,9 @@
             this.txtUnidadeMed.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtUnidadeMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUnidadeMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtUnidadeMed.Location = new System.Drawing.Point(322, 292);
+            this.txtUnidadeMed.Location = new System.Drawing.Point(452, 280);
             this.txtUnidadeMed.Name = "txtUnidadeMed";
-            this.txtUnidadeMed.Size = new System.Drawing.Size(99, 19);
+            this.txtUnidadeMed.Size = new System.Drawing.Size(133, 19);
             this.txtUnidadeMed.TabIndex = 119;
             // 
             // btnConsultarProdutoForn
@@ -517,11 +491,11 @@
             this.btnConsultarProdutoForn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarProdutoForn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarProdutoForn.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarProdutoForn.Location = new System.Drawing.Point(709, 152);
+            this.btnConsultarProdutoForn.Location = new System.Drawing.Point(566, 107);
             this.btnConsultarProdutoForn.Name = "btnConsultarProdutoForn";
-            this.btnConsultarProdutoForn.Size = new System.Drawing.Size(125, 22);
+            this.btnConsultarProdutoForn.Size = new System.Drawing.Size(81, 22);
             this.btnConsultarProdutoForn.TabIndex = 117;
-            this.btnConsultarProdutoForn.Text = "Consultar Produto";
+            this.btnConsultarProdutoForn.Text = "Consultar";
             this.btnConsultarProdutoForn.UseVisualStyleBackColor = false;
             this.btnConsultarProdutoForn.Click += new System.EventHandler(this.btnConsultarProdutoForn_Click);
             // 
@@ -530,7 +504,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label16.Location = new System.Drawing.Point(586, 196);
+            this.label16.Location = new System.Drawing.Point(780, 169);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(71, 20);
             this.label16.TabIndex = 116;
@@ -541,7 +515,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label15.Location = new System.Drawing.Point(446, 196);
+            this.label15.Location = new System.Drawing.Point(618, 169);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(39, 20);
             this.label15.TabIndex = 114;
@@ -552,9 +526,9 @@
             this.txtTipoMed.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtTipoMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTipoMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtTipoMed.Location = new System.Drawing.Point(450, 219);
+            this.txtTipoMed.Location = new System.Drawing.Point(622, 192);
             this.txtTipoMed.Name = "txtTipoMed";
-            this.txtTipoMed.Size = new System.Drawing.Size(99, 19);
+            this.txtTipoMed.Size = new System.Drawing.Size(133, 19);
             this.txtTipoMed.TabIndex = 115;
             // 
             // label14
@@ -562,7 +536,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label14.Location = new System.Drawing.Point(317, 196);
+            this.label14.Location = new System.Drawing.Point(448, 169);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(78, 20);
             this.label14.TabIndex = 112;
@@ -573,9 +547,9 @@
             this.txtCategoriaMed.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtCategoriaMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCategoriaMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCategoriaMed.Location = new System.Drawing.Point(321, 219);
+            this.txtCategoriaMed.Location = new System.Drawing.Point(452, 192);
             this.txtCategoriaMed.Name = "txtCategoriaMed";
-            this.txtCategoriaMed.Size = new System.Drawing.Size(99, 19);
+            this.txtCategoriaMed.Size = new System.Drawing.Size(133, 19);
             this.txtCategoriaMed.TabIndex = 113;
             // 
             // label13
@@ -583,7 +557,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label13.Location = new System.Drawing.Point(187, 196);
+            this.label13.Location = new System.Drawing.Point(282, 169);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(65, 20);
             this.label13.TabIndex = 110;
@@ -594,9 +568,9 @@
             this.txtProdutoMed.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtProdutoMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtProdutoMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtProdutoMed.Location = new System.Drawing.Point(191, 219);
+            this.txtProdutoMed.Location = new System.Drawing.Point(286, 192);
             this.txtProdutoMed.Name = "txtProdutoMed";
-            this.txtProdutoMed.Size = new System.Drawing.Size(99, 19);
+            this.txtProdutoMed.Size = new System.Drawing.Size(133, 19);
             this.txtProdutoMed.TabIndex = 111;
             // 
             // label12
@@ -604,7 +578,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label12.Location = new System.Drawing.Point(586, 130);
+            this.label12.Location = new System.Drawing.Point(407, 82);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(141, 20);
             this.label12.TabIndex = 109;
@@ -613,7 +587,7 @@
             // dtpFornMed
             // 
             this.dtpFornMed.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFornMed.Location = new System.Drawing.Point(191, 154);
+            this.dtpFornMed.Location = new System.Drawing.Point(286, 107);
             this.dtpFornMed.Name = "dtpFornMed";
             this.dtpFornMed.Size = new System.Drawing.Size(100, 20);
             this.dtpFornMed.TabIndex = 108;
@@ -623,7 +597,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label6.Location = new System.Drawing.Point(187, 51);
+            this.label6.Location = new System.Drawing.Point(282, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(228, 24);
             this.label6.TabIndex = 98;
@@ -634,7 +608,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label11.Location = new System.Drawing.Point(187, 130);
+            this.label11.Location = new System.Drawing.Point(282, 83);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 20);
             this.label11.TabIndex = 99;
@@ -647,11 +621,11 @@
             this.btnConsultarLoteForn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarLoteForn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarLoteForn.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarLoteForn.Location = new System.Drawing.Point(440, 151);
+            this.btnConsultarLoteForn.Location = new System.Drawing.Point(831, 108);
             this.btnConsultarLoteForn.Name = "btnConsultarLoteForn";
-            this.btnConsultarLoteForn.Size = new System.Drawing.Size(102, 22);
+            this.btnConsultarLoteForn.Size = new System.Drawing.Size(86, 22);
             this.btnConsultarLoteForn.TabIndex = 100;
-            this.btnConsultarLoteForn.Text = "Consultar Lote";
+            this.btnConsultarLoteForn.Text = "Consultar";
             this.btnConsultarLoteForn.UseVisualStyleBackColor = false;
             this.btnConsultarLoteForn.Click += new System.EventHandler(this.btnConsultarLoteForn_Click);
             // 
@@ -662,7 +636,7 @@
             this.btnLimparcampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimparcampos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimparcampos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLimparcampos.Location = new System.Drawing.Point(472, 281);
+            this.btnLimparcampos.Location = new System.Drawing.Point(686, 349);
             this.btnLimparcampos.Name = "btnLimparcampos";
             this.btnLimparcampos.Size = new System.Drawing.Size(106, 30);
             this.btnLimparcampos.TabIndex = 101;
@@ -675,7 +649,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label18.Location = new System.Drawing.Point(187, 261);
+            this.label18.Location = new System.Drawing.Point(281, 249);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(123, 20);
             this.label18.TabIndex = 102;
@@ -688,7 +662,7 @@
             this.btnSalvarFornMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvarFornMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarFornMed.ForeColor = System.Drawing.Color.White;
-            this.btnSalvarFornMed.Location = new System.Drawing.Point(597, 281);
+            this.btnSalvarFornMed.Location = new System.Drawing.Point(811, 349);
             this.btnSalvarFornMed.Name = "btnSalvarFornMed";
             this.btnSalvarFornMed.Size = new System.Drawing.Size(106, 30);
             this.btnSalvarFornMed.TabIndex = 107;
@@ -701,9 +675,9 @@
             this.txtCodigoloteFMed.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtCodigoloteFMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoloteFMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCodigoloteFMed.Location = new System.Drawing.Point(320, 154);
+            this.txtCodigoloteFMed.Location = new System.Drawing.Point(676, 108);
             this.txtCodigoloteFMed.Name = "txtCodigoloteFMed";
-            this.txtCodigoloteFMed.Size = new System.Drawing.Size(99, 19);
+            this.txtCodigoloteFMed.Size = new System.Drawing.Size(133, 19);
             this.txtCodigoloteFMed.TabIndex = 106;
             // 
             // txtQuantidadeMed
@@ -711,9 +685,9 @@
             this.txtQuantidadeMed.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtQuantidadeMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQuantidadeMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtQuantidadeMed.Location = new System.Drawing.Point(192, 292);
+            this.txtQuantidadeMed.Location = new System.Drawing.Point(286, 280);
             this.txtQuantidadeMed.Name = "txtQuantidadeMed";
-            this.txtQuantidadeMed.Size = new System.Drawing.Size(99, 19);
+            this.txtQuantidadeMed.Size = new System.Drawing.Size(133, 19);
             this.txtQuantidadeMed.TabIndex = 103;
             // 
             // label19
@@ -721,7 +695,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label19.Location = new System.Drawing.Point(317, 130);
+            this.label19.Location = new System.Drawing.Point(673, 84);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(117, 20);
             this.label19.TabIndex = 105;
@@ -732,9 +706,9 @@
             this.txtCodigoProdFMed.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtCodigoProdFMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoProdFMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCodigoProdFMed.Location = new System.Drawing.Point(590, 155);
+            this.txtCodigoProdFMed.Location = new System.Drawing.Point(411, 107);
             this.txtCodigoProdFMed.Name = "txtCodigoProdFMed";
-            this.txtCodigoProdFMed.Size = new System.Drawing.Size(99, 19);
+            this.txtCodigoProdFMed.Size = new System.Drawing.Size(133, 19);
             this.txtCodigoProdFMed.TabIndex = 104;
             // 
             // FormMedicacao
@@ -748,14 +722,11 @@
             this.Controls.Add(this.panelBotoes);
             this.Name = "FormMedicacao";
             this.Text = "FormMedicacao";
-            this.Load += new System.EventHandler(this.FormMedicacao_Load);
             this.panelBotoes.ResumeLayout(false);
             this.panelConsumo.ResumeLayout(false);
             this.panelConsumo.PerformLayout();
             this.panelFornecimento.ResumeLayout(false);
             this.panelFornecimento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFornecedor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -786,8 +757,6 @@
         private System.Windows.Forms.Panel panelConsumo;
         private System.Windows.Forms.Panel panelFornecimento;
         private System.Windows.Forms.Button btnConsultarFornecedorForn;
-        private System.Windows.Forms.DataGridView dataGridViewFornecedor;
-        private System.Windows.Forms.DataGridView dataGridViewProdutos;
         private System.Windows.Forms.DateTimePicker dtpValidadeMed;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtCodFornecedorMed;

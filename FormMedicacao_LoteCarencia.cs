@@ -16,10 +16,6 @@ namespace fazendaSuinos
             _parentForm = parentForm;
         }
 
-        public FormMedicacao_LoteCarencia(FormPeso_Medio formPeso_Medio)
-        {
-        }
-
         public void setVisiblepcbMedicamentos(bool b)
         {
             if (b)
@@ -41,6 +37,30 @@ namespace fazendaSuinos
             else
             {
                 dataGridViewLote.Visible = false;
+            }
+        }
+
+        public void setVisibledataGridProduto(bool b)
+        {
+            if (b)
+            {
+                dataGridViewProdutos.Visible = true;
+            }
+            else
+            {
+                dataGridViewProdutos.Visible = false;
+            }
+        }
+
+        public void setVisibledataGridFornecedor(bool b)
+        {
+            if (b)
+            {
+                dataGridViewFornecedor.Visible = true;
+            }
+            else
+            {
+                dataGridViewFornecedor.Visible = false;
             }
         }
 
@@ -73,11 +93,71 @@ namespace fazendaSuinos
             }
         }
 
+        public void LoadProduto()
+        {
+            string query = "SELECT CodProduto, Nome, Categoria, Tipo, Validade FROM Produto";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    dataGridViewProdutos.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar produtos: " + ex.Message);
+                }
+            }
+        }
+
+        public void LoadFornecedor()
+        {
+            string query = "SELECT CodFornecedor, CNPJ, Razao_Social, CEP, Telefone FROM Fornecedor";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    dataGridViewFornecedor.DataSource = dataTable;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar produtos: " + ex.Message);
+                }
+            }
+        }
+
         private void dataGridViewLote_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             object codigo = dataGridViewLote.Rows[e.RowIndex].Cells[0].Value;
 
             _parentForm.setCodigoLote(codigo.ToString());
+
+            this.Close();
+        }
+
+        private void dataGridViewProdutos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            object codigo = dataGridViewProdutos.Rows[e.RowIndex].Cells[0].Value;
+
+            _parentForm.setCodigoProduto(codigo.ToString());
+
+            this.Close();
+        }
+
+        private void dataGridViewFornecedor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            object codigo = dataGridViewFornecedor.Rows[e.RowIndex].Cells[0].Value;
+
+            _parentForm.setCodigoFornecedor(codigo.ToString());
 
             this.Close();
         }

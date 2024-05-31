@@ -67,6 +67,8 @@ namespace fazendaSuinos
             formAux.LoadLote();
             formAux.setVisiblepcbMedicamentos(false);
             formAux.setVisibledataGridLote(true);
+            formAux.setVisibledataGridProduto(false);
+            formAux.setVisibledataGridFornecedor(false);
             formAux.ShowDialog();
         }
 
@@ -80,12 +82,25 @@ namespace fazendaSuinos
             FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
             formAux.setVisiblepcbMedicamentos(true);
             formAux.setVisibledataGridLote(false);
+            formAux.setVisibledataGridProduto(false);
+            formAux.setVisibledataGridFornecedor(false);
             formAux.ShowDialog();
         }
 
         public void setCodigoLote(String codigo)
         {
             txtCodigoLote.Text = codigo;
+            txtCodigoloteFMed.Text = codigo;
+        }
+
+        public void setCodigoProduto(String codigo)
+        {
+            txtCodigoProdFMed.Text = codigo;
+        }
+
+        public void setCodigoFornecedor(String codigo)
+        {
+            txtCodFornecedorMed.Text = codigo;
         }
 
         private void btnConsumo_Click(object sender, EventArgs e)
@@ -102,11 +117,6 @@ namespace fazendaSuinos
             panelConsumo.Visible = false;
             panelFornecimento.Visible = true;
             ResumeLayout();
-        }
-
-        private void FormMedicacao_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void SalvarDadosFornMed()
@@ -174,51 +184,31 @@ namespace fazendaSuinos
             formAux.LoadLote();
             formAux.setVisiblepcbMedicamentos(false);
             formAux.setVisibledataGridLote(true);
+            formAux.setVisibledataGridProduto(false);
+            formAux.setVisibledataGridFornecedor(false);
             formAux.ShowDialog();
         }
 
         private void btnConsultarProdutoForn_Click(object sender, EventArgs e)
         {
-            string query = "SELECT CodProduto, Nome, Categoria, Tipo, Validade FROM Produto";
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    dataGridViewProdutos.DataSource = dataTable;
-                    dataGridViewProdutos.CellClick += new DataGridViewCellEventHandler(dataGridViewProdutos_CellClick);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao consultar produtos: " + ex.Message);
-                }
-            }
+            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
+            formAux.LoadProduto();
+            formAux.setVisiblepcbMedicamentos(false);
+            formAux.setVisibledataGridLote(false);
+            formAux.setVisibledataGridProduto(true);
+            formAux.setVisibledataGridFornecedor(false);
+            formAux.ShowDialog();
         }
 
         private void btnConsultarFornecedorForn_Click(object sender, EventArgs e)
         {
-            string query = "SELECT CodFornecedor, CNPJ, Razao_Social, CEP, Telefone FROM Fornecedor";
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    dataGridViewFornecedor.DataSource = dataTable;
-                    dataGridViewFornecedor.CellClick += new DataGridViewCellEventHandler(dataGridViewFornecedor_CellClick);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao consultar produtos: " + ex.Message);
-                }
-            }
+            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
+            formAux.LoadFornecedor();
+            formAux.setVisiblepcbMedicamentos(false);
+            formAux.setVisibledataGridLote(false);
+            formAux.setVisibledataGridProduto(false);
+            formAux.setVisibledataGridFornecedor(true);
+            formAux.ShowDialog();
         }
 
         private void btnLimparcampos_Click(object sender, EventArgs e)
@@ -233,28 +223,6 @@ namespace fazendaSuinos
             txtProdutoMed.Clear();
         }
 
-        private void dataGridViewFornecedor_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridViewFornecedor.Rows[e.RowIndex];
-                txtCodFornecedorMed.Text = row.Cells["CodFornecedor"].Value.ToString();
 
-            }
-        }
-
-        private void dataGridViewProdutos_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridViewProdutos.Rows[e.RowIndex];
-                txtCodigoProdFMed.Text = row.Cells["CodProduto"].Value.ToString();
-                txtProdutoMed.Text = row.Cells["Nome"].Value.ToString();
-                txtCategoriaMed.Text = row.Cells["Categoria"].Value.ToString();
-                txtTipoMed.Text = row.Cells["Tipo"].Value.ToString();
-                dtpValidadeMed.Value = Convert.ToDateTime(row.Cells["Validade"].Value);
-
-            }
-        }
     }
 }

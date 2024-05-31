@@ -23,6 +23,8 @@ namespace fazendaSuinos
 
         private void LoadDataGridPesagem()
         {
+            this.peso_MedioTableAdapter.Fill(this.fazendaSuinosDataSet.Peso_Medio);
+
             if (dataGridPesoMedio.Columns["Editar"] == null)
             {
                 // Define a coluna de Editar

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dateTimePickerData = new System.Windows.Forms.DateTimePicker();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtCodigoLote = new System.Windows.Forms.TextBox();
@@ -52,6 +52,12 @@
             this.btnFornecimento = new System.Windows.Forms.Button();
             this.btnConsumo = new System.Windows.Forms.Button();
             this.panelFornecimento = new System.Windows.Forms.Panel();
+            this.btnConsultarFornecedorForn = new System.Windows.Forms.Button();
+            this.dataGridViewFornecedor = new System.Windows.Forms.DataGridView();
+            this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
+            this.dtpValidadeRacao = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtCodFornecedorRacao = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtUnidadeRacao = new System.Windows.Forms.TextBox();
             this.btnConsultarProdutoForn = new System.Windows.Forms.Button();
@@ -76,18 +82,12 @@
             this.txtCodigoProdFRacao = new System.Windows.Forms.TextBox();
             this.panelBotoes = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtCodFornecedorRacao = new System.Windows.Forms.TextBox();
-            this.dtpValidadeRacao = new System.Windows.Forms.DateTimePicker();
-            this.dataGridViewProdutos = new System.Windows.Forms.DataGridView();
-            this.dataGridViewFornecedor = new System.Windows.Forms.DataGridView();
-            this.btnConsultarFornecedorForn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chartConsumo)).BeginInit();
             this.panelConsumo.SuspendLayout();
             this.panelFornecimento.SuspendLayout();
-            this.panelBotoes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFornecedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).BeginInit();
+            this.panelBotoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // dateTimePickerData
@@ -231,17 +231,17 @@
             // chartConsumo
             // 
             this.chartConsumo.BackColor = System.Drawing.SystemColors.MenuBar;
-            chartArea7.Name = "ChartArea1";
-            this.chartConsumo.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend3";
-            this.chartConsumo.Legends.Add(legend7);
+            chartArea2.Name = "ChartArea1";
+            this.chartConsumo.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend3";
+            this.chartConsumo.Legends.Add(legend2);
             this.chartConsumo.Location = new System.Drawing.Point(303, 319);
             this.chartConsumo.Name = "chartConsumo";
             this.chartConsumo.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend3";
-            series7.Name = "Consumo de Ração";
-            this.chartConsumo.Series.Add(series7);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend3";
+            series2.Name = "Consumo de Ração";
+            this.chartConsumo.Series.Add(series2);
             this.chartConsumo.Size = new System.Drawing.Size(618, 300);
             this.chartConsumo.TabIndex = 67;
             this.chartConsumo.Text = "Gráfico de Consumo";
@@ -303,7 +303,7 @@
             this.panelConsumo.Controls.Add(this.label7);
             this.panelConsumo.Controls.Add(this.txtDiaCiclo);
             this.panelConsumo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConsumo.Location = new System.Drawing.Point(0, 827);
+            this.panelConsumo.Location = new System.Drawing.Point(0, 150);
             this.panelConsumo.Margin = new System.Windows.Forms.Padding(2);
             this.panelConsumo.Name = "panelConsumo";
             this.panelConsumo.Size = new System.Drawing.Size(1327, 643);
@@ -369,11 +369,76 @@
             this.panelFornecimento.Controls.Add(this.label11);
             this.panelFornecimento.Controls.Add(this.txtCodigoProdFRacao);
             this.panelFornecimento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFornecimento.Location = new System.Drawing.Point(0, 187);
+            this.panelFornecimento.Location = new System.Drawing.Point(0, 793);
             this.panelFornecimento.Margin = new System.Windows.Forms.Padding(2);
             this.panelFornecimento.Name = "panelFornecimento";
             this.panelFornecimento.Size = new System.Drawing.Size(1327, 640);
             this.panelFornecimento.TabIndex = 72;
+            // 
+            // btnConsultarFornecedorForn
+            // 
+            this.btnConsultarFornecedorForn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnConsultarFornecedorForn.FlatAppearance.BorderSize = 0;
+            this.btnConsultarFornecedorForn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFornecedorForn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarFornecedorForn.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarFornecedorForn.Location = new System.Drawing.Point(978, 156);
+            this.btnConsultarFornecedorForn.Name = "btnConsultarFornecedorForn";
+            this.btnConsultarFornecedorForn.Size = new System.Drawing.Size(147, 22);
+            this.btnConsultarFornecedorForn.TabIndex = 97;
+            this.btnConsultarFornecedorForn.Text = "Consultar Fornecedor";
+            this.btnConsultarFornecedorForn.UseVisualStyleBackColor = false;
+            this.btnConsultarFornecedorForn.Click += new System.EventHandler(this.btnConsultarFornecedorForn_Click_1);
+            // 
+            // dataGridViewFornecedor
+            // 
+            this.dataGridViewFornecedor.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewFornecedor.Location = new System.Drawing.Point(191, 365);
+            this.dataGridViewFornecedor.Name = "dataGridViewFornecedor";
+            this.dataGridViewFornecedor.Size = new System.Drawing.Size(454, 150);
+            this.dataGridViewFornecedor.TabIndex = 96;
+            this.dataGridViewFornecedor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFornecedor_CellClick);
+            // 
+            // dataGridViewProdutos
+            // 
+            this.dataGridViewProdutos.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewProdutos.Location = new System.Drawing.Point(660, 365);
+            this.dataGridViewProdutos.Name = "dataGridViewProdutos";
+            this.dataGridViewProdutos.Size = new System.Drawing.Size(465, 150);
+            this.dataGridViewProdutos.TabIndex = 95;
+            this.dataGridViewProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdutos_CellClick);
+            this.dataGridViewProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // dtpValidadeRacao
+            // 
+            this.dtpValidadeRacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpValidadeRacao.Location = new System.Drawing.Point(589, 220);
+            this.dtpValidadeRacao.Name = "dtpValidadeRacao";
+            this.dtpValidadeRacao.Size = new System.Drawing.Size(100, 20);
+            this.dtpValidadeRacao.TabIndex = 94;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label10.Location = new System.Drawing.Point(856, 131);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(167, 20);
+            this.label10.TabIndex = 92;
+            this.label10.Text = "Código do Fornecedor";
+            // 
+            // txtCodFornecedorRacao
+            // 
+            this.txtCodFornecedorRacao.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodFornecedorRacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodFornecedorRacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCodFornecedorRacao.Location = new System.Drawing.Point(860, 156);
+            this.txtCodFornecedorRacao.Name = "txtCodFornecedorRacao";
+            this.txtCodFornecedorRacao.Size = new System.Drawing.Size(99, 19);
+            this.txtCodFornecedorRacao.TabIndex = 91;
             // 
             // label17
             // 
@@ -631,7 +696,7 @@
             this.panelBotoes.Location = new System.Drawing.Point(0, 0);
             this.panelBotoes.Margin = new System.Windows.Forms.Padding(2);
             this.panelBotoes.Name = "panelBotoes";
-            this.panelBotoes.Size = new System.Drawing.Size(1327, 187);
+            this.panelBotoes.Size = new System.Drawing.Size(1327, 150);
             this.panelBotoes.TabIndex = 74;
             // 
             // contextMenuStrip1
@@ -639,79 +704,14 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label10.Location = new System.Drawing.Point(856, 131);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(167, 20);
-            this.label10.TabIndex = 92;
-            this.label10.Text = "Código do Fornecedor";
-            // 
-            // txtCodFornecedorRacao
-            // 
-            this.txtCodFornecedorRacao.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtCodFornecedorRacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCodFornecedorRacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCodFornecedorRacao.Location = new System.Drawing.Point(860, 156);
-            this.txtCodFornecedorRacao.Name = "txtCodFornecedorRacao";
-            this.txtCodFornecedorRacao.Size = new System.Drawing.Size(99, 19);
-            this.txtCodFornecedorRacao.TabIndex = 91;
-            // 
-            // dtpValidadeRacao
-            // 
-            this.dtpValidadeRacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpValidadeRacao.Location = new System.Drawing.Point(589, 220);
-            this.dtpValidadeRacao.Name = "dtpValidadeRacao";
-            this.dtpValidadeRacao.Size = new System.Drawing.Size(100, 20);
-            this.dtpValidadeRacao.TabIndex = 94;
-            // 
-            // dataGridViewProdutos
-            // 
-            this.dataGridViewProdutos.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProdutos.Location = new System.Drawing.Point(660, 365);
-            this.dataGridViewProdutos.Name = "dataGridViewProdutos";
-            this.dataGridViewProdutos.Size = new System.Drawing.Size(465, 150);
-            this.dataGridViewProdutos.TabIndex = 95;
-            this.dataGridViewProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdutos_CellClick);
-            this.dataGridViewProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // dataGridViewFornecedor
-            // 
-            this.dataGridViewFornecedor.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewFornecedor.Location = new System.Drawing.Point(191, 365);
-            this.dataGridViewFornecedor.Name = "dataGridViewFornecedor";
-            this.dataGridViewFornecedor.Size = new System.Drawing.Size(454, 150);
-            this.dataGridViewFornecedor.TabIndex = 96;
-            this.dataGridViewFornecedor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFornecedor_CellClick);
-            // 
-            // btnConsultarFornecedorForn
-            // 
-            this.btnConsultarFornecedorForn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnConsultarFornecedorForn.FlatAppearance.BorderSize = 0;
-            this.btnConsultarFornecedorForn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarFornecedorForn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarFornecedorForn.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarFornecedorForn.Location = new System.Drawing.Point(978, 156);
-            this.btnConsultarFornecedorForn.Name = "btnConsultarFornecedorForn";
-            this.btnConsultarFornecedorForn.Size = new System.Drawing.Size(147, 22);
-            this.btnConsultarFornecedorForn.TabIndex = 97;
-            this.btnConsultarFornecedorForn.Text = "Consultar Fornecedor";
-            this.btnConsultarFornecedorForn.UseVisualStyleBackColor = false;
-            this.btnConsultarFornecedorForn.Click += new System.EventHandler(this.btnConsultarFornecedorForn_Click_1);
-            // 
             // FormConsumo_Racao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1327, 749);
-            this.Controls.Add(this.panelConsumo);
             this.Controls.Add(this.panelFornecimento);
+            this.Controls.Add(this.panelConsumo);
             this.Controls.Add(this.panelBotoes);
             this.Name = "FormConsumo_Racao";
             this.Text = "FormConsumo_Racao";
@@ -720,9 +720,9 @@
             this.panelConsumo.PerformLayout();
             this.panelFornecimento.ResumeLayout(false);
             this.panelFornecimento.PerformLayout();
-            this.panelBotoes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewFornecedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProdutos)).EndInit();
+            this.panelBotoes.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
