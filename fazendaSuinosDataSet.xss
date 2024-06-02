@@ -9,7 +9,7 @@
     <Shape ID="DesignTable:Acoes_Corretivas" ZOrder="64" X="607" Y="872" Height="191" Width="243" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="140" />
     <Shape ID="DesignTable:Consumo_Racao" ZOrder="63" X="310" Y="70" Height="153" Width="239" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="102" />
     <Shape ID="DesignTable:Controle_Mortalidade" ZOrder="62" X="310" Y="592" Height="210" Width="271" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
-    <Shape ID="DesignTable:Controle_Vacinacao" ZOrder="61" X="310" Y="312" Height="210" Width="258" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="159" />
+    <Shape ID="DesignTable:Controle_Vacinacao" ZOrder="61" X="310" Y="312" Height="250" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="191" />
     <Shape ID="DesignTable:CorrecoesLote" ZOrder="60" X="310" Y="872" Height="115" Width="227" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:CorrecoesPocilga" ZOrder="59" X="920" Y="1114" Height="115" Width="244" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:CorrecoesProdutor" ZOrder="58" X="920" Y="1299" Height="115" Width="254" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
@@ -306,7 +306,7 @@
     <Connector ID="DesignRelation:FK_QuantidadeMedicamento_CodPrescricao" ZOrder="23" LineWidth="11">
       <RoutePoints>
         <Point>
-          <X>568</X>
+          <X>610</X>
           <Y>398</Y>
         </Point>
         <Point>

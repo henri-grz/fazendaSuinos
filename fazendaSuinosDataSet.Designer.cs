@@ -2444,8 +2444,6 @@ namespace fazendaSuinos {
             
             private global::System.Data.DataColumn columnCodPrescricao;
             
-            private global::System.Data.DataColumn columnMotivo;
-            
             private global::System.Data.DataColumn columnData_Inicial;
             
             private global::System.Data.DataColumn columnDias_Uso;
@@ -2455,6 +2453,8 @@ namespace fazendaSuinos {
             private global::System.Data.DataColumn columnObservacao;
             
             private global::System.Data.DataColumn columnCodLote;
+            
+            private global::System.Data.DataColumn columnMedicacao;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -2494,14 +2494,6 @@ namespace fazendaSuinos {
             public global::System.Data.DataColumn CodPrescricaoColumn {
                 get {
                     return this.columnCodPrescricao;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MotivoColumn {
-                get {
-                    return this.columnMotivo;
                 }
             }
             
@@ -2547,6 +2539,14 @@ namespace fazendaSuinos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MedicacaoColumn {
+                get {
+                    return this.columnMedicacao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2582,18 +2582,18 @@ namespace fazendaSuinos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Controle_VacinacaoRow AddControle_VacinacaoRow(string Motivo, System.DateTime Data_Inicial, int Dias_Uso, int Dias_Carencia, string Observacao, LoteRow parentLoteRowByFK_Controle_Vacinacao_CodLote) {
+            public Controle_VacinacaoRow AddControle_VacinacaoRow(System.DateTime Data_Inicial, int Dias_Uso, int Dias_Carencia, string Observacao, LoteRow parentLoteRowByFK_Controle_Vacinacao_CodLote, string Medicacao) {
                 Controle_VacinacaoRow rowControle_VacinacaoRow = ((Controle_VacinacaoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Motivo,
                         Data_Inicial,
                         Dias_Uso,
                         Dias_Carencia,
                         Observacao,
-                        null};
+                        null,
+                        Medicacao};
                 if ((parentLoteRowByFK_Controle_Vacinacao_CodLote != null)) {
-                    columnValuesArray[6] = parentLoteRowByFK_Controle_Vacinacao_CodLote[0];
+                    columnValuesArray[5] = parentLoteRowByFK_Controle_Vacinacao_CodLote[0];
                 }
                 rowControle_VacinacaoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowControle_VacinacaoRow);
@@ -2625,12 +2625,12 @@ namespace fazendaSuinos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnCodPrescricao = base.Columns["CodPrescricao"];
-                this.columnMotivo = base.Columns["Motivo"];
                 this.columnData_Inicial = base.Columns["Data_Inicial"];
                 this.columnDias_Uso = base.Columns["Dias_Uso"];
                 this.columnDias_Carencia = base.Columns["Dias_Carencia"];
                 this.columnObservacao = base.Columns["Observacao"];
                 this.columnCodLote = base.Columns["CodLote"];
+                this.columnMedicacao = base.Columns["Medicacao"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2638,8 +2638,6 @@ namespace fazendaSuinos {
             private void InitClass() {
                 this.columnCodPrescricao = new global::System.Data.DataColumn("CodPrescricao", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCodPrescricao);
-                this.columnMotivo = new global::System.Data.DataColumn("Motivo", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMotivo);
                 this.columnData_Inicial = new global::System.Data.DataColumn("Data_Inicial", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData_Inicial);
                 this.columnDias_Uso = new global::System.Data.DataColumn("Dias_Uso", typeof(int), null, global::System.Data.MappingType.Element);
@@ -2650,6 +2648,8 @@ namespace fazendaSuinos {
                 base.Columns.Add(this.columnObservacao);
                 this.columnCodLote = new global::System.Data.DataColumn("CodLote", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCodLote);
+                this.columnMedicacao = new global::System.Data.DataColumn("Medicacao", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMedicacao);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCodPrescricao}, true));
                 this.columnCodPrescricao.AutoIncrement = true;
@@ -2658,8 +2658,8 @@ namespace fazendaSuinos {
                 this.columnCodPrescricao.AllowDBNull = false;
                 this.columnCodPrescricao.ReadOnly = true;
                 this.columnCodPrescricao.Unique = true;
-                this.columnMotivo.MaxLength = 100;
                 this.columnObservacao.MaxLength = 2147483647;
+                this.columnMedicacao.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10826,22 +10826,6 @@ namespace fazendaSuinos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Motivo {
-                get {
-                    try {
-                        return ((string)(this[this.tableControle_Vacinacao.MotivoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Motivo\' na tabela \'Controle_Vacinacao\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableControle_Vacinacao.MotivoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime Data_Inicial {
                 get {
                     try {
@@ -10922,6 +10906,22 @@ namespace fazendaSuinos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Medicacao {
+                get {
+                    try {
+                        return ((string)(this[this.tableControle_Vacinacao.MedicacaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Medicacao\' na tabela \'Controle_Vacinacao\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableControle_Vacinacao.MedicacaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public LoteRow LoteRow {
                 get {
                     return ((LoteRow)(this.GetParentRow(this.Table.ParentRelations["FK_Controle_Vacinacao_CodLote"])));
@@ -10929,18 +10929,6 @@ namespace fazendaSuinos {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Controle_Vacinacao_CodLote"]);
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsMotivoNull() {
-                return this.IsNull(this.tableControle_Vacinacao.MotivoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetMotivoNull() {
-                this[this.tableControle_Vacinacao.MotivoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11001,6 +10989,18 @@ namespace fazendaSuinos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetCodLoteNull() {
                 this[this.tableControle_Vacinacao.CodLoteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMedicacaoNull() {
+                return this.IsNull(this.tableControle_Vacinacao.MedicacaoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMedicacaoNull() {
+                this[this.tableControle_Vacinacao.MedicacaoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17333,20 +17333,18 @@ SELECT CodMortalidade, Data, Sexo, Peso, Causa_Mortis, Mossa, CodLote FROM Contr
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Controle_Vacinacao";
             tableMapping.ColumnMappings.Add("CodPrescricao", "CodPrescricao");
-            tableMapping.ColumnMappings.Add("Motivo", "Motivo");
             tableMapping.ColumnMappings.Add("Data_Inicial", "Data_Inicial");
             tableMapping.ColumnMappings.Add("Dias_Uso", "Dias_Uso");
             tableMapping.ColumnMappings.Add("Dias_Carencia", "Dias_Carencia");
             tableMapping.ColumnMappings.Add("Observacao", "Observacao");
             tableMapping.ColumnMappings.Add("CodLote", "CodLote");
+            tableMapping.ColumnMappings.Add("Medicacao", "Medicacao");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Controle_Vacinacao] WHERE (([CodPrescricao] = @Original_CodPrescricao) AND ((@IsNull_Motivo = 1 AND [Motivo] IS NULL) OR ([Motivo] = @Original_Motivo)) AND ((@IsNull_Data_Inicial = 1 AND [Data_Inicial] IS NULL) OR ([Data_Inicial] = @Original_Data_Inicial)) AND ((@IsNull_Dias_Uso = 1 AND [Dias_Uso] IS NULL) OR ([Dias_Uso] = @Original_Dias_Uso)) AND ((@IsNull_Dias_Carencia = 1 AND [Dias_Carencia] IS NULL) OR ([Dias_Carencia] = @Original_Dias_Carencia)) AND ((@IsNull_CodLote = 1 AND [CodLote] IS NULL) OR ([CodLote] = @Original_CodLote)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Controle_Vacinacao] WHERE (([CodPrescricao] = @Original_CodPrescricao) AND ((@IsNull_Data_Inicial = 1 AND [Data_Inicial] IS NULL) OR ([Data_Inicial] = @Original_Data_Inicial)) AND ((@IsNull_Dias_Uso = 1 AND [Dias_Uso] IS NULL) OR ([Dias_Uso] = @Original_Dias_Uso)) AND ((@IsNull_Dias_Carencia = 1 AND [Dias_Carencia] IS NULL) OR ([Dias_Carencia] = @Original_Dias_Carencia)) AND ((@IsNull_CodLote = 1 AND [CodLote] IS NULL) OR ([CodLote] = @Original_CodLote)) AND ((@IsNull_Medicacao = 1 AND [Medicacao] IS NULL) OR ([Medicacao] = @Original_Medicacao)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodPrescricao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodPrescricao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Motivo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Motivo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data_Inicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Inicial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Inicial", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Inicial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Dias_Uso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dias_Uso", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -17355,31 +17353,31 @@ SELECT CodMortalidade, Data, Sexo, Peso, Causa_Mortis, Mossa, CodLote FROM Contr
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Dias_Carencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dias_Carencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CodLote", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodLote", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodLote", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodLote", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Medicacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicacao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Medicacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Controle_Vacinacao] ([Motivo], [Data_Inicial], [Dias_Uso], [Dias_Carencia], [Observacao], [CodLote]) VALUES (@Motivo, @Data_Inicial, @Dias_Uso, @Dias_Carencia, @Observacao, @CodLote);
-SELECT CodPrescricao, Motivo, Data_Inicial, Dias_Uso, Dias_Carencia, Observacao, CodLote FROM Controle_Vacinacao WHERE (CodPrescricao = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Controle_Vacinacao] ([Data_Inicial], [Dias_Uso], [Dias_Carencia], [Observacao], [CodLote], [Medicacao]) VALUES (@Data_Inicial, @Dias_Uso, @Dias_Carencia, @Observacao, @CodLote, @Medicacao);
+SELECT CodPrescricao, Data_Inicial, Dias_Uso, Dias_Carencia, Observacao, CodLote, Medicacao FROM Controle_Vacinacao WHERE (CodPrescricao = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Motivo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Inicial", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Inicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dias_Uso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dias_Uso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dias_Carencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dias_Carencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Observacao", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Observacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodLote", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodLote", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Medicacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Controle_Vacinacao] SET [Motivo] = @Motivo, [Data_Inicial] = @Data_Inicial, [Dias_Uso] = @Dias_Uso, [Dias_Carencia] = @Dias_Carencia, [Observacao] = @Observacao, [CodLote] = @CodLote WHERE (([CodPrescricao] = @Original_CodPrescricao) AND ((@IsNull_Motivo = 1 AND [Motivo] IS NULL) OR ([Motivo] = @Original_Motivo)) AND ((@IsNull_Data_Inicial = 1 AND [Data_Inicial] IS NULL) OR ([Data_Inicial] = @Original_Data_Inicial)) AND ((@IsNull_Dias_Uso = 1 AND [Dias_Uso] IS NULL) OR ([Dias_Uso] = @Original_Dias_Uso)) AND ((@IsNull_Dias_Carencia = 1 AND [Dias_Carencia] IS NULL) OR ([Dias_Carencia] = @Original_Dias_Carencia)) AND ((@IsNull_CodLote = 1 AND [CodLote] IS NULL) OR ([CodLote] = @Original_CodLote)));
-SELECT CodPrescricao, Motivo, Data_Inicial, Dias_Uso, Dias_Carencia, Observacao, CodLote FROM Controle_Vacinacao WHERE (CodPrescricao = @CodPrescricao)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Controle_Vacinacao] SET [Data_Inicial] = @Data_Inicial, [Dias_Uso] = @Dias_Uso, [Dias_Carencia] = @Dias_Carencia, [Observacao] = @Observacao, [CodLote] = @CodLote, [Medicacao] = @Medicacao WHERE (([CodPrescricao] = @Original_CodPrescricao) AND ((@IsNull_Data_Inicial = 1 AND [Data_Inicial] IS NULL) OR ([Data_Inicial] = @Original_Data_Inicial)) AND ((@IsNull_Dias_Uso = 1 AND [Dias_Uso] IS NULL) OR ([Dias_Uso] = @Original_Dias_Uso)) AND ((@IsNull_Dias_Carencia = 1 AND [Dias_Carencia] IS NULL) OR ([Dias_Carencia] = @Original_Dias_Carencia)) AND ((@IsNull_CodLote = 1 AND [CodLote] IS NULL) OR ([CodLote] = @Original_CodLote)) AND ((@IsNull_Medicacao = 1 AND [Medicacao] IS NULL) OR ([Medicacao] = @Original_Medicacao)));
+SELECT CodPrescricao, Data_Inicial, Dias_Uso, Dias_Carencia, Observacao, CodLote, Medicacao FROM Controle_Vacinacao WHERE (CodPrescricao = @CodPrescricao)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Motivo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Inicial", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Inicial", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dias_Uso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dias_Uso", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dias_Carencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dias_Carencia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Observacao", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Observacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodLote", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodLote", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Medicacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodPrescricao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodPrescricao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Motivo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Motivo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Motivo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data_Inicial", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Inicial", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Inicial", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Inicial", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Dias_Uso", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dias_Uso", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -17388,6 +17386,8 @@ SELECT CodPrescricao, Motivo, Data_Inicial, Dias_Uso, Dias_Carencia, Observacao,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Dias_Carencia", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dias_Carencia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CodLote", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodLote", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodLote", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodLote", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Medicacao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicacao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Medicacao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Medicacao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodPrescricao", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CodPrescricao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -17404,8 +17404,8 @@ SELECT CodPrescricao, Motivo, Data_Inicial, Dias_Uso, Dias_Carencia, Observacao,
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CodPrescricao, Motivo, Data_Inicial, Dias_Uso, Dias_Carencia, Observacao, " +
-                "CodLote FROM dbo.Controle_Vacinacao";
+            this._commandCollection[0].CommandText = "SELECT CodPrescricao, Data_Inicial, Dias_Uso, Dias_Carencia, Observacao, CodLote," +
+                " Medicacao FROM Controle_Vacinacao";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -17466,47 +17466,47 @@ SELECT CodPrescricao, Motivo, Data_Inicial, Dias_Uso, Dias_Carencia, Observacao,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_CodPrescricao, string Original_Motivo, global::System.Nullable<global::System.DateTime> Original_Data_Inicial, global::System.Nullable<int> Original_Dias_Uso, global::System.Nullable<int> Original_Dias_Carencia, global::System.Nullable<int> Original_CodLote) {
+        public virtual int Delete(int Original_CodPrescricao, global::System.Nullable<global::System.DateTime> Original_Data_Inicial, global::System.Nullable<int> Original_Dias_Uso, global::System.Nullable<int> Original_Dias_Carencia, global::System.Nullable<int> Original_CodLote, string Original_Medicacao) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CodPrescricao));
-            if ((Original_Motivo == null)) {
+            if ((Original_Data_Inicial.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_Data_Inicial.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Motivo));
-            }
-            if ((Original_Data_Inicial.HasValue == true)) {
+            if ((Original_Dias_Uso.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_Data_Inicial.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Dias_Uso.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_Dias_Uso.HasValue == true)) {
+            if ((Original_Dias_Carencia.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Dias_Uso.Value));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_Dias_Carencia.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_Dias_Carencia.HasValue == true)) {
+            if ((Original_CodLote.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_Dias_Carencia.Value));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_CodLote.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_CodLote.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_CodLote.Value));
-            }
-            else {
+            if ((Original_Medicacao == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Medicacao));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -17528,42 +17528,42 @@ SELECT CodPrescricao, Motivo, Data_Inicial, Dias_Uso, Dias_Carencia, Observacao,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Motivo, global::System.Nullable<global::System.DateTime> Data_Inicial, global::System.Nullable<int> Dias_Uso, global::System.Nullable<int> Dias_Carencia, string Observacao, global::System.Nullable<int> CodLote) {
-            if ((Motivo == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Insert(global::System.Nullable<global::System.DateTime> Data_Inicial, global::System.Nullable<int> Dias_Uso, global::System.Nullable<int> Dias_Carencia, string Observacao, global::System.Nullable<int> CodLote, string Medicacao) {
+            if ((Data_Inicial.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Data_Inicial.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Motivo));
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Data_Inicial.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(Data_Inicial.Value));
+            if ((Dias_Uso.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Dias_Uso.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((Dias_Uso.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Dias_Uso.Value));
+            if ((Dias_Carencia.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Dias_Carencia.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Dias_Carencia.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Dias_Carencia.Value));
-            }
-            else {
+            if ((Observacao == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Observacao == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Observacao));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Observacao));
             }
             if ((CodLote.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(CodLote.Value));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(CodLote.Value));
             }
             else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Medicacao == null)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Medicacao));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -17585,83 +17585,83 @@ SELECT CodPrescricao, Motivo, Data_Inicial, Dias_Uso, Dias_Carencia, Observacao,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Motivo, global::System.Nullable<global::System.DateTime> Data_Inicial, global::System.Nullable<int> Dias_Uso, global::System.Nullable<int> Dias_Carencia, string Observacao, global::System.Nullable<int> CodLote, int Original_CodPrescricao, string Original_Motivo, global::System.Nullable<global::System.DateTime> Original_Data_Inicial, global::System.Nullable<int> Original_Dias_Uso, global::System.Nullable<int> Original_Dias_Carencia, global::System.Nullable<int> Original_CodLote, int CodPrescricao) {
-            if ((Motivo == null)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+        public virtual int Update(global::System.Nullable<global::System.DateTime> Data_Inicial, global::System.Nullable<int> Dias_Uso, global::System.Nullable<int> Dias_Carencia, string Observacao, global::System.Nullable<int> CodLote, string Medicacao, int Original_CodPrescricao, global::System.Nullable<global::System.DateTime> Original_Data_Inicial, global::System.Nullable<int> Original_Dias_Uso, global::System.Nullable<int> Original_Dias_Carencia, global::System.Nullable<int> Original_CodLote, string Original_Medicacao, int CodPrescricao) {
+            if ((Data_Inicial.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Data_Inicial.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Motivo));
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((Data_Inicial.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(Data_Inicial.Value));
+            if ((Dias_Uso.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Dias_Uso.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((Dias_Uso.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Dias_Uso.Value));
+            if ((Dias_Carencia.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Dias_Carencia.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Dias_Carencia.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Dias_Carencia.Value));
-            }
-            else {
+            if ((Observacao == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Observacao == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Observacao));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Observacao));
             }
             if ((CodLote.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(CodLote.Value));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(CodLote.Value));
             }
             else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Medicacao == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Medicacao));
+            }
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_CodPrescricao));
-            if ((Original_Motivo == null)) {
+            if ((Original_Data_Inicial.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_Data_Inicial.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Motivo));
-            }
-            if ((Original_Data_Inicial.HasValue == true)) {
+            if ((Original_Dias_Uso.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_Data_Inicial.Value));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Dias_Uso.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Original_Dias_Uso.HasValue == true)) {
+            if ((Original_Dias_Carencia.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Dias_Uso.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Dias_Carencia.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Original_Dias_Carencia.HasValue == true)) {
+            if ((Original_CodLote.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_Dias_Carencia.Value));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_CodLote.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_CodLote.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_CodLote.Value));
-            }
-            else {
+            if ((Original_Medicacao == null)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_Medicacao));
             }
             this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(CodPrescricao));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
@@ -17684,8 +17684,8 @@ SELECT CodPrescricao, Motivo, Data_Inicial, Dias_Uso, Dias_Carencia, Observacao,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Motivo, global::System.Nullable<global::System.DateTime> Data_Inicial, global::System.Nullable<int> Dias_Uso, global::System.Nullable<int> Dias_Carencia, string Observacao, global::System.Nullable<int> CodLote, int Original_CodPrescricao, string Original_Motivo, global::System.Nullable<global::System.DateTime> Original_Data_Inicial, global::System.Nullable<int> Original_Dias_Uso, global::System.Nullable<int> Original_Dias_Carencia, global::System.Nullable<int> Original_CodLote) {
-            return this.Update(Motivo, Data_Inicial, Dias_Uso, Dias_Carencia, Observacao, CodLote, Original_CodPrescricao, Original_Motivo, Original_Data_Inicial, Original_Dias_Uso, Original_Dias_Carencia, Original_CodLote, Original_CodPrescricao);
+        public virtual int Update(global::System.Nullable<global::System.DateTime> Data_Inicial, global::System.Nullable<int> Dias_Uso, global::System.Nullable<int> Dias_Carencia, string Observacao, global::System.Nullable<int> CodLote, string Medicacao, int Original_CodPrescricao, global::System.Nullable<global::System.DateTime> Original_Data_Inicial, global::System.Nullable<int> Original_Dias_Uso, global::System.Nullable<int> Original_Dias_Carencia, global::System.Nullable<int> Original_CodLote, string Original_Medicacao) {
+            return this.Update(Data_Inicial, Dias_Uso, Dias_Carencia, Observacao, CodLote, Medicacao, Original_CodPrescricao, Original_Data_Inicial, Original_Dias_Uso, Original_Dias_Carencia, Original_CodLote, Original_Medicacao, Original_CodPrescricao);
         }
     }
     

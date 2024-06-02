@@ -16,6 +16,431 @@ namespace fazendaSuinos
             panelFornecimento.Visible = false;
             panelConsumo.Visible = true;
             ResumeLayout();
+
+            LoadDataGridConsumo();
+        }
+
+        private void btnConsumo_Click(object sender, EventArgs e)
+        {
+            SuspendLayout();
+            panelFornecimento.Visible = false;
+            panelConsumo.Visible = true;
+            ResumeLayout();
+        }
+
+        private void btnFornecimento_Click(object sender, EventArgs e)
+        {
+            SuspendLayout();
+            panelConsumo.Visible = false;
+            panelFornecimento.Visible = true;
+            LoadDataGridFornecimento();
+            ResumeLayout();
+        }
+
+        private void FormMedicacao_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'fazendaSuinosDataSet.Controle_Vacinacao'. Você pode movê-la ou removê-la conforme necessário.
+            this.controle_VacinacaoTableAdapter.Fill(this.fazendaSuinosDataSet.Controle_Vacinacao);
+            this.fornecimentoMedicamentoTableAdapter.Fill(this.fazendaSuinosDataSet.FornecimentoMedicamento);
+
+        }
+
+
+        //FORMULARIO CONSUMO
+
+        private void txtCodConsumo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodConsumo.Text == "")
+            {
+                btnIncluir.Visible = true;
+                btnGravar.Visible = false;
+            }
+            else
+            {
+                btnIncluir.Visible = false;
+                btnGravar.Visible = true;
+            }
+        }
+
+        private void btnConsultarCodigoLote_Click(object sender, EventArgs e)
+        {
+            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
+            formAux.LoadLote();
+            formAux.setVisiblepcbMedicamentos(false);
+            formAux.setVisibledataGridLote(true);
+            formAux.setVisibledataGridProduto(false);
+            formAux.setVisibledataGridFornecedor(false);
+            formAux.ShowDialog();
+        }
+
+        private void btnConsultarCarencia_Click(object sender, EventArgs e)
+        {
+            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
+            formAux.setVisiblepcbMedicamentos(true);
+            formAux.setVisibledataGridLote(false);
+            formAux.setVisibledataGridProduto(false);
+            formAux.setVisibledataGridFornecedor(false);
+            formAux.ShowDialog();
+        }
+
+        
+        //FORMULARIO FORNECIMENTO
+
+        private void btnConsultarLoteForn_Click(object sender, EventArgs e)
+        {
+            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
+            formAux.LoadLote();
+            formAux.setVisiblepcbMedicamentos(false);
+            formAux.setVisibledataGridLote(true);
+            formAux.setVisibledataGridProduto(false);
+            formAux.setVisibledataGridFornecedor(false);
+            formAux.ShowDialog();
+        }
+
+        private void btnConsultarProdutoForn_Click(object sender, EventArgs e)
+        {
+            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
+            formAux.LoadProduto();
+            formAux.setVisiblepcbMedicamentos(false);
+            formAux.setVisibledataGridLote(false);
+            formAux.setVisibledataGridProduto(true);
+            formAux.setVisibledataGridFornecedor(false);
+            formAux.ShowDialog();
+        }
+
+        private void btnConsultarFornecedorForn_Click(object sender, EventArgs e)
+        {
+            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
+            formAux.LoadFornecedor();
+            formAux.setVisiblepcbMedicamentos(false);
+            formAux.setVisibledataGridLote(false);
+            formAux.setVisibledataGridProduto(false);
+            formAux.setVisibledataGridFornecedor(true);
+            formAux.ShowDialog();
+        }
+
+
+        //CONSUMO
+
+        private void LoadDataGridConsumo()
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string querySelecao = "SELECT * FROM Controle_Vacinacao";
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
+
+                    // Cria um DataTable para armazenar os resultados
+                    DataTable dataTable = new DataTable();
+
+                    // Preenche o DataTable com os resultados da consulta
+                    adapter.Fill(dataTable);
+
+                    // Define o DataTable como a fonte de dados do DataGridView
+                    dataGridConsumo.DataSource = dataTable;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao consultar registros: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            if (dataGridConsumo.Columns["Editar"] == null)
+            {
+                // Define a coluna de Editar
+                DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn();
+                btnColumn.Name = "Editar";
+                btnColumn.HeaderText = "";
+                btnColumn.Text = "Editar";
+                btnColumn.Width = 80;
+                btnColumn.UseColumnTextForButtonValue = true;
+
+                dataGridConsumo.Columns.Add(btnColumn);
+            }
+            if (dataGridConsumo.Columns["Excluir"] == null)
+            {
+                // Define a coluna de Excluir
+                DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn();
+                btnColumn.Name = "Excluir";
+                btnColumn.HeaderText = "";
+                btnColumn.Text = "Excluir";
+                btnColumn.Width = 80;
+                btnColumn.UseColumnTextForButtonValue = true;
+
+                dataGridConsumo.Columns.Add(btnColumn);
+            }
+        }
+
+        private void dataGridConsumo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridConsumo.Columns["Excluir"].Index && e.RowIndex >= 0)
+            {
+                //Exibe mensagem de confirmação da exclusão
+                DialogResult result = MessageBox.Show("Confirma a exclusão do registro?.", "Atenção", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.OK)
+                {
+                    int codConsumo = Convert.ToInt32(dataGridConsumo.Rows[e.RowIndex].Cells[0].Value);
+
+                    try
+                    {
+                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        {
+                            connection.Open();
+
+                            string queryExclusao = "DELETE FROM Controle_Vacinacao WHERE CodPrescricao = " + codConsumo;
+
+                            SqlCommand command = new SqlCommand(queryExclusao, connection);
+
+                            // Executa o comando SQL
+                            command.ExecuteNonQuery();
+
+                            MessageBox.Show("Exclusão feita com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            LoadDataGridConsumo();
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao excluir registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+            }
+            if (e.ColumnIndex == dataGridConsumo.Columns["Editar"].Index && e.RowIndex >= 0)
+            {
+
+                /*label8.Visible = true;
+                txtCodMortalidade.Visible = true;
+                btnSalvar.Visible = true;
+                btn.Visible = false;*/
+
+                int codConsumo = Convert.ToInt32(dataGridConsumo.Rows[e.RowIndex].Cells[0].Value);
+
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        string queryConsulta = "SELECT * FROM Controle_Vacinacao WHERE CodPrescricao = " + codConsumo;
+
+                        SqlCommand command = new SqlCommand(queryConsulta, connection);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                txtCodConsumo.Text = reader["CodPrescricao"].ToString();
+                                txtMedicamento.Text = reader["Medicacao"].ToString();
+                                txtQntVac.Text = reader["Quantidade"].ToString();
+                                txtCodigoLote.Text = reader["CodLote"].ToString();
+                                dtpVacinacao.Text = Convert.ToDateTime(reader["Data_Inicial"]).ToString("dd/MM/yyyy");
+                                txtDiasUso.Text = reader["Dias_Uso"].ToString();
+                                txtDiasCarencia.Text = reader["Dias_Carencia"].ToString();
+                                txtObservacao.Text = reader["Observacao"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Nenhum registro encontrado");
+                            }
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao editar registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+            }
+        }
+
+        //INCLUIR CONSUMO
+
+        private void SalvarDados()
+        {
+            try
+            {
+                // Obtém os valores dos controles
+                string Medicacao = txtMedicamento.SelectedItem.ToString();
+                int Quantidade = Convert.ToInt32(txtQntVac.Text);
+                DateTime Data_Inicial = dtpVacinacao.Value;
+                int Dias_Uso = Convert.ToInt32(txtDiasUso.Text);
+                int Dias_Carencia = Convert.ToInt32(txtDiasCarencia.Text);
+                string Observacao = txtObservacao.Text;
+                int CodLote = Convert.ToInt32(txtCodigoLote.Text);
+
+                // Abre a conexão com o banco de dados
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Cria o comando SQL para inserir os dados na tabela
+                    string queryInsercao = "INSERT INTO Controle_Vacinacao (Medicacao,Quantidade,Data_Inicial,Dias_Uso,Dias_Carencia,Observacao,CodLote) VALUES (@Medicacao,@Quantidade,@Data_Inicial,@Dias_Uso,@Dias_Carencia,@Observacao,@CodLote)";
+                    SqlCommand command = new SqlCommand(queryInsercao, connection);
+
+                    // Adiciona os parâmetros ao comando SQL
+                    command.Parameters.AddWithValue("@Medicacao", Medicacao);
+                    command.Parameters.AddWithValue("@Quantidade", Quantidade);
+                    command.Parameters.AddWithValue("@Data_Inicial", Data_Inicial);
+                    command.Parameters.AddWithValue("@Dias_Uso", Dias_Uso);
+                    command.Parameters.AddWithValue("@Dias_Carencia", Dias_Carencia);
+                    command.Parameters.AddWithValue("@Observacao", Observacao);
+                    command.Parameters.AddWithValue("@CodLote", CodLote);
+
+                    // Executa o comando SQL
+                    command.ExecuteNonQuery();
+
+                    LoadDataGridConsumo();
+                    limparCamposConsumo();
+
+
+                    MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar dados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnIncluir_Click(object sender, EventArgs e)
+        {
+            SalvarDados();
+        }
+
+        //GRAVAR CONSUMO
+
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCodConsumo.Text))
+            {
+                MessageBox.Show("O código de consumo não pode estar vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                // Obtém os valores dos controles e faz as verificações necessárias
+                if (!int.TryParse(txtCodConsumo.Text, out int codConsumo))
+                {
+                    MessageBox.Show("Código de consumo inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string medicamento = txtMedicamento.Text;
+
+                if (!int.TryParse(txtQntVac.Text, out int quantVac))
+                {
+                    MessageBox.Show("Quantidade de vacinação inválida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(txtCodigoLote.Text, out int codLote))
+                {
+                    MessageBox.Show("Código do lote inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DateTime data = dtpVacinacao.Value;
+
+                if (!int.TryParse(txtDiasUso.Text, out int diasUso))
+                {
+                    MessageBox.Show("Dias de uso inválidos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(txtDiasCarencia.Text, out int diasCarencia))
+                {
+                    MessageBox.Show("Dias de carência inválidos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string observas = txtObservacao.Text;
+
+                // Abre a conexão com o banco de dados
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Cria o comando SQL para atualizar os dados na tabela
+                    string queryAtualizacao = @"
+                        UPDATE Controle_Vacinacao 
+                        SET Medicacao = @Medicamento, 
+                            Quantidade = @quantVac,
+                            Data_Inicial = @DataInicial,
+                            Dias_Uso = @DiasUso,
+                            Dias_Carencia = @DiasCarencia,
+                            Observacao = @Observas,
+                            CodLote = @CodLote
+                        WHERE CodPrescricao = @CodConsumo";
+
+                    SqlCommand command = new SqlCommand(queryAtualizacao, connection);
+
+                    // Adiciona os parâmetros ao comando SQL
+                    command.Parameters.AddWithValue("@Medicamento", medicamento);
+                    command.Parameters.AddWithValue("@quantVac", quantVac);
+                    command.Parameters.AddWithValue("@DataInicial", data);
+                    command.Parameters.AddWithValue("@DiasUso", diasUso);
+                    command.Parameters.AddWithValue("@DiasCarencia", diasCarencia);
+                    command.Parameters.AddWithValue("@Observas", observas);
+                    command.Parameters.AddWithValue("@CodLote", codLote);
+                    command.Parameters.AddWithValue("@CodConsumo", codConsumo);
+
+                    // Executa o comando SQL
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    LoadDataGridConsumo();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //LIMPAR CONSUMO
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            limparCamposConsumo();
+        }
+
+        private void limparCamposConsumo()
+        {
+            txtCodConsumo.Clear();
+            txtMedicamento.Text = "";
+            txtQntVac.Clear();
+            txtCodigoLote.Clear();
+            txtDiasUso.Clear();
+            txtDiasCarencia.Clear();
+            txtObservacao.Clear();
+        }
+
+        //FORNECIMENTO
+
+        private void txtCodFornecimento_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodFornecimento.Text == "")
+            {
+                btnIncluirForn.Visible = true;
+                btnSalvarForn.Visible = false;
+            }
+            else
+            {
+                btnIncluirForn.Visible = false;
+                btnSalvarForn.Visible = true;
+            }
         }
 
         private void LoadDataGridFornecimento()
@@ -161,106 +586,12 @@ namespace fazendaSuinos
             }
         }
 
-        private void SalvarDados()
+
+        //INCLUIR FORNECIMENTO
+
+        private void btnIncluirForn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Obtém os valores dos controles
-                string Medicacao = txtMedicamento.SelectedItem.ToString();
-                int Quantidade = Convert.ToInt32(txtQntVac.Text);
-                DateTime Data_Inicial = dtpVacinacao.Value;
-                int Dias_Uso = Convert.ToInt32(txtDiasUso.Text);
-                int Dias_Carencia = Convert.ToInt32(txtDiasCarencia.Text);
-                string Observacao = txtObservacao.Text;
-                int CodLote = Convert.ToInt32(txtCodigoLote.Text);
-
-                // Abre a conexão com o banco de dados
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-
-                    // Cria o comando SQL para inserir os dados na tabela
-                    string queryInsercao = "INSERT INTO Controle_Vacinacao (Medicacao,Quantidade,Data_Inicial,Dias_Uso,Dias_Carencia,Observacao,CodLote) VALUES (@Medicacao,@Quantidade,@Data_Inicial,@Dias_Uso,@Dias_Carencia,@Observacao,@CodLote)";
-                    SqlCommand command = new SqlCommand(queryInsercao, connection);
-
-                    // Adiciona os parâmetros ao comando SQL
-                    command.Parameters.AddWithValue("@Medicacao", Medicacao);
-                    command.Parameters.AddWithValue("@Quantidade", Quantidade);
-                    command.Parameters.AddWithValue("@Data_Inicial", Data_Inicial);
-                    command.Parameters.AddWithValue("@Dias_Uso", Dias_Uso);
-                    command.Parameters.AddWithValue("@Dias_Carencia", Dias_Carencia);
-                    command.Parameters.AddWithValue("@Observacao", Observacao);
-                    command.Parameters.AddWithValue("@CodLote", CodLote);
-
-                    // Executa o comando SQL
-                    command.ExecuteNonQuery();
-
-                    MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao salvar dados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnConsultarCodigoLote_Click(object sender, EventArgs e)
-        {
-            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
-            formAux.LoadLote();
-            formAux.setVisiblepcbMedicamentos(false);
-            formAux.setVisibledataGridLote(true);
-            formAux.setVisibledataGridProduto(false);
-            formAux.setVisibledataGridFornecedor(false);
-            formAux.ShowDialog();
-        }
-
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-            SalvarDados();
-        }
-
-        private void btnConsultarCarencia_Click(object sender, EventArgs e)
-        {
-            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
-            formAux.setVisiblepcbMedicamentos(true);
-            formAux.setVisibledataGridLote(false);
-            formAux.setVisibledataGridProduto(false);
-            formAux.setVisibledataGridFornecedor(false);
-            formAux.ShowDialog();
-        }
-
-        public void setCodigoLote(String codigo)
-        {
-            txtCodigoLote.Text = codigo;
-            txtCodigoloteFMed.Text = codigo;
-        }
-
-        public void setCodigoProduto(String codigo)
-        {
-            txtCodigoProdFMed.Text = codigo;
-        }
-
-        public void setCodigoFornecedor(String codigo)
-        {
-            txtCodFornecedorMed.Text = codigo;
-        }
-
-        private void btnConsumo_Click(object sender, EventArgs e)
-        {
-            SuspendLayout();
-            panelFornecimento.Visible = false;
-            panelConsumo.Visible = true;
-            ResumeLayout();
-        }
-
-        private void btnFornecimento_Click(object sender, EventArgs e)
-        {
-            SuspendLayout();
-            panelConsumo.Visible = false;
-            panelFornecimento.Visible = true;
-            LoadDataGridFornecimento();
-            ResumeLayout();
+            SalvarDadosFornMed();
         }
 
         private void SalvarDadosFornMed()
@@ -312,6 +643,7 @@ namespace fazendaSuinos
                     MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     LoadDataGridFornecimento();
+                    limparCamposFornecimento();
                 }
             }
             catch (Exception ex)
@@ -319,6 +651,8 @@ namespace fazendaSuinos
                 MessageBox.Show("Erro ao salvar dados: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        //GRAVAR FORNECIMENTO
 
         private void btnSalvarFornMed_Click(object sender, EventArgs e)
         {
@@ -394,40 +728,13 @@ namespace fazendaSuinos
             }
         }
 
-        private void btnConsultarLoteForn_Click(object sender, EventArgs e)
-        {
-            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
-            formAux.LoadLote();
-            formAux.setVisiblepcbMedicamentos(false);
-            formAux.setVisibledataGridLote(true);
-            formAux.setVisibledataGridProduto(false);
-            formAux.setVisibledataGridFornecedor(false);
-            formAux.ShowDialog();
-        }
-
-        private void btnConsultarProdutoForn_Click(object sender, EventArgs e)
-        {
-            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
-            formAux.LoadProduto();
-            formAux.setVisiblepcbMedicamentos(false);
-            formAux.setVisibledataGridLote(false);
-            formAux.setVisibledataGridProduto(true);
-            formAux.setVisibledataGridFornecedor(false);
-            formAux.ShowDialog();
-        }
-
-        private void btnConsultarFornecedorForn_Click(object sender, EventArgs e)
-        {
-            FormMedicacao_LoteCarencia formAux = new FormMedicacao_LoteCarencia(this);
-            formAux.LoadFornecedor();
-            formAux.setVisiblepcbMedicamentos(false);
-            formAux.setVisibledataGridLote(false);
-            formAux.setVisibledataGridProduto(false);
-            formAux.setVisibledataGridFornecedor(true);
-            formAux.ShowDialog();
-        }
-
+        //LIMPAR FORNECIMENTO
         private void btnLimparcampos_Click(object sender, EventArgs e)
+        {
+            limparCamposFornecimento();
+        }
+
+        private void limparCamposFornecimento()
         {
             txtCodFornecimento.Clear();
             txtCodigoloteFMed.Clear();
@@ -440,47 +747,25 @@ namespace fazendaSuinos
             txtProdutoMed.Clear();
         }
 
-        private void FormMedicacao_Load(object sender, EventArgs e)
-        {
-            this.fornecimentoMedicamentoTableAdapter.Fill(this.fazendaSuinosDataSet.FornecimentoMedicamento);
 
+        //GETTERS AND SETTERS
+
+        public void setCodigoLote(String codigo)
+        {
+            txtCodigoLote.Text = codigo;
+            txtCodigoloteFMed.Text = codigo;
         }
 
-        private void dataGridFornecimento_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        public void setCodigoProduto(String codigo)
         {
-            dataGridFornecimento.Columns[0].HeaderText = "Cód.";
-            dataGridFornecimento.Columns[0].Width = 60;
-            dataGridFornecimento.Columns[1].HeaderText = "Data";
-            dataGridFornecimento.Columns[2].HeaderText = "Produto";
-            dataGridFornecimento.Columns[6].HeaderText = "Quant.";
-            dataGridFornecimento.Columns[6].Width = 80;
-            dataGridFornecimento.Columns[7].HeaderText = "Un.";
-            dataGridFornecimento.Columns[7].Width = 50;
-            dataGridFornecimento.Columns[8].HeaderText = "Lote";
-            dataGridFornecimento.Columns[8].Width = 60;
-
-            dataGridFornecimento.Columns[9].Visible = false;
-            dataGridFornecimento.Columns[10].Visible = false;
-
+            txtCodigoProdFMed.Text = codigo;
         }
 
-        private void btnIncluirForn_Click(object sender, EventArgs e)
+        public void setCodigoFornecedor(String codigo)
         {
-            SalvarDadosFornMed();
+            txtCodFornecedorMed.Text = codigo;
         }
 
-        private void txtCodFornecimento_TextChanged(object sender, EventArgs e)
-        {
-            if (txtCodFornecimento.Text == "")
-            {
-                btnIncluirForn.Visible = true;
-                btnSalvarForn.Visible = false;
-            }
-            else
-            {
-                btnIncluirForn.Visible = false;
-                btnSalvarForn.Visible = true;
-            }
-        }
+        
     }
 }
