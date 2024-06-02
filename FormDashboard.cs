@@ -132,7 +132,6 @@ namespace fazendaSuinos
 
                     foreach (DataGridViewColumn column in dataGridAgenda.Columns)
                     {
-                        // Define a coluna de status como editável
                         column.ReadOnly = true;
                     }
 

@@ -148,6 +148,15 @@ namespace fazendaSuinos
         {
             object codigo = dataGridViewProdutos.Rows[e.RowIndex].Cells[0].Value;
 
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewProdutos.Rows[e.RowIndex];
+                _parentForm.txtProdutoMed.Text = row.Cells["Nome"].Value.ToString();
+                _parentForm.txtCategoriaMed.Text = row.Cells["Categoria"].Value.ToString();
+                _parentForm.txtTipoMed.Text = row.Cells["Tipo"].Value.ToString();
+                _parentForm.dtpValidadeMed.Value = Convert.ToDateTime(row.Cells["Validade"].Value);
+            }
+
             _parentForm.setCodigoProduto(codigo.ToString());
 
             this.Close();

@@ -40,23 +40,28 @@
             // 
             // dataGridViewLote
             // 
+            this.dataGridViewLote.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewLote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewLote.Location = new System.Drawing.Point(19, 62);
+            this.dataGridViewLote.Location = new System.Drawing.Point(25, 76);
+            this.dataGridViewLote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewLote.Name = "dataGridViewLote";
             this.dataGridViewLote.ReadOnly = true;
             this.dataGridViewLote.RowHeadersWidth = 51;
-            this.dataGridViewLote.Size = new System.Drawing.Size(598, 323);
+            this.dataGridViewLote.Size = new System.Drawing.Size(797, 398);
             this.dataGridViewLote.TabIndex = 65;
             this.dataGridViewLote.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewLote_CellDoubleClick);
             // 
             // dataGridViewProdutos
             // 
+            this.dataGridViewProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewProdutos.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProdutos.Location = new System.Drawing.Point(19, 62);
+            this.dataGridViewProdutos.Location = new System.Drawing.Point(25, 76);
+            this.dataGridViewProdutos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewProdutos.Name = "dataGridViewProdutos";
             this.dataGridViewProdutos.ReadOnly = true;
-            this.dataGridViewProdutos.Size = new System.Drawing.Size(598, 323);
+            this.dataGridViewProdutos.RowHeadersWidth = 51;
+            this.dataGridViewProdutos.Size = new System.Drawing.Size(797, 398);
             this.dataGridViewProdutos.TabIndex = 124;
             this.dataGridViewProdutos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProdutos_CellDoubleClick);
             // 
@@ -65,10 +70,12 @@
             this.dataGridViewFornecedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewFornecedor.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewFornecedor.Location = new System.Drawing.Point(19, 62);
+            this.dataGridViewFornecedor.Location = new System.Drawing.Point(25, 76);
+            this.dataGridViewFornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewFornecedor.Name = "dataGridViewFornecedor";
             this.dataGridViewFornecedor.ReadOnly = true;
-            this.dataGridViewFornecedor.Size = new System.Drawing.Size(598, 323);
+            this.dataGridViewFornecedor.RowHeadersWidth = 51;
+            this.dataGridViewFornecedor.Size = new System.Drawing.Size(797, 398);
             this.dataGridViewFornecedor.TabIndex = 125;
             this.dataGridViewFornecedor.Visible = false;
             this.dataGridViewFornecedor.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewFornecedor_CellDoubleClick);
@@ -78,24 +85,26 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 76);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(598, 323);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(797, 398);
             this.dataGridView1.TabIndex = 126;
             this.dataGridView1.Visible = false;
             // 
             // FormConsumo_Racao_Lote
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 447);
+            this.ClientSize = new System.Drawing.Size(847, 550);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dataGridViewFornecedor);
             this.Controls.Add(this.dataGridViewProdutos);
             this.Controls.Add(this.dataGridViewLote);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormConsumo_Racao_Lote";

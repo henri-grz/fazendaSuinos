@@ -13,9 +13,11 @@ namespace fazendaSuinos
 
         public FormMortalidade()
         {
+            SuspendLayout();
             InitializeComponent();
             loadDataGridMortalidade();
             dataGridMortalidade.CellContentClick += new DataGridViewCellEventHandler(dataGridMortalidade_CellContentClick);
+            ResumeLayout();
         }
 
         private void loadDataGridMortalidade()
@@ -169,6 +171,7 @@ namespace fazendaSuinos
         {
             loadDataGridMortalidade();
         }
+
         private void dataGridMortalidade_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataGridMortalidade.Columns["Excluir"].Index && e.RowIndex >= 0)
