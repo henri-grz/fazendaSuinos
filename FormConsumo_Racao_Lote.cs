@@ -75,11 +75,11 @@ namespace fazendaSuinos
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGridViewProdutos.Rows[e.RowIndex];
-                _parentForm.txtCodigoProdFRacao.Text = row.Cells["CodProduto"].Value.ToString();
-                _parentForm.txtProdutoRacao.Text = row.Cells["Nome"].Value.ToString();
-                _parentForm.txtCategoriaRacao.Text = row.Cells["Categoria"].Value.ToString();
-                _parentForm.txtTipoRacao.Text = row.Cells["Tipo"].Value.ToString();
-                _parentForm.dtpValidadeRacao.Value = Convert.ToDateTime(row.Cells["Validade"].Value);
+                _parentForm.txtCodProdForn.Text = row.Cells["CodProduto"].Value.ToString();
+                _parentForm.txtProdutoForn.Text = row.Cells["Nome"].Value.ToString();
+                _parentForm.txtCategoriaForn.Text = row.Cells["Categoria"].Value.ToString();
+                _parentForm.txtTipoForn.Text = row.Cells["Tipo"].Value.ToString();
+                _parentForm.dtpValidadeForn.Value = Convert.ToDateTime(row.Cells["Validade"].Value);
 
             }
 

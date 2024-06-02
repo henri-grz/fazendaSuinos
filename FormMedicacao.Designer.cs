@@ -412,9 +412,9 @@
             this.label9.Location = new System.Drawing.Point(376, 22);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(324, 29);
+            this.label9.Size = new System.Drawing.Size(294, 29);
             this.label9.TabIndex = 76;
-            this.label9.Text = "Consumo de medicamento";
+            this.label9.Text = "Consumo de Medicação";
             // 
             // panelConsumo
             // 
@@ -442,7 +442,7 @@
             this.panelConsumo.Controls.Add(this.btnConsultarCodigoLote);
             this.panelConsumo.Controls.Add(this.label5);
             this.panelConsumo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConsumo.Location = new System.Drawing.Point(0, 185);
+            this.panelConsumo.Location = new System.Drawing.Point(0, 1172);
             this.panelConsumo.Margin = new System.Windows.Forms.Padding(4);
             this.panelConsumo.Name = "panelConsumo";
             this.panelConsumo.Size = new System.Drawing.Size(1476, 980);
@@ -534,6 +534,7 @@
             this.dataInicialDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dataInicialDataGridViewTextBoxColumn.Name = "dataInicialDataGridViewTextBoxColumn";
             this.dataInicialDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataInicialDataGridViewTextBoxColumn.Width = 125;
             // 
             // diasUsoDataGridViewTextBoxColumn
             // 
@@ -620,7 +621,7 @@
             this.panelFornecimento.Controls.Add(this.label19);
             this.panelFornecimento.Controls.Add(this.txtCodigoProdFMed);
             this.panelFornecimento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFornecimento.Location = new System.Drawing.Point(0, 1165);
+            this.panelFornecimento.Location = new System.Drawing.Point(0, 185);
             this.panelFornecimento.Margin = new System.Windows.Forms.Padding(4);
             this.panelFornecimento.Name = "panelFornecimento";
             this.panelFornecimento.Size = new System.Drawing.Size(1476, 987);
@@ -1128,8 +1129,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1497, 922);
-            this.Controls.Add(this.panelFornecimento);
             this.Controls.Add(this.panelConsumo);
+            this.Controls.Add(this.panelFornecimento);
             this.Controls.Add(this.panelBotoes);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMedicacao";
