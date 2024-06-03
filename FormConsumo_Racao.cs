@@ -20,12 +20,12 @@ namespace fazendaSuinos
         public FormConsumo_Racao()
         {
             InitializeComponent();
-            fillComboCodLote();
-
             SuspendLayout();
             panelFornecimento.Visible = false;
             panelConsumo.Visible = true;
             ResumeLayout();
+
+            LoadDataGridConsumo();
         }
 
         private void btnConsumo_Click(object sender, EventArgs e)
@@ -48,6 +48,10 @@ namespace fazendaSuinos
 
         private void FormConsumo_Racao_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'fazendaSuinosDataSet.Consumo_Racao'. Você pode movê-la ou removê-la conforme necessário.
+            this.consumo_RacaoTableAdapter.Fill(this.fazendaSuinosDataSet.Consumo_Racao);
+            // TODO: esta linha de código carrega dados na tabela 'fazendaSuinosDataSet.Consumo_Racao'. Você pode movê-la ou removê-la conforme necessário.
+            this.consumo_RacaoTableAdapter.Fill(this.fazendaSuinosDataSet.Consumo_Racao);
             // TODO: esta linha de código carrega dados na tabela 'fazendaSuinosDataSet.FornecimentoRacao'. Você pode movê-la ou removê-la conforme necessário.
             this.fornecimentoRacaoTableAdapter.Fill(this.fazendaSuinosDataSet.FornecimentoRacao);
 
@@ -66,6 +70,161 @@ namespace fazendaSuinos
             formAux.ShowDialog();
         }
 
+        private void txtCodConsumo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCodConsumo.Text == "")
+            {
+                btnIncluir.Visible = true;
+                btnGravar.Visible = false;
+            }
+            else
+            {
+                btnIncluir.Visible = false;
+                btnGravar.Visible = true;
+            }
+        }
+
+
+
+        //DATAGRID CONSUMO
+
+        private void LoadDataGridConsumo()
+        {
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string querySelecao = "SELECT * FROM Consumo_Racao";
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
+
+                    // Cria um DataTable para armazenar os resultados
+                    DataTable dataTable = new DataTable();
+
+                    // Preenche o DataTable com os resultados da consulta
+                    adapter.Fill(dataTable);
+
+                    // Define o DataTable como a fonte de dados do DataGridView
+                    dataGridConsumo.DataSource = dataTable;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao consultar registros: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            if (dataGridConsumo.Columns["Editar"] == null)
+            {
+                // Define a coluna de Editar
+                DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn();
+                btnColumn.Name = "Editar";
+                btnColumn.HeaderText = "";
+                btnColumn.Text = "Editar";
+                btnColumn.UseColumnTextForButtonValue = true;
+
+                dataGridConsumo.Columns.Add(btnColumn);
+            }
+            if (dataGridConsumo.Columns["Excluir"] == null)
+            {
+                // Define a coluna de Excluir
+                DataGridViewButtonColumn btnColumn = new DataGridViewButtonColumn();
+                btnColumn.Name = "Excluir";
+                btnColumn.HeaderText = "";
+                btnColumn.Text = "Excluir";
+                btnColumn.UseColumnTextForButtonValue = true;
+
+                dataGridConsumo.Columns.Add(btnColumn);
+            }
+        }
+
+        private void dataGridConsumo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridConsumo.Columns["Excluir"].Index && e.RowIndex >= 0)
+            {
+                //Exibe mensagem de confirmação da exclusão
+                DialogResult result = MessageBox.Show("Confirma a exclusão do registro?.", "Atenção", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.OK)
+                {
+                    int codConsumo = Convert.ToInt32(dataGridConsumo.Rows[e.RowIndex].Cells[0].Value);
+
+                    try
+                    {
+                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        {
+                            connection.Open();
+
+                            string queryExclusao = "DELETE FROM Consumo_Racao WHERE CodConsumo = " + codConsumo;
+
+                            SqlCommand command = new SqlCommand(queryExclusao, connection);
+
+                            // Executa o comando SQL
+                            command.ExecuteNonQuery();
+
+                            MessageBox.Show("Exclusão feita com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            LoadDataGridConsumo();
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao excluir registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+            }
+            if (e.ColumnIndex == dataGridConsumo.Columns["Editar"].Index && e.RowIndex >= 0)
+            {
+
+                /*label8.Visible = true;
+                txtCodMortalidade.Visible = true;
+                btnSalvar.Visible = true;
+                btn.Visible = false;*/
+
+                int codConsumo = Convert.ToInt32(dataGridConsumo.Rows[e.RowIndex].Cells[0].Value);
+
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        string queryConsulta = "SELECT * FROM Consumo_Racao WHERE CodConsumo = " + codConsumo;
+
+                        SqlCommand command = new SqlCommand(queryConsulta, connection);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                txtCodConsumo.Text = reader["CodConsumo"].ToString();
+                                dtpDataConsumo.Text = Convert.ToDateTime(reader["Data"]).ToString("dd/MM/yyyy");
+                                txtCodigoLoteConsumo.Text = reader["CodLote"].ToString();
+                                txtConsumo.Text = reader["Quantidade_Consumo"].ToString();
+                                txtDiaCicloConsumo.Text = reader["Dia_Ciclo"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Nenhum registro encontrado");
+                            }
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao editar registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+            }
+        }
+
         //INCLUIR
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -78,10 +237,10 @@ namespace fazendaSuinos
             try
             {
                 // Obtém os valores dos controles
-                DateTime Data = dateTimePickerData.Value;
+                DateTime Data = dtpDataConsumo.Value;
                 double QuantConsumo = Convert.ToDouble(txtConsumo.Text);
-                int CodLote = Convert.ToInt32(txtCodigoLote.Text);
-                int Dia_Ciclo = Convert.ToInt32(txtDiaCiclo.Text);
+                int CodLote = Convert.ToInt32(txtCodigoLoteConsumo.Text);
+                int Dia_Ciclo = Convert.ToInt32(txtDiaCicloConsumo.Text);
 
                 // Abre a conexão com o banco de dados
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -101,6 +260,8 @@ namespace fazendaSuinos
                     // Executa o comando SQL
                     command.ExecuteNonQuery();
 
+                    LoadDataGridConsumo();
+
                     MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -112,143 +273,69 @@ namespace fazendaSuinos
 
         //GRAVAR
 
+        private void btnGravar_Click(object sender, EventArgs e)
+        {
+            if (txtCodConsumo.Text == "")
+            {
+                return;
+            }
+            else
+            {
+                try
+                {
+                    // Obtém os valores dos controles
+                    int codConsumo = Convert.ToInt32(txtCodConsumo.Text);
+                    DateTime dataConsumo = dtpDataConsumo.Value;
+                    int codLote = Convert.ToInt32(txtCodigoLoteConsumo.Text);
+                    double quant = Convert.ToDouble(txtConsumo.Text);
+                    int diaCiclo = Convert.ToInt32(txtDiaCicloConsumo.Text);
 
+                    // Abre a conexão com o banco de dados
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        // Cria o comando SQL para inserir os dados na tabela
+                        string queryAtualizacao = @"
+                            UPDATE Consumo_Racao
+                            SET Data = @Data, 
+                                Dia_Ciclo = @Dia_Ciclo,
+                                CodLote = @CodLote,
+                                Quantidade_Consumo = @Quantidade_Consumo
+                            WHERE CodConsumo = @CodConsumo";
+
+                        SqlCommand command = new SqlCommand(queryAtualizacao, connection);
+
+                        // Adiciona os parâmetros ao comando SQL
+                        command.Parameters.AddWithValue("@Data", dataConsumo);
+                        command.Parameters.AddWithValue("@CodLote", codLote);
+                        command.Parameters.AddWithValue("@Dia_Ciclo", diaCiclo);
+                        command.Parameters.AddWithValue("@Quantidade_Consumo", quant);
+                        command.Parameters.AddWithValue("@CodConsumo", codConsumo);
+
+                        // Executa o comando SQL
+                        command.ExecuteNonQuery();
+
+                        MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        LoadDataGridConsumo();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao atualizar registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
 
         //LIMPAR
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
+            txtCodConsumo.Clear();
             txtConsumo.Clear();
-            txtCodigoLote.Clear();
-            txtDiaCiclo.Clear();
-        }
-
-
-        //GRAFICO CONSUMO
-
-        private void btnGerar_Grafico_Click(object sender, EventArgs e)
-        {
-            chartConsumo.Series.Clear();
-            chartConsumo.Titles.Clear();
-            chartConsumo.Legends.Clear();
-            chartConsumo.ChartAreas.Clear();
-
-            // Configurações do gráfico
-            chartConsumo.Titles.Add("Gráfico de Consumo");
-            var series = chartConsumo.Series.Add("Consumo por Dia");
-            series.ChartType = SeriesChartType.Line;
-
-            chartConsumo.Legends.Add("Legenda");
-            chartConsumo.Legends[0].LegendStyle = LegendStyle.Table;
-            chartConsumo.Legends[0].Docking = Docking.Bottom;
-            chartConsumo.Legends[0].Alignment = StringAlignment.Center;
-            chartConsumo.Legends[0].BorderColor = Color.Black;
-
-            // Configurações da área do gráfico
-            ChartArea chartArea = new ChartArea();
-            chartConsumo.ChartAreas.Add(chartArea);
-
-            chartArea.AxisX.Title = "Dias";
-            chartArea.AxisY.Title = "Consumo (kg)";
-
-            chartArea.AxisX.Minimum = 0;
-            chartArea.AxisY.Minimum = 0;
-
-            // Obtém o intervalo de dias do lote
-            int codLote = Convert.ToInt32(comboLoteGrafico.Text);
-            int intervaloDias = calcularIntervaloDias(codLote);
-
-            try
-            {
-                // Obtém os dados do banco de dados
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    string query = "SELECT Dia_Ciclo, Quantidade_Consumo FROM Consumo_Racao WHERE CodLote = @CodLote ORDER BY Dia_Ciclo";
-                    SqlCommand command = new SqlCommand(query, connection);
-
-                    command.Parameters.AddWithValue("@CodLote", Convert.ToInt32(comboLoteGrafico.Text));
-
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    int maxDia = 0;
-                    while (reader.Read())
-                    {
-                        int dia = reader.GetInt32(0);
-                        double consumo = reader.GetDouble(1);
-                        series.Points.AddXY(dia, consumo);
-
-                        if (dia > maxDia)
-                        {
-                            maxDia = dia;
-                        }
-                    }
-
-                    reader.Close();
-
-                    // Configura o valor máximo do eixo X
-                    chartArea.AxisX.Maximum = intervaloDias;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao gerar gráfico.\n" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private int calcularIntervaloDias(int codLote)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string query = "SELECT Data_Alojamento, Estimativa_Carregamento FROM Lote WHERE CodLote = @CodLote";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@CodLote", codLote);
-
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
-                {
-                    DateTime dataAlojamento = reader.GetDateTime(0);
-                    DateTime estimativaCarregamento = reader.GetDateTime(1);
-                    reader.Close();
-                    return (estimativaCarregamento - dataAlojamento).Days;
-                }
-                else
-                {
-                    reader.Close();
-                    throw new Exception("Lote não encontrado.");
-                }
-            }
-        }
-
-        private void fillComboCodLote()
-        {
-            String query = "SELECT CodLote FROM Lote";
-            comboLoteGrafico.Items.Clear();
-
-            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-
-                    using (SqlCommand command = new SqlCommand(query, connection.GetConnection()))
-                    {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                comboLoteGrafico.Items.Add(reader["CodLote"].ToString());
-                                Console.WriteLine("Codigos encontrados " + comboLoteGrafico.Items);
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao consultar lotes: " + ex.Message);
-                }
-            }
+            txtCodigoLoteConsumo.Clear();
+            txtDiaCicloConsumo.Clear();
         }
 
 
@@ -509,6 +596,7 @@ namespace fazendaSuinos
             SalvarDadosFornRacao();
         }
 
+
         //GRAVAR
 
         private void btnGravarForn_Click(object sender, EventArgs e)
@@ -605,7 +693,7 @@ namespace fazendaSuinos
 
         public void setCodigoLote(String codigo)
         {
-            txtCodigoLote.Text = codigo;
+            txtCodigoLoteConsumo.Text = codigo;
             txtCodLoteForn.Text = codigo;
         }
 
@@ -618,5 +706,7 @@ namespace fazendaSuinos
         {
             txtCodProdForn.Text = v;
         }
+
+        
     }
 }

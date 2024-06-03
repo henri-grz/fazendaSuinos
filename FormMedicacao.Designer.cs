@@ -1222,7 +1222,6 @@
         private System.Windows.Forms.BindingSource controleVacinacaoBindingSource;
         private fazendaSuinosDataSetTableAdapters.Controle_VacinacaoTableAdapter controle_VacinacaoTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn codPrescricaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn motivoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataInicialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diasUsoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diasCarenciaDataGridViewTextBoxColumn;

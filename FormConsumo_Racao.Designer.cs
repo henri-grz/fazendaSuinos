@@ -29,14 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.dateTimePickerData = new System.Windows.Forms.DateTimePicker();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtCodigoLote = new System.Windows.Forms.TextBox();
+            this.dtpDataConsumo = new System.Windows.Forms.DateTimePicker();
+            this.btnGravar = new System.Windows.Forms.Button();
+            this.txtCodigoLoteConsumo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtDiaCiclo = new System.Windows.Forms.TextBox();
+            this.txtDiaCicloConsumo = new System.Windows.Forms.TextBox();
             this.txtConsumo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,14 +41,18 @@
             this.btnConsultarCodigoLote = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.chartConsumo = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.btnGerar_Grafico = new System.Windows.Forms.Button();
-            this.comboLoteGrafico = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelConsumo = new System.Windows.Forms.Panel();
+            this.dataGridConsumo = new System.Windows.Forms.DataGridView();
+            this.txtCodConsumo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnIncluir = new System.Windows.Forms.Button();
             this.btnFornecimento = new System.Windows.Forms.Button();
             this.btnConsumo = new System.Windows.Forms.Button();
             this.panelFornecimento = new System.Windows.Forms.Panel();
+            this.txtCodFornecimento = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnIncluirForn = new System.Windows.Forms.Button();
+            this.dataGridFornecimento = new System.Windows.Forms.DataGridView();
             this.btnConsultarFornecedorForn = new System.Windows.Forms.Button();
             this.dtpValidadeForn = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
@@ -80,98 +81,103 @@
             this.txtCodProdForn = new System.Windows.Forms.TextBox();
             this.panelBotoes = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.dataGridFornecimento = new System.Windows.Forms.DataGridView();
             this.fazendaSuinosDataSet = new fazendaSuinos.fazendaSuinosDataSet();
-            this.fornecimentoRacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fornecimentoRacaoTableAdapter = new fazendaSuinos.fazendaSuinosDataSetTableAdapters.FornecimentoRacaoTableAdapter();
-            this.codFornecimentoRacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataFornDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.validadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codLoteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fornecimentoRacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.codFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnIncluirForn = new System.Windows.Forms.Button();
-            this.txtCodFornecimento = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chartConsumo)).BeginInit();
+            this.codProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codLoteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.validadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataFornDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codFornecimentoRacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.consumoRacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consumo_RacaoTableAdapter = new fazendaSuinos.fazendaSuinosDataSetTableAdapters.Consumo_RacaoTableAdapter();
+            this.codConsumoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaCicloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codLoteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeConsumoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelConsumo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridConsumo)).BeginInit();
             this.panelFornecimento.SuspendLayout();
-            this.panelBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFornecimento)).BeginInit();
+            this.panelBotoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecimentoRacaoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consumoRacaoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePickerData
+            // dtpDataConsumo
             // 
-            this.dateTimePickerData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerData.Location = new System.Drawing.Point(404, 143);
-            this.dateTimePickerData.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePickerData.Name = "dateTimePickerData";
-            this.dateTimePickerData.Size = new System.Drawing.Size(132, 22);
-            this.dateTimePickerData.TabIndex = 66;
+            this.dtpDataConsumo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataConsumo.Location = new System.Drawing.Point(404, 202);
+            this.dtpDataConsumo.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDataConsumo.Name = "dtpDataConsumo";
+            this.dtpDataConsumo.Size = new System.Drawing.Size(132, 22);
+            this.dtpDataConsumo.TabIndex = 66;
             // 
-            // btnSalvar
+            // btnGravar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnSalvar.FlatAppearance.BorderSize = 0;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(1087, 241);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(141, 37);
-            this.btnSalvar.TabIndex = 65;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnGravar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnGravar.FlatAppearance.BorderSize = 0;
+            this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGravar.ForeColor = System.Drawing.Color.White;
+            this.btnGravar.Location = new System.Drawing.Point(913, 301);
+            this.btnGravar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(141, 37);
+            this.btnGravar.TabIndex = 65;
+            this.btnGravar.Text = "Gravar";
+            this.btnGravar.UseVisualStyleBackColor = false;
+            this.btnGravar.Visible = false;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
-            // txtCodigoLote
+            // txtCodigoLoteConsumo
             // 
-            this.txtCodigoLote.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtCodigoLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCodigoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCodigoLote.Location = new System.Drawing.Point(576, 143);
-            this.txtCodigoLote.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCodigoLote.Name = "txtCodigoLote";
-            this.txtCodigoLote.Size = new System.Drawing.Size(132, 23);
-            this.txtCodigoLote.TabIndex = 64;
+            this.txtCodigoLoteConsumo.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodigoLoteConsumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodigoLoteConsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCodigoLoteConsumo.Location = new System.Drawing.Point(576, 202);
+            this.txtCodigoLoteConsumo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoLoteConsumo.Name = "txtCodigoLoteConsumo";
+            this.txtCodigoLoteConsumo.Size = new System.Drawing.Size(132, 23);
+            this.txtCodigoLoteConsumo.TabIndex = 64;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label7.Location = new System.Drawing.Point(572, 113);
+            this.label7.Location = new System.Drawing.Point(572, 172);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(145, 25);
             this.label7.TabIndex = 63;
             this.label7.Text = "Código do Lote";
             // 
-            // txtDiaCiclo
+            // txtDiaCicloConsumo
             // 
-            this.txtDiaCiclo.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtDiaCiclo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiaCiclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtDiaCiclo.Location = new System.Drawing.Point(1096, 143);
-            this.txtDiaCiclo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDiaCiclo.Name = "txtDiaCiclo";
-            this.txtDiaCiclo.Size = new System.Drawing.Size(132, 23);
-            this.txtDiaCiclo.TabIndex = 62;
+            this.txtDiaCicloConsumo.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtDiaCicloConsumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiaCicloConsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtDiaCicloConsumo.Location = new System.Drawing.Point(1096, 202);
+            this.txtDiaCicloConsumo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDiaCicloConsumo.Name = "txtDiaCicloConsumo";
+            this.txtDiaCicloConsumo.Size = new System.Drawing.Size(132, 23);
+            this.txtDiaCicloConsumo.TabIndex = 62;
             // 
             // txtConsumo
             // 
             this.txtConsumo.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtConsumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtConsumo.Location = new System.Drawing.Point(923, 142);
+            this.txtConsumo.Location = new System.Drawing.Point(923, 201);
             this.txtConsumo.Margin = new System.Windows.Forms.Padding(4);
             this.txtConsumo.Name = "txtConsumo";
             this.txtConsumo.Size = new System.Drawing.Size(132, 23);
@@ -182,7 +188,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label3.Location = new System.Drawing.Point(1091, 114);
+            this.label3.Location = new System.Drawing.Point(1091, 173);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 25);
@@ -194,7 +200,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label2.Location = new System.Drawing.Point(917, 114);
+            this.label2.Location = new System.Drawing.Point(917, 173);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 25);
@@ -208,7 +214,7 @@
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLimpar.Location = new System.Drawing.Point(903, 241);
+            this.btnLimpar.Location = new System.Drawing.Point(739, 301);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(141, 37);
@@ -224,7 +230,7 @@
             this.btnConsultarCodigoLote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarCodigoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCodigoLote.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarCodigoLote.Location = new System.Drawing.Point(736, 139);
+            this.btnConsultarCodigoLote.Location = new System.Drawing.Point(736, 198);
             this.btnConsultarCodigoLote.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultarCodigoLote.Name = "btnConsultarCodigoLote";
             this.btnConsultarCodigoLote.Size = new System.Drawing.Size(136, 27);
@@ -238,7 +244,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label5.Location = new System.Drawing.Point(399, 113);
+            this.label5.Location = new System.Drawing.Point(399, 172);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 25);
@@ -257,90 +263,95 @@
             this.label6.TabIndex = 55;
             this.label6.Text = "Consumo de Ração";
             // 
-            // chartConsumo
+            // panelConsumo
             // 
-            this.chartConsumo.BackColor = System.Drawing.SystemColors.MenuBar;
-            chartArea8.Name = "ChartArea1";
-            this.chartConsumo.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend3";
-            this.chartConsumo.Legends.Add(legend8);
-            this.chartConsumo.Location = new System.Drawing.Point(404, 393);
-            this.chartConsumo.Margin = new System.Windows.Forms.Padding(4);
-            this.chartConsumo.Name = "chartConsumo";
-            this.chartConsumo.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend3";
-            series8.Name = "Consumo de Ração";
-            this.chartConsumo.Series.Add(series8);
-            this.chartConsumo.Size = new System.Drawing.Size(824, 369);
-            this.chartConsumo.TabIndex = 67;
-            this.chartConsumo.Text = "Gráfico de Consumo";
+            this.panelConsumo.Controls.Add(this.dataGridConsumo);
+            this.panelConsumo.Controls.Add(this.txtCodConsumo);
+            this.panelConsumo.Controls.Add(this.label1);
+            this.panelConsumo.Controls.Add(this.btnIncluir);
+            this.panelConsumo.Controls.Add(this.dtpDataConsumo);
+            this.panelConsumo.Controls.Add(this.label6);
+            this.panelConsumo.Controls.Add(this.label5);
+            this.panelConsumo.Controls.Add(this.btnConsultarCodigoLote);
+            this.panelConsumo.Controls.Add(this.btnLimpar);
+            this.panelConsumo.Controls.Add(this.label2);
+            this.panelConsumo.Controls.Add(this.btnGravar);
+            this.panelConsumo.Controls.Add(this.label3);
+            this.panelConsumo.Controls.Add(this.txtCodigoLoteConsumo);
+            this.panelConsumo.Controls.Add(this.txtConsumo);
+            this.panelConsumo.Controls.Add(this.label7);
+            this.panelConsumo.Controls.Add(this.txtDiaCicloConsumo);
+            this.panelConsumo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelConsumo.Location = new System.Drawing.Point(0, 185);
+            this.panelConsumo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelConsumo.Name = "panelConsumo";
+            this.panelConsumo.Size = new System.Drawing.Size(1467, 791);
+            this.panelConsumo.TabIndex = 71;
             // 
-            // btnGerar_Grafico
+            // dataGridConsumo
             // 
-            this.btnGerar_Grafico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnGerar_Grafico.FlatAppearance.BorderSize = 0;
-            this.btnGerar_Grafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerar_Grafico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerar_Grafico.ForeColor = System.Drawing.Color.White;
-            this.btnGerar_Grafico.Location = new System.Drawing.Point(576, 334);
-            this.btnGerar_Grafico.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGerar_Grafico.Name = "btnGerar_Grafico";
-            this.btnGerar_Grafico.Size = new System.Drawing.Size(141, 37);
-            this.btnGerar_Grafico.TabIndex = 68;
-            this.btnGerar_Grafico.Text = "Gerar Gráfico";
-            this.btnGerar_Grafico.UseVisualStyleBackColor = false;
-            this.btnGerar_Grafico.Click += new System.EventHandler(this.btnGerar_Grafico_Click);
+            this.dataGridConsumo.AllowUserToAddRows = false;
+            this.dataGridConsumo.AllowUserToDeleteRows = false;
+            this.dataGridConsumo.AutoGenerateColumns = false;
+            this.dataGridConsumo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridConsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridConsumo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codConsumoDataGridViewTextBoxColumn,
+            this.dataDataGridViewTextBoxColumn,
+            this.diaCicloDataGridViewTextBoxColumn,
+            this.codLoteDataGridViewTextBoxColumn1,
+            this.quantidadeConsumoDataGridViewTextBoxColumn});
+            this.dataGridConsumo.DataSource = this.consumoRacaoBindingSource;
+            this.dataGridConsumo.Location = new System.Drawing.Point(404, 391);
+            this.dataGridConsumo.Name = "dataGridConsumo";
+            this.dataGridConsumo.ReadOnly = true;
+            this.dataGridConsumo.RowHeadersVisible = false;
+            this.dataGridConsumo.RowHeadersWidth = 51;
+            this.dataGridConsumo.RowTemplate.Height = 24;
+            this.dataGridConsumo.Size = new System.Drawing.Size(824, 330);
+            this.dataGridConsumo.TabIndex = 70;
+            this.dataGridConsumo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridConsumo_CellContentClick);
             // 
-            // comboLoteGrafico
+            // txtCodConsumo
             // 
-            this.comboLoteGrafico.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.comboLoteGrafico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboLoteGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboLoteGrafico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboLoteGrafico.ItemHeight = 24;
-            this.comboLoteGrafico.Location = new System.Drawing.Point(404, 338);
-            this.comboLoteGrafico.Margin = new System.Windows.Forms.Padding(4);
-            this.comboLoteGrafico.Name = "comboLoteGrafico";
-            this.comboLoteGrafico.Size = new System.Drawing.Size(132, 32);
-            this.comboLoteGrafico.TabIndex = 69;
+            this.txtCodConsumo.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodConsumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodConsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCodConsumo.Location = new System.Drawing.Point(403, 117);
+            this.txtCodConsumo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodConsumo.Name = "txtCodConsumo";
+            this.txtCodConsumo.ReadOnly = true;
+            this.txtCodConsumo.Size = new System.Drawing.Size(132, 23);
+            this.txtCodConsumo.TabIndex = 69;
+            this.txtCodConsumo.TextChanged += new System.EventHandler(this.txtCodConsumo_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label1.Location = new System.Drawing.Point(399, 309);
+            this.label1.Location = new System.Drawing.Point(399, 87);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 25);
-            this.label1.TabIndex = 70;
-            this.label1.Text = "Lote";
+            this.label1.Size = new System.Drawing.Size(192, 25);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Código do Consumo";
             // 
-            // panelConsumo
+            // btnIncluir
             // 
-            this.panelConsumo.Controls.Add(this.label1);
-            this.panelConsumo.Controls.Add(this.dateTimePickerData);
-            this.panelConsumo.Controls.Add(this.label6);
-            this.panelConsumo.Controls.Add(this.comboLoteGrafico);
-            this.panelConsumo.Controls.Add(this.label5);
-            this.panelConsumo.Controls.Add(this.btnGerar_Grafico);
-            this.panelConsumo.Controls.Add(this.btnConsultarCodigoLote);
-            this.panelConsumo.Controls.Add(this.chartConsumo);
-            this.panelConsumo.Controls.Add(this.btnLimpar);
-            this.panelConsumo.Controls.Add(this.label2);
-            this.panelConsumo.Controls.Add(this.btnSalvar);
-            this.panelConsumo.Controls.Add(this.label3);
-            this.panelConsumo.Controls.Add(this.txtCodigoLote);
-            this.panelConsumo.Controls.Add(this.txtConsumo);
-            this.panelConsumo.Controls.Add(this.label7);
-            this.panelConsumo.Controls.Add(this.txtDiaCiclo);
-            this.panelConsumo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelConsumo.Location = new System.Drawing.Point(0, 1158);
-            this.panelConsumo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelConsumo.Name = "panelConsumo";
-            this.panelConsumo.Size = new System.Drawing.Size(1446, 791);
-            this.panelConsumo.TabIndex = 71;
+            this.btnIncluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnIncluir.FlatAppearance.BorderSize = 0;
+            this.btnIncluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluir.ForeColor = System.Drawing.Color.White;
+            this.btnIncluir.Location = new System.Drawing.Point(1087, 301);
+            this.btnIncluir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIncluir.Name = "btnIncluir";
+            this.btnIncluir.Size = new System.Drawing.Size(141, 37);
+            this.btnIncluir.TabIndex = 67;
+            this.btnIncluir.Text = "Incluir";
+            this.btnIncluir.UseVisualStyleBackColor = false;
+            this.btnIncluir.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnFornecimento
             // 
@@ -405,11 +416,79 @@
             this.panelFornecimento.Controls.Add(this.label11);
             this.panelFornecimento.Controls.Add(this.txtCodProdForn);
             this.panelFornecimento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFornecimento.Location = new System.Drawing.Point(0, 185);
+            this.panelFornecimento.Location = new System.Drawing.Point(0, 976);
             this.panelFornecimento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelFornecimento.Name = "panelFornecimento";
-            this.panelFornecimento.Size = new System.Drawing.Size(1446, 973);
+            this.panelFornecimento.Size = new System.Drawing.Size(1467, 973);
             this.panelFornecimento.TabIndex = 72;
+            // 
+            // txtCodFornecimento
+            // 
+            this.txtCodFornecimento.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodFornecimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodFornecimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCodFornecimento.Location = new System.Drawing.Point(402, 116);
+            this.txtCodFornecimento.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodFornecimento.Name = "txtCodFornecimento";
+            this.txtCodFornecimento.ReadOnly = true;
+            this.txtCodFornecimento.Size = new System.Drawing.Size(177, 23);
+            this.txtCodFornecimento.TabIndex = 130;
+            this.txtCodFornecimento.TextChanged += new System.EventHandler(this.txtCodFornecimento_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.label18.Location = new System.Drawing.Point(398, 87);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(226, 25);
+            this.label18.TabIndex = 129;
+            this.label18.Text = "Código do Fornecimento";
+            // 
+            // btnIncluirForn
+            // 
+            this.btnIncluirForn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnIncluirForn.FlatAppearance.BorderSize = 0;
+            this.btnIncluirForn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncluirForn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIncluirForn.ForeColor = System.Drawing.Color.White;
+            this.btnIncluirForn.Location = new System.Drawing.Point(1132, 484);
+            this.btnIncluirForn.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIncluirForn.Name = "btnIncluirForn";
+            this.btnIncluirForn.Size = new System.Drawing.Size(141, 37);
+            this.btnIncluirForn.TabIndex = 128;
+            this.btnIncluirForn.Text = "Incluir";
+            this.btnIncluirForn.UseVisualStyleBackColor = false;
+            // 
+            // dataGridFornecimento
+            // 
+            this.dataGridFornecimento.AllowUserToAddRows = false;
+            this.dataGridFornecimento.AllowUserToDeleteRows = false;
+            this.dataGridFornecimento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridFornecimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridFornecimento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codFornecimentoRacaoDataGridViewTextBoxColumn,
+            this.dataFornDataGridViewTextBoxColumn,
+            this.nomeProdutoDataGridViewTextBoxColumn,
+            this.categoriaDataGridViewTextBoxColumn,
+            this.tipoDataGridViewTextBoxColumn,
+            this.validadeDataGridViewTextBoxColumn,
+            this.quantidadeDataGridViewTextBoxColumn,
+            this.unidadeDataGridViewTextBoxColumn,
+            this.codLoteDataGridViewTextBoxColumn,
+            this.codProdutoDataGridViewTextBoxColumn,
+            this.codFornecedorDataGridViewTextBoxColumn});
+            this.dataGridFornecimento.Location = new System.Drawing.Point(404, 591);
+            this.dataGridFornecimento.Name = "dataGridFornecimento";
+            this.dataGridFornecimento.ReadOnly = true;
+            this.dataGridFornecimento.RowHeadersVisible = false;
+            this.dataGridFornecimento.RowHeadersWidth = 51;
+            this.dataGridFornecimento.RowTemplate.Height = 24;
+            this.dataGridFornecimento.Size = new System.Drawing.Size(869, 330);
+            this.dataGridFornecimento.TabIndex = 127;
+            this.dataGridFornecimento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridFornecimento_CellContentClick);
             // 
             // btnConsultarFornecedorForn
             // 
@@ -741,7 +820,7 @@
             this.panelBotoes.Location = new System.Drawing.Point(0, 0);
             this.panelBotoes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelBotoes.Name = "panelBotoes";
-            this.panelBotoes.Size = new System.Drawing.Size(1446, 185);
+            this.panelBotoes.Size = new System.Drawing.Size(1467, 185);
             this.panelBotoes.TabIndex = 74;
             // 
             // contextMenuStrip1
@@ -750,152 +829,19 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // dataGridFornecimento
-            // 
-            this.dataGridFornecimento.AllowUserToAddRows = false;
-            this.dataGridFornecimento.AllowUserToDeleteRows = false;
-            this.dataGridFornecimento.AutoGenerateColumns = false;
-            this.dataGridFornecimento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridFornecimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridFornecimento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codFornecimentoRacaoDataGridViewTextBoxColumn,
-            this.dataFornDataGridViewTextBoxColumn,
-            this.nomeProdutoDataGridViewTextBoxColumn,
-            this.categoriaDataGridViewTextBoxColumn,
-            this.tipoDataGridViewTextBoxColumn,
-            this.validadeDataGridViewTextBoxColumn,
-            this.quantidadeDataGridViewTextBoxColumn,
-            this.unidadeDataGridViewTextBoxColumn,
-            this.codLoteDataGridViewTextBoxColumn,
-            this.codProdutoDataGridViewTextBoxColumn,
-            this.codFornecedorDataGridViewTextBoxColumn});
-            this.dataGridFornecimento.DataSource = this.fornecimentoRacaoBindingSource;
-            this.dataGridFornecimento.Location = new System.Drawing.Point(404, 591);
-            this.dataGridFornecimento.Name = "dataGridFornecimento";
-            this.dataGridFornecimento.ReadOnly = true;
-            this.dataGridFornecimento.RowHeadersVisible = false;
-            this.dataGridFornecimento.RowHeadersWidth = 51;
-            this.dataGridFornecimento.RowTemplate.Height = 24;
-            this.dataGridFornecimento.Size = new System.Drawing.Size(869, 330);
-            this.dataGridFornecimento.TabIndex = 127;
-            this.dataGridFornecimento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridFornecimento_CellContentClick);
-            // 
             // fazendaSuinosDataSet
             // 
             this.fazendaSuinosDataSet.DataSetName = "fazendaSuinosDataSet";
             this.fazendaSuinosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // fornecimentoRacaoBindingSource
-            // 
-            this.fornecimentoRacaoBindingSource.DataMember = "FornecimentoRacao";
-            this.fornecimentoRacaoBindingSource.DataSource = this.fazendaSuinosDataSet;
-            // 
             // fornecimentoRacaoTableAdapter
             // 
             this.fornecimentoRacaoTableAdapter.ClearBeforeFill = true;
             // 
-            // codFornecimentoRacaoDataGridViewTextBoxColumn
+            // fornecimentoRacaoBindingSource
             // 
-            this.codFornecimentoRacaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.codFornecimentoRacaoDataGridViewTextBoxColumn.DataPropertyName = "CodFornecimentoRacao";
-            this.codFornecimentoRacaoDataGridViewTextBoxColumn.FillWeight = 75.9632F;
-            this.codFornecimentoRacaoDataGridViewTextBoxColumn.HeaderText = "Cód.";
-            this.codFornecimentoRacaoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codFornecimentoRacaoDataGridViewTextBoxColumn.Name = "codFornecimentoRacaoDataGridViewTextBoxColumn";
-            this.codFornecimentoRacaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codFornecimentoRacaoDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // dataFornDataGridViewTextBoxColumn
-            // 
-            this.dataFornDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataFornDataGridViewTextBoxColumn.DataPropertyName = "DataForn";
-            this.dataFornDataGridViewTextBoxColumn.FillWeight = 90.51307F;
-            this.dataFornDataGridViewTextBoxColumn.HeaderText = "Data";
-            this.dataFornDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dataFornDataGridViewTextBoxColumn.Name = "dataFornDataGridViewTextBoxColumn";
-            this.dataFornDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nomeProdutoDataGridViewTextBoxColumn
-            // 
-            this.nomeProdutoDataGridViewTextBoxColumn.DataPropertyName = "NomeProduto";
-            this.nomeProdutoDataGridViewTextBoxColumn.FillWeight = 133.8093F;
-            this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "Produto";
-            this.nomeProdutoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
-            this.nomeProdutoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // categoriaDataGridViewTextBoxColumn
-            // 
-            this.categoriaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.categoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria";
-            this.categoriaDataGridViewTextBoxColumn.FillWeight = 63.46687F;
-            this.categoriaDataGridViewTextBoxColumn.HeaderText = "Categ.";
-            this.categoriaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categoriaDataGridViewTextBoxColumn.Name = "categoriaDataGridViewTextBoxColumn";
-            this.categoriaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categoriaDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // tipoDataGridViewTextBoxColumn
-            // 
-            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "Tipo";
-            this.tipoDataGridViewTextBoxColumn.FillWeight = 133.8093F;
-            this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
-            this.tipoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
-            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // validadeDataGridViewTextBoxColumn
-            // 
-            this.validadeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.validadeDataGridViewTextBoxColumn.DataPropertyName = "Validade";
-            this.validadeDataGridViewTextBoxColumn.FillWeight = 84.6225F;
-            this.validadeDataGridViewTextBoxColumn.HeaderText = "Validade";
-            this.validadeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.validadeDataGridViewTextBoxColumn.Name = "validadeDataGridViewTextBoxColumn";
-            this.validadeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantidadeDataGridViewTextBoxColumn
-            // 
-            this.quantidadeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.FillWeight = 72.85739F;
-            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quant.";
-            this.quantidadeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
-            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantidadeDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // unidadeDataGridViewTextBoxColumn
-            // 
-            this.unidadeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.unidadeDataGridViewTextBoxColumn.DataPropertyName = "Unidade";
-            this.unidadeDataGridViewTextBoxColumn.FillWeight = 55.10499F;
-            this.unidadeDataGridViewTextBoxColumn.HeaderText = "Un.";
-            this.unidadeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.unidadeDataGridViewTextBoxColumn.Name = "unidadeDataGridViewTextBoxColumn";
-            this.unidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.unidadeDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // codLoteDataGridViewTextBoxColumn
-            // 
-            this.codLoteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.codLoteDataGridViewTextBoxColumn.DataPropertyName = "CodLote";
-            this.codLoteDataGridViewTextBoxColumn.FillWeight = 65.50558F;
-            this.codLoteDataGridViewTextBoxColumn.HeaderText = "Lote";
-            this.codLoteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codLoteDataGridViewTextBoxColumn.Name = "codLoteDataGridViewTextBoxColumn";
-            this.codLoteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codLoteDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // codProdutoDataGridViewTextBoxColumn
-            // 
-            this.codProdutoDataGridViewTextBoxColumn.DataPropertyName = "CodProduto";
-            this.codProdutoDataGridViewTextBoxColumn.FillWeight = 120.196F;
-            this.codProdutoDataGridViewTextBoxColumn.HeaderText = "CodProduto";
-            this.codProdutoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codProdutoDataGridViewTextBoxColumn.Name = "codProdutoDataGridViewTextBoxColumn";
-            this.codProdutoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codProdutoDataGridViewTextBoxColumn.Visible = false;
+            this.fornecimentoRacaoBindingSource.DataMember = "FornecimentoRacao";
+            this.fornecimentoRacaoBindingSource.DataSource = this.fazendaSuinosDataSet;
             // 
             // codFornecedorDataGridViewTextBoxColumn
             // 
@@ -908,45 +854,166 @@
             this.codFornecedorDataGridViewTextBoxColumn.ReadOnly = true;
             this.codFornecedorDataGridViewTextBoxColumn.Width = 60;
             // 
-            // btnIncluirForn
+            // codProdutoDataGridViewTextBoxColumn
             // 
-            this.btnIncluirForn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnIncluirForn.FlatAppearance.BorderSize = 0;
-            this.btnIncluirForn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIncluirForn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIncluirForn.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirForn.Location = new System.Drawing.Point(1132, 484);
-            this.btnIncluirForn.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIncluirForn.Name = "btnIncluirForn";
-            this.btnIncluirForn.Size = new System.Drawing.Size(141, 37);
-            this.btnIncluirForn.TabIndex = 128;
-            this.btnIncluirForn.Text = "Incluir";
-            this.btnIncluirForn.UseVisualStyleBackColor = false;
+            this.codProdutoDataGridViewTextBoxColumn.DataPropertyName = "CodProduto";
+            this.codProdutoDataGridViewTextBoxColumn.FillWeight = 120.196F;
+            this.codProdutoDataGridViewTextBoxColumn.HeaderText = "CodProduto";
+            this.codProdutoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codProdutoDataGridViewTextBoxColumn.Name = "codProdutoDataGridViewTextBoxColumn";
+            this.codProdutoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codProdutoDataGridViewTextBoxColumn.Visible = false;
             // 
-            // txtCodFornecimento
+            // codLoteDataGridViewTextBoxColumn
             // 
-            this.txtCodFornecimento.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtCodFornecimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCodFornecimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCodFornecimento.Location = new System.Drawing.Point(402, 116);
-            this.txtCodFornecimento.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCodFornecimento.Name = "txtCodFornecimento";
-            this.txtCodFornecimento.ReadOnly = true;
-            this.txtCodFornecimento.Size = new System.Drawing.Size(177, 23);
-            this.txtCodFornecimento.TabIndex = 130;
-            this.txtCodFornecimento.TextChanged += new System.EventHandler(this.txtCodFornecimento_TextChanged);
+            this.codLoteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.codLoteDataGridViewTextBoxColumn.DataPropertyName = "CodLote";
+            this.codLoteDataGridViewTextBoxColumn.FillWeight = 65.50558F;
+            this.codLoteDataGridViewTextBoxColumn.HeaderText = "Lote";
+            this.codLoteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codLoteDataGridViewTextBoxColumn.Name = "codLoteDataGridViewTextBoxColumn";
+            this.codLoteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codLoteDataGridViewTextBoxColumn.Width = 50;
             // 
-            // label18
+            // unidadeDataGridViewTextBoxColumn
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label18.Location = new System.Drawing.Point(398, 87);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(226, 25);
-            this.label18.TabIndex = 129;
-            this.label18.Text = "Código do Fornecimento";
+            this.unidadeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.unidadeDataGridViewTextBoxColumn.DataPropertyName = "Unidade";
+            this.unidadeDataGridViewTextBoxColumn.FillWeight = 55.10499F;
+            this.unidadeDataGridViewTextBoxColumn.HeaderText = "Un.";
+            this.unidadeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.unidadeDataGridViewTextBoxColumn.Name = "unidadeDataGridViewTextBoxColumn";
+            this.unidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.unidadeDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // quantidadeDataGridViewTextBoxColumn
+            // 
+            this.quantidadeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.FillWeight = 72.85739F;
+            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quant.";
+            this.quantidadeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
+            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantidadeDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // validadeDataGridViewTextBoxColumn
+            // 
+            this.validadeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.validadeDataGridViewTextBoxColumn.DataPropertyName = "Validade";
+            this.validadeDataGridViewTextBoxColumn.FillWeight = 84.6225F;
+            this.validadeDataGridViewTextBoxColumn.HeaderText = "Validade";
+            this.validadeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.validadeDataGridViewTextBoxColumn.Name = "validadeDataGridViewTextBoxColumn";
+            this.validadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.validadeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tipoDataGridViewTextBoxColumn
+            // 
+            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "Tipo";
+            this.tipoDataGridViewTextBoxColumn.FillWeight = 133.8093F;
+            this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
+            this.tipoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // categoriaDataGridViewTextBoxColumn
+            // 
+            this.categoriaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.categoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria";
+            this.categoriaDataGridViewTextBoxColumn.FillWeight = 63.46687F;
+            this.categoriaDataGridViewTextBoxColumn.HeaderText = "Categ.";
+            this.categoriaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categoriaDataGridViewTextBoxColumn.Name = "categoriaDataGridViewTextBoxColumn";
+            this.categoriaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categoriaDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // nomeProdutoDataGridViewTextBoxColumn
+            // 
+            this.nomeProdutoDataGridViewTextBoxColumn.DataPropertyName = "NomeProduto";
+            this.nomeProdutoDataGridViewTextBoxColumn.FillWeight = 133.8093F;
+            this.nomeProdutoDataGridViewTextBoxColumn.HeaderText = "Produto";
+            this.nomeProdutoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomeProdutoDataGridViewTextBoxColumn.Name = "nomeProdutoDataGridViewTextBoxColumn";
+            this.nomeProdutoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataFornDataGridViewTextBoxColumn
+            // 
+            this.dataFornDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataFornDataGridViewTextBoxColumn.DataPropertyName = "DataForn";
+            this.dataFornDataGridViewTextBoxColumn.FillWeight = 90.51307F;
+            this.dataFornDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.dataFornDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dataFornDataGridViewTextBoxColumn.Name = "dataFornDataGridViewTextBoxColumn";
+            this.dataFornDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataFornDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // codFornecimentoRacaoDataGridViewTextBoxColumn
+            // 
+            this.codFornecimentoRacaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.codFornecimentoRacaoDataGridViewTextBoxColumn.DataPropertyName = "CodFornecimentoRacao";
+            this.codFornecimentoRacaoDataGridViewTextBoxColumn.FillWeight = 75.9632F;
+            this.codFornecimentoRacaoDataGridViewTextBoxColumn.HeaderText = "Cód.";
+            this.codFornecimentoRacaoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codFornecimentoRacaoDataGridViewTextBoxColumn.Name = "codFornecimentoRacaoDataGridViewTextBoxColumn";
+            this.codFornecimentoRacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codFornecimentoRacaoDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // consumoRacaoBindingSource
+            // 
+            this.consumoRacaoBindingSource.DataMember = "Consumo_Racao";
+            this.consumoRacaoBindingSource.DataSource = this.fazendaSuinosDataSet;
+            // 
+            // consumo_RacaoTableAdapter
+            // 
+            this.consumo_RacaoTableAdapter.ClearBeforeFill = true;
+            // 
+            // codConsumoDataGridViewTextBoxColumn
+            // 
+            this.codConsumoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.codConsumoDataGridViewTextBoxColumn.DataPropertyName = "CodConsumo";
+            this.codConsumoDataGridViewTextBoxColumn.HeaderText = "Cod";
+            this.codConsumoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codConsumoDataGridViewTextBoxColumn.Name = "codConsumoDataGridViewTextBoxColumn";
+            this.codConsumoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codConsumoDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // dataDataGridViewTextBoxColumn
+            // 
+            this.dataDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
+            this.dataDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.dataDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
+            this.dataDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // diaCicloDataGridViewTextBoxColumn
+            // 
+            this.diaCicloDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.diaCicloDataGridViewTextBoxColumn.DataPropertyName = "Dia_Ciclo";
+            this.diaCicloDataGridViewTextBoxColumn.HeaderText = "Dia do Ciclo";
+            this.diaCicloDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.diaCicloDataGridViewTextBoxColumn.Name = "diaCicloDataGridViewTextBoxColumn";
+            this.diaCicloDataGridViewTextBoxColumn.ReadOnly = true;
+            this.diaCicloDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // codLoteDataGridViewTextBoxColumn1
+            // 
+            this.codLoteDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.codLoteDataGridViewTextBoxColumn1.DataPropertyName = "CodLote";
+            this.codLoteDataGridViewTextBoxColumn1.HeaderText = "Codigo do Lote";
+            this.codLoteDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.codLoteDataGridViewTextBoxColumn1.Name = "codLoteDataGridViewTextBoxColumn1";
+            this.codLoteDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.codLoteDataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // quantidadeConsumoDataGridViewTextBoxColumn
+            // 
+            this.quantidadeConsumoDataGridViewTextBoxColumn.DataPropertyName = "Quantidade_Consumo";
+            this.quantidadeConsumoDataGridViewTextBoxColumn.HeaderText = "Quant. Consumo (kg)";
+            this.quantidadeConsumoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.quantidadeConsumoDataGridViewTextBoxColumn.Name = "quantidadeConsumoDataGridViewTextBoxColumn";
+            this.quantidadeConsumoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FormConsumo_Racao
             // 
@@ -954,34 +1021,35 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1467, 922);
-            this.Controls.Add(this.panelConsumo);
+            this.ClientSize = new System.Drawing.Size(1488, 922);
             this.Controls.Add(this.panelFornecimento);
+            this.Controls.Add(this.panelConsumo);
             this.Controls.Add(this.panelBotoes);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormConsumo_Racao";
             this.Text = "FormConsumo_Racao";
             this.Load += new System.EventHandler(this.FormConsumo_Racao_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chartConsumo)).EndInit();
             this.panelConsumo.ResumeLayout(false);
             this.panelConsumo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridConsumo)).EndInit();
             this.panelFornecimento.ResumeLayout(false);
             this.panelFornecimento.PerformLayout();
-            this.panelBotoes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFornecimento)).EndInit();
+            this.panelBotoes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fornecimentoRacaoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consumoRacaoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePickerData;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.TextBox txtCodigoLote;
+        private System.Windows.Forms.DateTimePicker dtpDataConsumo;
+        private System.Windows.Forms.Button btnGravar;
+        private System.Windows.Forms.TextBox txtCodigoLoteConsumo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtDiaCiclo;
+        private System.Windows.Forms.TextBox txtDiaCicloConsumo;
         private System.Windows.Forms.TextBox txtConsumo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -989,10 +1057,6 @@
         private System.Windows.Forms.Button btnConsultarCodigoLote;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartConsumo;
-        private System.Windows.Forms.Button btnGerar_Grafico;
-        private System.Windows.Forms.ComboBox comboLoteGrafico;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelConsumo;
         private System.Windows.Forms.Button btnFornecimento;
         private System.Windows.Forms.Button btnConsumo;
@@ -1027,8 +1091,14 @@
         private System.Windows.Forms.Button btnConsultarFornecedorForn;
         private System.Windows.Forms.DataGridView dataGridFornecimento;
         private fazendaSuinosDataSet fazendaSuinosDataSet;
-        private System.Windows.Forms.BindingSource fornecimentoRacaoBindingSource;
         private fazendaSuinosDataSetTableAdapters.FornecimentoRacaoTableAdapter fornecimentoRacaoTableAdapter;
+        private System.Windows.Forms.Button btnIncluirForn;
+        public System.Windows.Forms.TextBox txtCodFornecimento;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button btnIncluir;
+        private System.Windows.Forms.TextBox txtCodConsumo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridConsumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn codFornecimentoRacaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataFornDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeProdutoDataGridViewTextBoxColumn;
@@ -1040,8 +1110,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codLoteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codProdutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codFornecedorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnIncluirForn;
-        public System.Windows.Forms.TextBox txtCodFornecimento;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.BindingSource fornecimentoRacaoBindingSource;
+        private System.Windows.Forms.BindingSource consumoRacaoBindingSource;
+        private fazendaSuinosDataSetTableAdapters.Consumo_RacaoTableAdapter consumo_RacaoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codConsumoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaCicloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codLoteDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeConsumoDataGridViewTextBoxColumn;
     }
 }

@@ -1792,6 +1792,8 @@ namespace fazendaSuinos {
             
             private global::System.Data.DataColumn columnCodLote;
             
+            private global::System.Data.DataColumn columnQuantidade_Consumo;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Consumo_RacaoDataTable() {
@@ -1859,6 +1861,14 @@ namespace fazendaSuinos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Quantidade_ConsumoColumn {
+                get {
+                    return this.columnQuantidade_Consumo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1894,13 +1904,14 @@ namespace fazendaSuinos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Consumo_RacaoRow AddConsumo_RacaoRow(System.DateTime Data, int Dia_Ciclo, LoteRow parentLoteRowByFK_Consumo_Racao_CodLote) {
+            public Consumo_RacaoRow AddConsumo_RacaoRow(System.DateTime Data, int Dia_Ciclo, LoteRow parentLoteRowByFK_Consumo_Racao_CodLote, double Quantidade_Consumo) {
                 Consumo_RacaoRow rowConsumo_RacaoRow = ((Consumo_RacaoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Data,
                         Dia_Ciclo,
-                        null};
+                        null,
+                        Quantidade_Consumo};
                 if ((parentLoteRowByFK_Consumo_Racao_CodLote != null)) {
                     columnValuesArray[3] = parentLoteRowByFK_Consumo_Racao_CodLote[0];
                 }
@@ -1937,6 +1948,7 @@ namespace fazendaSuinos {
                 this.columnData = base.Columns["Data"];
                 this.columnDia_Ciclo = base.Columns["Dia_Ciclo"];
                 this.columnCodLote = base.Columns["CodLote"];
+                this.columnQuantidade_Consumo = base.Columns["Quantidade_Consumo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1950,6 +1962,8 @@ namespace fazendaSuinos {
                 base.Columns.Add(this.columnDia_Ciclo);
                 this.columnCodLote = new global::System.Data.DataColumn("CodLote", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCodLote);
+                this.columnQuantidade_Consumo = new global::System.Data.DataColumn("Quantidade_Consumo", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQuantidade_Consumo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCodConsumo}, true));
                 this.columnCodConsumo.AutoIncrement = true;
@@ -10515,6 +10529,22 @@ namespace fazendaSuinos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double Quantidade_Consumo {
+                get {
+                    try {
+                        return ((double)(this[this.tableConsumo_Racao.Quantidade_ConsumoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Quantidade_Consumo\' na tabela \'Consumo_Racao\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableConsumo_Racao.Quantidade_ConsumoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public LoteRow LoteRow {
                 get {
                     return ((LoteRow)(this.GetParentRow(this.Table.ParentRelations["FK_Consumo_Racao_CodLote"])));
@@ -10558,6 +10588,18 @@ namespace fazendaSuinos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetCodLoteNull() {
                 this[this.tableConsumo_Racao.CodLoteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsQuantidade_ConsumoNull() {
+                return this.IsNull(this.tableConsumo_Racao.Quantidade_ConsumoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetQuantidade_ConsumoNull() {
+                this[this.tableConsumo_Racao.Quantidade_ConsumoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16445,10 +16487,11 @@ SELECT CodAcao, Data, Tarefa, Prazo, Conclusao, CodTecnico FROM Acoes_Corretivas
             tableMapping.ColumnMappings.Add("Data", "Data");
             tableMapping.ColumnMappings.Add("Dia_Ciclo", "Dia_Ciclo");
             tableMapping.ColumnMappings.Add("CodLote", "CodLote");
+            tableMapping.ColumnMappings.Add("Quantidade_Consumo", "Quantidade_Consumo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Consumo_Racao] WHERE (([CodConsumo] = @Original_CodConsumo) AND ((@IsNull_Data = 1 AND [Data] IS NULL) OR ([Data] = @Original_Data)) AND ((@IsNull_Dia_Ciclo = 1 AND [Dia_Ciclo] IS NULL) OR ([Dia_Ciclo] = @Original_Dia_Ciclo)) AND ((@IsNull_CodLote = 1 AND [CodLote] IS NULL) OR ([CodLote] = @Original_CodLote)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Consumo_Racao] WHERE (([CodConsumo] = @Original_CodConsumo) AND ((@IsNull_Data = 1 AND [Data] IS NULL) OR ([Data] = @Original_Data)) AND ((@IsNull_Dia_Ciclo = 1 AND [Dia_Ciclo] IS NULL) OR ([Dia_Ciclo] = @Original_Dia_Ciclo)) AND ((@IsNull_CodLote = 1 AND [CodLote] IS NULL) OR ([CodLote] = @Original_CodLote)) AND ((@IsNull_Quantidade_Consumo = 1 AND [Quantidade_Consumo] IS NULL) OR ([Quantidade_Consumo] = @Original_Quantidade_Consumo)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodConsumo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodConsumo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -16457,23 +16500,26 @@ SELECT CodAcao, Data, Tarefa, Prazo, Conclusao, CodTecnico FROM Acoes_Corretivas
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Dia_Ciclo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dia_Ciclo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CodLote", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodLote", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodLote", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodLote", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantidade_Consumo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade_Consumo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantidade_Consumo", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade_Consumo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Consumo_Racao] ([Data], [Dia_Ciclo], [CodLote]) VALUES (@Data," +
-                " @Dia_Ciclo, @CodLote);\r\nSELECT CodConsumo, Data, Dia_Ciclo, CodLote FROM Consum" +
-                "o_Racao WHERE (CodConsumo = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Consumo_Racao] ([Data], [Dia_Ciclo], [CodLote], [Quantidade_Consumo]) VALUES (@Data, @Dia_Ciclo, @CodLote, @Quantidade_Consumo);
+SELECT CodConsumo, Data, Dia_Ciclo, CodLote, Quantidade_Consumo FROM Consumo_Racao WHERE (CodConsumo = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dia_Ciclo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dia_Ciclo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodLote", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodLote", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantidade_Consumo", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade_Consumo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Consumo_Racao] SET [Data] = @Data, [Dia_Ciclo] = @Dia_Ciclo, [CodLote] = @CodLote WHERE (([CodConsumo] = @Original_CodConsumo) AND ((@IsNull_Data = 1 AND [Data] IS NULL) OR ([Data] = @Original_Data)) AND ((@IsNull_Dia_Ciclo = 1 AND [Dia_Ciclo] IS NULL) OR ([Dia_Ciclo] = @Original_Dia_Ciclo)) AND ((@IsNull_CodLote = 1 AND [CodLote] IS NULL) OR ([CodLote] = @Original_CodLote)));
-SELECT CodConsumo, Data, Dia_Ciclo, CodLote FROM Consumo_Racao WHERE (CodConsumo = @CodConsumo)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Consumo_Racao] SET [Data] = @Data, [Dia_Ciclo] = @Dia_Ciclo, [CodLote] = @CodLote, [Quantidade_Consumo] = @Quantidade_Consumo WHERE (([CodConsumo] = @Original_CodConsumo) AND ((@IsNull_Data = 1 AND [Data] IS NULL) OR ([Data] = @Original_Data)) AND ((@IsNull_Dia_Ciclo = 1 AND [Dia_Ciclo] IS NULL) OR ([Dia_Ciclo] = @Original_Dia_Ciclo)) AND ((@IsNull_CodLote = 1 AND [CodLote] IS NULL) OR ([CodLote] = @Original_CodLote)) AND ((@IsNull_Quantidade_Consumo = 1 AND [Quantidade_Consumo] IS NULL) OR ([Quantidade_Consumo] = @Original_Quantidade_Consumo)));
+SELECT CodConsumo, Data, Dia_Ciclo, CodLote, Quantidade_Consumo FROM Consumo_Racao WHERE (CodConsumo = @CodConsumo)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dia_Ciclo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dia_Ciclo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodLote", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodLote", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantidade_Consumo", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade_Consumo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodConsumo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodConsumo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Data", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -16481,6 +16527,8 @@ SELECT CodConsumo, Data, Dia_Ciclo, CodLote FROM Consumo_Racao WHERE (CodConsumo
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Dia_Ciclo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dia_Ciclo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CodLote", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodLote", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CodLote", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodLote", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Quantidade_Consumo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade_Consumo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantidade_Consumo", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade_Consumo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodConsumo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "CodConsumo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -16497,7 +16545,8 @@ SELECT CodConsumo, Data, Dia_Ciclo, CodLote FROM Consumo_Racao WHERE (CodConsumo
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT CodConsumo, Data, Dia_Ciclo, CodLote FROM dbo.Consumo_Racao";
+            this._commandCollection[0].CommandText = "SELECT CodConsumo, Data, Dia_Ciclo, CodLote, Quantidade_Consumo FROM Consumo_Raca" +
+                "o";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -16558,7 +16607,7 @@ SELECT CodConsumo, Data, Dia_Ciclo, CodLote FROM Consumo_Racao WHERE (CodConsumo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_CodConsumo, global::System.Nullable<global::System.DateTime> Original_Data, global::System.Nullable<int> Original_Dia_Ciclo, global::System.Nullable<int> Original_CodLote) {
+        public virtual int Delete(int Original_CodConsumo, global::System.Nullable<global::System.DateTime> Original_Data, global::System.Nullable<int> Original_Dia_Ciclo, global::System.Nullable<int> Original_CodLote, global::System.Nullable<double> Original_Quantidade_Consumo) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_CodConsumo));
             if ((Original_Data.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -16584,6 +16633,14 @@ SELECT CodConsumo, Data, Dia_Ciclo, CodLote FROM Consumo_Racao WHERE (CodConsumo
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
+            if ((Original_Quantidade_Consumo.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((double)(Original_Quantidade_Consumo.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16604,7 +16661,7 @@ SELECT CodConsumo, Data, Dia_Ciclo, CodLote FROM Consumo_Racao WHERE (CodConsumo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<global::System.DateTime> Data, global::System.Nullable<int> Dia_Ciclo, global::System.Nullable<int> CodLote) {
+        public virtual int Insert(global::System.Nullable<global::System.DateTime> Data, global::System.Nullable<int> Dia_Ciclo, global::System.Nullable<int> CodLote, global::System.Nullable<double> Quantidade_Consumo) {
             if ((Data.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((System.DateTime)(Data.Value));
             }
@@ -16622,6 +16679,12 @@ SELECT CodConsumo, Data, Dia_Ciclo, CodLote FROM Consumo_Racao WHERE (CodConsumo
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Quantidade_Consumo.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((double)(Quantidade_Consumo.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -16643,7 +16706,7 @@ SELECT CodConsumo, Data, Dia_Ciclo, CodLote FROM Consumo_Racao WHERE (CodConsumo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> Data, global::System.Nullable<int> Dia_Ciclo, global::System.Nullable<int> CodLote, int Original_CodConsumo, global::System.Nullable<global::System.DateTime> Original_Data, global::System.Nullable<int> Original_Dia_Ciclo, global::System.Nullable<int> Original_CodLote, int CodConsumo) {
+        public virtual int Update(global::System.Nullable<global::System.DateTime> Data, global::System.Nullable<int> Dia_Ciclo, global::System.Nullable<int> CodLote, global::System.Nullable<double> Quantidade_Consumo, int Original_CodConsumo, global::System.Nullable<global::System.DateTime> Original_Data, global::System.Nullable<int> Original_Dia_Ciclo, global::System.Nullable<int> Original_CodLote, global::System.Nullable<double> Original_Quantidade_Consumo, int CodConsumo) {
             if ((Data.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Data.Value));
             }
@@ -16662,32 +16725,46 @@ SELECT CodConsumo, Data, Dia_Ciclo, CodLote FROM Consumo_Racao WHERE (CodConsumo
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_CodConsumo));
-            if ((Original_Data.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_Data.Value));
+            if ((Quantidade_Consumo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(Quantidade_Consumo.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_CodConsumo));
+            if ((Original_Data.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_Data.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             if ((Original_Dia_Ciclo.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Dia_Ciclo.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Dia_Ciclo.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             if ((Original_CodLote.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_CodLote.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_CodLote.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(CodConsumo));
+            if ((Original_Quantidade_Consumo.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((double)(Original_Quantidade_Consumo.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(CodConsumo));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16708,8 +16785,8 @@ SELECT CodConsumo, Data, Dia_Ciclo, CodLote FROM Consumo_Racao WHERE (CodConsumo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<global::System.DateTime> Data, global::System.Nullable<int> Dia_Ciclo, global::System.Nullable<int> CodLote, int Original_CodConsumo, global::System.Nullable<global::System.DateTime> Original_Data, global::System.Nullable<int> Original_Dia_Ciclo, global::System.Nullable<int> Original_CodLote) {
-            return this.Update(Data, Dia_Ciclo, CodLote, Original_CodConsumo, Original_Data, Original_Dia_Ciclo, Original_CodLote, Original_CodConsumo);
+        public virtual int Update(global::System.Nullable<global::System.DateTime> Data, global::System.Nullable<int> Dia_Ciclo, global::System.Nullable<int> CodLote, global::System.Nullable<double> Quantidade_Consumo, int Original_CodConsumo, global::System.Nullable<global::System.DateTime> Original_Data, global::System.Nullable<int> Original_Dia_Ciclo, global::System.Nullable<int> Original_CodLote, global::System.Nullable<double> Original_Quantidade_Consumo) {
+            return this.Update(Data, Dia_Ciclo, CodLote, Quantidade_Consumo, Original_CodConsumo, Original_Data, Original_Dia_Ciclo, Original_CodLote, Original_Quantidade_Consumo, Original_CodConsumo);
         }
     }
     

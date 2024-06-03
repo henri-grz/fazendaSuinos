@@ -2,7 +2,9 @@
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace fazendaSuinos
 {
@@ -15,6 +17,7 @@ namespace fazendaSuinos
             InitializeComponent();
             fillComboCodLote();
             fillComboCodProp();
+            fillComboLoteCons();
             InitializeDataGridView();
 
             LoadAgenda();
@@ -552,6 +555,139 @@ namespace fazendaSuinos
         private void dataGridAgenda_Sorted(object sender, EventArgs e)
         {
             sincronizaStatus();
+        }
+
+
+        //CONSUMO RACAO
+
+        private void fillComboLoteCons()
+        {
+            String query = "SELECT CodLote FROM Lote";
+            comboLoteCons.Items.Clear();
+
+            using (DatabaseConnection connection = new DatabaseConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection.GetConnection()))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                comboLoteCons.Items.Add(reader["CodLote"].ToString());
+                                Console.WriteLine("Codigos encontrados " + comboLoteCons.Items);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao consultar lotes: " + ex.Message);
+                }
+            }
+        }
+
+        private void geraGrafico()
+        {
+            chartConsumo.Series.Clear();
+            chartConsumo.Titles.Clear();
+            chartConsumo.Legends.Clear();
+            chartConsumo.ChartAreas.Clear();
+
+            // Configurações do gráfico
+            //chartConsumo.Titles.Add("Gráfico de Consumo");
+            var series = chartConsumo.Series.Add("Consumo por Dia");
+            series.ChartType = SeriesChartType.Line;
+
+            chartConsumo.Legends.Add("Legenda");
+            chartConsumo.Legends[0].LegendStyle = LegendStyle.Table;
+            chartConsumo.Legends[0].Docking = Docking.Bottom;
+            chartConsumo.Legends[0].Alignment = StringAlignment.Center;
+            chartConsumo.Legends[0].BorderColor = Color.Black;
+
+            // Configurações da área do gráfico
+            ChartArea chartArea = new ChartArea();
+            chartConsumo.ChartAreas.Add(chartArea);
+
+            chartArea.AxisX.Title = "Dias";
+            chartArea.AxisY.Title = "Consumo (kg)";
+
+            chartArea.AxisX.Minimum = 0;
+            chartArea.AxisY.Minimum = 0;
+
+            // Obtém o intervalo de dias do lote
+            int codLote = Convert.ToInt32(comboLoteCons.Text);
+            int intervaloDias = calcularIntervaloDias(codLote);
+
+            try
+            {
+                // Obtém os dados do banco de dados
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT Dia_Ciclo, Quantidade_Consumo FROM Consumo_Racao WHERE CodLote = @CodLote ORDER BY Dia_Ciclo";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    command.Parameters.AddWithValue("@CodLote", Convert.ToInt32(comboLoteCons.Text));
+
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    int maxDia = 0;
+                    while (reader.Read())
+                    {
+                        int dia = reader.GetInt32(0);
+                        double consumo = reader.GetDouble(1);
+                        series.Points.AddXY(dia, consumo);
+
+                        if (dia > maxDia)
+                        {
+                            maxDia = dia;
+                        }
+                    }
+
+                    reader.Close();
+
+                    // Configura o valor máximo do eixo X
+                    chartArea.AxisX.Maximum = intervaloDias;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao gerar gráfico.\n" + ex, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private int calcularIntervaloDias(int codLote)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT Data_Alojamento, Estimativa_Carregamento FROM Lote WHERE CodLote = @CodLote";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@CodLote", codLote);
+
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    DateTime dataAlojamento = reader.GetDateTime(0);
+                    DateTime estimativaCarregamento = reader.GetDateTime(1);
+                    reader.Close();
+                    return (estimativaCarregamento - dataAlojamento).Days;
+                }
+                else
+                {
+                    reader.Close();
+                    throw new Exception("Lote não encontrado.");
+                }
+            }
+        }
+
+        private void comboLoteCons_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            geraGrafico();
         }
     }
 }
