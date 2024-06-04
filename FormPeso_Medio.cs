@@ -53,12 +53,26 @@ namespace fazendaSuinos
         {
             try
             {
-                // Obtém os valores dos controles
-                DateTime Data = dateTimePickerData.Value;
-                double PesoMedio = Convert.ToDouble(txtPesoMedio.Text);
-                int CodLote = Convert.ToInt32(txtCodigoLote.Text);
-                int DiaCiclo = Convert.ToInt32(txtDiaCiclo.Text);
+                // Verificação e obtenção dos valores dos controles
+                DateTime data = dateTimePickerData.Value;
 
+                if (!double.TryParse(txtPesoMedio.Text, out double pesoMedio))
+                {
+                    MessageBox.Show("Peso médio inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(txtCodigoLote.Text, out int codLote))
+                {
+                    MessageBox.Show("Código do lote inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(txtDiaCiclo.Text, out int diaCiclo))
+                {
+                    MessageBox.Show("Dia do ciclo inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 // Abre a conexão com o banco de dados
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -68,35 +82,36 @@ namespace fazendaSuinos
                     // Verifica se já existe um registro com o mesmo DiaCiclo e CodLote
                     string queryVerificacao = "SELECT COUNT(*) FROM Peso_Medio WHERE Dia_Ciclo = @DiaCiclo AND CodLote = @CodLote";
 
-                    SqlCommand commandVerificacao = new SqlCommand(queryVerificacao, connection);
-
-                    commandVerificacao.Parameters.AddWithValue("@DiaCiclo", DiaCiclo);
-                    commandVerificacao.Parameters.AddWithValue("@CodLote", CodLote);
-                    commandVerificacao.Parameters.AddWithValue("@Data", Data);
-
-                    int count = (int)commandVerificacao.ExecuteScalar();
-
-                    if (count > 0)
+                    using (SqlCommand commandVerificacao = new SqlCommand(queryVerificacao, connection))
                     {
-                        MessageBox.Show("Já existe um registro para este dia e lote.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        commandVerificacao.Parameters.AddWithValue("@DiaCiclo", diaCiclo);
+                        commandVerificacao.Parameters.AddWithValue("@CodLote", codLote);
+
+                        int count = (int)commandVerificacao.ExecuteScalar();
+
+                        if (count > 0)
+                        {
+                            MessageBox.Show("Já existe um registro para este dia e lote.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
                     }
 
                     // Cria o comando SQL para inserir os dados na tabela
                     string queryInsercao = "INSERT INTO Peso_Medio (Data, PesoMedio, Dia_Ciclo, CodLote) VALUES (@Data, @PesoMedio, @DiaCiclo, @CodLote)";
-                    SqlCommand command = new SqlCommand(queryInsercao, connection);
 
-                    // Adiciona os parâmetros ao comando SQL
-                    command.Parameters.AddWithValue("@Data", Data);
-                    command.Parameters.AddWithValue("@PesoMedio", PesoMedio);
-                    command.Parameters.AddWithValue("@DiaCiclo", DiaCiclo);
-                    command.Parameters.AddWithValue("@CodLote", CodLote);
+                    using (SqlCommand commandInsercao = new SqlCommand(queryInsercao, connection))
+                    {
+                        // Adiciona os parâmetros ao comando SQL
+                        commandInsercao.Parameters.AddWithValue("@Data", data);
+                        commandInsercao.Parameters.AddWithValue("@PesoMedio", pesoMedio);
+                        commandInsercao.Parameters.AddWithValue("@DiaCiclo", diaCiclo);
+                        commandInsercao.Parameters.AddWithValue("@CodLote", codLote);
 
+                        // Executa o comando SQL
+                        commandInsercao.ExecuteNonQuery();
 
-                    // Executa o comando SQL
-                    command.ExecuteNonQuery();
-
-                    MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
             catch (Exception ex)
@@ -178,33 +193,81 @@ namespace fazendaSuinos
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            if (txtCodPesagem.Text == "")
+            if (string.IsNullOrWhiteSpace(txtCodPesagem.Text))
             {
+                MessageBox.Show("O código de pesagem não pode estar vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else
+
+            try
             {
-                try
+                // Verificação e obtenção dos valores dos controles
+                if (!int.TryParse(txtCodPesagem.Text, out int codPesagem))
                 {
-                    // Obtém os valores dos controles
-                    int codPesagem = Convert.ToInt32(txtCodPesagem.Text);
-                    double PesoMedio = Convert.ToDouble(txtPesoMedio.Text);
-                    int codLote = Convert.ToInt32(txtCodigoLote.Text);
-                    int diaCiclo = Convert.ToInt32(txtDiaCiclo.Text);
-                    DateTime Data = dateTimePickerData.Value;
+                    MessageBox.Show("Código de pesagem inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                    // Abre a conexão com o banco de dados
-                    using (SqlConnection connection = new SqlConnection(connectionString))
+                if (!double.TryParse(txtPesoMedio.Text, out double pesoMedio))
+                {
+                    MessageBox.Show("Peso médio inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(txtCodigoLote.Text, out int codLote))
+                {
+                    MessageBox.Show("Código do lote inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(txtDiaCiclo.Text, out int diaCiclo))
+                {
+                    MessageBox.Show("Dia do ciclo inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DateTime data = dateTimePickerData.Value;
+
+                // Abre a conexão com o banco de dados
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Verifica se já existe um registro com o mesmo DiaCiclo e CodLote, exceto para o registro atual
+                    string queryVerificacao = @"
+                        SELECT COUNT(*) 
+                        FROM Peso_Medio 
+                        WHERE Dia_Ciclo = @DiaCiclo AND CodLote = @CodLote AND CodPeso_Medio != @CodPeso_Medio";
+
+                    using (SqlCommand commandVerificacao = new SqlCommand(queryVerificacao, connection))
                     {
-                        connection.Open();
+                        commandVerificacao.Parameters.AddWithValue("@DiaCiclo", diaCiclo);
+                        commandVerificacao.Parameters.AddWithValue("@CodLote", codLote);
+                        commandVerificacao.Parameters.AddWithValue("@CodPeso_Medio", codPesagem);
 
-                        // Cria o comando SQL para inserir os dados na tabela
-                        string queryInsercao = "UPDATE Peso_Medio SET Data=@Data, CodLote=@CodLote, PesoMedio=@PesoMedio, Dia_Ciclo=@DiaCiclo WHERE CodPeso_Medio=@CodPeso_Medio";
-                        SqlCommand command = new SqlCommand(queryInsercao, connection);
+                        int count = (int)commandVerificacao.ExecuteScalar();
 
+                        if (count > 0)
+                        {
+                            MessageBox.Show("Já existe um registro para este dia e lote.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+
+                    // Cria o comando SQL para atualizar os dados na tabela
+                    string queryAtualizacao = @"
+                        UPDATE Peso_Medio 
+                        SET Data = @Data, 
+                            CodLote = @CodLote, 
+                            PesoMedio = @PesoMedio, 
+                            Dia_Ciclo = @DiaCiclo 
+                        WHERE CodPeso_Medio = @CodPeso_Medio";
+
+                    using (SqlCommand command = new SqlCommand(queryAtualizacao, connection))
+                    {
                         // Adiciona os parâmetros ao comando SQL
-                        command.Parameters.AddWithValue("@Data", Data);
-                        command.Parameters.AddWithValue("@PesoMedio", PesoMedio);
+                        command.Parameters.AddWithValue("@Data", data);
+                        command.Parameters.AddWithValue("@PesoMedio", pesoMedio);
                         command.Parameters.AddWithValue("@DiaCiclo", diaCiclo);
                         command.Parameters.AddWithValue("@CodLote", codLote);
                         command.Parameters.AddWithValue("@CodPeso_Medio", codPesagem);
@@ -217,10 +280,10 @@ namespace fazendaSuinos
                         atualizaDataGrid();
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao atualizar registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

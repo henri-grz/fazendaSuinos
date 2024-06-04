@@ -84,13 +84,40 @@ namespace fazendaSuinos
         {
             try
             {
-                // Obtém os valores dos controles
-                DateTime Data = dateTimePickerData.Value;
-                double Peso = Convert.ToDouble(txtPeso.Text);
-                int CodLote = Convert.ToInt32(txtCodigoLote.Text);
-                int Mossa = Convert.ToInt32(txtMossa.Text);
-                string Sexo = comboBoxSexo.SelectedItem.ToString();
-                string Causa_Mortis = comboBoxCausa.Text;
+                // Verificação e obtenção dos valores dos controles
+                DateTime data = dateTimePickerData.Value;
+
+                if (!double.TryParse(txtPeso.Text, out double peso))
+                {
+                    MessageBox.Show("Peso inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(txtCodigoLote.Text, out int codLote))
+                {
+                    MessageBox.Show("Código do lote inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(txtMossa.Text, out int mossa))
+                {
+                    MessageBox.Show("Mossa inválida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (comboBoxSexo.SelectedItem == null || string.IsNullOrWhiteSpace(comboBoxSexo.SelectedItem.ToString()))
+                {
+                    MessageBox.Show("Sexo inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                string sexo = comboBoxSexo.SelectedItem.ToString();
+
+                if (comboBoxCausa.SelectedItem == null || string.IsNullOrWhiteSpace(comboBoxCausa.SelectedItem.ToString()))
+                {
+                    MessageBox.Show("Causa Mortis inválida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                string causaMortis = comboBoxCausa.SelectedItem.ToString();
 
                 // Abre a conexão com o banco de dados
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -98,21 +125,27 @@ namespace fazendaSuinos
                     connection.Open();
 
                     // Cria o comando SQL para inserir os dados na tabela
-                    string queryInsercao = "INSERT INTO Controle_Mortalidade (Data, Peso, Mossa, CodLote, Sexo, Causa_Mortis) VALUES (@Data, @Peso, @Mossa, @CodLote, @Sexo, @Causa_Mortis)";
-                    SqlCommand command = new SqlCommand(queryInsercao, connection);
+                    string queryInsercao = @"
+                        INSERT INTO Controle_Mortalidade 
+                        (Data, Peso, Mossa, CodLote, Sexo, Causa_Mortis) 
+                        VALUES 
+                        (@Data, @Peso, @Mossa, @CodLote, @Sexo, @Causa_Mortis)";
 
-                    // Adiciona os parâmetros ao comando SQL
-                    command.Parameters.AddWithValue("@Data", Data);
-                    command.Parameters.AddWithValue("@Peso", Peso);
-                    command.Parameters.AddWithValue("@Mossa", Mossa);
-                    command.Parameters.AddWithValue("@CodLote", CodLote);
-                    command.Parameters.AddWithValue("@Sexo", Sexo);
-                    command.Parameters.AddWithValue("@Causa_Mortis", Causa_Mortis);
+                    using (SqlCommand command = new SqlCommand(queryInsercao, connection))
+                    {
+                        // Adiciona os parâmetros ao comando SQL
+                        command.Parameters.AddWithValue("@Data", data);
+                        command.Parameters.AddWithValue("@Peso", peso);
+                        command.Parameters.AddWithValue("@Mossa", mossa);
+                        command.Parameters.AddWithValue("@CodLote", codLote);
+                        command.Parameters.AddWithValue("@Sexo", sexo);
+                        command.Parameters.AddWithValue("@Causa_Mortis", causaMortis);
 
-                    // Executa o comando SQL
-                    command.ExecuteNonQuery();
+                        // Executa o comando SQL
+                        command.ExecuteNonQuery();
 
-                    MessageBox.Show("Dados incluídos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Dados incluídos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
             catch (Exception ex)
@@ -263,38 +296,79 @@ namespace fazendaSuinos
             btnGravar.Visible = false;
             btnIncluir.Visible = true;
 
-            if (txtCodMortalidade.Text == "")
+            if (string.IsNullOrWhiteSpace(txtCodMortalidade.Text))
             {
+                MessageBox.Show("O código de mortalidade não pode estar vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else
+
+            try
             {
-                try
+                // Verificação e obtenção dos valores dos controles
+                if (!int.TryParse(txtCodMortalidade.Text, out int codMortalidade))
                 {
-                    // Obtém os valores dos controles
-                    int codMortalidade = Convert.ToInt32(txtCodMortalidade.Text);
-                    double Peso = Convert.ToDouble(txtPeso.Text);
-                    int codLote = Convert.ToInt32(txtCodigoLote.Text);
-                    char sexo = Convert.ToChar(comboBoxSexo.Text);
-                    string CausaMortis = comboBoxCausa.Text;
-                    int mossa = Convert.ToInt32(txtMossa.Text);
-                    DateTime Data = dateTimePickerData.Value;
+                    MessageBox.Show("Código de mortalidade inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                    // Abre a conexão com o banco de dados
-                    using (SqlConnection connection = new SqlConnection(connectionString))
+                if (!double.TryParse(txtPeso.Text, out double peso))
+                {
+                    MessageBox.Show("Peso inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(txtCodigoLote.Text, out int codLote))
+                {
+                    MessageBox.Show("Código do lote inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (comboBoxSexo.SelectedItem == null || string.IsNullOrWhiteSpace(comboBoxSexo.SelectedItem.ToString()))
+                {
+                    MessageBox.Show("Sexo inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                char sexo = Convert.ToChar(comboBoxSexo.SelectedItem.ToString());
+
+                if (comboBoxCausa.SelectedItem == null || string.IsNullOrWhiteSpace(comboBoxCausa.SelectedItem.ToString()))
+                {
+                    MessageBox.Show("Causa Mortis inválida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                string causaMortis = comboBoxCausa.SelectedItem.ToString();
+
+                if (!int.TryParse(txtMossa.Text, out int mossa))
+                {
+                    MessageBox.Show("Mossa inválida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DateTime data = dateTimePickerData.Value;
+
+                // Abre a conexão com o banco de dados
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Cria o comando SQL para atualizar os dados na tabela
+                    string queryAtualizacao = @"
+                        UPDATE Controle_Mortalidade 
+                        SET Data = @Data, 
+                            Sexo = @Sexo, 
+                            Peso = @Peso, 
+                            Causa_Mortis = @Causa_Mortis, 
+                            Mossa = @Mossa, 
+                            CodLote = @CodLote 
+                        WHERE CodMortalidade = @CodMortalidade";
+
+                    using (SqlCommand command = new SqlCommand(queryAtualizacao, connection))
                     {
-                        connection.Open();
-
-                        // Cria o comando SQL para inserir os dados na tabela
-                        string queryInsercao = "UPDATE Controle_Mortalidade SET Data=@Data, Sexo=@Sexo, Peso=@Peso, Causa_Mortis=@Causa_Mortis, Mossa=@Mossa, CodLote=@CodLote WHERE CodMortalidade=@CodMortalidade";
-                        SqlCommand command = new SqlCommand(queryInsercao, connection);
-
                         // Adiciona os parâmetros ao comando SQL
                         command.Parameters.AddWithValue("@CodMortalidade", codMortalidade);
-                        command.Parameters.AddWithValue("@Data", Data);
+                        command.Parameters.AddWithValue("@Data", data);
                         command.Parameters.AddWithValue("@Sexo", sexo);
-                        command.Parameters.AddWithValue("@Peso", Peso);
-                        command.Parameters.AddWithValue("@Causa_Mortis", CausaMortis);
+                        command.Parameters.AddWithValue("@Peso", peso);
+                        command.Parameters.AddWithValue("@Causa_Mortis", causaMortis);
                         command.Parameters.AddWithValue("@Mossa", mossa);
                         command.Parameters.AddWithValue("@CodLote", codLote);
 
@@ -306,10 +380,10 @@ namespace fazendaSuinos
                         atualizaDataGrid();
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao atualizar registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

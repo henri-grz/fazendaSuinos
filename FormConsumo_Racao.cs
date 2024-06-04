@@ -236,11 +236,26 @@ namespace fazendaSuinos
         {
             try
             {
-                // Obtém os valores dos controles
-                DateTime Data = dtpDataConsumo.Value;
-                double QuantConsumo = Convert.ToDouble(txtConsumo.Text);
-                int CodLote = Convert.ToInt32(txtCodigoLoteConsumo.Text);
-                int Dia_Ciclo = Convert.ToInt32(txtDiaCicloConsumo.Text);
+                // Verificação e obtenção dos valores dos controles
+                DateTime data = dtpDataConsumo.Value;
+
+                if (!double.TryParse(txtConsumo.Text, out double quantConsumo))
+                {
+                    MessageBox.Show("Quantidade de consumo inválida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(txtCodigoLoteConsumo.Text, out int codLote))
+                {
+                    MessageBox.Show("Código do lote inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(txtDiaCicloConsumo.Text, out int diaCiclo))
+                {
+                    MessageBox.Show("Dia do ciclo inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 // Abre a conexão com o banco de dados
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -248,19 +263,27 @@ namespace fazendaSuinos
                     connection.Open();
 
                     // Cria o comando SQL para inserir os dados na tabela
-                    string queryInsercao = "INSERT INTO Consumo_Racao (Data, Quantidade_Consumo, Dia_Ciclo, CodLote) VALUES (@Data, @QuantConsumo, @Dia_Ciclo, @CodLote)";
+                    string queryInsercao = @"
+                        INSERT INTO Consumo_Racao (Data, Quantidade_Consumo, Dia_Ciclo, CodLote) 
+                        VALUES (@Data, @QuantConsumo, @Dia_Ciclo, @CodLote)";
+
                     SqlCommand command = new SqlCommand(queryInsercao, connection);
 
                     // Adiciona os parâmetros ao comando SQL
-                    command.Parameters.AddWithValue("@Data", Data);
-                    command.Parameters.AddWithValue("@QuantConsumo", QuantConsumo);
-                    command.Parameters.AddWithValue("@Dia_Ciclo", Dia_Ciclo);
-                    command.Parameters.AddWithValue("@CodLote", CodLote);
+                    command.Parameters.AddWithValue("@Data", data);
+                    command.Parameters.AddWithValue("@QuantConsumo", quantConsumo);
+                    command.Parameters.AddWithValue("@Dia_Ciclo", diaCiclo);
+                    command.Parameters.AddWithValue("@CodLote", codLote);
 
                     // Executa o comando SQL
                     command.ExecuteNonQuery();
 
                     LoadDataGridConsumo();
+
+                    txtCodConsumo.Clear();
+                    txtConsumo.Clear();
+                    txtCodigoLoteConsumo.Clear();
+                    txtDiaCicloConsumo.Clear();
 
                     MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -275,56 +298,75 @@ namespace fazendaSuinos
 
         private void btnGravar_Click(object sender, EventArgs e)
         {
-            if (txtCodConsumo.Text == "")
+            if (string.IsNullOrWhiteSpace(txtCodConsumo.Text))
             {
+                MessageBox.Show("O código de consumo não pode estar vazio.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else
+
+            try
             {
-                try
+                // Verificação e obtenção dos valores dos controles
+                if (!int.TryParse(txtCodConsumo.Text, out int codConsumo))
                 {
-                    // Obtém os valores dos controles
-                    int codConsumo = Convert.ToInt32(txtCodConsumo.Text);
-                    DateTime dataConsumo = dtpDataConsumo.Value;
-                    int codLote = Convert.ToInt32(txtCodigoLoteConsumo.Text);
-                    double quant = Convert.ToDouble(txtConsumo.Text);
-                    int diaCiclo = Convert.ToInt32(txtDiaCicloConsumo.Text);
-
-                    // Abre a conexão com o banco de dados
-                    using (SqlConnection connection = new SqlConnection(connectionString))
-                    {
-                        connection.Open();
-
-                        // Cria o comando SQL para inserir os dados na tabela
-                        string queryAtualizacao = @"
-                            UPDATE Consumo_Racao
-                            SET Data = @Data, 
-                                Dia_Ciclo = @Dia_Ciclo,
-                                CodLote = @CodLote,
-                                Quantidade_Consumo = @Quantidade_Consumo
-                            WHERE CodConsumo = @CodConsumo";
-
-                        SqlCommand command = new SqlCommand(queryAtualizacao, connection);
-
-                        // Adiciona os parâmetros ao comando SQL
-                        command.Parameters.AddWithValue("@Data", dataConsumo);
-                        command.Parameters.AddWithValue("@CodLote", codLote);
-                        command.Parameters.AddWithValue("@Dia_Ciclo", diaCiclo);
-                        command.Parameters.AddWithValue("@Quantidade_Consumo", quant);
-                        command.Parameters.AddWithValue("@CodConsumo", codConsumo);
-
-                        // Executa o comando SQL
-                        command.ExecuteNonQuery();
-
-                        MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        LoadDataGridConsumo();
-                    }
+                    MessageBox.Show("Código de consumo inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                catch (Exception ex)
+
+                DateTime dataConsumo = dtpDataConsumo.Value;
+
+                if (!int.TryParse(txtCodigoLoteConsumo.Text, out int codLote))
                 {
-                    MessageBox.Show("Erro ao atualizar registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Código do lote inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
+
+                if (!double.TryParse(txtConsumo.Text, out double quant))
+                {
+                    MessageBox.Show("Quantidade de consumo inválida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(txtDiaCicloConsumo.Text, out int diaCiclo))
+                {
+                    MessageBox.Show("Dia do ciclo inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Abre a conexão com o banco de dados
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Cria o comando SQL para atualizar os dados na tabela
+                    string queryAtualizacao = @"
+                        UPDATE Consumo_Racao
+                        SET Data = @Data, 
+                            Dia_Ciclo = @Dia_Ciclo,
+                            CodLote = @CodLote,
+                            Quantidade_Consumo = @Quantidade_Consumo
+                        WHERE CodConsumo = @CodConsumo";
+
+                    SqlCommand command = new SqlCommand(queryAtualizacao, connection);
+
+                    // Adiciona os parâmetros ao comando SQL
+                    command.Parameters.AddWithValue("@Data", dataConsumo);
+                    command.Parameters.AddWithValue("@CodLote", codLote);
+                    command.Parameters.AddWithValue("@Dia_Ciclo", diaCiclo);
+                    command.Parameters.AddWithValue("@Quantidade_Consumo", quant);
+                    command.Parameters.AddWithValue("@CodConsumo", codConsumo);
+
+                    // Executa o comando SQL
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Dados salvos com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    LoadDataGridConsumo();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -9,7 +9,7 @@ namespace fazendaSuinos
     {
         private string connectionString = Properties.Settings.Default.fazendaSuinosConnectionString;
 
-        List<Control> listaPanels = new List<Control> {};
+        List<Panel> listaPanels = new List<Panel> {};
 
         string tipoAtividade = "";
 
@@ -20,6 +20,7 @@ namespace fazendaSuinos
             listaPanels.Add(panelMedicacao);
             listaPanels.Add(panelVisita);
             listaPanels.Add(panelMortalidade);
+            listaPanels.Add(panelAlimentacao);
 
             LoadForm(codAgenda, CodAtividade);
 
@@ -27,7 +28,7 @@ namespace fazendaSuinos
             definePanelVisivel();
 
             // Ajusta o tamanho da Dialog após definir quais painéis estão visíveis
-            //ajustarTamanhoDialog();
+            ajustarTamanhoDialog();
         }
 
         private void definePanelVisivel()
@@ -58,24 +59,25 @@ namespace fazendaSuinos
             int larguraDialog = this.Width; // Pode ser fixo ou calculado conforme necessário
             int alturaNecessaria = 0;
 
-            //Calcular o tamanho dos panels visíveis
-            foreach (Panel panel in listaPanels)
-            {
-                Console.WriteLine("Altura do painel " + panel.Name + ": " + panel.Height);
-                Console.WriteLine("Visível: " + panel.Visible);
-
-                if (panel.Visible)
-                {
-                    alturaNecessaria += panel.Height;
-                    
-                    Console.WriteLine("Altura acumulada: " + alturaNecessaria);
-                }
-            }
-
             // Adiciona algum espaço extra para margens e padding
             alturaNecessaria += panelDetalhes.Height; // 50 é um valor arbitrário, ajuste conforme necessário
 
-            Console.WriteLine("Largura: " + larguraDialog + " Altura total necessária: " + alturaNecessaria);
+            if (tipoAtividade == "Mortalidade")
+            {
+                alturaNecessaria += panelMortalidade.Height;
+            }
+            else if (tipoAtividade == "Vacinação")
+            {
+                alturaNecessaria += panelMedicacao.Height;
+            }
+            else if (tipoAtividade == "Visita")
+            {
+                alturaNecessaria += panelVisita.Height;
+            }
+            else if (tipoAtividade == "Alimentação")
+            {
+                alturaNecessaria += panelAlimentacao.Height;
+            }
 
             // Ajusta o tamanho da Dialog
             this.ClientSize = new System.Drawing.Size(larguraDialog, alturaNecessaria);

@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelDashboard = new System.Windows.Forms.Panel();
+            this.panelConsRação = new System.Windows.Forms.Panel();
+            this.chartConsumo = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.comboLoteCons = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.panelAcoesCorretivas = new System.Windows.Forms.Panel();
             this.comboCodProp = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -69,21 +75,28 @@
             this.panelAgenda = new System.Windows.Forms.Panel();
             this.btnAtualizarAgenda = new FontAwesome.Sharp.IconButton();
             this.dataGridAgenda = new System.Windows.Forms.DataGridView();
-            this.labelDashHoje = new System.Windows.Forms.Label();
+            this.finalizadaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.codAtividadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.atividadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataAtividadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codVacinacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codRacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codMortalidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codVisitaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codLoteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agendaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fazendaSuinosDataSet = new fazendaSuinos.fazendaSuinosDataSet();
-            this.panelConsRação = new System.Windows.Forms.Panel();
-            this.comboLoteCons = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.chartConsumo = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.labelDashHoje = new System.Windows.Forms.Label();
+            this.agendaTableAdapter = new fazendaSuinos.fazendaSuinosDataSetTableAdapters.AgendaTableAdapter();
             this.panelDashboard.SuspendLayout();
+            this.panelConsRação.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartConsumo)).BeginInit();
             this.panelAcoesCorretivas.SuspendLayout();
             this.panelDetalhesLote.SuspendLayout();
             this.panelAgenda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAgenda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).BeginInit();
-            this.panelConsRação.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartConsumo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDashboard
@@ -94,10 +107,75 @@
             this.panelDashboard.Controls.Add(this.panelAgenda);
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDashboard.Location = new System.Drawing.Point(0, 0);
-            this.panelDashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDashboard.Margin = new System.Windows.Forms.Padding(4);
             this.panelDashboard.Name = "panelDashboard";
             this.panelDashboard.Size = new System.Drawing.Size(1765, 992);
             this.panelDashboard.TabIndex = 0;
+            // 
+            // panelConsRação
+            // 
+            this.panelConsRação.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.panelConsRação.Controls.Add(this.chartConsumo);
+            this.panelConsRação.Controls.Add(this.comboLoteCons);
+            this.panelConsRação.Controls.Add(this.label1);
+            this.panelConsRação.Controls.Add(this.label15);
+            this.panelConsRação.Location = new System.Drawing.Point(113, 527);
+            this.panelConsRação.Margin = new System.Windows.Forms.Padding(4);
+            this.panelConsRação.Name = "panelConsRação";
+            this.panelConsRação.Size = new System.Drawing.Size(661, 377);
+            this.panelConsRação.TabIndex = 34;
+            // 
+            // chartConsumo
+            // 
+            this.chartConsumo.BackColor = System.Drawing.SystemColors.MenuBar;
+            chartArea1.Name = "ChartArea1";
+            this.chartConsumo.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend3";
+            this.chartConsumo.Legends.Add(legend1);
+            this.chartConsumo.Location = new System.Drawing.Point(20, 103);
+            this.chartConsumo.Margin = new System.Windows.Forms.Padding(4);
+            this.chartConsumo.Name = "chartConsumo";
+            this.chartConsumo.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend3";
+            series1.Name = "Consumo de Ração";
+            this.chartConsumo.Series.Add(series1);
+            this.chartConsumo.Size = new System.Drawing.Size(609, 255);
+            this.chartConsumo.TabIndex = 68;
+            this.chartConsumo.Text = "Gráfico de Consumo";
+            // 
+            // comboLoteCons
+            // 
+            this.comboLoteCons.FormattingEnabled = true;
+            this.comboLoteCons.Location = new System.Drawing.Point(512, 59);
+            this.comboLoteCons.Margin = new System.Windows.Forms.Padding(4);
+            this.comboLoteCons.Name = "comboLoteCons";
+            this.comboLoteCons.Size = new System.Drawing.Size(100, 24);
+            this.comboLoteCons.TabIndex = 33;
+            this.comboLoteCons.SelectedIndexChanged += new System.EventHandler(this.comboLoteCons_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label1.Location = new System.Drawing.Point(453, 56);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 24);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Lote:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label15.Location = new System.Drawing.Point(47, 39);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(264, 46);
+            this.label15.TabIndex = 1;
+            this.label15.Text = "Cons. Ração";
             // 
             // panelAcoesCorretivas
             // 
@@ -118,7 +196,7 @@
             this.panelAcoesCorretivas.Controls.Add(this.label7);
             this.panelAcoesCorretivas.Controls.Add(this.labelDashAcoes);
             this.panelAcoesCorretivas.Location = new System.Drawing.Point(843, 527);
-            this.panelAcoesCorretivas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAcoesCorretivas.Margin = new System.Windows.Forms.Padding(4);
             this.panelAcoesCorretivas.Name = "panelAcoesCorretivas";
             this.panelAcoesCorretivas.Size = new System.Drawing.Size(661, 377);
             this.panelAcoesCorretivas.TabIndex = 2;
@@ -127,7 +205,7 @@
             // 
             this.comboCodProp.FormattingEnabled = true;
             this.comboCodProp.Location = new System.Drawing.Point(503, 58);
-            this.comboCodProp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboCodProp.Margin = new System.Windows.Forms.Padding(4);
             this.comboCodProp.Name = "comboCodProp";
             this.comboCodProp.Size = new System.Drawing.Size(100, 24);
             this.comboCodProp.TabIndex = 33;
@@ -150,7 +228,7 @@
             this.campoQuant.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoQuant.Location = new System.Drawing.Point(372, 290);
-            this.campoQuant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoQuant.Margin = new System.Windows.Forms.Padding(4);
             this.campoQuant.Name = "campoQuant";
             this.campoQuant.ReadOnly = true;
             this.campoQuant.Size = new System.Drawing.Size(232, 23);
@@ -163,7 +241,7 @@
             this.campoLotesAbertos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoLotesAbertos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoLotesAbertos.Location = new System.Drawing.Point(372, 256);
-            this.campoLotesAbertos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoLotesAbertos.Margin = new System.Windows.Forms.Padding(4);
             this.campoLotesAbertos.Name = "campoLotesAbertos";
             this.campoLotesAbertos.ReadOnly = true;
             this.campoLotesAbertos.Size = new System.Drawing.Size(232, 23);
@@ -176,7 +254,7 @@
             this.campoLotes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoLotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoLotes.Location = new System.Drawing.Point(372, 222);
-            this.campoLotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoLotes.Margin = new System.Windows.Forms.Padding(4);
             this.campoLotes.Name = "campoLotes";
             this.campoLotes.ReadOnly = true;
             this.campoLotes.Size = new System.Drawing.Size(232, 23);
@@ -189,7 +267,7 @@
             this.campoPocilgas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoPocilgas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoPocilgas.Location = new System.Drawing.Point(372, 187);
-            this.campoPocilgas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoPocilgas.Margin = new System.Windows.Forms.Padding(4);
             this.campoPocilgas.Name = "campoPocilgas";
             this.campoPocilgas.ReadOnly = true;
             this.campoPocilgas.Size = new System.Drawing.Size(232, 23);
@@ -202,7 +280,7 @@
             this.campoNomeProd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoNomeProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoNomeProd.Location = new System.Drawing.Point(372, 153);
-            this.campoNomeProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoNomeProd.Margin = new System.Windows.Forms.Padding(4);
             this.campoNomeProd.Name = "campoNomeProd";
             this.campoNomeProd.ReadOnly = true;
             this.campoNomeProd.Size = new System.Drawing.Size(232, 23);
@@ -215,7 +293,7 @@
             this.campoNomeProp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoNomeProp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoNomeProp.Location = new System.Drawing.Point(372, 117);
-            this.campoNomeProp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoNomeProp.Margin = new System.Windows.Forms.Padding(4);
             this.campoNomeProp.Name = "campoNomeProp";
             this.campoNomeProp.ReadOnly = true;
             this.campoNomeProp.Size = new System.Drawing.Size(232, 23);
@@ -321,7 +399,7 @@
             this.panelDetalhesLote.Controls.Add(this.labelDetCod);
             this.panelDetalhesLote.Controls.Add(this.labelDashDetalhes);
             this.panelDetalhesLote.Location = new System.Drawing.Point(843, 80);
-            this.panelDetalhesLote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelDetalhesLote.Margin = new System.Windows.Forms.Padding(4);
             this.panelDetalhesLote.Name = "panelDetalhesLote";
             this.panelDetalhesLote.Size = new System.Drawing.Size(661, 389);
             this.panelDetalhesLote.TabIndex = 1;
@@ -330,7 +408,7 @@
             // 
             this.comboCodLote_Det.FormattingEnabled = true;
             this.comboCodLote_Det.Location = new System.Drawing.Point(503, 43);
-            this.comboCodLote_Det.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboCodLote_Det.Margin = new System.Windows.Forms.Padding(4);
             this.comboCodLote_Det.Name = "comboCodLote_Det";
             this.comboCodLote_Det.Size = new System.Drawing.Size(100, 24);
             this.comboCodLote_Det.TabIndex = 19;
@@ -343,7 +421,7 @@
             this.campoDetCodGerente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetCodGerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetCodGerente.Location = new System.Drawing.Point(372, 311);
-            this.campoDetCodGerente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoDetCodGerente.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetCodGerente.Name = "campoDetCodGerente";
             this.campoDetCodGerente.ReadOnly = true;
             this.campoDetCodGerente.Size = new System.Drawing.Size(232, 23);
@@ -356,7 +434,7 @@
             this.campoDetDataCarreg.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetDataCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetDataCarreg.Location = new System.Drawing.Point(372, 277);
-            this.campoDetDataCarreg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoDetDataCarreg.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetDataCarreg.Name = "campoDetDataCarreg";
             this.campoDetDataCarreg.ReadOnly = true;
             this.campoDetDataCarreg.Size = new System.Drawing.Size(232, 23);
@@ -369,7 +447,7 @@
             this.campoDetDataAloj.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetDataAloj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetDataAloj.Location = new System.Drawing.Point(372, 242);
-            this.campoDetDataAloj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoDetDataAloj.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetDataAloj.Name = "campoDetDataAloj";
             this.campoDetDataAloj.ReadOnly = true;
             this.campoDetDataAloj.Size = new System.Drawing.Size(232, 23);
@@ -382,7 +460,7 @@
             this.campoDetSituacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetSituacao.Location = new System.Drawing.Point(372, 208);
-            this.campoDetSituacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoDetSituacao.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetSituacao.Name = "campoDetSituacao";
             this.campoDetSituacao.ReadOnly = true;
             this.campoDetSituacao.Size = new System.Drawing.Size(232, 23);
@@ -395,7 +473,7 @@
             this.campoDetPesoMedio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetPesoMedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetPesoMedio.Location = new System.Drawing.Point(372, 174);
-            this.campoDetPesoMedio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoDetPesoMedio.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetPesoMedio.Name = "campoDetPesoMedio";
             this.campoDetPesoMedio.ReadOnly = true;
             this.campoDetPesoMedio.Size = new System.Drawing.Size(232, 23);
@@ -408,7 +486,7 @@
             this.campoDetPesoTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetPesoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetPesoTotal.Location = new System.Drawing.Point(372, 139);
-            this.campoDetPesoTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoDetPesoTotal.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetPesoTotal.Name = "campoDetPesoTotal";
             this.campoDetPesoTotal.ReadOnly = true;
             this.campoDetPesoTotal.Size = new System.Drawing.Size(232, 23);
@@ -421,7 +499,7 @@
             this.campoDetQuant.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoDetQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.campoDetQuant.Location = new System.Drawing.Point(372, 103);
-            this.campoDetQuant.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.campoDetQuant.Margin = new System.Windows.Forms.Padding(4);
             this.campoDetQuant.Name = "campoDetQuant";
             this.campoDetQuant.ReadOnly = true;
             this.campoDetQuant.Size = new System.Drawing.Size(232, 23);
@@ -535,7 +613,7 @@
             this.panelAgenda.Controls.Add(this.dataGridAgenda);
             this.panelAgenda.Controls.Add(this.labelDashHoje);
             this.panelAgenda.Location = new System.Drawing.Point(113, 80);
-            this.panelAgenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAgenda.Margin = new System.Windows.Forms.Padding(4);
             this.panelAgenda.Name = "panelAgenda";
             this.panelAgenda.Size = new System.Drawing.Size(661, 389);
             this.panelAgenda.TabIndex = 0;
@@ -565,8 +643,20 @@
             // 
             this.dataGridAgenda.AllowUserToAddRows = false;
             this.dataGridAgenda.AllowUserToDeleteRows = false;
+            this.dataGridAgenda.AutoGenerateColumns = false;
             this.dataGridAgenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAgenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.finalizadaDataGridViewCheckBoxColumn,
+            this.codAtividadeDataGridViewTextBoxColumn,
+            this.atividadeDataGridViewTextBoxColumn,
+            this.dataAtividadeDataGridViewTextBoxColumn,
+            this.codVacinacaoDataGridViewTextBoxColumn,
+            this.codRacaoDataGridViewTextBoxColumn,
+            this.codMortalidadeDataGridViewTextBoxColumn,
+            this.codVisitaDataGridViewTextBoxColumn,
+            this.codLoteDataGridViewTextBoxColumn});
+            this.dataGridAgenda.DataSource = this.agendaBindingSource;
             this.dataGridAgenda.Location = new System.Drawing.Point(55, 103);
             this.dataGridAgenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridAgenda.Name = "dataGridAgenda";
@@ -576,9 +666,93 @@
             this.dataGridAgenda.Size = new System.Drawing.Size(557, 255);
             this.dataGridAgenda.TabIndex = 1;
             this.dataGridAgenda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAgenda_CellDoubleClick);
-            this.dataGridAgenda.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridAgenda_CellValueChanged);
             this.dataGridAgenda.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridAgenda_DataBindingComplete);
-            this.dataGridAgenda.Sorted += new System.EventHandler(this.dataGridAgenda_Sorted);
+            // 
+            // finalizadaDataGridViewCheckBoxColumn
+            // 
+            this.finalizadaDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.finalizadaDataGridViewCheckBoxColumn.DataPropertyName = "Finalizada";
+            this.finalizadaDataGridViewCheckBoxColumn.HeaderText = "Status";
+            this.finalizadaDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.finalizadaDataGridViewCheckBoxColumn.Name = "finalizadaDataGridViewCheckBoxColumn";
+            this.finalizadaDataGridViewCheckBoxColumn.Width = 60;
+            // 
+            // codAtividadeDataGridViewTextBoxColumn
+            // 
+            this.codAtividadeDataGridViewTextBoxColumn.DataPropertyName = "CodAtividade";
+            this.codAtividadeDataGridViewTextBoxColumn.HeaderText = "Cod";
+            this.codAtividadeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codAtividadeDataGridViewTextBoxColumn.Name = "codAtividadeDataGridViewTextBoxColumn";
+            this.codAtividadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codAtividadeDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // atividadeDataGridViewTextBoxColumn
+            // 
+            this.atividadeDataGridViewTextBoxColumn.DataPropertyName = "Atividade";
+            this.atividadeDataGridViewTextBoxColumn.HeaderText = "Atividade";
+            this.atividadeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.atividadeDataGridViewTextBoxColumn.Name = "atividadeDataGridViewTextBoxColumn";
+            this.atividadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataAtividadeDataGridViewTextBoxColumn
+            // 
+            this.dataAtividadeDataGridViewTextBoxColumn.DataPropertyName = "DataAtividade";
+            this.dataAtividadeDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.dataAtividadeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dataAtividadeDataGridViewTextBoxColumn.Name = "dataAtividadeDataGridViewTextBoxColumn";
+            this.dataAtividadeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codVacinacaoDataGridViewTextBoxColumn
+            // 
+            this.codVacinacaoDataGridViewTextBoxColumn.DataPropertyName = "CodVacinacao";
+            this.codVacinacaoDataGridViewTextBoxColumn.HeaderText = "CodVacinacao";
+            this.codVacinacaoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codVacinacaoDataGridViewTextBoxColumn.Name = "codVacinacaoDataGridViewTextBoxColumn";
+            this.codVacinacaoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codRacaoDataGridViewTextBoxColumn
+            // 
+            this.codRacaoDataGridViewTextBoxColumn.DataPropertyName = "CodRacao";
+            this.codRacaoDataGridViewTextBoxColumn.HeaderText = "CodRacao";
+            this.codRacaoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codRacaoDataGridViewTextBoxColumn.Name = "codRacaoDataGridViewTextBoxColumn";
+            this.codRacaoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codMortalidadeDataGridViewTextBoxColumn
+            // 
+            this.codMortalidadeDataGridViewTextBoxColumn.DataPropertyName = "CodMortalidade";
+            this.codMortalidadeDataGridViewTextBoxColumn.HeaderText = "CodMortalidade";
+            this.codMortalidadeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codMortalidadeDataGridViewTextBoxColumn.Name = "codMortalidadeDataGridViewTextBoxColumn";
+            this.codMortalidadeDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codVisitaDataGridViewTextBoxColumn
+            // 
+            this.codVisitaDataGridViewTextBoxColumn.DataPropertyName = "CodVisita";
+            this.codVisitaDataGridViewTextBoxColumn.HeaderText = "CodVisita";
+            this.codVisitaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codVisitaDataGridViewTextBoxColumn.Name = "codVisitaDataGridViewTextBoxColumn";
+            this.codVisitaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codLoteDataGridViewTextBoxColumn
+            // 
+            this.codLoteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.codLoteDataGridViewTextBoxColumn.DataPropertyName = "CodLote";
+            this.codLoteDataGridViewTextBoxColumn.HeaderText = "Lote";
+            this.codLoteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codLoteDataGridViewTextBoxColumn.Name = "codLoteDataGridViewTextBoxColumn";
+            this.codLoteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codLoteDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // agendaBindingSource
+            // 
+            this.agendaBindingSource.DataMember = "Agenda";
+            this.agendaBindingSource.DataSource = this.fazendaSuinosDataSet;
+            // 
+            // fazendaSuinosDataSet
+            // 
+            this.fazendaSuinosDataSet.DataSetName = "fazendaSuinosDataSet";
+            this.fazendaSuinosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // labelDashHoje
             // 
@@ -592,75 +766,9 @@
             this.labelDashHoje.TabIndex = 0;
             this.labelDashHoje.Text = "Agenda";
             // 
-            // fazendaSuinosDataSet
+            // agendaTableAdapter
             // 
-            this.fazendaSuinosDataSet.DataSetName = "fazendaSuinosDataSet";
-            this.fazendaSuinosDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // panelConsRação
-            // 
-            this.panelConsRação.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.panelConsRação.Controls.Add(this.chartConsumo);
-            this.panelConsRação.Controls.Add(this.comboLoteCons);
-            this.panelConsRação.Controls.Add(this.label1);
-            this.panelConsRação.Controls.Add(this.label15);
-            this.panelConsRação.Location = new System.Drawing.Point(113, 527);
-            this.panelConsRação.Margin = new System.Windows.Forms.Padding(4);
-            this.panelConsRação.Name = "panelConsRação";
-            this.panelConsRação.Size = new System.Drawing.Size(661, 377);
-            this.panelConsRação.TabIndex = 34;
-            // 
-            // comboLoteCons
-            // 
-            this.comboLoteCons.FormattingEnabled = true;
-            this.comboLoteCons.Location = new System.Drawing.Point(512, 59);
-            this.comboLoteCons.Margin = new System.Windows.Forms.Padding(4);
-            this.comboLoteCons.Name = "comboLoteCons";
-            this.comboLoteCons.Size = new System.Drawing.Size(100, 24);
-            this.comboLoteCons.TabIndex = 33;
-            this.comboLoteCons.SelectedIndexChanged += new System.EventHandler(this.comboLoteCons_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(453, 56);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 24);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Lote:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label15.Location = new System.Drawing.Point(47, 39);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(264, 46);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "Cons. Ração";
-            // 
-            // chartConsumo
-            // 
-            this.chartConsumo.BackColor = System.Drawing.SystemColors.MenuBar;
-            chartArea1.Name = "ChartArea1";
-            this.chartConsumo.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend3";
-            this.chartConsumo.Legends.Add(legend1);
-            this.chartConsumo.Location = new System.Drawing.Point(20, 103);
-            this.chartConsumo.Margin = new System.Windows.Forms.Padding(4);
-            this.chartConsumo.Name = "chartConsumo";
-            this.chartConsumo.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend3";
-            series1.Name = "Consumo de Ração";
-            this.chartConsumo.Series.Add(series1);
-            this.chartConsumo.Size = new System.Drawing.Size(609, 255);
-            this.chartConsumo.TabIndex = 68;
-            this.chartConsumo.Text = "Gráfico de Consumo";
+            this.agendaTableAdapter.ClearBeforeFill = true;
             // 
             // FormDashboard
             // 
@@ -669,10 +777,14 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1765, 992);
             this.Controls.Add(this.panelDashboard);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDashboard";
             this.Text = "FormDashboard";
+            this.Load += new System.EventHandler(this.FormDashboard_Load);
             this.panelDashboard.ResumeLayout(false);
+            this.panelConsRação.ResumeLayout(false);
+            this.panelConsRação.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartConsumo)).EndInit();
             this.panelAcoesCorretivas.ResumeLayout(false);
             this.panelAcoesCorretivas.PerformLayout();
             this.panelDetalhesLote.ResumeLayout(false);
@@ -680,10 +792,8 @@
             this.panelAgenda.ResumeLayout(false);
             this.panelAgenda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAgenda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fazendaSuinosDataSet)).EndInit();
-            this.panelConsRação.ResumeLayout(false);
-            this.panelConsRação.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartConsumo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -735,5 +845,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartConsumo;
+        private System.Windows.Forms.BindingSource agendaBindingSource;
+        private fazendaSuinosDataSetTableAdapters.AgendaTableAdapter agendaTableAdapter;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn finalizadaDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codAtividadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn atividadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataAtividadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codVacinacaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codRacaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codMortalidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codVisitaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codLoteDataGridViewTextBoxColumn;
     }
 }

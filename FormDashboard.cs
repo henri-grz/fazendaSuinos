@@ -102,18 +102,6 @@ namespace fazendaSuinos
                 dataGridAgenda.Rows.RemoveAt(0);
             }
 
-            if (dataGridAgenda.Columns["Status"] == null)
-            {
-                // Define a coluna de Check
-                DataGridViewCheckBoxColumn checkColumn = new DataGridViewCheckBoxColumn();
-                checkColumn.Name = "Status";
-                checkColumn.HeaderText = "Status";
-                checkColumn.Width = 80;
-                checkColumn.FillWeight = 10;
-
-                dataGridAgenda.Columns.Add(checkColumn);
-            }
-
             using (DatabaseConnection connection = new DatabaseConnection(connectionString))
             {
                 try
@@ -146,26 +134,15 @@ namespace fazendaSuinos
             }
 
             // Define a coluna de status como editável
-            dataGridAgenda.Columns["Status"].ReadOnly = false;
+            dataGridAgenda.Columns[0].ReadOnly = false;
 
             // Define o foco para a célula desejada
             if (dataGridAgenda.Rows.Count > 1)
             {
                 dataGridAgenda.CurrentCell = null; // Foca na célula da primeira coluna na segunda linha
             }
-
-            sincronizaStatus();
         }
 
-        private void sincronizaStatus()
-        {
-            // Configura as células de checkbox de acordo com o valor da coluna 'Finalizada'
-            foreach (DataGridViewRow row in dataGridAgenda.Rows)
-            {
-                bool finalizada = (bool)row.Cells["Finalizada"].Value;
-                row.Cells["Status"].Value = finalizada;
-            }
-        }
 
         private void InitializeDataGridView()
         {
@@ -176,47 +153,6 @@ namespace fazendaSuinos
 
         private void dataGridAgenda_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            // Renomeia a coluna de acordo com o nome desejado
-            if (dataGridAgenda.Columns["DataAtividade"] != null)
-            {
-                dataGridAgenda.Columns["DataAtividade"].HeaderText = "Data";
-                dataGridAgenda.Columns["DataAtividade"].Width = 100;
-                dataGridAgenda.Columns["Status"].Width = 80;
-            }
-            if (dataGridAgenda.Columns["CodVacinacao"] != null)
-            {
-                dataGridAgenda.Columns["CodVacinacao"].HeaderText = "Contr. Vac.";
-                dataGridAgenda.Columns["CodVacinacao"].Width = 40;
-            }
-            if (dataGridAgenda.Columns["CodAtividade"] != null)
-            {
-                dataGridAgenda.Columns["CodAtividade"].HeaderText = "Cód.";
-                dataGridAgenda.Columns["CodAtividade"].Width = 45;
-                dataGridAgenda.Columns["CodAtividade"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            }
-            if (dataGridAgenda.Columns["CodRacao"] != null)
-            {
-                dataGridAgenda.Columns["CodRacao"].HeaderText = "Cons. Ração";
-                dataGridAgenda.Columns["CodRacao"].Width = 40;
-            }
-            if (dataGridAgenda.Columns["CodMortalidade"] != null)
-            {
-                dataGridAgenda.Columns["CodMortalidade"].HeaderText = "Contr. Mort.";
-                dataGridAgenda.Columns["CodMortalidade"].Width = 40;
-            }
-            if (dataGridAgenda.Columns["CodLote"] != null)
-            {
-                dataGridAgenda.Columns["CodLote"].HeaderText = "Lote";
-                dataGridAgenda.Columns["CodLote"].Width = 80;
-            }
-
-            //Oculta colunas que não é para exibir
-            dataGridAgenda.Columns["Finalizada"].Visible = false;
-            dataGridAgenda.Columns["CodVacinacao"].Visible = false;
-            dataGridAgenda.Columns["CodMortalidade"].Visible = false;
-            dataGridAgenda.Columns["CodRacao"].Visible = false;
-            dataGridAgenda.Columns["CodVisita"].Visible = false;
-
             // Define o foco para a célula desejada após atualizar a agenda
             if (dataGridAgenda.Rows.Count > 1)
             {
@@ -229,13 +165,13 @@ namespace fazendaSuinos
         private void dataGridAgenda_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             // Verifique se a célula alterada é uma célula de checkbox
-            if (e.ColumnIndex == dataGridAgenda.Columns["Status"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dataGridAgenda.Columns[0].Index && e.RowIndex >= 0)
             {
                 // Obtenha o valor do checkbox
                 bool isChecked = (bool)dataGridAgenda.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
 
                 // Obtenha o código da atividade
-                int codAtividade = (int)dataGridAgenda.Rows[e.RowIndex].Cells["CodAtividade"].Value;
+                int codAtividade = (int)dataGridAgenda.Rows[e.RowIndex].Cells[1].Value;
 
                 // Atualize a tabela de Agenda com o novo status
                 using (DatabaseConnection connection = new DatabaseConnection(connectionString))
@@ -277,27 +213,27 @@ namespace fazendaSuinos
         {
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
             {
-                string codAgenda = dataGridAgenda.Rows[e.RowIndex].Cells["CodAtividade"].Value.ToString();
+                string codAgenda = dataGridAgenda.Rows[e.RowIndex].Cells[1].Value.ToString();
                 string codAtividade = "";
 
-                if (dataGridAgenda.Rows[e.RowIndex].Cells["CodMortalidade"].Value != DBNull.Value)
+                if (dataGridAgenda.Rows[e.RowIndex].Cells[6].Value != DBNull.Value)
                 {
-                    codAtividade = dataGridAgenda.Rows[e.RowIndex].Cells["CodMortalidade"].Value.ToString();
+                    codAtividade = dataGridAgenda.Rows[e.RowIndex].Cells[6].Value.ToString();
                     Console.WriteLine(codAtividade);
                 }
-                else if (dataGridAgenda.Rows[e.RowIndex].Cells["CodVacinacao"].Value != DBNull.Value)
+                else if (dataGridAgenda.Rows[e.RowIndex].Cells[4].Value != DBNull.Value)
                 {
-                    codAtividade = dataGridAgenda.Rows[e.RowIndex].Cells["CodVacinacao"].Value.ToString();
+                    codAtividade = dataGridAgenda.Rows[e.RowIndex].Cells[4].Value.ToString();
                     Console.WriteLine(codAtividade);
                 }
-                else if (dataGridAgenda.Rows[e.RowIndex].Cells["CodVisita"].Value != DBNull.Value)
+                else if (dataGridAgenda.Rows[e.RowIndex].Cells[7].Value != DBNull.Value)
                 {
-                    codAtividade = dataGridAgenda.Rows[e.RowIndex].Cells["CodVisita"].Value.ToString();
+                    codAtividade = dataGridAgenda.Rows[e.RowIndex].Cells[7].Value.ToString();
                     Console.WriteLine(codAtividade);
                 }
-                else if (dataGridAgenda.Rows[e.RowIndex].Cells["CodRacao"].Value != DBNull.Value)
+                else if (dataGridAgenda.Rows[e.RowIndex].Cells[5].Value != DBNull.Value)
                 {
-                    codAtividade = dataGridAgenda.Rows[e.RowIndex].Cells["CodRacao"].Value.ToString();
+                    codAtividade = dataGridAgenda.Rows[e.RowIndex].Cells[5].Value.ToString();
                     Console.WriteLine(codAtividade);
                 }
                 else
@@ -552,11 +488,6 @@ namespace fazendaSuinos
             fillPropFields();
         }
 
-        private void dataGridAgenda_Sorted(object sender, EventArgs e)
-        {
-            sincronizaStatus();
-        }
-
 
         //CONSUMO RACAO
 
@@ -688,6 +619,13 @@ namespace fazendaSuinos
         private void comboLoteCons_SelectedIndexChanged(object sender, EventArgs e)
         {
             geraGrafico();
+        }
+
+        private void FormDashboard_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'fazendaSuinosDataSet.Agenda'. Você pode movê-la ou removê-la conforme necessário.
+            this.agendaTableAdapter.Fill(this.fazendaSuinosDataSet.Agenda);
+
         }
     }
 }
