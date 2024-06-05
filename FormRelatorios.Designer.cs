@@ -80,7 +80,7 @@
             // 
             // comboModelo
             // 
-            this.comboModelo.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboModelo.BackColor = System.Drawing.Color.LightGray;
             this.comboModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboModelo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -129,7 +129,7 @@
             // 
             // btnSelecionarTodos
             // 
-            this.btnSelecionarTodos.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnSelecionarTodos.BackColor = System.Drawing.Color.LightGray;
             this.btnSelecionarTodos.FlatAppearance.BorderSize = 0;
             this.btnSelecionarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelecionarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
@@ -144,7 +144,7 @@
             // 
             // btnDesmarcarTodos
             // 
-            this.btnDesmarcarTodos.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnDesmarcarTodos.BackColor = System.Drawing.Color.LightGray;
             this.btnDesmarcarTodos.FlatAppearance.BorderSize = 0;
             this.btnDesmarcarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDesmarcarTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);

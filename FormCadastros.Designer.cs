@@ -460,7 +460,7 @@ namespace fazendaSuinos
             // 
             // btnLimparEntidade
             // 
-            this.btnLimparEntidade.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnLimparEntidade.BackColor = System.Drawing.Color.LightGray;
             this.btnLimparEntidade.FlatAppearance.BorderSize = 0;
             this.btnLimparEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimparEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -505,7 +505,7 @@ namespace fazendaSuinos
             // 
             // campoValorEntidade
             // 
-            this.campoValorEntidade.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoValorEntidade.BackColor = System.Drawing.Color.LightGray;
             this.campoValorEntidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoValorEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoValorEntidade.Location = new System.Drawing.Point(507, 117);
@@ -526,7 +526,7 @@ namespace fazendaSuinos
             // 
             // comboAtributoEntidade
             // 
-            this.comboAtributoEntidade.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboAtributoEntidade.BackColor = System.Drawing.Color.LightGray;
             this.comboAtributoEntidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboAtributoEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboAtributoEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -772,7 +772,7 @@ namespace fazendaSuinos
             // 
             // btnLimparFazenda
             // 
-            this.btnLimparFazenda.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnLimparFazenda.BackColor = System.Drawing.Color.LightGray;
             this.btnLimparFazenda.FlatAppearance.BorderSize = 0;
             this.btnLimparFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimparFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -817,7 +817,7 @@ namespace fazendaSuinos
             // 
             // campoValorFazenda
             // 
-            this.campoValorFazenda.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoValorFazenda.BackColor = System.Drawing.Color.LightGray;
             this.campoValorFazenda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoValorFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoValorFazenda.Location = new System.Drawing.Point(507, 117);
@@ -838,7 +838,7 @@ namespace fazendaSuinos
             // 
             // comboAtributoFazenda
             // 
-            this.comboAtributoFazenda.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboAtributoFazenda.BackColor = System.Drawing.Color.LightGray;
             this.comboAtributoFazenda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboAtributoFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboAtributoFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -996,7 +996,7 @@ namespace fazendaSuinos
             // 
             // btnLimparAcoes
             // 
-            this.btnLimparAcoes.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnLimparAcoes.BackColor = System.Drawing.Color.LightGray;
             this.btnLimparAcoes.FlatAppearance.BorderSize = 0;
             this.btnLimparAcoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimparAcoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1039,7 +1039,7 @@ namespace fazendaSuinos
             // 
             // campoValorAcoes
             // 
-            this.campoValorAcoes.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoValorAcoes.BackColor = System.Drawing.Color.LightGray;
             this.campoValorAcoes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoValorAcoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoValorAcoes.Location = new System.Drawing.Point(507, 117);
@@ -1060,7 +1060,7 @@ namespace fazendaSuinos
             // 
             // comboAtributoAcoes
             // 
-            this.comboAtributoAcoes.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboAtributoAcoes.BackColor = System.Drawing.Color.LightGray;
             this.comboAtributoAcoes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboAtributoAcoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboAtributoAcoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1159,7 +1159,7 @@ namespace fazendaSuinos
             // 
             // campoCEP
             // 
-            this.campoCEP.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCEP.BackColor = System.Drawing.Color.LightGray;
             this.campoCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCEP.Location = new System.Drawing.Point(299, 276);
@@ -1183,7 +1183,7 @@ namespace fazendaSuinos
             // 
             // campoCNPJ
             // 
-            this.campoCNPJ.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCNPJ.BackColor = System.Drawing.Color.LightGray;
             this.campoCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCNPJ.Location = new System.Drawing.Point(660, 198);
@@ -1207,7 +1207,7 @@ namespace fazendaSuinos
             // 
             // campoRazaoSocial
             // 
-            this.campoRazaoSocial.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoRazaoSocial.BackColor = System.Drawing.Color.LightGray;
             this.campoRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoRazaoSocial.Location = new System.Drawing.Point(299, 198);
@@ -1274,7 +1274,7 @@ namespace fazendaSuinos
             // 
             // btnLimparCadastroEntidade
             // 
-            this.btnLimparCadastroEntidade.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnLimparCadastroEntidade.BackColor = System.Drawing.Color.LightGray;
             this.btnLimparCadastroEntidade.FlatAppearance.BorderSize = 0;
             this.btnLimparCadastroEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimparCadastroEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1289,7 +1289,7 @@ namespace fazendaSuinos
             // 
             // comboPrivilegios
             // 
-            this.comboPrivilegios.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboPrivilegios.BackColor = System.Drawing.Color.LightGray;
             this.comboPrivilegios.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPrivilegios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboPrivilegios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1319,7 +1319,7 @@ namespace fazendaSuinos
             // 
             // comboEspecialidade
             // 
-            this.comboEspecialidade.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboEspecialidade.BackColor = System.Drawing.Color.LightGray;
             this.comboEspecialidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboEspecialidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboEspecialidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1351,7 +1351,7 @@ namespace fazendaSuinos
             // 
             // comboSetor
             // 
-            this.comboSetor.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboSetor.BackColor = System.Drawing.Color.LightGray;
             this.comboSetor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSetor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1383,7 +1383,7 @@ namespace fazendaSuinos
             // 
             // campoTelefone
             // 
-            this.campoTelefone.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoTelefone.BackColor = System.Drawing.Color.LightGray;
             this.campoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoTelefone.Location = new System.Drawing.Point(841, 198);
@@ -1407,7 +1407,7 @@ namespace fazendaSuinos
             // 
             // campoCPF
             // 
-            this.campoCPF.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCPF.BackColor = System.Drawing.Color.LightGray;
             this.campoCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCPF.Location = new System.Drawing.Point(660, 198);
@@ -1431,7 +1431,7 @@ namespace fazendaSuinos
             // 
             // campoNome
             // 
-            this.campoNome.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoNome.BackColor = System.Drawing.Color.LightGray;
             this.campoNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoNome.Location = new System.Drawing.Point(299, 198);
@@ -1455,7 +1455,7 @@ namespace fazendaSuinos
             // 
             // campoCodigoEntidade
             // 
-            this.campoCodigoEntidade.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodigoEntidade.BackColor = System.Drawing.Color.LightGray;
             this.campoCodigoEntidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodigoEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodigoEntidade.Location = new System.Drawing.Point(472, 117);
@@ -1479,7 +1479,7 @@ namespace fazendaSuinos
             // 
             // comboTipoEntidade
             // 
-            this.comboTipoEntidade.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboTipoEntidade.BackColor = System.Drawing.Color.LightGray;
             this.comboTipoEntidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboTipoEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboTipoEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1625,7 +1625,7 @@ namespace fazendaSuinos
             // 
             // btnLimparDadosFazenda
             // 
-            this.btnLimparDadosFazenda.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnLimparDadosFazenda.BackColor = System.Drawing.Color.LightGray;
             this.btnLimparDadosFazenda.FlatAppearance.BorderSize = 0;
             this.btnLimparDadosFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimparDadosFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1678,7 +1678,7 @@ namespace fazendaSuinos
             // 
             // campoCodPocilga_Lote
             // 
-            this.campoCodPocilga_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodPocilga_Lote.BackColor = System.Drawing.Color.LightGray;
             this.campoCodPocilga_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodPocilga_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodPocilga_Lote.Location = new System.Drawing.Point(670, 285);
@@ -1690,7 +1690,7 @@ namespace fazendaSuinos
             // 
             // dateTPValidade_Produto
             // 
-            this.dateTPValidade_Produto.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
+            this.dateTPValidade_Produto.CalendarMonthBackground = System.Drawing.Color.LightGray;
             this.dateTPValidade_Produto.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.dateTPValidade_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPValidade_Produto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -1728,7 +1728,7 @@ namespace fazendaSuinos
             // 
             // comboTipo_Produto
             // 
-            this.comboTipo_Produto.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboTipo_Produto.BackColor = System.Drawing.Color.LightGray;
             this.comboTipo_Produto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboTipo_Produto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboTipo_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1757,7 +1757,7 @@ namespace fazendaSuinos
             // 
             // comboCategoria_Produto
             // 
-            this.comboCategoria_Produto.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboCategoria_Produto.BackColor = System.Drawing.Color.LightGray;
             this.comboCategoria_Produto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCategoria_Produto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboCategoria_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1776,7 +1776,7 @@ namespace fazendaSuinos
             // 
             // campoNome_Produto
             // 
-            this.campoNome_Produto.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoNome_Produto.BackColor = System.Drawing.Color.LightGray;
             this.campoNome_Produto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoNome_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoNome_Produto.Location = new System.Drawing.Point(298, 198);
@@ -1800,7 +1800,7 @@ namespace fazendaSuinos
             // 
             // campoCodigoProdutor_Propriedade
             // 
-            this.campoCodigoProdutor_Propriedade.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodigoProdutor_Propriedade.BackColor = System.Drawing.Color.LightGray;
             this.campoCodigoProdutor_Propriedade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodigoProdutor_Propriedade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodigoProdutor_Propriedade.Location = new System.Drawing.Point(842, 198);
@@ -1824,7 +1824,7 @@ namespace fazendaSuinos
             // 
             // campoNome_Propriedade
             // 
-            this.campoNome_Propriedade.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoNome_Propriedade.BackColor = System.Drawing.Color.LightGray;
             this.campoNome_Propriedade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoNome_Propriedade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoNome_Propriedade.Location = new System.Drawing.Point(298, 199);
@@ -1860,7 +1860,7 @@ namespace fazendaSuinos
             // 
             // campoCodPocilga_Visita
             // 
-            this.campoCodPocilga_Visita.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodPocilga_Visita.BackColor = System.Drawing.Color.LightGray;
             this.campoCodPocilga_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodPocilga_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodPocilga_Visita.Location = new System.Drawing.Point(842, 284);
@@ -1884,7 +1884,7 @@ namespace fazendaSuinos
             // 
             // campoCodVisitante_Visita
             // 
-            this.campoCodVisitante_Visita.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodVisitante_Visita.BackColor = System.Drawing.Color.LightGray;
             this.campoCodVisitante_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodVisitante_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodVisitante_Visita.Location = new System.Drawing.Point(670, 284);
@@ -1896,7 +1896,7 @@ namespace fazendaSuinos
             // 
             // textObservacoes_Visita
             // 
-            this.textObservacoes_Visita.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.textObservacoes_Visita.BackColor = System.Drawing.Color.LightGray;
             this.textObservacoes_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textObservacoes_Visita.Location = new System.Drawing.Point(300, 373);
             this.textObservacoes_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -1933,7 +1933,7 @@ namespace fazendaSuinos
             // 
             // campoCodUlt_Visita
             // 
-            this.campoCodUlt_Visita.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodUlt_Visita.BackColor = System.Drawing.Color.LightGray;
             this.campoCodUlt_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodUlt_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodUlt_Visita.Location = new System.Drawing.Point(472, 284);
@@ -1945,7 +1945,7 @@ namespace fazendaSuinos
             // 
             // dateTPUlt_Visita
             // 
-            this.dateTPUlt_Visita.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
+            this.dateTPUlt_Visita.CalendarMonthBackground = System.Drawing.Color.LightGray;
             this.dateTPUlt_Visita.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.dateTPUlt_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPUlt_Visita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -1971,7 +1971,7 @@ namespace fazendaSuinos
             // 
             // campoFinalidade_Visita
             // 
-            this.campoFinalidade_Visita.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoFinalidade_Visita.BackColor = System.Drawing.Color.LightGray;
             this.campoFinalidade_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoFinalidade_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoFinalidade_Visita.Location = new System.Drawing.Point(474, 198);
@@ -1995,7 +1995,7 @@ namespace fazendaSuinos
             // 
             // dateTPData_Visita
             // 
-            this.dateTPData_Visita.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
+            this.dateTPData_Visita.CalendarMonthBackground = System.Drawing.Color.LightGray;
             this.dateTPData_Visita.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.dateTPData_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPData_Visita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -2033,7 +2033,7 @@ namespace fazendaSuinos
             // 
             // campoCodPropriedade_Pocilga
             // 
-            this.campoCodPropriedade_Pocilga.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodPropriedade_Pocilga.BackColor = System.Drawing.Color.LightGray;
             this.campoCodPropriedade_Pocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodPropriedade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodPropriedade_Pocilga.Location = new System.Drawing.Point(298, 284);
@@ -2045,7 +2045,7 @@ namespace fazendaSuinos
             // 
             // textoDescricao_Pocilga
             // 
-            this.textoDescricao_Pocilga.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.textoDescricao_Pocilga.BackColor = System.Drawing.Color.LightGray;
             this.textoDescricao_Pocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textoDescricao_Pocilga.Location = new System.Drawing.Point(298, 373);
             this.textoDescricao_Pocilga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -2070,7 +2070,7 @@ namespace fazendaSuinos
             // 
             // campoCapacidade_Pocilga
             // 
-            this.campoCapacidade_Pocilga.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCapacidade_Pocilga.BackColor = System.Drawing.Color.LightGray;
             this.campoCapacidade_Pocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCapacidade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCapacidade_Pocilga.Location = new System.Drawing.Point(298, 198);
@@ -2094,7 +2094,7 @@ namespace fazendaSuinos
             // 
             // textoObservacoes_Lote
             // 
-            this.textoObservacoes_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.textoObservacoes_Lote.BackColor = System.Drawing.Color.LightGray;
             this.textoObservacoes_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textoObservacoes_Lote.Location = new System.Drawing.Point(300, 373);
             this.textoObservacoes_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -2131,7 +2131,7 @@ namespace fazendaSuinos
             // 
             // campoCodGerente_Lote
             // 
-            this.campoCodGerente_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodGerente_Lote.BackColor = System.Drawing.Color.LightGray;
             this.campoCodGerente_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodGerente_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodGerente_Lote.Location = new System.Drawing.Point(842, 284);
@@ -2143,7 +2143,7 @@ namespace fazendaSuinos
             // 
             // dateTPEstCarregamento_Lote
             // 
-            this.dateTPEstCarregamento_Lote.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
+            this.dateTPEstCarregamento_Lote.CalendarMonthBackground = System.Drawing.Color.LightGray;
             this.dateTPEstCarregamento_Lote.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.dateTPEstCarregamento_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPEstCarregamento_Lote.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -2169,7 +2169,7 @@ namespace fazendaSuinos
             // 
             // dateTPDataAloj_Lote
             // 
-            this.dateTPDataAloj_Lote.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
+            this.dateTPDataAloj_Lote.CalendarMonthBackground = System.Drawing.Color.LightGray;
             this.dateTPDataAloj_Lote.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.dateTPDataAloj_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPDataAloj_Lote.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -2183,7 +2183,7 @@ namespace fazendaSuinos
             // 
             // comboSituacao_Lote
             // 
-            this.comboSituacao_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboSituacao_Lote.BackColor = System.Drawing.Color.LightGray;
             this.comboSituacao_Lote.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSituacao_Lote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboSituacao_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2201,7 +2201,7 @@ namespace fazendaSuinos
             // 
             // campoQuantidade_Lote
             // 
-            this.campoQuantidade_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoQuantidade_Lote.BackColor = System.Drawing.Color.LightGray;
             this.campoQuantidade_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoQuantidade_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoQuantidade_Lote.Location = new System.Drawing.Point(298, 198);
@@ -2213,7 +2213,7 @@ namespace fazendaSuinos
             // 
             // campoPesoTotal_Lote
             // 
-            this.campoPesoTotal_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoPesoTotal_Lote.BackColor = System.Drawing.Color.LightGray;
             this.campoPesoTotal_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoPesoTotal_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoPesoTotal_Lote.Location = new System.Drawing.Point(473, 198);
@@ -2261,7 +2261,7 @@ namespace fazendaSuinos
             // 
             // campoPesoMedio_Lote
             // 
-            this.campoPesoMedio_Lote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoPesoMedio_Lote.BackColor = System.Drawing.Color.LightGray;
             this.campoPesoMedio_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoPesoMedio_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoPesoMedio_Lote.Location = new System.Drawing.Point(670, 198);
@@ -2340,7 +2340,7 @@ namespace fazendaSuinos
             // 
             // campoCodigoFazenda
             // 
-            this.campoCodigoFazenda.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.campoCodigoFazenda.BackColor = System.Drawing.Color.LightGray;
             this.campoCodigoFazenda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodigoFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.campoCodigoFazenda.Location = new System.Drawing.Point(472, 117);
@@ -2364,7 +2364,7 @@ namespace fazendaSuinos
             // 
             // comboTipoFazenda
             // 
-            this.comboTipoFazenda.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboTipoFazenda.BackColor = System.Drawing.Color.LightGray;
             this.comboTipoFazenda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboTipoFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboTipoFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

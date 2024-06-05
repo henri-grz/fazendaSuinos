@@ -83,7 +83,7 @@
             // 
             // txtCodigoLote
             // 
-            this.txtCodigoLote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodigoLote.BackColor = System.Drawing.Color.LightGray;
             this.txtCodigoLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodigoLote.Location = new System.Drawing.Point(418, 265);
@@ -104,7 +104,7 @@
             // 
             // txtDiaCiclo
             // 
-            this.txtDiaCiclo.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtDiaCiclo.BackColor = System.Drawing.Color.LightGray;
             this.txtDiaCiclo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDiaCiclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtDiaCiclo.Location = new System.Drawing.Point(802, 265);
@@ -114,7 +114,7 @@
             // 
             // txtPesoMedio
             // 
-            this.txtPesoMedio.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtPesoMedio.BackColor = System.Drawing.Color.LightGray;
             this.txtPesoMedio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPesoMedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPesoMedio.Location = new System.Drawing.Point(672, 264);
@@ -146,7 +146,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnLimpar.BackColor = System.Drawing.Color.LightGray;
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -270,7 +270,7 @@
             // 
             // txtCodPesagem
             // 
-            this.txtCodPesagem.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodPesagem.BackColor = System.Drawing.Color.LightGray;
             this.txtCodPesagem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodPesagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodPesagem.Location = new System.Drawing.Point(290, 201);

@@ -54,7 +54,7 @@
             // 
             // txtCodigoLote
             // 
-            this.txtCodigoLote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodigoLote.BackColor = System.Drawing.Color.LightGray;
             this.txtCodigoLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodigoLote.Location = new System.Drawing.Point(609, 279);
@@ -77,7 +77,7 @@
             // 
             // txtMossa
             // 
-            this.txtMossa.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtMossa.BackColor = System.Drawing.Color.LightGray;
             this.txtMossa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMossa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtMossa.Location = new System.Drawing.Point(769, 380);
@@ -88,7 +88,7 @@
             // 
             // txtPeso
             // 
-            this.txtPeso.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtPeso.BackColor = System.Drawing.Color.LightGray;
             this.txtPeso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPeso.Location = new System.Drawing.Point(609, 380);
@@ -135,7 +135,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnLimpar.BackColor = System.Drawing.Color.LightGray;
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -203,7 +203,7 @@
             // 
             // comboBoxCausa
             // 
-            this.comboBoxCausa.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboBoxCausa.BackColor = System.Drawing.Color.LightGray;
             this.comboBoxCausa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCausa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxCausa.FormattingEnabled = true;
@@ -253,7 +253,7 @@
             // 
             // comboBoxSexo
             // 
-            this.comboBoxSexo.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboBoxSexo.BackColor = System.Drawing.Color.LightGray;
             this.comboBoxSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSexo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBoxSexo.FormattingEnabled = true;
@@ -299,7 +299,7 @@
             // 
             // txtCodMortalidade
             // 
-            this.txtCodMortalidade.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodMortalidade.BackColor = System.Drawing.Color.LightGray;
             this.txtCodMortalidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodMortalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodMortalidade.Location = new System.Drawing.Point(436, 200);

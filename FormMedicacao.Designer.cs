@@ -120,7 +120,7 @@
             // 
             // dtpVacinacao
             // 
-            this.dtpVacinacao.CalendarMonthBackground = System.Drawing.SystemColors.MenuBar;
+            this.dtpVacinacao.CalendarMonthBackground = System.Drawing.Color.LightGray;
             this.dtpVacinacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.dtpVacinacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpVacinacao.Location = new System.Drawing.Point(381, 282);
@@ -148,7 +148,7 @@
             // 
             // txtMedicamento
             // 
-            this.txtMedicamento.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtMedicamento.BackColor = System.Drawing.Color.LightGray;
             this.txtMedicamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtMedicamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtMedicamento.FormattingEnabled = true;
@@ -179,7 +179,7 @@
             // 
             // txtCodigoLote
             // 
-            this.txtCodigoLote.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodigoLote.BackColor = System.Drawing.Color.LightGray;
             this.txtCodigoLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodigoLote.Location = new System.Drawing.Point(855, 208);
@@ -202,7 +202,7 @@
             // 
             // txtDiasUso
             // 
-            this.txtDiasUso.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtDiasUso.BackColor = System.Drawing.Color.LightGray;
             this.txtDiasUso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDiasUso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtDiasUso.Location = new System.Drawing.Point(603, 283);
@@ -249,7 +249,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnLimpar.BackColor = System.Drawing.Color.LightGray;
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -293,7 +293,7 @@
             // 
             // txtObservacao
             // 
-            this.txtObservacao.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtObservacao.BackColor = System.Drawing.Color.LightGray;
             this.txtObservacao.Location = new System.Drawing.Point(381, 369);
             this.txtObservacao.Margin = new System.Windows.Forms.Padding(4);
             this.txtObservacao.Multiline = true;
@@ -315,7 +315,7 @@
             // 
             // txtQntVac
             // 
-            this.txtQntVac.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtQntVac.BackColor = System.Drawing.Color.LightGray;
             this.txtQntVac.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQntVac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtQntVac.Location = new System.Drawing.Point(603, 208);
@@ -338,7 +338,7 @@
             // 
             // txtDiasCarencia
             // 
-            this.txtDiasCarencia.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtDiasCarencia.BackColor = System.Drawing.Color.LightGray;
             this.txtDiasCarencia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDiasCarencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtDiasCarencia.Location = new System.Drawing.Point(855, 283);
@@ -450,7 +450,7 @@
             // 
             // txtCodConsumo
             // 
-            this.txtCodConsumo.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodConsumo.BackColor = System.Drawing.Color.LightGray;
             this.txtCodConsumo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodConsumo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodConsumo.Location = new System.Drawing.Point(381, 122);
@@ -657,7 +657,7 @@
             // 
             // txtCodFornecimento
             // 
-            this.txtCodFornecimento.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodFornecimento.BackColor = System.Drawing.Color.LightGray;
             this.txtCodFornecimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodFornecimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodFornecimento.Location = new System.Drawing.Point(381, 117);
@@ -831,7 +831,7 @@
             // 
             // txtCodFornecedorMed
             // 
-            this.txtCodFornecedorMed.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodFornecedorMed.BackColor = System.Drawing.Color.LightGray;
             this.txtCodFornecedorMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodFornecedorMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodFornecedorMed.Location = new System.Drawing.Point(829, 419);
@@ -854,7 +854,7 @@
             // 
             // txtUnidadeMed
             // 
-            this.txtUnidadeMed.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtUnidadeMed.BackColor = System.Drawing.Color.LightGray;
             this.txtUnidadeMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUnidadeMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtUnidadeMed.Location = new System.Drawing.Point(603, 419);
@@ -905,7 +905,7 @@
             // 
             // txtTipoMed
             // 
-            this.txtTipoMed.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtTipoMed.BackColor = System.Drawing.Color.LightGray;
             this.txtTipoMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTipoMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtTipoMed.Location = new System.Drawing.Point(829, 310);
@@ -929,7 +929,7 @@
             // 
             // txtCategoriaMed
             // 
-            this.txtCategoriaMed.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCategoriaMed.BackColor = System.Drawing.Color.LightGray;
             this.txtCategoriaMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCategoriaMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCategoriaMed.Location = new System.Drawing.Point(603, 310);
@@ -953,7 +953,7 @@
             // 
             // txtProdutoMed
             // 
-            this.txtProdutoMed.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtProdutoMed.BackColor = System.Drawing.Color.LightGray;
             this.txtProdutoMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtProdutoMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtProdutoMed.Location = new System.Drawing.Point(381, 310);
@@ -1026,7 +1026,7 @@
             // 
             // btnLimparForn
             // 
-            this.btnLimparForn.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnLimparForn.BackColor = System.Drawing.Color.LightGray;
             this.btnLimparForn.FlatAppearance.BorderSize = 0;
             this.btnLimparForn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimparForn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1071,7 +1071,7 @@
             // 
             // txtCodigoloteFMed
             // 
-            this.txtCodigoloteFMed.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodigoloteFMed.BackColor = System.Drawing.Color.LightGray;
             this.txtCodigoloteFMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoloteFMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodigoloteFMed.Location = new System.Drawing.Point(901, 207);
@@ -1082,7 +1082,7 @@
             // 
             // txtQuantidadeMed
             // 
-            this.txtQuantidadeMed.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtQuantidadeMed.BackColor = System.Drawing.Color.LightGray;
             this.txtQuantidadeMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQuantidadeMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtQuantidadeMed.Location = new System.Drawing.Point(381, 419);
@@ -1105,7 +1105,7 @@
             // 
             // txtCodigoProdFMed
             // 
-            this.txtCodigoProdFMed.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtCodigoProdFMed.BackColor = System.Drawing.Color.LightGray;
             this.txtCodigoProdFMed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoProdFMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodigoProdFMed.Location = new System.Drawing.Point(548, 206);
