@@ -193,7 +193,7 @@ namespace fazendaSuinos
                         {
                             connection.Open();
 
-                            string queryExclusao = "DELETE FROM Controle_Vacinacao WHERE CodPrescricao = " + codConsumo;
+                            string queryExclusao = "DELETE FROM Agenda WHERE CodVacinacao = " + codConsumo + "; DELETE FROM Controle_Vacinacao WHERE CodPrescricao = " + codConsumo;
 
                             SqlCommand command = new SqlCommand(queryExclusao, connection);
 

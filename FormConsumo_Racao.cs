@@ -158,7 +158,7 @@ namespace fazendaSuinos
                         {
                             connection.Open();
 
-                            string queryExclusao = "DELETE FROM Consumo_Racao WHERE CodConsumo = " + codConsumo;
+                            string queryExclusao = "DELETE FROM Agenda WHERE CodRacao = " + codConsumo + "; DELETE FROM Consumo_Racao WHERE CodConsumo = " + codConsumo;
 
                             SqlCommand command = new SqlCommand(queryExclusao, connection);
 
@@ -749,6 +749,9 @@ namespace fazendaSuinos
             txtCodProdForn.Text = v;
         }
 
-        
+        private void btnIncluirForn_Click(object sender, EventArgs e)
+        {
+            SalvarDadosFornRacao();
+        }
     }
 }
