@@ -1,5 +1,4 @@
 ﻿using fazendaSuinos.Relatorios;
-using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections;
 using System.Collections.Generic;

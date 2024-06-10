@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            //this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            /*this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "fazendaSuinos.RelatorioEntidades.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -53,12 +53,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatório de Entidades";
             this.Load += new System.EventHandler(this.FormRelatorioEntidade_Load);
-            this.ResumeLayout(false);
+            this.ResumeLayout(false);*/
 
         }
 
         #endregion
 
-        public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        //public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

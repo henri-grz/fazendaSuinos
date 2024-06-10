@@ -1,5 +1,4 @@
 ﻿using fazendaSuinos.Relatorios;
-using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,8 +26,8 @@ namespace fazendaSuinos
             string caminhoRelatorio = Path.Combine(Application.StartupPath, "Relatorios", "RelatorioEntidades.rdlc");
 
             // Configurações do Report Viewer
-            reportViewer1.ProcessingMode = ProcessingMode.Local;
-            reportViewer1.LocalReport.ReportPath = caminhoRelatorio;
+            //reportViewer1.ProcessingMode = ProcessingMode.Local;
+            //reportViewer1.LocalReport.ReportPath = caminhoRelatorio;
 
             // Verifica se o arquivo de relatório existe
             if (!File.Exists(caminhoRelatorio))
@@ -40,17 +39,17 @@ namespace fazendaSuinos
             // Adiciona as fontes de dados para cada seleção
             foreach (var key in dados.Keys)
             {
-                var rds = new ReportDataSource(key, dados[key]);
-                reportViewer1.LocalReport.DataSources.Add(rds);
+                //var rds = new ReportDataSource(key, dados[key]);
+                //reportViewer1.LocalReport.DataSources.Add(rds);
             }
 
             // Atualiza o relatório
-            reportViewer1.RefreshReport();
+            //reportViewer1.RefreshReport();
         }
 
         private void FormRelatorioEntidade_Load(object sender, EventArgs e)
         {
-            this.reportViewer1.RefreshReport();
+            //this.reportViewer1.RefreshReport();
         }
     }
 }
