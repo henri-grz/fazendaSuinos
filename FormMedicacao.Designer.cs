@@ -56,12 +56,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.btnIncluir = new System.Windows.Forms.Button();
             this.dataGridConsumo = new System.Windows.Forms.DataGridView();
-            this.codPrescricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataInicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diasUsoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diasCarenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codLoteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.controleVacinacaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fazendaSuinosDataSet = new fazendaSuinos.fazendaSuinosDataSet();
             this.panelFornecimento = new System.Windows.Forms.Panel();
@@ -108,6 +102,13 @@
             this.txtCodigoProdFMed = new System.Windows.Forms.TextBox();
             this.fornecimentoMedicamentoTableAdapter = new fazendaSuinos.fazendaSuinosDataSetTableAdapters.FornecimentoMedicamentoTableAdapter();
             this.controle_VacinacaoTableAdapter = new fazendaSuinos.fazendaSuinosDataSetTableAdapters.Controle_VacinacaoTableAdapter();
+            this.codPrescricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Medicacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataInicialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diasUsoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diasCarenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observacaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codLoteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBotoes.SuspendLayout();
             this.panelConsumo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridConsumo)).BeginInit();
@@ -493,11 +494,13 @@
             // 
             this.dataGridConsumo.AllowUserToAddRows = false;
             this.dataGridConsumo.AllowUserToDeleteRows = false;
+            this.dataGridConsumo.AllowUserToResizeRows = false;
             this.dataGridConsumo.AutoGenerateColumns = false;
             this.dataGridConsumo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridConsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridConsumo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codPrescricaoDataGridViewTextBoxColumn,
+            this.Medicacao,
             this.dataInicialDataGridViewTextBoxColumn,
             this.diasUsoDataGridViewTextBoxColumn,
             this.diasCarenciaDataGridViewTextBoxColumn,
@@ -513,70 +516,6 @@
             this.dataGridConsumo.Size = new System.Drawing.Size(843, 330);
             this.dataGridConsumo.TabIndex = 77;
             this.dataGridConsumo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridConsumo_CellContentClick);
-            // 
-            // codPrescricaoDataGridViewTextBoxColumn
-            // 
-            this.codPrescricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.codPrescricaoDataGridViewTextBoxColumn.DataPropertyName = "CodPrescricao";
-            this.codPrescricaoDataGridViewTextBoxColumn.FillWeight = 61.7299F;
-            this.codPrescricaoDataGridViewTextBoxColumn.HeaderText = "Cod";
-            this.codPrescricaoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codPrescricaoDataGridViewTextBoxColumn.Name = "codPrescricaoDataGridViewTextBoxColumn";
-            this.codPrescricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codPrescricaoDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // dataInicialDataGridViewTextBoxColumn
-            // 
-            this.dataInicialDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataInicialDataGridViewTextBoxColumn.DataPropertyName = "Data_Inicial";
-            this.dataInicialDataGridViewTextBoxColumn.FillWeight = 85.21055F;
-            this.dataInicialDataGridViewTextBoxColumn.HeaderText = "Data Inicial";
-            this.dataInicialDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dataInicialDataGridViewTextBoxColumn.Name = "dataInicialDataGridViewTextBoxColumn";
-            this.dataInicialDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dataInicialDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // diasUsoDataGridViewTextBoxColumn
-            // 
-            this.diasUsoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.diasUsoDataGridViewTextBoxColumn.DataPropertyName = "Dias_Uso";
-            this.diasUsoDataGridViewTextBoxColumn.FillWeight = 47.09765F;
-            this.diasUsoDataGridViewTextBoxColumn.HeaderText = "Dias Uso";
-            this.diasUsoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.diasUsoDataGridViewTextBoxColumn.Name = "diasUsoDataGridViewTextBoxColumn";
-            this.diasUsoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.diasUsoDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // diasCarenciaDataGridViewTextBoxColumn
-            // 
-            this.diasCarenciaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.diasCarenciaDataGridViewTextBoxColumn.DataPropertyName = "Dias_Carencia";
-            this.diasCarenciaDataGridViewTextBoxColumn.FillWeight = 47.09765F;
-            this.diasCarenciaDataGridViewTextBoxColumn.HeaderText = "Dias Carencia";
-            this.diasCarenciaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.diasCarenciaDataGridViewTextBoxColumn.Name = "diasCarenciaDataGridViewTextBoxColumn";
-            this.diasCarenciaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.diasCarenciaDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // observacaoDataGridViewTextBoxColumn
-            // 
-            this.observacaoDataGridViewTextBoxColumn.DataPropertyName = "Observacao";
-            this.observacaoDataGridViewTextBoxColumn.FillWeight = 264.9242F;
-            this.observacaoDataGridViewTextBoxColumn.HeaderText = "Observacao";
-            this.observacaoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.observacaoDataGridViewTextBoxColumn.Name = "observacaoDataGridViewTextBoxColumn";
-            this.observacaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // codLoteDataGridViewTextBoxColumn1
-            // 
-            this.codLoteDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.codLoteDataGridViewTextBoxColumn1.DataPropertyName = "CodLote";
-            this.codLoteDataGridViewTextBoxColumn1.FillWeight = 47.09766F;
-            this.codLoteDataGridViewTextBoxColumn1.HeaderText = "Lote";
-            this.codLoteDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.codLoteDataGridViewTextBoxColumn1.Name = "codLoteDataGridViewTextBoxColumn1";
-            this.codLoteDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.codLoteDataGridViewTextBoxColumn1.Width = 80;
             // 
             // controleVacinacaoBindingSource
             // 
@@ -672,6 +611,7 @@
             // 
             this.dataGridFornecimento.AllowUserToAddRows = false;
             this.dataGridFornecimento.AllowUserToDeleteRows = false;
+            this.dataGridFornecimento.AllowUserToResizeRows = false;
             this.dataGridFornecimento.AutoGenerateColumns = false;
             this.dataGridFornecimento.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridFornecimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1122,6 +1062,78 @@
             // 
             this.controle_VacinacaoTableAdapter.ClearBeforeFill = true;
             // 
+            // codPrescricaoDataGridViewTextBoxColumn
+            // 
+            this.codPrescricaoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.codPrescricaoDataGridViewTextBoxColumn.DataPropertyName = "CodPrescricao";
+            this.codPrescricaoDataGridViewTextBoxColumn.FillWeight = 61.7299F;
+            this.codPrescricaoDataGridViewTextBoxColumn.HeaderText = "Cod";
+            this.codPrescricaoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codPrescricaoDataGridViewTextBoxColumn.Name = "codPrescricaoDataGridViewTextBoxColumn";
+            this.codPrescricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codPrescricaoDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // Medicacao
+            // 
+            this.Medicacao.DataPropertyName = "Medicacao";
+            this.Medicacao.HeaderText = "Medicacao";
+            this.Medicacao.MinimumWidth = 6;
+            this.Medicacao.Name = "Medicacao";
+            this.Medicacao.ReadOnly = true;
+            // 
+            // dataInicialDataGridViewTextBoxColumn
+            // 
+            this.dataInicialDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataInicialDataGridViewTextBoxColumn.DataPropertyName = "Data_Inicial";
+            this.dataInicialDataGridViewTextBoxColumn.FillWeight = 85.21055F;
+            this.dataInicialDataGridViewTextBoxColumn.HeaderText = "Data Inicial";
+            this.dataInicialDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dataInicialDataGridViewTextBoxColumn.Name = "dataInicialDataGridViewTextBoxColumn";
+            this.dataInicialDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataInicialDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // diasUsoDataGridViewTextBoxColumn
+            // 
+            this.diasUsoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.diasUsoDataGridViewTextBoxColumn.DataPropertyName = "Dias_Uso";
+            this.diasUsoDataGridViewTextBoxColumn.FillWeight = 47.09765F;
+            this.diasUsoDataGridViewTextBoxColumn.HeaderText = "Dias Uso";
+            this.diasUsoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.diasUsoDataGridViewTextBoxColumn.Name = "diasUsoDataGridViewTextBoxColumn";
+            this.diasUsoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.diasUsoDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // diasCarenciaDataGridViewTextBoxColumn
+            // 
+            this.diasCarenciaDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.diasCarenciaDataGridViewTextBoxColumn.DataPropertyName = "Dias_Carencia";
+            this.diasCarenciaDataGridViewTextBoxColumn.FillWeight = 47.09765F;
+            this.diasCarenciaDataGridViewTextBoxColumn.HeaderText = "Dias Carencia";
+            this.diasCarenciaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.diasCarenciaDataGridViewTextBoxColumn.Name = "diasCarenciaDataGridViewTextBoxColumn";
+            this.diasCarenciaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.diasCarenciaDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // observacaoDataGridViewTextBoxColumn
+            // 
+            this.observacaoDataGridViewTextBoxColumn.DataPropertyName = "Observacao";
+            this.observacaoDataGridViewTextBoxColumn.FillWeight = 264.9242F;
+            this.observacaoDataGridViewTextBoxColumn.HeaderText = "Observacao";
+            this.observacaoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.observacaoDataGridViewTextBoxColumn.Name = "observacaoDataGridViewTextBoxColumn";
+            this.observacaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codLoteDataGridViewTextBoxColumn1
+            // 
+            this.codLoteDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.codLoteDataGridViewTextBoxColumn1.DataPropertyName = "CodLote";
+            this.codLoteDataGridViewTextBoxColumn1.FillWeight = 47.09766F;
+            this.codLoteDataGridViewTextBoxColumn1.HeaderText = "Lote";
+            this.codLoteDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.codLoteDataGridViewTextBoxColumn1.Name = "codLoteDataGridViewTextBoxColumn1";
+            this.codLoteDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.codLoteDataGridViewTextBoxColumn1.Width = 80;
+            // 
             // FormMedicacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1221,14 +1233,15 @@
         private System.Windows.Forms.DataGridView dataGridConsumo;
         private System.Windows.Forms.BindingSource controleVacinacaoBindingSource;
         private fazendaSuinosDataSetTableAdapters.Controle_VacinacaoTableAdapter controle_VacinacaoTableAdapter;
+        private System.Windows.Forms.Button btnIncluir;
+        private System.Windows.Forms.TextBox txtCodConsumo;
+        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.DataGridViewTextBoxColumn codPrescricaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Medicacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataInicialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diasUsoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diasCarenciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn observacaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codLoteDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.Button btnIncluir;
-        private System.Windows.Forms.TextBox txtCodConsumo;
-        private System.Windows.Forms.Label label21;
     }
 }

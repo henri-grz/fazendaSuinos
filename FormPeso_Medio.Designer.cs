@@ -62,7 +62,7 @@
             // 
             this.dateTimePickerData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerData.Location = new System.Drawing.Point(387, 326);
-            this.dateTimePickerData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePickerData.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerData.Name = "dateTimePickerData";
             this.dateTimePickerData.Size = new System.Drawing.Size(132, 22);
             this.dateTimePickerData.TabIndex = 54;
@@ -75,7 +75,7 @@
             this.btnIncluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncluir.ForeColor = System.Drawing.Color.White;
             this.btnIncluir.Location = new System.Drawing.Point(1060, 396);
-            this.btnIncluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIncluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnIncluir.Name = "btnIncluir";
             this.btnIncluir.Size = new System.Drawing.Size(141, 37);
             this.btnIncluir.TabIndex = 53;
@@ -89,7 +89,7 @@
             this.txtCodigoLote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodigoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodigoLote.Location = new System.Drawing.Point(557, 326);
-            this.txtCodigoLote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigoLote.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigoLote.Name = "txtCodigoLote";
             this.txtCodigoLote.Size = new System.Drawing.Size(132, 23);
             this.txtCodigoLote.TabIndex = 51;
@@ -112,7 +112,7 @@
             this.txtDiaCiclo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDiaCiclo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtDiaCiclo.Location = new System.Drawing.Point(1069, 326);
-            this.txtDiaCiclo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaCiclo.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaCiclo.Name = "txtDiaCiclo";
             this.txtDiaCiclo.Size = new System.Drawing.Size(132, 23);
             this.txtDiaCiclo.TabIndex = 49;
@@ -123,7 +123,7 @@
             this.txtPesoMedio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPesoMedio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPesoMedio.Location = new System.Drawing.Point(896, 325);
-            this.txtPesoMedio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPesoMedio.Margin = new System.Windows.Forms.Padding(4);
             this.txtPesoMedio.Name = "txtPesoMedio";
             this.txtPesoMedio.Size = new System.Drawing.Size(132, 23);
             this.txtPesoMedio.TabIndex = 48;
@@ -160,7 +160,7 @@
             this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnLimpar.Location = new System.Drawing.Point(712, 396);
-            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(141, 37);
             this.btnLimpar.TabIndex = 44;
@@ -176,7 +176,7 @@
             this.btnConsultarCodigoLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCodigoLote.ForeColor = System.Drawing.Color.White;
             this.btnConsultarCodigoLote.Location = new System.Drawing.Point(717, 321);
-            this.btnConsultarCodigoLote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConsultarCodigoLote.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultarCodigoLote.Name = "btnConsultarCodigoLote";
             this.btnConsultarCodigoLote.Size = new System.Drawing.Size(136, 27);
             this.btnConsultarCodigoLote.TabIndex = 43;
@@ -212,6 +212,7 @@
             // 
             this.dataGridPesoMedio.AllowUserToAddRows = false;
             this.dataGridPesoMedio.AllowUserToDeleteRows = false;
+            this.dataGridPesoMedio.AllowUserToResizeRows = false;
             this.dataGridPesoMedio.AutoGenerateColumns = false;
             this.dataGridPesoMedio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridPesoMedio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -223,7 +224,7 @@
             this.codLoteDataGridViewTextBoxColumn});
             this.dataGridPesoMedio.DataSource = this.pesoMedioBindingSource;
             this.dataGridPesoMedio.Location = new System.Drawing.Point(369, 486);
-            this.dataGridPesoMedio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridPesoMedio.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridPesoMedio.Name = "dataGridPesoMedio";
             this.dataGridPesoMedio.ReadOnly = true;
             this.dataGridPesoMedio.RowHeadersVisible = false;
@@ -293,7 +294,7 @@
             this.txtCodPesagem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCodPesagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCodPesagem.Location = new System.Drawing.Point(387, 247);
-            this.txtCodPesagem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodPesagem.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodPesagem.Name = "txtCodPesagem";
             this.txtCodPesagem.ReadOnly = true;
             this.txtCodPesagem.Size = new System.Drawing.Size(132, 23);
@@ -320,7 +321,7 @@
             this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGravar.ForeColor = System.Drawing.Color.White;
             this.btnGravar.Location = new System.Drawing.Point(887, 396);
-            this.btnGravar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGravar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(141, 37);
             this.btnGravar.TabIndex = 58;
@@ -351,7 +352,7 @@
             this.Controls.Add(this.btnConsultarCodigoLote);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPeso_Medio";
             this.Text = "FormPeso_Medio";
             this.Load += new System.EventHandler(this.FormPeso_Medio_Load);
