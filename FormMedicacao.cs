@@ -317,19 +317,31 @@ namespace fazendaSuinos
                         VALUES 
                         (@Medicacao, @Quantidade, @Data_Inicial, @Dias_Uso, @Dias_Carencia, @Observacao, @CodLote)";
 
-                    SqlCommand command = new SqlCommand(queryInsercao, connection);
+                    using (SqlCommand command = new SqlCommand(queryInsercao, connection))
+                    {
+                        // Loop para gerar registros subsequentes
+                        DateTime dataAtual = dataInicial;
+                        int diasUsoRestantes = diasUso;
 
-                    // Adiciona os parâmetros ao comando SQL
-                    command.Parameters.AddWithValue("@Medicacao", medicacao);
-                    command.Parameters.AddWithValue("@Quantidade", quantidade);
-                    command.Parameters.AddWithValue("@Data_Inicial", dataInicial);
-                    command.Parameters.AddWithValue("@Dias_Uso", diasUso);
-                    command.Parameters.AddWithValue("@Dias_Carencia", diasCarencia);
-                    command.Parameters.AddWithValue("@Observacao", observacao);
-                    command.Parameters.AddWithValue("@CodLote", codLote);
+                        while (diasUsoRestantes >= 0)
+                        {
+                            command.Parameters.Clear();
+                            command.Parameters.AddWithValue("@Medicacao", medicacao);
+                            command.Parameters.AddWithValue("@Quantidade", quantidade);
+                            command.Parameters.AddWithValue("@Data_Inicial", dataAtual);
+                            command.Parameters.AddWithValue("@Dias_Uso", diasUsoRestantes);
+                            command.Parameters.AddWithValue("@Dias_Carencia", diasCarencia);
+                            command.Parameters.AddWithValue("@Observacao", observacao);
+                            command.Parameters.AddWithValue("@CodLote", codLote);
 
-                    // Executa o comando SQL
-                    command.ExecuteNonQuery();
+                            // Executa o comando SQL
+                            command.ExecuteNonQuery();
+
+                            // Ajusta a data e os dias de uso restantes
+                            dataAtual = dataAtual.AddDays(diasCarencia);
+                            diasUsoRestantes -= 1;
+                        }
+                    }
 
                     LoadDataGridConsumo();
                     limparCamposConsumo();
