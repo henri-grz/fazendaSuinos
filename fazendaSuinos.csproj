@@ -69,6 +69,12 @@
     <Compile Include="FormAgendaDetalhes.Designer.cs">
       <DependentUpon>FormAgendaDetalhes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAgendaTodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgendaTodos.Designer.cs">
+      <DependentUpon>FormAgendaTodos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConsumo_Racao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     <Compile Include="Validador.cs" />
     <EmbeddedResource Include="FormAgendaDetalhes.resx">
       <DependentUpon>FormAgendaDetalhes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgendaTodos.resx">
+      <DependentUpon>FormAgendaTodos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConsumo_Racao.resx">
       <DependentUpon>FormConsumo_Racao.cs</DependentUpon>

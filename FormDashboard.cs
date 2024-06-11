@@ -107,7 +107,7 @@ namespace fazendaSuinos
                 try
                 {
                     connection.Open();
-                    string querySelecao = "SELECT * FROM Agenda";
+                    string querySelecao = "SELECT * FROM Agenda WHERE Oculto = 0";
 
                     // Cria um adaptador de dados para executar a query
                     SqlDataAdapter adapter = new SqlDataAdapter(querySelecao, connectionString);
@@ -325,7 +325,7 @@ namespace fazendaSuinos
             }
         }
 
-        
+
         //DETALHES DA PROPRIEDADE
         private void fillComboCodProp()
         {
@@ -625,7 +625,62 @@ namespace fazendaSuinos
         {
             // TODO: esta linha de código carrega dados na tabela 'fazendaSuinosDataSet.Agenda'. Você pode movê-la ou removê-la conforme necessário.
             this.agendaTableAdapter.Fill(this.fazendaSuinosDataSet.Agenda);
+            dataGridAgenda.ContextMenuStrip = contextMenuStripAgenda;
 
+        }
+
+        private void ocultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine(dataGridAgenda.SelectedRows.Count);
+
+            if (dataGridAgenda.CurrentCell != null && dataGridAgenda.CurrentCell.RowIndex >= 0)
+            {
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        string query = "UPDATE Agenda SET Oculto = 1 WHERE CodAtividade = @Id";
+
+                        foreach (DataGridViewRow row in dataGridAgenda.SelectedRows)
+                        {
+                            int id = (int)row.Cells[1].Value;
+
+                            using (SqlCommand command = new SqlCommand(query, connection))
+                            {
+                                command.Parameters.Clear();
+                                command.Parameters.AddWithValue("@Id", id);
+
+                                int rowsAffected = command.ExecuteNonQuery();
+
+                                if (rowsAffected == 0)
+                                {
+                                    MessageBox.Show("Erro ao ocultar o registro com ID: " + id + ". Registro não encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                        }
+
+                        MessageBox.Show("Registros ocultados com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Atualize o DataGridView para refletir a mudança
+                        LoadAgenda();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao ocultar o registro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um registro para ocultar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnVerTodos_Click(object sender, EventArgs e)
+        {
+            FormAgendaTodos formAux = new FormAgendaTodos(this);
+            formAux.ShowDialog();
         }
     }
 }
