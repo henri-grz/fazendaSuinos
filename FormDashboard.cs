@@ -430,7 +430,7 @@ namespace fazendaSuinos
                 SELECT COUNT(*)
                 FROM LotePocilga lp
                 JOIN Lote l ON lp.CodLote = l.CodLote
-                WHERE lp.CodPocilga IN (SELECT CodPocilga FROM Pocilga WHERE CodPropriedade = @codigoProp) AND l.Situacao = 'Aberto'";
+                WHERE lp.CodPocilga IN (SELECT CodPocilga FROM Pocilga WHERE CodPropriedade = @codigoProp) AND l.Situacao = 'Ativo'";
             string queryQuantidadeSuinos = @"
                 SELECT SUM(l.Quantidade)
                 FROM LotePocilga lp

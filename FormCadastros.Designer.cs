@@ -208,9 +208,10 @@ namespace fazendaSuinos
             this.btnEntidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntidades.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnEntidades.Location = new System.Drawing.Point(868, 54);
+            this.btnEntidades.Location = new System.Drawing.Point(1157, 66);
+            this.btnEntidades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEntidades.Name = "btnEntidades";
-            this.btnEntidades.Size = new System.Drawing.Size(200, 60);
+            this.btnEntidades.Size = new System.Drawing.Size(267, 74);
             this.btnEntidades.TabIndex = 0;
             this.btnEntidades.Text = "Entidades";
             this.btnEntidades.UseVisualStyleBackColor = true;
@@ -223,8 +224,9 @@ namespace fazendaSuinos
             this.panel3Botoes.Controls.Add(this.btnEntidades);
             this.panel3Botoes.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3Botoes.Location = new System.Drawing.Point(0, 0);
+            this.panel3Botoes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3Botoes.Name = "panel3Botoes";
-            this.panel3Botoes.Size = new System.Drawing.Size(1423, 150);
+            this.panel3Botoes.Size = new System.Drawing.Size(1899, 185);
             this.panel3Botoes.TabIndex = 1;
             // 
             // btnAcoesCorretivas
@@ -233,9 +235,10 @@ namespace fazendaSuinos
             this.btnAcoesCorretivas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcoesCorretivas.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcoesCorretivas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnAcoesCorretivas.Location = new System.Drawing.Point(472, 54);
+            this.btnAcoesCorretivas.Location = new System.Drawing.Point(629, 66);
+            this.btnAcoesCorretivas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAcoesCorretivas.Name = "btnAcoesCorretivas";
-            this.btnAcoesCorretivas.Size = new System.Drawing.Size(294, 60);
+            this.btnAcoesCorretivas.Size = new System.Drawing.Size(392, 74);
             this.btnAcoesCorretivas.TabIndex = 2;
             this.btnAcoesCorretivas.Text = "Ações Corretivas";
             this.btnAcoesCorretivas.UseVisualStyleBackColor = true;
@@ -247,9 +250,10 @@ namespace fazendaSuinos
             this.btnFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFazenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnFazenda.Location = new System.Drawing.Point(191, 54);
+            this.btnFazenda.Location = new System.Drawing.Point(255, 66);
+            this.btnFazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFazenda.Name = "btnFazenda";
-            this.btnFazenda.Size = new System.Drawing.Size(200, 60);
+            this.btnFazenda.Size = new System.Drawing.Size(267, 74);
             this.btnFazenda.TabIndex = 1;
             this.btnFazenda.Text = "Fazenda";
             this.btnFazenda.UseVisualStyleBackColor = true;
@@ -275,8 +279,9 @@ namespace fazendaSuinos
             this.panelFiltroEntidade.Controls.Add(this.label1);
             this.panelFiltroEntidade.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFiltroEntidade.Location = new System.Drawing.Point(0, 0);
+            this.panelFiltroEntidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFiltroEntidade.Name = "panelFiltroEntidade";
-            this.panelFiltroEntidade.Size = new System.Drawing.Size(1423, 630);
+            this.panelFiltroEntidade.Size = new System.Drawing.Size(1899, 775);
             this.panelFiltroEntidade.TabIndex = 2;
             this.panelFiltroEntidade.Visible = false;
             // 
@@ -284,9 +289,10 @@ namespace fazendaSuinos
             // 
             this.radio_Visitante_Entidade.AutoSize = true;
             this.radio_Visitante_Entidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_Visitante_Entidade.Location = new System.Drawing.Point(884, 222);
+            this.radio_Visitante_Entidade.Location = new System.Drawing.Point(1179, 273);
+            this.radio_Visitante_Entidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radio_Visitante_Entidade.Name = "radio_Visitante_Entidade";
-            this.radio_Visitante_Entidade.Size = new System.Drawing.Size(76, 20);
+            this.radio_Visitante_Entidade.Size = new System.Drawing.Size(95, 24);
             this.radio_Visitante_Entidade.TabIndex = 19;
             this.radio_Visitante_Entidade.TabStop = true;
             this.radio_Visitante_Entidade.Text = "Visitante";
@@ -297,9 +303,10 @@ namespace fazendaSuinos
             // 
             this.radio_Tecnico_Entidade.AutoSize = true;
             this.radio_Tecnico_Entidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_Tecnico_Entidade.Location = new System.Drawing.Point(778, 222);
+            this.radio_Tecnico_Entidade.Location = new System.Drawing.Point(1037, 273);
+            this.radio_Tecnico_Entidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radio_Tecnico_Entidade.Name = "radio_Tecnico_Entidade";
-            this.radio_Tecnico_Entidade.Size = new System.Drawing.Size(74, 20);
+            this.radio_Tecnico_Entidade.Size = new System.Drawing.Size(89, 24);
             this.radio_Tecnico_Entidade.TabIndex = 18;
             this.radio_Tecnico_Entidade.TabStop = true;
             this.radio_Tecnico_Entidade.Text = "Técnico";
@@ -310,9 +317,10 @@ namespace fazendaSuinos
             // 
             this.radio_Produtor_Entidade.AutoSize = true;
             this.radio_Produtor_Entidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_Produtor_Entidade.Location = new System.Drawing.Point(670, 222);
+            this.radio_Produtor_Entidade.Location = new System.Drawing.Point(893, 273);
+            this.radio_Produtor_Entidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radio_Produtor_Entidade.Name = "radio_Produtor_Entidade";
-            this.radio_Produtor_Entidade.Size = new System.Drawing.Size(76, 20);
+            this.radio_Produtor_Entidade.Size = new System.Drawing.Size(94, 24);
             this.radio_Produtor_Entidade.TabIndex = 17;
             this.radio_Produtor_Entidade.TabStop = true;
             this.radio_Produtor_Entidade.Text = "Produtor";
@@ -323,9 +331,10 @@ namespace fazendaSuinos
             // 
             this.radio_Fornecedor_Entidade.AutoSize = true;
             this.radio_Fornecedor_Entidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_Fornecedor_Entidade.Location = new System.Drawing.Point(438, 222);
+            this.radio_Fornecedor_Entidade.Location = new System.Drawing.Point(584, 273);
+            this.radio_Fornecedor_Entidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radio_Fornecedor_Entidade.Name = "radio_Fornecedor_Entidade";
-            this.radio_Fornecedor_Entidade.Size = new System.Drawing.Size(95, 20);
+            this.radio_Fornecedor_Entidade.Size = new System.Drawing.Size(115, 24);
             this.radio_Fornecedor_Entidade.TabIndex = 16;
             this.radio_Fornecedor_Entidade.TabStop = true;
             this.radio_Fornecedor_Entidade.Text = "Fornecedor";
@@ -336,9 +345,10 @@ namespace fazendaSuinos
             // 
             this.radio_Gerente_Entidade.AutoSize = true;
             this.radio_Gerente_Entidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_Gerente_Entidade.Location = new System.Drawing.Point(565, 222);
+            this.radio_Gerente_Entidade.Location = new System.Drawing.Point(753, 273);
+            this.radio_Gerente_Entidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radio_Gerente_Entidade.Name = "radio_Gerente_Entidade";
-            this.radio_Gerente_Entidade.Size = new System.Drawing.Size(73, 20);
+            this.radio_Gerente_Entidade.Size = new System.Drawing.Size(90, 24);
             this.radio_Gerente_Entidade.TabIndex = 15;
             this.radio_Gerente_Entidade.TabStop = true;
             this.radio_Gerente_Entidade.Text = "Gerente";
@@ -349,9 +359,10 @@ namespace fazendaSuinos
             // 
             this.radio_Administrador_Entidade.AutoSize = true;
             this.radio_Administrador_Entidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_Administrador_Entidade.Location = new System.Drawing.Point(298, 222);
+            this.radio_Administrador_Entidade.Location = new System.Drawing.Point(397, 273);
+            this.radio_Administrador_Entidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radio_Administrador_Entidade.Name = "radio_Administrador_Entidade";
-            this.radio_Administrador_Entidade.Size = new System.Drawing.Size(108, 20);
+            this.radio_Administrador_Entidade.Size = new System.Drawing.Size(134, 24);
             this.radio_Administrador_Entidade.TabIndex = 14;
             this.radio_Administrador_Entidade.TabStop = true;
             this.radio_Administrador_Entidade.Text = "Administrador";
@@ -363,9 +374,10 @@ namespace fazendaSuinos
             this.flowLayoutFiltroEntidade.Controls.Add(this.btnFiltroEnt2);
             this.flowLayoutFiltroEntidade.Controls.Add(this.btnFiltroEnt1);
             this.flowLayoutFiltroEntidade.Controls.Add(this.btnFiltroEnt3);
-            this.flowLayoutFiltroEntidade.Location = new System.Drawing.Point(289, 170);
+            this.flowLayoutFiltroEntidade.Location = new System.Drawing.Point(385, 209);
+            this.flowLayoutFiltroEntidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutFiltroEntidade.Name = "flowLayoutFiltroEntidade";
-            this.flowLayoutFiltroEntidade.Size = new System.Drawing.Size(419, 30);
+            this.flowLayoutFiltroEntidade.Size = new System.Drawing.Size(559, 37);
             this.flowLayoutFiltroEntidade.TabIndex = 13;
             // 
             // btnFiltroEnt2
@@ -381,10 +393,10 @@ namespace fazendaSuinos
             this.btnFiltroEnt2.IconColor = System.Drawing.Color.White;
             this.btnFiltroEnt2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroEnt2.IconSize = 20;
-            this.btnFiltroEnt2.Location = new System.Drawing.Point(2, 2);
-            this.btnFiltroEnt2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroEnt2.Location = new System.Drawing.Point(3, 2);
+            this.btnFiltroEnt2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFiltroEnt2.Name = "btnFiltroEnt2";
-            this.btnFiltroEnt2.Size = new System.Drawing.Size(126, 27);
+            this.btnFiltroEnt2.Size = new System.Drawing.Size(143, 30);
             this.btnFiltroEnt2.TabIndex = 10;
             this.btnFiltroEnt2.Text = "Especialidade";
             this.btnFiltroEnt2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -406,10 +418,10 @@ namespace fazendaSuinos
             this.btnFiltroEnt1.IconColor = System.Drawing.Color.White;
             this.btnFiltroEnt1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroEnt1.IconSize = 20;
-            this.btnFiltroEnt1.Location = new System.Drawing.Point(132, 2);
-            this.btnFiltroEnt1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroEnt1.Location = new System.Drawing.Point(152, 2);
+            this.btnFiltroEnt1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFiltroEnt1.Name = "btnFiltroEnt1";
-            this.btnFiltroEnt1.Size = new System.Drawing.Size(126, 27);
+            this.btnFiltroEnt1.Size = new System.Drawing.Size(143, 30);
             this.btnFiltroEnt1.TabIndex = 9;
             this.btnFiltroEnt1.Text = "Especialidade";
             this.btnFiltroEnt1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -431,10 +443,10 @@ namespace fazendaSuinos
             this.btnFiltroEnt3.IconColor = System.Drawing.Color.White;
             this.btnFiltroEnt3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroEnt3.IconSize = 20;
-            this.btnFiltroEnt3.Location = new System.Drawing.Point(262, 2);
-            this.btnFiltroEnt3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroEnt3.Location = new System.Drawing.Point(301, 2);
+            this.btnFiltroEnt3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFiltroEnt3.Name = "btnFiltroEnt3";
-            this.btnFiltroEnt3.Size = new System.Drawing.Size(126, 27);
+            this.btnFiltroEnt3.Size = new System.Drawing.Size(143, 30);
             this.btnFiltroEnt3.TabIndex = 10;
             this.btnFiltroEnt3.Text = "Especialidade";
             this.btnFiltroEnt3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -449,11 +461,12 @@ namespace fazendaSuinos
             this.dataGridEntidade.AllowUserToDeleteRows = false;
             this.dataGridEntidade.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridEntidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEntidade.Location = new System.Drawing.Point(289, 260);
+            this.dataGridEntidade.Location = new System.Drawing.Point(385, 320);
+            this.dataGridEntidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridEntidade.Name = "dataGridEntidade";
             this.dataGridEntidade.ReadOnly = true;
             this.dataGridEntidade.RowHeadersWidth = 51;
-            this.dataGridEntidade.Size = new System.Drawing.Size(685, 150);
+            this.dataGridEntidade.Size = new System.Drawing.Size(913, 185);
             this.dataGridEntidade.TabIndex = 8;
             this.dataGridEntidade.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEntidade_CellDoubleClick);
             this.dataGridEntidade.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridEntidade_DataBindingComplete);
@@ -465,9 +478,10 @@ namespace fazendaSuinos
             this.btnLimparEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimparEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimparEntidade.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLimparEntidade.Location = new System.Drawing.Point(731, 170);
+            this.btnLimparEntidade.Location = new System.Drawing.Point(975, 209);
+            this.btnLimparEntidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimparEntidade.Name = "btnLimparEntidade";
-            this.btnLimparEntidade.Size = new System.Drawing.Size(106, 30);
+            this.btnLimparEntidade.Size = new System.Drawing.Size(141, 37);
             this.btnLimparEntidade.TabIndex = 7;
             this.btnLimparEntidade.Text = "Limpar";
             this.btnLimparEntidade.UseVisualStyleBackColor = false;
@@ -480,9 +494,10 @@ namespace fazendaSuinos
             this.btnConsultarEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarEntidade.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarEntidade.Location = new System.Drawing.Point(868, 170);
+            this.btnConsultarEntidade.Location = new System.Drawing.Point(1157, 209);
+            this.btnConsultarEntidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConsultarEntidade.Name = "btnConsultarEntidade";
-            this.btnConsultarEntidade.Size = new System.Drawing.Size(106, 30);
+            this.btnConsultarEntidade.Size = new System.Drawing.Size(141, 37);
             this.btnConsultarEntidade.TabIndex = 6;
             this.btnConsultarEntidade.Text = "Consultar";
             this.btnConsultarEntidade.UseVisualStyleBackColor = false;
@@ -496,9 +511,10 @@ namespace fazendaSuinos
             this.btnAddFiltroEntidade.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnAddFiltroEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddFiltroEntidade.IconSize = 35;
-            this.btnAddFiltroEntidade.Location = new System.Drawing.Point(943, 112);
+            this.btnAddFiltroEntidade.Location = new System.Drawing.Point(1257, 138);
+            this.btnAddFiltroEntidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddFiltroEntidade.Name = "btnAddFiltroEntidade";
-            this.btnAddFiltroEntidade.Size = new System.Drawing.Size(30, 30);
+            this.btnAddFiltroEntidade.Size = new System.Drawing.Size(40, 37);
             this.btnAddFiltroEntidade.TabIndex = 5;
             this.btnAddFiltroEntidade.UseVisualStyleBackColor = true;
             this.btnAddFiltroEntidade.Click += new System.EventHandler(this.btnAdicionarFiltroEntidade_Click);
@@ -508,9 +524,10 @@ namespace fazendaSuinos
             this.campoValorEntidade.BackColor = System.Drawing.Color.LightGray;
             this.campoValorEntidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoValorEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoValorEntidade.Location = new System.Drawing.Point(507, 117);
+            this.campoValorEntidade.Location = new System.Drawing.Point(676, 144);
+            this.campoValorEntidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoValorEntidade.Name = "campoValorEntidade";
-            this.campoValorEntidade.Size = new System.Drawing.Size(430, 19);
+            this.campoValorEntidade.Size = new System.Drawing.Size(573, 23);
             this.campoValorEntidade.TabIndex = 4;
             // 
             // label3
@@ -518,9 +535,10 @@ namespace fazendaSuinos
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label3.Location = new System.Drawing.Point(503, 90);
+            this.label3.Location = new System.Drawing.Point(671, 111);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 20);
+            this.label3.Size = new System.Drawing.Size(58, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Valor";
             // 
@@ -530,7 +548,7 @@ namespace fazendaSuinos
             this.comboAtributoEntidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboAtributoEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboAtributoEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboAtributoEntidade.ItemHeight = 18;
+            this.comboAtributoEntidade.ItemHeight = 24;
             this.comboAtributoEntidade.Items.AddRange(new object[] {
             "Código",
             "Nome",
@@ -542,9 +560,10 @@ namespace fazendaSuinos
             "Setor",
             "Especialidade",
             "Privilégios"});
-            this.comboAtributoEntidade.Location = new System.Drawing.Point(298, 114);
+            this.comboAtributoEntidade.Location = new System.Drawing.Point(397, 140);
+            this.comboAtributoEntidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboAtributoEntidade.Name = "comboAtributoEntidade";
-            this.comboAtributoEntidade.Size = new System.Drawing.Size(168, 26);
+            this.comboAtributoEntidade.Size = new System.Drawing.Size(223, 32);
             this.comboAtributoEntidade.TabIndex = 2;
             this.comboAtributoEntidade.SelectedIndexChanged += new System.EventHandler(this.comboAtributoEntidade_SelectedIndexChanged);
             // 
@@ -553,9 +572,10 @@ namespace fazendaSuinos
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label2.Location = new System.Drawing.Point(294, 91);
+            this.label2.Location = new System.Drawing.Point(392, 112);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.Size = new System.Drawing.Size(79, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Atributo";
             // 
@@ -564,9 +584,10 @@ namespace fazendaSuinos
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label1.Location = new System.Drawing.Point(285, 44);
+            this.label1.Location = new System.Drawing.Point(380, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 24);
+            this.label1.Size = new System.Drawing.Size(221, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Consulta Entidades";
             // 
@@ -576,9 +597,10 @@ namespace fazendaSuinos
             this.panelFiltros.Controls.Add(this.panelFiltroAcoes);
             this.panelFiltros.Controls.Add(this.panelFiltroEntidade);
             this.panelFiltros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFiltros.Location = new System.Drawing.Point(0, 150);
+            this.panelFiltros.Location = new System.Drawing.Point(0, 185);
+            this.panelFiltros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFiltros.Name = "panelFiltros";
-            this.panelFiltros.Size = new System.Drawing.Size(1423, 414);
+            this.panelFiltros.Size = new System.Drawing.Size(1899, 510);
             this.panelFiltros.TabIndex = 9;
             // 
             // panelFiltroFazenda
@@ -599,9 +621,10 @@ namespace fazendaSuinos
             this.panelFiltroFazenda.Controls.Add(this.label5);
             this.panelFiltroFazenda.Controls.Add(this.label6);
             this.panelFiltroFazenda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFiltroFazenda.Location = new System.Drawing.Point(0, 1320);
+            this.panelFiltroFazenda.Location = new System.Drawing.Point(0, 1624);
+            this.panelFiltroFazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFiltroFazenda.Name = "panelFiltroFazenda";
-            this.panelFiltroFazenda.Size = new System.Drawing.Size(1423, 690);
+            this.panelFiltroFazenda.Size = new System.Drawing.Size(1899, 849);
             this.panelFiltroFazenda.TabIndex = 11;
             this.panelFiltroFazenda.Visible = false;
             // 
@@ -609,9 +632,10 @@ namespace fazendaSuinos
             // 
             this.radio_Produto_Fazenda.AutoSize = true;
             this.radio_Produto_Fazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_Produto_Fazenda.Location = new System.Drawing.Point(891, 222);
+            this.radio_Produto_Fazenda.Location = new System.Drawing.Point(1188, 273);
+            this.radio_Produto_Fazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radio_Produto_Fazenda.Name = "radio_Produto_Fazenda";
-            this.radio_Produto_Fazenda.Size = new System.Drawing.Size(72, 20);
+            this.radio_Produto_Fazenda.Size = new System.Drawing.Size(88, 24);
             this.radio_Produto_Fazenda.TabIndex = 19;
             this.radio_Produto_Fazenda.TabStop = true;
             this.radio_Produto_Fazenda.Text = "Produto";
@@ -622,9 +646,10 @@ namespace fazendaSuinos
             // 
             this.radio_Visita_Fazenda.AutoSize = true;
             this.radio_Visita_Fazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_Visita_Fazenda.Location = new System.Drawing.Point(755, 222);
+            this.radio_Visita_Fazenda.Location = new System.Drawing.Point(1007, 273);
+            this.radio_Visita_Fazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radio_Visita_Fazenda.Name = "radio_Visita_Fazenda";
-            this.radio_Visita_Fazenda.Size = new System.Drawing.Size(58, 20);
+            this.radio_Visita_Fazenda.Size = new System.Drawing.Size(72, 24);
             this.radio_Visita_Fazenda.TabIndex = 18;
             this.radio_Visita_Fazenda.TabStop = true;
             this.radio_Visita_Fazenda.Text = "Visita";
@@ -635,9 +660,10 @@ namespace fazendaSuinos
             // 
             this.radio_Lote_Fazenda.AutoSize = true;
             this.radio_Lote_Fazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_Lote_Fazenda.Location = new System.Drawing.Point(626, 222);
+            this.radio_Lote_Fazenda.Location = new System.Drawing.Point(835, 273);
+            this.radio_Lote_Fazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radio_Lote_Fazenda.Name = "radio_Lote_Fazenda";
-            this.radio_Lote_Fazenda.Size = new System.Drawing.Size(51, 20);
+            this.radio_Lote_Fazenda.Size = new System.Drawing.Size(63, 24);
             this.radio_Lote_Fazenda.TabIndex = 17;
             this.radio_Lote_Fazenda.TabStop = true;
             this.radio_Lote_Fazenda.Text = "Lote";
@@ -648,9 +674,10 @@ namespace fazendaSuinos
             // 
             this.radio_Pocilga_Fazenda.AutoSize = true;
             this.radio_Pocilga_Fazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_Pocilga_Fazenda.Location = new System.Drawing.Point(477, 222);
+            this.radio_Pocilga_Fazenda.Location = new System.Drawing.Point(636, 273);
+            this.radio_Pocilga_Fazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radio_Pocilga_Fazenda.Name = "radio_Pocilga_Fazenda";
-            this.radio_Pocilga_Fazenda.Size = new System.Drawing.Size(71, 20);
+            this.radio_Pocilga_Fazenda.Size = new System.Drawing.Size(85, 24);
             this.radio_Pocilga_Fazenda.TabIndex = 16;
             this.radio_Pocilga_Fazenda.TabStop = true;
             this.radio_Pocilga_Fazenda.Text = "Pocilga";
@@ -661,9 +688,10 @@ namespace fazendaSuinos
             // 
             this.radio_Propriedade_Fazenda.AutoSize = true;
             this.radio_Propriedade_Fazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radio_Propriedade_Fazenda.Location = new System.Drawing.Point(298, 222);
+            this.radio_Propriedade_Fazenda.Location = new System.Drawing.Point(397, 273);
+            this.radio_Propriedade_Fazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radio_Propriedade_Fazenda.Name = "radio_Propriedade_Fazenda";
-            this.radio_Propriedade_Fazenda.Size = new System.Drawing.Size(101, 20);
+            this.radio_Propriedade_Fazenda.Size = new System.Drawing.Size(120, 24);
             this.radio_Propriedade_Fazenda.TabIndex = 15;
             this.radio_Propriedade_Fazenda.TabStop = true;
             this.radio_Propriedade_Fazenda.Text = "Propriedade";
@@ -675,9 +703,10 @@ namespace fazendaSuinos
             this.flowLayoutFiltroFazenda.Controls.Add(this.btnFiltroFaz2);
             this.flowLayoutFiltroFazenda.Controls.Add(this.btnFiltroFaz1);
             this.flowLayoutFiltroFazenda.Controls.Add(this.btnFiltroFaz3);
-            this.flowLayoutFiltroFazenda.Location = new System.Drawing.Point(289, 170);
+            this.flowLayoutFiltroFazenda.Location = new System.Drawing.Point(385, 209);
+            this.flowLayoutFiltroFazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutFiltroFazenda.Name = "flowLayoutFiltroFazenda";
-            this.flowLayoutFiltroFazenda.Size = new System.Drawing.Size(419, 30);
+            this.flowLayoutFiltroFazenda.Size = new System.Drawing.Size(559, 37);
             this.flowLayoutFiltroFazenda.TabIndex = 12;
             // 
             // btnFiltroFaz2
@@ -693,10 +722,10 @@ namespace fazendaSuinos
             this.btnFiltroFaz2.IconColor = System.Drawing.Color.White;
             this.btnFiltroFaz2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroFaz2.IconSize = 20;
-            this.btnFiltroFaz2.Location = new System.Drawing.Point(2, 2);
-            this.btnFiltroFaz2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroFaz2.Location = new System.Drawing.Point(3, 2);
+            this.btnFiltroFaz2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFiltroFaz2.Name = "btnFiltroFaz2";
-            this.btnFiltroFaz2.Size = new System.Drawing.Size(126, 27);
+            this.btnFiltroFaz2.Size = new System.Drawing.Size(143, 30);
             this.btnFiltroFaz2.TabIndex = 10;
             this.btnFiltroFaz2.Text = "Especialidade";
             this.btnFiltroFaz2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -718,10 +747,10 @@ namespace fazendaSuinos
             this.btnFiltroFaz1.IconColor = System.Drawing.Color.White;
             this.btnFiltroFaz1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroFaz1.IconSize = 20;
-            this.btnFiltroFaz1.Location = new System.Drawing.Point(132, 2);
-            this.btnFiltroFaz1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroFaz1.Location = new System.Drawing.Point(152, 2);
+            this.btnFiltroFaz1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFiltroFaz1.Name = "btnFiltroFaz1";
-            this.btnFiltroFaz1.Size = new System.Drawing.Size(126, 27);
+            this.btnFiltroFaz1.Size = new System.Drawing.Size(143, 30);
             this.btnFiltroFaz1.TabIndex = 9;
             this.btnFiltroFaz1.Text = "Especialidade";
             this.btnFiltroFaz1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -743,10 +772,10 @@ namespace fazendaSuinos
             this.btnFiltroFaz3.IconColor = System.Drawing.Color.White;
             this.btnFiltroFaz3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroFaz3.IconSize = 20;
-            this.btnFiltroFaz3.Location = new System.Drawing.Point(262, 2);
-            this.btnFiltroFaz3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroFaz3.Location = new System.Drawing.Point(301, 2);
+            this.btnFiltroFaz3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFiltroFaz3.Name = "btnFiltroFaz3";
-            this.btnFiltroFaz3.Size = new System.Drawing.Size(126, 27);
+            this.btnFiltroFaz3.Size = new System.Drawing.Size(143, 30);
             this.btnFiltroFaz3.TabIndex = 10;
             this.btnFiltroFaz3.Text = "Especialidade";
             this.btnFiltroFaz3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -761,11 +790,12 @@ namespace fazendaSuinos
             this.dataGridFazenda.AllowUserToDeleteRows = false;
             this.dataGridFazenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridFazenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridFazenda.Location = new System.Drawing.Point(289, 260);
+            this.dataGridFazenda.Location = new System.Drawing.Point(385, 320);
+            this.dataGridFazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridFazenda.Name = "dataGridFazenda";
             this.dataGridFazenda.ReadOnly = true;
             this.dataGridFazenda.RowHeadersWidth = 51;
-            this.dataGridFazenda.Size = new System.Drawing.Size(685, 150);
+            this.dataGridFazenda.Size = new System.Drawing.Size(913, 185);
             this.dataGridFazenda.TabIndex = 8;
             this.dataGridFazenda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridFazenda_CellDoubleClick);
             this.dataGridFazenda.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dataGridFazenda_DataBindingComplete);
@@ -777,9 +807,10 @@ namespace fazendaSuinos
             this.btnLimparFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimparFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimparFazenda.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLimparFazenda.Location = new System.Drawing.Point(731, 170);
+            this.btnLimparFazenda.Location = new System.Drawing.Point(975, 209);
+            this.btnLimparFazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimparFazenda.Name = "btnLimparFazenda";
-            this.btnLimparFazenda.Size = new System.Drawing.Size(106, 30);
+            this.btnLimparFazenda.Size = new System.Drawing.Size(141, 37);
             this.btnLimparFazenda.TabIndex = 7;
             this.btnLimparFazenda.Text = "Limpar";
             this.btnLimparFazenda.UseVisualStyleBackColor = false;
@@ -792,9 +823,10 @@ namespace fazendaSuinos
             this.btnConsultarFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarFazenda.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarFazenda.Location = new System.Drawing.Point(868, 170);
+            this.btnConsultarFazenda.Location = new System.Drawing.Point(1157, 209);
+            this.btnConsultarFazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConsultarFazenda.Name = "btnConsultarFazenda";
-            this.btnConsultarFazenda.Size = new System.Drawing.Size(106, 30);
+            this.btnConsultarFazenda.Size = new System.Drawing.Size(141, 37);
             this.btnConsultarFazenda.TabIndex = 6;
             this.btnConsultarFazenda.Text = "Consultar";
             this.btnConsultarFazenda.UseVisualStyleBackColor = false;
@@ -808,9 +840,10 @@ namespace fazendaSuinos
             this.btnAddFiltroFazenda.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnAddFiltroFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddFiltroFazenda.IconSize = 35;
-            this.btnAddFiltroFazenda.Location = new System.Drawing.Point(943, 112);
+            this.btnAddFiltroFazenda.Location = new System.Drawing.Point(1257, 138);
+            this.btnAddFiltroFazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddFiltroFazenda.Name = "btnAddFiltroFazenda";
-            this.btnAddFiltroFazenda.Size = new System.Drawing.Size(30, 30);
+            this.btnAddFiltroFazenda.Size = new System.Drawing.Size(40, 37);
             this.btnAddFiltroFazenda.TabIndex = 5;
             this.btnAddFiltroFazenda.UseVisualStyleBackColor = true;
             this.btnAddFiltroFazenda.Click += new System.EventHandler(this.btnAdicionarFiltroFazenda_Click);
@@ -820,9 +853,10 @@ namespace fazendaSuinos
             this.campoValorFazenda.BackColor = System.Drawing.Color.LightGray;
             this.campoValorFazenda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoValorFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoValorFazenda.Location = new System.Drawing.Point(507, 117);
+            this.campoValorFazenda.Location = new System.Drawing.Point(676, 144);
+            this.campoValorFazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoValorFazenda.Name = "campoValorFazenda";
-            this.campoValorFazenda.Size = new System.Drawing.Size(430, 19);
+            this.campoValorFazenda.Size = new System.Drawing.Size(573, 23);
             this.campoValorFazenda.TabIndex = 4;
             // 
             // label4
@@ -830,9 +864,10 @@ namespace fazendaSuinos
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label4.Location = new System.Drawing.Point(503, 90);
+            this.label4.Location = new System.Drawing.Point(671, 111);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 20);
+            this.label4.Size = new System.Drawing.Size(58, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "Valor";
             // 
@@ -842,7 +877,7 @@ namespace fazendaSuinos
             this.comboAtributoFazenda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboAtributoFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboAtributoFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboAtributoFazenda.ItemHeight = 18;
+            this.comboAtributoFazenda.ItemHeight = 24;
             this.comboAtributoFazenda.Items.AddRange(new object[] {
             "Código",
             "Nome",
@@ -853,9 +888,10 @@ namespace fazendaSuinos
             "Observações",
             "Data de Alojamento",
             "Data de Carregamento"});
-            this.comboAtributoFazenda.Location = new System.Drawing.Point(298, 114);
+            this.comboAtributoFazenda.Location = new System.Drawing.Point(397, 140);
+            this.comboAtributoFazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboAtributoFazenda.Name = "comboAtributoFazenda";
-            this.comboAtributoFazenda.Size = new System.Drawing.Size(168, 26);
+            this.comboAtributoFazenda.Size = new System.Drawing.Size(223, 32);
             this.comboAtributoFazenda.TabIndex = 2;
             this.comboAtributoFazenda.SelectedIndexChanged += new System.EventHandler(this.comboAtributoFazenda_SelectedIndexChanged);
             // 
@@ -864,9 +900,10 @@ namespace fazendaSuinos
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label5.Location = new System.Drawing.Point(294, 91);
+            this.label5.Location = new System.Drawing.Point(392, 112);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 20);
+            this.label5.Size = new System.Drawing.Size(79, 25);
             this.label5.TabIndex = 1;
             this.label5.Text = "Atributo";
             // 
@@ -875,9 +912,10 @@ namespace fazendaSuinos
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label6.Location = new System.Drawing.Point(285, 44);
+            this.label6.Location = new System.Drawing.Point(380, 54);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(162, 24);
+            this.label6.Size = new System.Drawing.Size(206, 29);
             this.label6.TabIndex = 0;
             this.label6.Text = "Consulta Fazenda";
             // 
@@ -894,9 +932,10 @@ namespace fazendaSuinos
             this.panelFiltroAcoes.Controls.Add(this.label8);
             this.panelFiltroAcoes.Controls.Add(this.label9);
             this.panelFiltroAcoes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFiltroAcoes.Location = new System.Drawing.Point(0, 630);
+            this.panelFiltroAcoes.Location = new System.Drawing.Point(0, 775);
+            this.panelFiltroAcoes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFiltroAcoes.Name = "panelFiltroAcoes";
-            this.panelFiltroAcoes.Size = new System.Drawing.Size(1423, 690);
+            this.panelFiltroAcoes.Size = new System.Drawing.Size(1899, 849);
             this.panelFiltroAcoes.TabIndex = 11;
             this.panelFiltroAcoes.Visible = false;
             // 
@@ -905,9 +944,10 @@ namespace fazendaSuinos
             this.flowLayoutFiltroAcoes.Controls.Add(this.btnFiltroAco1);
             this.flowLayoutFiltroAcoes.Controls.Add(this.btnFiltroAco2);
             this.flowLayoutFiltroAcoes.Controls.Add(this.btnFiltroAco3);
-            this.flowLayoutFiltroAcoes.Location = new System.Drawing.Point(289, 170);
+            this.flowLayoutFiltroAcoes.Location = new System.Drawing.Point(385, 209);
+            this.flowLayoutFiltroAcoes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutFiltroAcoes.Name = "flowLayoutFiltroAcoes";
-            this.flowLayoutFiltroAcoes.Size = new System.Drawing.Size(419, 30);
+            this.flowLayoutFiltroAcoes.Size = new System.Drawing.Size(559, 37);
             this.flowLayoutFiltroAcoes.TabIndex = 11;
             // 
             // btnFiltroAco1
@@ -923,10 +963,10 @@ namespace fazendaSuinos
             this.btnFiltroAco1.IconColor = System.Drawing.Color.White;
             this.btnFiltroAco1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroAco1.IconSize = 20;
-            this.btnFiltroAco1.Location = new System.Drawing.Point(2, 2);
-            this.btnFiltroAco1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroAco1.Location = new System.Drawing.Point(3, 2);
+            this.btnFiltroAco1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFiltroAco1.Name = "btnFiltroAco1";
-            this.btnFiltroAco1.Size = new System.Drawing.Size(126, 27);
+            this.btnFiltroAco1.Size = new System.Drawing.Size(143, 30);
             this.btnFiltroAco1.TabIndex = 9;
             this.btnFiltroAco1.Text = "Especialidade";
             this.btnFiltroAco1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -948,10 +988,10 @@ namespace fazendaSuinos
             this.btnFiltroAco2.IconColor = System.Drawing.Color.White;
             this.btnFiltroAco2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroAco2.IconSize = 20;
-            this.btnFiltroAco2.Location = new System.Drawing.Point(132, 2);
-            this.btnFiltroAco2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroAco2.Location = new System.Drawing.Point(152, 2);
+            this.btnFiltroAco2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFiltroAco2.Name = "btnFiltroAco2";
-            this.btnFiltroAco2.Size = new System.Drawing.Size(126, 27);
+            this.btnFiltroAco2.Size = new System.Drawing.Size(143, 30);
             this.btnFiltroAco2.TabIndex = 10;
             this.btnFiltroAco2.Text = "Especialidade";
             this.btnFiltroAco2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -973,10 +1013,10 @@ namespace fazendaSuinos
             this.btnFiltroAco3.IconColor = System.Drawing.Color.White;
             this.btnFiltroAco3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnFiltroAco3.IconSize = 20;
-            this.btnFiltroAco3.Location = new System.Drawing.Point(262, 2);
-            this.btnFiltroAco3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFiltroAco3.Location = new System.Drawing.Point(301, 2);
+            this.btnFiltroAco3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFiltroAco3.Name = "btnFiltroAco3";
-            this.btnFiltroAco3.Size = new System.Drawing.Size(126, 27);
+            this.btnFiltroAco3.Size = new System.Drawing.Size(143, 30);
             this.btnFiltroAco3.TabIndex = 10;
             this.btnFiltroAco3.Text = "Especialidade";
             this.btnFiltroAco3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -988,10 +1028,11 @@ namespace fazendaSuinos
             // dataGridAcoes
             // 
             this.dataGridAcoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAcoes.Location = new System.Drawing.Point(289, 231);
+            this.dataGridAcoes.Location = new System.Drawing.Point(385, 284);
+            this.dataGridAcoes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridAcoes.Name = "dataGridAcoes";
             this.dataGridAcoes.RowHeadersWidth = 51;
-            this.dataGridAcoes.Size = new System.Drawing.Size(685, 150);
+            this.dataGridAcoes.Size = new System.Drawing.Size(913, 185);
             this.dataGridAcoes.TabIndex = 8;
             // 
             // btnLimparAcoes
@@ -1001,9 +1042,10 @@ namespace fazendaSuinos
             this.btnLimparAcoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimparAcoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimparAcoes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLimparAcoes.Location = new System.Drawing.Point(731, 170);
+            this.btnLimparAcoes.Location = new System.Drawing.Point(975, 209);
+            this.btnLimparAcoes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimparAcoes.Name = "btnLimparAcoes";
-            this.btnLimparAcoes.Size = new System.Drawing.Size(106, 30);
+            this.btnLimparAcoes.Size = new System.Drawing.Size(141, 37);
             this.btnLimparAcoes.TabIndex = 7;
             this.btnLimparAcoes.Text = "Limpar";
             this.btnLimparAcoes.UseVisualStyleBackColor = false;
@@ -1015,9 +1057,10 @@ namespace fazendaSuinos
             this.btnConsultarAcoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarAcoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarAcoes.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarAcoes.Location = new System.Drawing.Point(868, 170);
+            this.btnConsultarAcoes.Location = new System.Drawing.Point(1157, 209);
+            this.btnConsultarAcoes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConsultarAcoes.Name = "btnConsultarAcoes";
-            this.btnConsultarAcoes.Size = new System.Drawing.Size(106, 30);
+            this.btnConsultarAcoes.Size = new System.Drawing.Size(141, 37);
             this.btnConsultarAcoes.TabIndex = 6;
             this.btnConsultarAcoes.Text = "Consultar";
             this.btnConsultarAcoes.UseVisualStyleBackColor = false;
@@ -1030,9 +1073,10 @@ namespace fazendaSuinos
             this.btnAddFiltroAcoes.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btnAddFiltroAcoes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddFiltroAcoes.IconSize = 35;
-            this.btnAddFiltroAcoes.Location = new System.Drawing.Point(943, 112);
+            this.btnAddFiltroAcoes.Location = new System.Drawing.Point(1257, 138);
+            this.btnAddFiltroAcoes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddFiltroAcoes.Name = "btnAddFiltroAcoes";
-            this.btnAddFiltroAcoes.Size = new System.Drawing.Size(30, 30);
+            this.btnAddFiltroAcoes.Size = new System.Drawing.Size(40, 37);
             this.btnAddFiltroAcoes.TabIndex = 5;
             this.btnAddFiltroAcoes.UseVisualStyleBackColor = true;
             this.btnAddFiltroAcoes.Click += new System.EventHandler(this.btnAdicionarFiltroAcoes_Click);
@@ -1042,9 +1086,10 @@ namespace fazendaSuinos
             this.campoValorAcoes.BackColor = System.Drawing.Color.LightGray;
             this.campoValorAcoes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoValorAcoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoValorAcoes.Location = new System.Drawing.Point(507, 117);
+            this.campoValorAcoes.Location = new System.Drawing.Point(676, 144);
+            this.campoValorAcoes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.campoValorAcoes.Name = "campoValorAcoes";
-            this.campoValorAcoes.Size = new System.Drawing.Size(430, 19);
+            this.campoValorAcoes.Size = new System.Drawing.Size(573, 23);
             this.campoValorAcoes.TabIndex = 4;
             // 
             // label7
@@ -1052,9 +1097,10 @@ namespace fazendaSuinos
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label7.Location = new System.Drawing.Point(503, 90);
+            this.label7.Location = new System.Drawing.Point(671, 111);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 20);
+            this.label7.Size = new System.Drawing.Size(58, 25);
             this.label7.TabIndex = 3;
             this.label7.Text = "Valor";
             // 
@@ -1064,16 +1110,17 @@ namespace fazendaSuinos
             this.comboAtributoAcoes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboAtributoAcoes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboAtributoAcoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboAtributoAcoes.ItemHeight = 18;
+            this.comboAtributoAcoes.ItemHeight = 24;
             this.comboAtributoAcoes.Items.AddRange(new object[] {
             "Código",
             "Data",
             "Tarefa",
             "Prazo",
             "Conclusao"});
-            this.comboAtributoAcoes.Location = new System.Drawing.Point(298, 114);
+            this.comboAtributoAcoes.Location = new System.Drawing.Point(397, 140);
+            this.comboAtributoAcoes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboAtributoAcoes.Name = "comboAtributoAcoes";
-            this.comboAtributoAcoes.Size = new System.Drawing.Size(168, 26);
+            this.comboAtributoAcoes.Size = new System.Drawing.Size(223, 32);
             this.comboAtributoAcoes.TabIndex = 2;
             // 
             // label8
@@ -1081,9 +1128,10 @@ namespace fazendaSuinos
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label8.Location = new System.Drawing.Point(294, 91);
+            this.label8.Location = new System.Drawing.Point(392, 112);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 20);
+            this.label8.Size = new System.Drawing.Size(79, 25);
             this.label8.TabIndex = 1;
             this.label8.Text = "Atributo";
             // 
@@ -1092,9 +1140,10 @@ namespace fazendaSuinos
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.label9.Location = new System.Drawing.Point(285, 44);
+            this.label9.Location = new System.Drawing.Point(380, 54);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(230, 24);
+            this.label9.Size = new System.Drawing.Size(295, 29);
             this.label9.TabIndex = 0;
             this.label9.Text = "Consulta Ações Corretivas";
             // 
@@ -1129,9 +1178,9 @@ namespace fazendaSuinos
             this.panelCadastroEntidade.Controls.Add(this.labelDadosEntidades);
             this.panelCadastroEntidade.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCadastroEntidade.Location = new System.Drawing.Point(0, 0);
-            this.panelCadastroEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelCadastroEntidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelCadastroEntidade.Name = "panelCadastroEntidade";
-            this.panelCadastroEntidade.Size = new System.Drawing.Size(1423, 690);
+            this.panelCadastroEntidade.Size = new System.Drawing.Size(1899, 849);
             this.panelCadastroEntidade.TabIndex = 10;
             this.panelCadastroEntidade.Visible = false;
             // 
@@ -1145,10 +1194,10 @@ namespace fazendaSuinos
             this.btnExcluirEntidade.IconColor = System.Drawing.Color.White;
             this.btnExcluirEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExcluirEntidade.IconSize = 20;
-            this.btnExcluirEntidade.Location = new System.Drawing.Point(565, 354);
-            this.btnExcluirEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExcluirEntidade.Location = new System.Drawing.Point(753, 436);
+            this.btnExcluirEntidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExcluirEntidade.Name = "btnExcluirEntidade";
-            this.btnExcluirEntidade.Size = new System.Drawing.Size(106, 30);
+            this.btnExcluirEntidade.Size = new System.Drawing.Size(141, 37);
             this.btnExcluirEntidade.TabIndex = 91;
             this.btnExcluirEntidade.Text = "Excluir";
             this.btnExcluirEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1162,10 +1211,10 @@ namespace fazendaSuinos
             this.campoCEP.BackColor = System.Drawing.Color.LightGray;
             this.campoCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCEP.Location = new System.Drawing.Point(299, 276);
-            this.campoCEP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCEP.Location = new System.Drawing.Point(399, 340);
+            this.campoCEP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoCEP.Name = "campoCEP";
-            this.campoCEP.Size = new System.Drawing.Size(134, 19);
+            this.campoCEP.Size = new System.Drawing.Size(179, 23);
             this.campoCEP.TabIndex = 31;
             this.campoCEP.Visible = false;
             // 
@@ -1174,9 +1223,10 @@ namespace fazendaSuinos
             this.labelCEP.AutoSize = true;
             this.labelCEP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCEP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCEP.Location = new System.Drawing.Point(294, 251);
+            this.labelCEP.Location = new System.Drawing.Point(392, 309);
+            this.labelCEP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCEP.Name = "labelCEP";
-            this.labelCEP.Size = new System.Drawing.Size(41, 20);
+            this.labelCEP.Size = new System.Drawing.Size(53, 25);
             this.labelCEP.TabIndex = 30;
             this.labelCEP.Text = "CEP";
             this.labelCEP.Visible = false;
@@ -1186,10 +1236,10 @@ namespace fazendaSuinos
             this.campoCNPJ.BackColor = System.Drawing.Color.LightGray;
             this.campoCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCNPJ.Location = new System.Drawing.Point(660, 198);
-            this.campoCNPJ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCNPJ.Location = new System.Drawing.Point(880, 244);
+            this.campoCNPJ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoCNPJ.Name = "campoCNPJ";
-            this.campoCNPJ.Size = new System.Drawing.Size(134, 19);
+            this.campoCNPJ.Size = new System.Drawing.Size(179, 23);
             this.campoCNPJ.TabIndex = 27;
             this.campoCNPJ.Visible = false;
             // 
@@ -1198,9 +1248,10 @@ namespace fazendaSuinos
             this.labelCNPJ.AutoSize = true;
             this.labelCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCNPJ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCNPJ.Location = new System.Drawing.Point(656, 173);
+            this.labelCNPJ.Location = new System.Drawing.Point(875, 213);
+            this.labelCNPJ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCNPJ.Name = "labelCNPJ";
-            this.labelCNPJ.Size = new System.Drawing.Size(49, 20);
+            this.labelCNPJ.Size = new System.Drawing.Size(65, 25);
             this.labelCNPJ.TabIndex = 26;
             this.labelCNPJ.Text = "CNPJ";
             this.labelCNPJ.Visible = false;
@@ -1210,10 +1261,10 @@ namespace fazendaSuinos
             this.campoRazaoSocial.BackColor = System.Drawing.Color.LightGray;
             this.campoRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoRazaoSocial.Location = new System.Drawing.Point(299, 198);
-            this.campoRazaoSocial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoRazaoSocial.Location = new System.Drawing.Point(399, 244);
+            this.campoRazaoSocial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoRazaoSocial.Name = "campoRazaoSocial";
-            this.campoRazaoSocial.Size = new System.Drawing.Size(320, 19);
+            this.campoRazaoSocial.Size = new System.Drawing.Size(427, 23);
             this.campoRazaoSocial.TabIndex = 25;
             this.campoRazaoSocial.Visible = false;
             // 
@@ -1222,9 +1273,10 @@ namespace fazendaSuinos
             this.labelRazaoSocial.AutoSize = true;
             this.labelRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRazaoSocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelRazaoSocial.Location = new System.Drawing.Point(296, 173);
+            this.labelRazaoSocial.Location = new System.Drawing.Point(395, 213);
+            this.labelRazaoSocial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRazaoSocial.Name = "labelRazaoSocial";
-            this.labelRazaoSocial.Size = new System.Drawing.Size(103, 20);
+            this.labelRazaoSocial.Size = new System.Drawing.Size(127, 25);
             this.labelRazaoSocial.TabIndex = 24;
             this.labelRazaoSocial.Text = "Razão Social";
             this.labelRazaoSocial.Visible = false;
@@ -1239,10 +1291,10 @@ namespace fazendaSuinos
             this.btnGravarEntidade.IconColor = System.Drawing.Color.White;
             this.btnGravarEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGravarEntidade.IconSize = 25;
-            this.btnGravarEntidade.Location = new System.Drawing.Point(699, 354);
-            this.btnGravarEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGravarEntidade.Location = new System.Drawing.Point(932, 436);
+            this.btnGravarEntidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGravarEntidade.Name = "btnGravarEntidade";
-            this.btnGravarEntidade.Size = new System.Drawing.Size(137, 30);
+            this.btnGravarEntidade.Size = new System.Drawing.Size(183, 37);
             this.btnGravarEntidade.TabIndex = 23;
             this.btnGravarEntidade.Text = "Salvar Alterações";
             this.btnGravarEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1261,10 +1313,10 @@ namespace fazendaSuinos
             this.btnIncluirEntidade.IconColor = System.Drawing.Color.White;
             this.btnIncluirEntidade.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnIncluirEntidade.IconSize = 25;
-            this.btnIncluirEntidade.Location = new System.Drawing.Point(868, 354);
-            this.btnIncluirEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIncluirEntidade.Location = new System.Drawing.Point(1157, 436);
+            this.btnIncluirEntidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIncluirEntidade.Name = "btnIncluirEntidade";
-            this.btnIncluirEntidade.Size = new System.Drawing.Size(106, 30);
+            this.btnIncluirEntidade.Size = new System.Drawing.Size(141, 37);
             this.btnIncluirEntidade.TabIndex = 22;
             this.btnIncluirEntidade.Text = "Incluir";
             this.btnIncluirEntidade.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1279,9 +1331,10 @@ namespace fazendaSuinos
             this.btnLimparCadastroEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimparCadastroEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimparCadastroEntidade.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLimparCadastroEntidade.Location = new System.Drawing.Point(426, 354);
+            this.btnLimparCadastroEntidade.Location = new System.Drawing.Point(568, 436);
+            this.btnLimparCadastroEntidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimparCadastroEntidade.Name = "btnLimparCadastroEntidade";
-            this.btnLimparCadastroEntidade.Size = new System.Drawing.Size(106, 30);
+            this.btnLimparCadastroEntidade.Size = new System.Drawing.Size(141, 37);
             this.btnLimparCadastroEntidade.TabIndex = 20;
             this.btnLimparCadastroEntidade.Text = "Limpar";
             this.btnLimparCadastroEntidade.UseVisualStyleBackColor = false;
@@ -1294,14 +1347,15 @@ namespace fazendaSuinos
             this.comboPrivilegios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboPrivilegios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboPrivilegios.FormattingEnabled = true;
-            this.comboPrivilegios.ItemHeight = 18;
+            this.comboPrivilegios.ItemHeight = 24;
             this.comboPrivilegios.Items.AddRange(new object[] {
             "Administrador",
             "Funcionário",
             "Usuário"});
-            this.comboPrivilegios.Location = new System.Drawing.Point(840, 274);
+            this.comboPrivilegios.Location = new System.Drawing.Point(1120, 337);
+            this.comboPrivilegios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboPrivilegios.Name = "comboPrivilegios";
-            this.comboPrivilegios.Size = new System.Drawing.Size(134, 26);
+            this.comboPrivilegios.Size = new System.Drawing.Size(177, 32);
             this.comboPrivilegios.TabIndex = 18;
             this.comboPrivilegios.Visible = false;
             // 
@@ -1310,9 +1364,10 @@ namespace fazendaSuinos
             this.labelPrivilegios.AutoSize = true;
             this.labelPrivilegios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrivilegios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelPrivilegios.Location = new System.Drawing.Point(836, 251);
+            this.labelPrivilegios.Location = new System.Drawing.Point(1115, 309);
+            this.labelPrivilegios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPrivilegios.Name = "labelPrivilegios";
-            this.labelPrivilegios.Size = new System.Drawing.Size(78, 20);
+            this.labelPrivilegios.Size = new System.Drawing.Size(100, 25);
             this.labelPrivilegios.TabIndex = 17;
             this.labelPrivilegios.Text = "Privilégios";
             this.labelPrivilegios.Visible = false;
@@ -1324,16 +1379,17 @@ namespace fazendaSuinos
             this.comboEspecialidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboEspecialidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboEspecialidade.FormattingEnabled = true;
-            this.comboEspecialidade.ItemHeight = 18;
+            this.comboEspecialidade.ItemHeight = 24;
             this.comboEspecialidade.Items.AddRange(new object[] {
             "Operacional",
             "Infraestrutura",
             "Tecnologia da Informação",
             "Alimentação",
             "Vacinação e infecções"});
-            this.comboEspecialidade.Location = new System.Drawing.Point(507, 274);
+            this.comboEspecialidade.Location = new System.Drawing.Point(676, 337);
+            this.comboEspecialidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboEspecialidade.Name = "comboEspecialidade";
-            this.comboEspecialidade.Size = new System.Drawing.Size(286, 26);
+            this.comboEspecialidade.Size = new System.Drawing.Size(380, 32);
             this.comboEspecialidade.TabIndex = 16;
             this.comboEspecialidade.Visible = false;
             // 
@@ -1342,9 +1398,10 @@ namespace fazendaSuinos
             this.labelEspecialidade.AutoSize = true;
             this.labelEspecialidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEspecialidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelEspecialidade.Location = new System.Drawing.Point(503, 251);
+            this.labelEspecialidade.Location = new System.Drawing.Point(671, 309);
+            this.labelEspecialidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEspecialidade.Name = "labelEspecialidade";
-            this.labelEspecialidade.Size = new System.Drawing.Size(108, 20);
+            this.labelEspecialidade.Size = new System.Drawing.Size(134, 25);
             this.labelEspecialidade.TabIndex = 15;
             this.labelEspecialidade.Text = "Especialidade";
             this.labelEspecialidade.Visible = false;
@@ -1356,16 +1413,17 @@ namespace fazendaSuinos
             this.comboSetor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboSetor.FormattingEnabled = true;
-            this.comboSetor.ItemHeight = 18;
+            this.comboSetor.ItemHeight = 24;
             this.comboSetor.Items.AddRange(new object[] {
             "Administrativo",
             "Saúde",
             "Financeiro",
             "RH",
             "Marketing"});
-            this.comboSetor.Location = new System.Drawing.Point(297, 274);
+            this.comboSetor.Location = new System.Drawing.Point(396, 337);
+            this.comboSetor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboSetor.Name = "comboSetor";
-            this.comboSetor.Size = new System.Drawing.Size(152, 26);
+            this.comboSetor.Size = new System.Drawing.Size(201, 32);
             this.comboSetor.TabIndex = 14;
             this.comboSetor.Visible = false;
             // 
@@ -1374,9 +1432,10 @@ namespace fazendaSuinos
             this.labelSetor.AutoSize = true;
             this.labelSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSetor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelSetor.Location = new System.Drawing.Point(293, 251);
+            this.labelSetor.Location = new System.Drawing.Point(391, 309);
+            this.labelSetor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSetor.Name = "labelSetor";
-            this.labelSetor.Size = new System.Drawing.Size(48, 20);
+            this.labelSetor.Size = new System.Drawing.Size(59, 25);
             this.labelSetor.TabIndex = 13;
             this.labelSetor.Text = "Setor";
             this.labelSetor.Visible = false;
@@ -1386,10 +1445,10 @@ namespace fazendaSuinos
             this.campoTelefone.BackColor = System.Drawing.Color.LightGray;
             this.campoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoTelefone.Location = new System.Drawing.Point(841, 198);
-            this.campoTelefone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoTelefone.Location = new System.Drawing.Point(1121, 244);
+            this.campoTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoTelefone.Name = "campoTelefone";
-            this.campoTelefone.Size = new System.Drawing.Size(134, 19);
+            this.campoTelefone.Size = new System.Drawing.Size(179, 23);
             this.campoTelefone.TabIndex = 12;
             this.campoTelefone.Visible = false;
             // 
@@ -1398,9 +1457,10 @@ namespace fazendaSuinos
             this.labelTelefone.AutoSize = true;
             this.labelTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTelefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelTelefone.Location = new System.Drawing.Point(838, 173);
+            this.labelTelefone.Location = new System.Drawing.Point(1117, 213);
+            this.labelTelefone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTelefone.Name = "labelTelefone";
-            this.labelTelefone.Size = new System.Drawing.Size(71, 20);
+            this.labelTelefone.Size = new System.Drawing.Size(89, 25);
             this.labelTelefone.TabIndex = 11;
             this.labelTelefone.Text = "Telefone";
             this.labelTelefone.Visible = false;
@@ -1410,10 +1470,10 @@ namespace fazendaSuinos
             this.campoCPF.BackColor = System.Drawing.Color.LightGray;
             this.campoCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCPF.Location = new System.Drawing.Point(660, 198);
-            this.campoCPF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCPF.Location = new System.Drawing.Point(880, 244);
+            this.campoCPF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoCPF.Name = "campoCPF";
-            this.campoCPF.Size = new System.Drawing.Size(134, 19);
+            this.campoCPF.Size = new System.Drawing.Size(179, 23);
             this.campoCPF.TabIndex = 92;
             this.campoCPF.Visible = false;
             // 
@@ -1422,9 +1482,10 @@ namespace fazendaSuinos
             this.labelCPF.AutoSize = true;
             this.labelCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCPF.Location = new System.Drawing.Point(656, 173);
+            this.labelCPF.Location = new System.Drawing.Point(875, 213);
+            this.labelCPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCPF.Name = "labelCPF";
-            this.labelCPF.Size = new System.Drawing.Size(40, 20);
+            this.labelCPF.Size = new System.Drawing.Size(52, 25);
             this.labelCPF.TabIndex = 9;
             this.labelCPF.Text = "CPF";
             this.labelCPF.Visible = false;
@@ -1434,10 +1495,10 @@ namespace fazendaSuinos
             this.campoNome.BackColor = System.Drawing.Color.LightGray;
             this.campoNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoNome.Location = new System.Drawing.Point(299, 198);
-            this.campoNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoNome.Location = new System.Drawing.Point(399, 244);
+            this.campoNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoNome.Name = "campoNome";
-            this.campoNome.Size = new System.Drawing.Size(320, 19);
+            this.campoNome.Size = new System.Drawing.Size(427, 23);
             this.campoNome.TabIndex = 8;
             this.campoNome.Visible = false;
             // 
@@ -1446,9 +1507,10 @@ namespace fazendaSuinos
             this.labelNome.AutoSize = true;
             this.labelNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelNome.Location = new System.Drawing.Point(296, 173);
+            this.labelNome.Location = new System.Drawing.Point(395, 213);
+            this.labelNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(51, 20);
+            this.labelNome.Size = new System.Drawing.Size(64, 25);
             this.labelNome.TabIndex = 7;
             this.labelNome.Text = "Nome";
             this.labelNome.Visible = false;
@@ -1458,11 +1520,11 @@ namespace fazendaSuinos
             this.campoCodigoEntidade.BackColor = System.Drawing.Color.LightGray;
             this.campoCodigoEntidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodigoEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodigoEntidade.Location = new System.Drawing.Point(472, 117);
-            this.campoCodigoEntidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodigoEntidade.Location = new System.Drawing.Point(629, 144);
+            this.campoCodigoEntidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoCodigoEntidade.Name = "campoCodigoEntidade";
             this.campoCodigoEntidade.ReadOnly = true;
-            this.campoCodigoEntidade.Size = new System.Drawing.Size(110, 19);
+            this.campoCodigoEntidade.Size = new System.Drawing.Size(147, 23);
             this.campoCodigoEntidade.TabIndex = 6;
             this.campoCodigoEntidade.TextChanged += new System.EventHandler(this.campoCodigoEntidade_TextChanged);
             // 
@@ -1471,9 +1533,10 @@ namespace fazendaSuinos
             this.labelCodigoEntidade.AutoSize = true;
             this.labelCodigoEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodigoEntidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodigoEntidade.Location = new System.Drawing.Point(469, 93);
+            this.labelCodigoEntidade.Location = new System.Drawing.Point(625, 114);
+            this.labelCodigoEntidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCodigoEntidade.Name = "labelCodigoEntidade";
-            this.labelCodigoEntidade.Size = new System.Drawing.Size(59, 20);
+            this.labelCodigoEntidade.Size = new System.Drawing.Size(75, 25);
             this.labelCodigoEntidade.TabIndex = 5;
             this.labelCodigoEntidade.Text = "Código";
             // 
@@ -1484,7 +1547,7 @@ namespace fazendaSuinos
             this.comboTipoEntidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboTipoEntidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTipoEntidade.FormattingEnabled = true;
-            this.comboTipoEntidade.ItemHeight = 18;
+            this.comboTipoEntidade.ItemHeight = 24;
             this.comboTipoEntidade.Items.AddRange(new object[] {
             "Administrador",
             "Fornecedor",
@@ -1492,9 +1555,10 @@ namespace fazendaSuinos
             "Produtor",
             "Técnico",
             "Visitante"});
-            this.comboTipoEntidade.Location = new System.Drawing.Point(298, 117);
+            this.comboTipoEntidade.Location = new System.Drawing.Point(397, 144);
+            this.comboTipoEntidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboTipoEntidade.Name = "comboTipoEntidade";
-            this.comboTipoEntidade.Size = new System.Drawing.Size(125, 26);
+            this.comboTipoEntidade.Size = new System.Drawing.Size(165, 32);
             this.comboTipoEntidade.TabIndex = 4;
             this.comboTipoEntidade.SelectedIndexChanged += new System.EventHandler(this.comboTipoEntidade_SelectedIndexChanged);
             // 
@@ -1503,9 +1567,10 @@ namespace fazendaSuinos
             this.labelTipo.AutoSize = true;
             this.labelTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelTipo.Location = new System.Drawing.Point(294, 94);
+            this.labelTipo.Location = new System.Drawing.Point(392, 116);
+            this.labelTipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTipo.Name = "labelTipo";
-            this.labelTipo.Size = new System.Drawing.Size(39, 20);
+            this.labelTipo.Size = new System.Drawing.Size(51, 25);
             this.labelTipo.TabIndex = 3;
             this.labelTipo.Text = "Tipo";
             // 
@@ -1514,9 +1579,10 @@ namespace fazendaSuinos
             this.labelDadosEntidades.AutoSize = true;
             this.labelDadosEntidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDadosEntidades.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelDadosEntidades.Location = new System.Drawing.Point(285, 47);
+            this.labelDadosEntidades.Location = new System.Drawing.Point(380, 58);
+            this.labelDadosEntidades.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDadosEntidades.Name = "labelDadosEntidades";
-            this.labelDadosEntidades.Size = new System.Drawing.Size(153, 24);
+            this.labelDadosEntidades.Size = new System.Drawing.Size(197, 29);
             this.labelDadosEntidades.TabIndex = 1;
             this.labelDadosEntidades.Text = "Dados Entidades";
             // 
@@ -1525,10 +1591,10 @@ namespace fazendaSuinos
             this.panelCadastros.Controls.Add(this.panelCadastroFazenda);
             this.panelCadastros.Controls.Add(this.panelCadastroEntidade);
             this.panelCadastros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCadastros.Location = new System.Drawing.Point(0, 564);
-            this.panelCadastros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelCadastros.Location = new System.Drawing.Point(0, 695);
+            this.panelCadastros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelCadastros.Name = "panelCadastros";
-            this.panelCadastros.Size = new System.Drawing.Size(1423, 524);
+            this.panelCadastros.Size = new System.Drawing.Size(1899, 645);
             this.panelCadastros.TabIndex = 32;
             // 
             // panelCadastroFazenda
@@ -1595,10 +1661,10 @@ namespace fazendaSuinos
             this.panelCadastroFazenda.Controls.Add(this.labelTipoFazenda);
             this.panelCadastroFazenda.Controls.Add(this.labelDadosFazenda);
             this.panelCadastroFazenda.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCadastroFazenda.Location = new System.Drawing.Point(0, 690);
-            this.panelCadastroFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelCadastroFazenda.Location = new System.Drawing.Point(0, 849);
+            this.panelCadastroFazenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelCadastroFazenda.Name = "panelCadastroFazenda";
-            this.panelCadastroFazenda.Size = new System.Drawing.Size(1423, 805);
+            this.panelCadastroFazenda.Size = new System.Drawing.Size(1899, 991);
             this.panelCadastroFazenda.TabIndex = 32;
             this.panelCadastroFazenda.Visible = false;
             // 
@@ -1612,10 +1678,10 @@ namespace fazendaSuinos
             this.btnExcluirFazenda.IconColor = System.Drawing.Color.White;
             this.btnExcluirFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExcluirFazenda.IconSize = 20;
-            this.btnExcluirFazenda.Location = new System.Drawing.Point(565, 455);
-            this.btnExcluirFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExcluirFazenda.Location = new System.Drawing.Point(753, 560);
+            this.btnExcluirFazenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExcluirFazenda.Name = "btnExcluirFazenda";
-            this.btnExcluirFazenda.Size = new System.Drawing.Size(106, 30);
+            this.btnExcluirFazenda.Size = new System.Drawing.Size(141, 37);
             this.btnExcluirFazenda.TabIndex = 90;
             this.btnExcluirFazenda.Text = "Excluir";
             this.btnExcluirFazenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1630,9 +1696,10 @@ namespace fazendaSuinos
             this.btnLimparDadosFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimparDadosFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimparDadosFazenda.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLimparDadosFazenda.Location = new System.Drawing.Point(426, 455);
+            this.btnLimparDadosFazenda.Location = new System.Drawing.Point(568, 560);
+            this.btnLimparDadosFazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLimparDadosFazenda.Name = "btnLimparDadosFazenda";
-            this.btnLimparDadosFazenda.Size = new System.Drawing.Size(106, 30);
+            this.btnLimparDadosFazenda.Size = new System.Drawing.Size(141, 37);
             this.btnLimparDadosFazenda.TabIndex = 89;
             this.btnLimparDadosFazenda.Text = "Limpar";
             this.btnLimparDadosFazenda.UseVisualStyleBackColor = false;
@@ -1644,11 +1711,12 @@ namespace fazendaSuinos
             this.dataGridLotesAssociados_Pocilga.AllowUserToDeleteRows = false;
             this.dataGridLotesAssociados_Pocilga.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridLotesAssociados_Pocilga.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridLotesAssociados_Pocilga.Location = new System.Drawing.Point(473, 198);
+            this.dataGridLotesAssociados_Pocilga.Location = new System.Drawing.Point(631, 244);
+            this.dataGridLotesAssociados_Pocilga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridLotesAssociados_Pocilga.Name = "dataGridLotesAssociados_Pocilga";
             this.dataGridLotesAssociados_Pocilga.ReadOnly = true;
             this.dataGridLotesAssociados_Pocilga.RowHeadersWidth = 51;
-            this.dataGridLotesAssociados_Pocilga.Size = new System.Drawing.Size(500, 106);
+            this.dataGridLotesAssociados_Pocilga.Size = new System.Drawing.Size(667, 130);
             this.dataGridLotesAssociados_Pocilga.TabIndex = 88;
             this.dataGridLotesAssociados_Pocilga.Visible = false;
             // 
@@ -1657,9 +1725,10 @@ namespace fazendaSuinos
             this.labelLotesAssociados_Pocilga.AutoSize = true;
             this.labelLotesAssociados_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLotesAssociados_Pocilga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelLotesAssociados_Pocilga.Location = new System.Drawing.Point(470, 173);
+            this.labelLotesAssociados_Pocilga.Location = new System.Drawing.Point(627, 213);
+            this.labelLotesAssociados_Pocilga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLotesAssociados_Pocilga.Name = "labelLotesAssociados_Pocilga";
-            this.labelLotesAssociados_Pocilga.Size = new System.Drawing.Size(135, 20);
+            this.labelLotesAssociados_Pocilga.Size = new System.Drawing.Size(167, 25);
             this.labelLotesAssociados_Pocilga.TabIndex = 87;
             this.labelLotesAssociados_Pocilga.Text = "Lotes Associados";
             this.labelLotesAssociados_Pocilga.Visible = false;
@@ -1669,9 +1738,10 @@ namespace fazendaSuinos
             this.labelCodPocilga_Lote.AutoSize = true;
             this.labelCodPocilga_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodPocilga_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodPocilga_Lote.Location = new System.Drawing.Point(666, 258);
+            this.labelCodPocilga_Lote.Location = new System.Drawing.Point(888, 318);
+            this.labelCodPocilga_Lote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCodPocilga_Lote.Name = "labelCodPocilga_Lote";
-            this.labelCodPocilga_Lote.Size = new System.Drawing.Size(114, 20);
+            this.labelCodPocilga_Lote.Size = new System.Drawing.Size(144, 25);
             this.labelCodPocilga_Lote.TabIndex = 86;
             this.labelCodPocilga_Lote.Text = "Código Pocilga";
             this.labelCodPocilga_Lote.Visible = false;
@@ -1681,10 +1751,10 @@ namespace fazendaSuinos
             this.campoCodPocilga_Lote.BackColor = System.Drawing.Color.LightGray;
             this.campoCodPocilga_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodPocilga_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodPocilga_Lote.Location = new System.Drawing.Point(670, 285);
-            this.campoCodPocilga_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodPocilga_Lote.Location = new System.Drawing.Point(893, 351);
+            this.campoCodPocilga_Lote.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoCodPocilga_Lote.Name = "campoCodPocilga_Lote";
-            this.campoCodPocilga_Lote.Size = new System.Drawing.Size(111, 19);
+            this.campoCodPocilga_Lote.Size = new System.Drawing.Size(148, 23);
             this.campoCodPocilga_Lote.TabIndex = 85;
             this.campoCodPocilga_Lote.Visible = false;
             // 
@@ -1694,10 +1764,10 @@ namespace fazendaSuinos
             this.dateTPValidade_Produto.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.dateTPValidade_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPValidade_Produto.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTPValidade_Produto.Location = new System.Drawing.Point(299, 281);
-            this.dateTPValidade_Produto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPValidade_Produto.Location = new System.Drawing.Point(399, 346);
+            this.dateTPValidade_Produto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTPValidade_Produto.Name = "dateTPValidade_Produto";
-            this.dateTPValidade_Produto.Size = new System.Drawing.Size(125, 23);
+            this.dateTPValidade_Produto.Size = new System.Drawing.Size(165, 26);
             this.dateTPValidade_Produto.TabIndex = 84;
             this.dateTPValidade_Produto.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.dateTPValidade_Produto.Visible = false;
@@ -1707,9 +1777,10 @@ namespace fazendaSuinos
             this.labelValidade_Produto.AutoSize = true;
             this.labelValidade_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelValidade_Produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelValidade_Produto.Location = new System.Drawing.Point(295, 256);
+            this.labelValidade_Produto.Location = new System.Drawing.Point(393, 315);
+            this.labelValidade_Produto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelValidade_Produto.Name = "labelValidade_Produto";
-            this.labelValidade_Produto.Size = new System.Drawing.Size(132, 20);
+            this.labelValidade_Produto.Size = new System.Drawing.Size(162, 25);
             this.labelValidade_Produto.TabIndex = 83;
             this.labelValidade_Produto.Text = "Data de Validade";
             this.labelValidade_Produto.Visible = false;
@@ -1719,9 +1790,10 @@ namespace fazendaSuinos
             this.labelTipo_Produto.AutoSize = true;
             this.labelTipo_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTipo_Produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelTipo_Produto.Location = new System.Drawing.Point(471, 257);
+            this.labelTipo_Produto.Location = new System.Drawing.Point(628, 316);
+            this.labelTipo_Produto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTipo_Produto.Name = "labelTipo_Produto";
-            this.labelTipo_Produto.Size = new System.Drawing.Size(39, 20);
+            this.labelTipo_Produto.Size = new System.Drawing.Size(51, 25);
             this.labelTipo_Produto.TabIndex = 82;
             this.labelTipo_Produto.Text = "Tipo";
             this.labelTipo_Produto.Visible = false;
@@ -1733,13 +1805,14 @@ namespace fazendaSuinos
             this.comboTipo_Produto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboTipo_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTipo_Produto.FormattingEnabled = true;
-            this.comboTipo_Produto.ItemHeight = 18;
+            this.comboTipo_Produto.ItemHeight = 24;
             this.comboTipo_Produto.Items.AddRange(new object[] {
             "Peletizada",
             "Peletizada Especial"});
-            this.comboTipo_Produto.Location = new System.Drawing.Point(472, 281);
+            this.comboTipo_Produto.Location = new System.Drawing.Point(629, 346);
+            this.comboTipo_Produto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboTipo_Produto.Name = "comboTipo_Produto";
-            this.comboTipo_Produto.Size = new System.Drawing.Size(134, 26);
+            this.comboTipo_Produto.Size = new System.Drawing.Size(177, 32);
             this.comboTipo_Produto.TabIndex = 81;
             this.comboTipo_Produto.Visible = false;
             // 
@@ -1748,9 +1821,10 @@ namespace fazendaSuinos
             this.labelCategoria_Produto.AutoSize = true;
             this.labelCategoria_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategoria_Produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCategoria_Produto.Location = new System.Drawing.Point(836, 172);
+            this.labelCategoria_Produto.Location = new System.Drawing.Point(1115, 212);
+            this.labelCategoria_Produto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCategoria_Produto.Name = "labelCategoria_Produto";
-            this.labelCategoria_Produto.Size = new System.Drawing.Size(78, 20);
+            this.labelCategoria_Produto.Size = new System.Drawing.Size(97, 25);
             this.labelCategoria_Produto.TabIndex = 80;
             this.labelCategoria_Produto.Text = "Categoria";
             this.labelCategoria_Produto.Visible = false;
@@ -1762,15 +1836,16 @@ namespace fazendaSuinos
             this.comboCategoria_Produto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboCategoria_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboCategoria_Produto.FormattingEnabled = true;
-            this.comboCategoria_Produto.ItemHeight = 18;
+            this.comboCategoria_Produto.ItemHeight = 24;
             this.comboCategoria_Produto.Items.AddRange(new object[] {
             "SR3",
             "SR4",
             "SR5",
             "SR6"});
-            this.comboCategoria_Produto.Location = new System.Drawing.Point(837, 196);
+            this.comboCategoria_Produto.Location = new System.Drawing.Point(1116, 241);
+            this.comboCategoria_Produto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboCategoria_Produto.Name = "comboCategoria_Produto";
-            this.comboCategoria_Produto.Size = new System.Drawing.Size(134, 26);
+            this.comboCategoria_Produto.Size = new System.Drawing.Size(177, 32);
             this.comboCategoria_Produto.TabIndex = 79;
             this.comboCategoria_Produto.Visible = false;
             // 
@@ -1779,10 +1854,10 @@ namespace fazendaSuinos
             this.campoNome_Produto.BackColor = System.Drawing.Color.LightGray;
             this.campoNome_Produto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoNome_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoNome_Produto.Location = new System.Drawing.Point(298, 198);
-            this.campoNome_Produto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoNome_Produto.Location = new System.Drawing.Point(397, 244);
+            this.campoNome_Produto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoNome_Produto.Name = "campoNome_Produto";
-            this.campoNome_Produto.Size = new System.Drawing.Size(483, 19);
+            this.campoNome_Produto.Size = new System.Drawing.Size(644, 23);
             this.campoNome_Produto.TabIndex = 78;
             this.campoNome_Produto.Visible = false;
             // 
@@ -1791,9 +1866,10 @@ namespace fazendaSuinos
             this.labelNome_Produto.AutoSize = true;
             this.labelNome_Produto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNome_Produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelNome_Produto.Location = new System.Drawing.Point(295, 174);
+            this.labelNome_Produto.Location = new System.Drawing.Point(393, 214);
+            this.labelNome_Produto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNome_Produto.Name = "labelNome_Produto";
-            this.labelNome_Produto.Size = new System.Drawing.Size(51, 20);
+            this.labelNome_Produto.Size = new System.Drawing.Size(64, 25);
             this.labelNome_Produto.TabIndex = 77;
             this.labelNome_Produto.Text = "Nome";
             this.labelNome_Produto.Visible = false;
@@ -1803,10 +1879,10 @@ namespace fazendaSuinos
             this.campoCodigoProdutor_Propriedade.BackColor = System.Drawing.Color.LightGray;
             this.campoCodigoProdutor_Propriedade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodigoProdutor_Propriedade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodigoProdutor_Propriedade.Location = new System.Drawing.Point(842, 198);
-            this.campoCodigoProdutor_Propriedade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodigoProdutor_Propriedade.Location = new System.Drawing.Point(1123, 244);
+            this.campoCodigoProdutor_Propriedade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoCodigoProdutor_Propriedade.Name = "campoCodigoProdutor_Propriedade";
-            this.campoCodigoProdutor_Propriedade.Size = new System.Drawing.Size(110, 19);
+            this.campoCodigoProdutor_Propriedade.Size = new System.Drawing.Size(147, 23);
             this.campoCodigoProdutor_Propriedade.TabIndex = 74;
             this.campoCodigoProdutor_Propriedade.Visible = false;
             // 
@@ -1815,9 +1891,10 @@ namespace fazendaSuinos
             this.labelCodProdutor_Propriedade.AutoSize = true;
             this.labelCodProdutor_Propriedade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodProdutor_Propriedade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodProdutor_Propriedade.Location = new System.Drawing.Point(839, 174);
+            this.labelCodProdutor_Propriedade.Location = new System.Drawing.Point(1119, 214);
+            this.labelCodProdutor_Propriedade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCodProdutor_Propriedade.Name = "labelCodProdutor_Propriedade";
-            this.labelCodProdutor_Propriedade.Size = new System.Drawing.Size(146, 20);
+            this.labelCodProdutor_Propriedade.Size = new System.Drawing.Size(181, 25);
             this.labelCodProdutor_Propriedade.TabIndex = 73;
             this.labelCodProdutor_Propriedade.Text = "Código do Produtor";
             this.labelCodProdutor_Propriedade.Visible = false;
@@ -1827,10 +1904,10 @@ namespace fazendaSuinos
             this.campoNome_Propriedade.BackColor = System.Drawing.Color.LightGray;
             this.campoNome_Propriedade.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoNome_Propriedade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoNome_Propriedade.Location = new System.Drawing.Point(298, 199);
-            this.campoNome_Propriedade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoNome_Propriedade.Location = new System.Drawing.Point(397, 245);
+            this.campoNome_Propriedade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoNome_Propriedade.Name = "campoNome_Propriedade";
-            this.campoNome_Propriedade.Size = new System.Drawing.Size(483, 19);
+            this.campoNome_Propriedade.Size = new System.Drawing.Size(644, 23);
             this.campoNome_Propriedade.TabIndex = 72;
             this.campoNome_Propriedade.Visible = false;
             // 
@@ -1839,9 +1916,10 @@ namespace fazendaSuinos
             this.labelNome_Propriedade.AutoSize = true;
             this.labelNome_Propriedade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNome_Propriedade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelNome_Propriedade.Location = new System.Drawing.Point(295, 175);
+            this.labelNome_Propriedade.Location = new System.Drawing.Point(393, 215);
+            this.labelNome_Propriedade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNome_Propriedade.Name = "labelNome_Propriedade";
-            this.labelNome_Propriedade.Size = new System.Drawing.Size(51, 20);
+            this.labelNome_Propriedade.Size = new System.Drawing.Size(64, 25);
             this.labelNome_Propriedade.TabIndex = 71;
             this.labelNome_Propriedade.Text = "Nome";
             this.labelNome_Propriedade.Visible = false;
@@ -1851,9 +1929,10 @@ namespace fazendaSuinos
             this.labelCodPocilga_Visita.AutoSize = true;
             this.labelCodPocilga_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodPocilga_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodPocilga_Visita.Location = new System.Drawing.Point(838, 257);
+            this.labelCodPocilga_Visita.Location = new System.Drawing.Point(1117, 316);
+            this.labelCodPocilga_Visita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCodPocilga_Visita.Name = "labelCodPocilga_Visita";
-            this.labelCodPocilga_Visita.Size = new System.Drawing.Size(114, 20);
+            this.labelCodPocilga_Visita.Size = new System.Drawing.Size(144, 25);
             this.labelCodPocilga_Visita.TabIndex = 70;
             this.labelCodPocilga_Visita.Text = "Código Pocilga";
             this.labelCodPocilga_Visita.Visible = false;
@@ -1863,10 +1942,10 @@ namespace fazendaSuinos
             this.campoCodPocilga_Visita.BackColor = System.Drawing.Color.LightGray;
             this.campoCodPocilga_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodPocilga_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodPocilga_Visita.Location = new System.Drawing.Point(842, 284);
-            this.campoCodPocilga_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodPocilga_Visita.Location = new System.Drawing.Point(1123, 350);
+            this.campoCodPocilga_Visita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoCodPocilga_Visita.Name = "campoCodPocilga_Visita";
-            this.campoCodPocilga_Visita.Size = new System.Drawing.Size(131, 19);
+            this.campoCodPocilga_Visita.Size = new System.Drawing.Size(175, 23);
             this.campoCodPocilga_Visita.TabIndex = 69;
             this.campoCodPocilga_Visita.Visible = false;
             // 
@@ -1875,9 +1954,10 @@ namespace fazendaSuinos
             this.labelCodVisitante_Visita.AutoSize = true;
             this.labelCodVisitante_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodVisitante_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodVisitante_Visita.Location = new System.Drawing.Point(666, 257);
+            this.labelCodVisitante_Visita.Location = new System.Drawing.Point(888, 316);
+            this.labelCodVisitante_Visita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCodVisitante_Visita.Name = "labelCodVisitante_Visita";
-            this.labelCodVisitante_Visita.Size = new System.Drawing.Size(125, 20);
+            this.labelCodVisitante_Visita.Size = new System.Drawing.Size(155, 25);
             this.labelCodVisitante_Visita.TabIndex = 68;
             this.labelCodVisitante_Visita.Text = "Código Visitante";
             this.labelCodVisitante_Visita.Visible = false;
@@ -1887,10 +1967,10 @@ namespace fazendaSuinos
             this.campoCodVisitante_Visita.BackColor = System.Drawing.Color.LightGray;
             this.campoCodVisitante_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodVisitante_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodVisitante_Visita.Location = new System.Drawing.Point(670, 284);
-            this.campoCodVisitante_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodVisitante_Visita.Location = new System.Drawing.Point(893, 350);
+            this.campoCodVisitante_Visita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoCodVisitante_Visita.Name = "campoCodVisitante_Visita";
-            this.campoCodVisitante_Visita.Size = new System.Drawing.Size(111, 19);
+            this.campoCodVisitante_Visita.Size = new System.Drawing.Size(148, 23);
             this.campoCodVisitante_Visita.TabIndex = 47;
             this.campoCodVisitante_Visita.Visible = false;
             // 
@@ -1898,12 +1978,12 @@ namespace fazendaSuinos
             // 
             this.textObservacoes_Visita.BackColor = System.Drawing.Color.LightGray;
             this.textObservacoes_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textObservacoes_Visita.Location = new System.Drawing.Point(300, 373);
-            this.textObservacoes_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textObservacoes_Visita.Location = new System.Drawing.Point(400, 459);
+            this.textObservacoes_Visita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textObservacoes_Visita.Multiline = true;
             this.textObservacoes_Visita.Name = "textObservacoes_Visita";
             this.textObservacoes_Visita.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textObservacoes_Visita.Size = new System.Drawing.Size(673, 53);
+            this.textObservacoes_Visita.Size = new System.Drawing.Size(897, 65);
             this.textObservacoes_Visita.TabIndex = 66;
             this.textObservacoes_Visita.Visible = false;
             // 
@@ -1912,9 +1992,10 @@ namespace fazendaSuinos
             this.labelObservacoes_Visita.AutoSize = true;
             this.labelObservacoes_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelObservacoes_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelObservacoes_Visita.Location = new System.Drawing.Point(298, 342);
+            this.labelObservacoes_Visita.Location = new System.Drawing.Point(397, 421);
+            this.labelObservacoes_Visita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelObservacoes_Visita.Name = "labelObservacoes_Visita";
-            this.labelObservacoes_Visita.Size = new System.Drawing.Size(167, 20);
+            this.labelObservacoes_Visita.Size = new System.Drawing.Size(209, 25);
             this.labelObservacoes_Visita.TabIndex = 63;
             this.labelObservacoes_Visita.Text = "Observações da Visita";
             this.labelObservacoes_Visita.Visible = false;
@@ -1924,9 +2005,10 @@ namespace fazendaSuinos
             this.labelCodUlt_Visita.AutoSize = true;
             this.labelCodUlt_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodUlt_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodUlt_Visita.Location = new System.Drawing.Point(468, 257);
+            this.labelCodUlt_Visita.Location = new System.Drawing.Point(624, 316);
+            this.labelCodUlt_Visita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCodUlt_Visita.Name = "labelCodUlt_Visita";
-            this.labelCodUlt_Visita.Size = new System.Drawing.Size(152, 20);
+            this.labelCodUlt_Visita.Size = new System.Drawing.Size(188, 25);
             this.labelCodUlt_Visita.TabIndex = 62;
             this.labelCodUlt_Visita.Text = "Código da Últ. Visita";
             this.labelCodUlt_Visita.Visible = false;
@@ -1936,10 +2018,10 @@ namespace fazendaSuinos
             this.campoCodUlt_Visita.BackColor = System.Drawing.Color.LightGray;
             this.campoCodUlt_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodUlt_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodUlt_Visita.Location = new System.Drawing.Point(472, 284);
-            this.campoCodUlt_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodUlt_Visita.Location = new System.Drawing.Point(629, 350);
+            this.campoCodUlt_Visita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoCodUlt_Visita.Name = "campoCodUlt_Visita";
-            this.campoCodUlt_Visita.Size = new System.Drawing.Size(111, 19);
+            this.campoCodUlt_Visita.Size = new System.Drawing.Size(148, 23);
             this.campoCodUlt_Visita.TabIndex = 61;
             this.campoCodUlt_Visita.Visible = false;
             // 
@@ -1949,10 +2031,10 @@ namespace fazendaSuinos
             this.dateTPUlt_Visita.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.dateTPUlt_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPUlt_Visita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTPUlt_Visita.Location = new System.Drawing.Point(298, 282);
-            this.dateTPUlt_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPUlt_Visita.Location = new System.Drawing.Point(397, 347);
+            this.dateTPUlt_Visita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTPUlt_Visita.Name = "dateTPUlt_Visita";
-            this.dateTPUlt_Visita.Size = new System.Drawing.Size(125, 23);
+            this.dateTPUlt_Visita.Size = new System.Drawing.Size(165, 26);
             this.dateTPUlt_Visita.TabIndex = 60;
             this.dateTPUlt_Visita.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.dateTPUlt_Visita.Visible = false;
@@ -1962,9 +2044,10 @@ namespace fazendaSuinos
             this.labelDataUlt_Visita.AutoSize = true;
             this.labelDataUlt_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDataUlt_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelDataUlt_Visita.Location = new System.Drawing.Point(294, 257);
+            this.labelDataUlt_Visita.Location = new System.Drawing.Point(392, 316);
+            this.labelDataUlt_Visita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDataUlt_Visita.Name = "labelDataUlt_Visita";
-            this.labelDataUlt_Visita.Size = new System.Drawing.Size(155, 20);
+            this.labelDataUlt_Visita.Size = new System.Drawing.Size(188, 25);
             this.labelDataUlt_Visita.TabIndex = 59;
             this.labelDataUlt_Visita.Text = "Data da Última Vista";
             this.labelDataUlt_Visita.Visible = false;
@@ -1974,10 +2057,10 @@ namespace fazendaSuinos
             this.campoFinalidade_Visita.BackColor = System.Drawing.Color.LightGray;
             this.campoFinalidade_Visita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoFinalidade_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoFinalidade_Visita.Location = new System.Drawing.Point(474, 198);
-            this.campoFinalidade_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoFinalidade_Visita.Location = new System.Drawing.Point(632, 244);
+            this.campoFinalidade_Visita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoFinalidade_Visita.Name = "campoFinalidade_Visita";
-            this.campoFinalidade_Visita.Size = new System.Drawing.Size(499, 19);
+            this.campoFinalidade_Visita.Size = new System.Drawing.Size(665, 23);
             this.campoFinalidade_Visita.TabIndex = 58;
             this.campoFinalidade_Visita.Visible = false;
             // 
@@ -1986,9 +2069,10 @@ namespace fazendaSuinos
             this.labelFinalidade_Visita.AutoSize = true;
             this.labelFinalidade_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFinalidade_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelFinalidade_Visita.Location = new System.Drawing.Point(471, 174);
+            this.labelFinalidade_Visita.Location = new System.Drawing.Point(628, 214);
+            this.labelFinalidade_Visita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFinalidade_Visita.Name = "labelFinalidade_Visita";
-            this.labelFinalidade_Visita.Size = new System.Drawing.Size(82, 20);
+            this.labelFinalidade_Visita.Size = new System.Drawing.Size(102, 25);
             this.labelFinalidade_Visita.TabIndex = 57;
             this.labelFinalidade_Visita.Text = "Finalidade";
             this.labelFinalidade_Visita.Visible = false;
@@ -1999,10 +2083,10 @@ namespace fazendaSuinos
             this.dateTPData_Visita.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.dateTPData_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPData_Visita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTPData_Visita.Location = new System.Drawing.Point(298, 196);
-            this.dateTPData_Visita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPData_Visita.Location = new System.Drawing.Point(397, 241);
+            this.dateTPData_Visita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTPData_Visita.Name = "dateTPData_Visita";
-            this.dateTPData_Visita.Size = new System.Drawing.Size(125, 23);
+            this.dateTPData_Visita.Size = new System.Drawing.Size(165, 26);
             this.dateTPData_Visita.TabIndex = 56;
             this.dateTPData_Visita.Value = new System.DateTime(2024, 5, 19, 0, 0, 0, 0);
             this.dateTPData_Visita.Visible = false;
@@ -2012,9 +2096,10 @@ namespace fazendaSuinos
             this.labelData_Visita.AutoSize = true;
             this.labelData_Visita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelData_Visita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelData_Visita.Location = new System.Drawing.Point(294, 169);
+            this.labelData_Visita.Location = new System.Drawing.Point(392, 208);
+            this.labelData_Visita.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelData_Visita.Name = "labelData_Visita";
-            this.labelData_Visita.Size = new System.Drawing.Size(44, 20);
+            this.labelData_Visita.Size = new System.Drawing.Size(53, 25);
             this.labelData_Visita.TabIndex = 55;
             this.labelData_Visita.Text = "Data";
             this.labelData_Visita.Visible = false;
@@ -2024,9 +2109,10 @@ namespace fazendaSuinos
             this.labelCodPropriedade_Pocilga.AutoSize = true;
             this.labelCodPropriedade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodPropriedade_Pocilga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodPropriedade_Pocilga.Location = new System.Drawing.Point(295, 260);
+            this.labelCodPropriedade_Pocilga.Location = new System.Drawing.Point(393, 320);
+            this.labelCodPropriedade_Pocilga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCodPropriedade_Pocilga.Name = "labelCodPropriedade_Pocilga";
-            this.labelCodPropriedade_Pocilga.Size = new System.Drawing.Size(171, 20);
+            this.labelCodPropriedade_Pocilga.Size = new System.Drawing.Size(213, 25);
             this.labelCodPropriedade_Pocilga.TabIndex = 75;
             this.labelCodPropriedade_Pocilga.Text = "Código da Propriedade";
             this.labelCodPropriedade_Pocilga.Visible = false;
@@ -2036,10 +2122,10 @@ namespace fazendaSuinos
             this.campoCodPropriedade_Pocilga.BackColor = System.Drawing.Color.LightGray;
             this.campoCodPropriedade_Pocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodPropriedade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodPropriedade_Pocilga.Location = new System.Drawing.Point(298, 284);
-            this.campoCodPropriedade_Pocilga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodPropriedade_Pocilga.Location = new System.Drawing.Point(397, 350);
+            this.campoCodPropriedade_Pocilga.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoCodPropriedade_Pocilga.Name = "campoCodPropriedade_Pocilga";
-            this.campoCodPropriedade_Pocilga.Size = new System.Drawing.Size(110, 19);
+            this.campoCodPropriedade_Pocilga.Size = new System.Drawing.Size(147, 23);
             this.campoCodPropriedade_Pocilga.TabIndex = 76;
             this.campoCodPropriedade_Pocilga.Visible = false;
             // 
@@ -2047,12 +2133,12 @@ namespace fazendaSuinos
             // 
             this.textoDescricao_Pocilga.BackColor = System.Drawing.Color.LightGray;
             this.textoDescricao_Pocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textoDescricao_Pocilga.Location = new System.Drawing.Point(298, 373);
-            this.textoDescricao_Pocilga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textoDescricao_Pocilga.Location = new System.Drawing.Point(397, 459);
+            this.textoDescricao_Pocilga.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textoDescricao_Pocilga.Multiline = true;
             this.textoDescricao_Pocilga.Name = "textoDescricao_Pocilga";
             this.textoDescricao_Pocilga.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textoDescricao_Pocilga.Size = new System.Drawing.Size(673, 53);
+            this.textoDescricao_Pocilga.Size = new System.Drawing.Size(897, 65);
             this.textoDescricao_Pocilga.TabIndex = 52;
             this.textoDescricao_Pocilga.Visible = false;
             // 
@@ -2061,9 +2147,10 @@ namespace fazendaSuinos
             this.labelDescricao_Pocilga.AutoSize = true;
             this.labelDescricao_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescricao_Pocilga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelDescricao_Pocilga.Location = new System.Drawing.Point(296, 342);
+            this.labelDescricao_Pocilga.Location = new System.Drawing.Point(395, 421);
+            this.labelDescricao_Pocilga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDescricao_Pocilga.Name = "labelDescricao_Pocilga";
-            this.labelDescricao_Pocilga.Size = new System.Drawing.Size(80, 20);
+            this.labelDescricao_Pocilga.Size = new System.Drawing.Size(99, 25);
             this.labelDescricao_Pocilga.TabIndex = 51;
             this.labelDescricao_Pocilga.Text = "Descrição";
             this.labelDescricao_Pocilga.Visible = false;
@@ -2073,10 +2160,10 @@ namespace fazendaSuinos
             this.campoCapacidade_Pocilga.BackColor = System.Drawing.Color.LightGray;
             this.campoCapacidade_Pocilga.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCapacidade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCapacidade_Pocilga.Location = new System.Drawing.Point(298, 198);
-            this.campoCapacidade_Pocilga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCapacidade_Pocilga.Location = new System.Drawing.Point(397, 244);
+            this.campoCapacidade_Pocilga.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoCapacidade_Pocilga.Name = "campoCapacidade_Pocilga";
-            this.campoCapacidade_Pocilga.Size = new System.Drawing.Size(125, 19);
+            this.campoCapacidade_Pocilga.Size = new System.Drawing.Size(167, 23);
             this.campoCapacidade_Pocilga.TabIndex = 50;
             this.campoCapacidade_Pocilga.Visible = false;
             // 
@@ -2085,9 +2172,10 @@ namespace fazendaSuinos
             this.labelCapacidade_Pocilga.AutoSize = true;
             this.labelCapacidade_Pocilga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCapacidade_Pocilga.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCapacidade_Pocilga.Location = new System.Drawing.Point(294, 169);
+            this.labelCapacidade_Pocilga.Location = new System.Drawing.Point(392, 208);
+            this.labelCapacidade_Pocilga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCapacidade_Pocilga.Name = "labelCapacidade_Pocilga";
-            this.labelCapacidade_Pocilga.Size = new System.Drawing.Size(94, 20);
+            this.labelCapacidade_Pocilga.Size = new System.Drawing.Size(118, 25);
             this.labelCapacidade_Pocilga.TabIndex = 49;
             this.labelCapacidade_Pocilga.Text = "Capacidade";
             this.labelCapacidade_Pocilga.Visible = false;
@@ -2096,12 +2184,12 @@ namespace fazendaSuinos
             // 
             this.textoObservacoes_Lote.BackColor = System.Drawing.Color.LightGray;
             this.textoObservacoes_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textoObservacoes_Lote.Location = new System.Drawing.Point(300, 373);
-            this.textoObservacoes_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textoObservacoes_Lote.Location = new System.Drawing.Point(400, 459);
+            this.textoObservacoes_Lote.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textoObservacoes_Lote.Multiline = true;
             this.textoObservacoes_Lote.Name = "textoObservacoes_Lote";
             this.textoObservacoes_Lote.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textoObservacoes_Lote.Size = new System.Drawing.Size(673, 53);
+            this.textoObservacoes_Lote.Size = new System.Drawing.Size(897, 65);
             this.textoObservacoes_Lote.TabIndex = 46;
             this.textoObservacoes_Lote.Visible = false;
             // 
@@ -2110,9 +2198,10 @@ namespace fazendaSuinos
             this.labelObservacoes_Lote.AutoSize = true;
             this.labelObservacoes_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelObservacoes_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelObservacoes_Lote.Location = new System.Drawing.Point(296, 342);
+            this.labelObservacoes_Lote.Location = new System.Drawing.Point(395, 421);
+            this.labelObservacoes_Lote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelObservacoes_Lote.Name = "labelObservacoes_Lote";
-            this.labelObservacoes_Lote.Size = new System.Drawing.Size(102, 20);
+            this.labelObservacoes_Lote.Size = new System.Drawing.Size(129, 25);
             this.labelObservacoes_Lote.TabIndex = 45;
             this.labelObservacoes_Lote.Text = "Observações";
             this.labelObservacoes_Lote.Visible = false;
@@ -2122,9 +2211,10 @@ namespace fazendaSuinos
             this.labelCodigoGerente_Lote.AutoSize = true;
             this.labelCodigoGerente_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodigoGerente_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodigoGerente_Lote.Location = new System.Drawing.Point(838, 257);
+            this.labelCodigoGerente_Lote.Location = new System.Drawing.Point(1117, 316);
+            this.labelCodigoGerente_Lote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCodigoGerente_Lote.Name = "labelCodigoGerente_Lote";
-            this.labelCodigoGerente_Lote.Size = new System.Drawing.Size(122, 20);
+            this.labelCodigoGerente_Lote.Size = new System.Drawing.Size(150, 25);
             this.labelCodigoGerente_Lote.TabIndex = 44;
             this.labelCodigoGerente_Lote.Text = "Código Gerente";
             this.labelCodigoGerente_Lote.Visible = false;
@@ -2134,10 +2224,10 @@ namespace fazendaSuinos
             this.campoCodGerente_Lote.BackColor = System.Drawing.Color.LightGray;
             this.campoCodGerente_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodGerente_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodGerente_Lote.Location = new System.Drawing.Point(842, 284);
-            this.campoCodGerente_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodGerente_Lote.Location = new System.Drawing.Point(1123, 350);
+            this.campoCodGerente_Lote.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoCodGerente_Lote.Name = "campoCodGerente_Lote";
-            this.campoCodGerente_Lote.Size = new System.Drawing.Size(131, 19);
+            this.campoCodGerente_Lote.Size = new System.Drawing.Size(175, 23);
             this.campoCodGerente_Lote.TabIndex = 43;
             this.campoCodGerente_Lote.Visible = false;
             // 
@@ -2147,10 +2237,10 @@ namespace fazendaSuinos
             this.dateTPEstCarregamento_Lote.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.dateTPEstCarregamento_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPEstCarregamento_Lote.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTPEstCarregamento_Lote.Location = new System.Drawing.Point(473, 282);
-            this.dateTPEstCarregamento_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPEstCarregamento_Lote.Location = new System.Drawing.Point(631, 347);
+            this.dateTPEstCarregamento_Lote.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTPEstCarregamento_Lote.Name = "dateTPEstCarregamento_Lote";
-            this.dateTPEstCarregamento_Lote.Size = new System.Drawing.Size(125, 23);
+            this.dateTPEstCarregamento_Lote.Size = new System.Drawing.Size(165, 26);
             this.dateTPEstCarregamento_Lote.TabIndex = 41;
             this.dateTPEstCarregamento_Lote.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.dateTPEstCarregamento_Lote.Visible = false;
@@ -2160,9 +2250,10 @@ namespace fazendaSuinos
             this.labelEstCarreg_Lote.AutoSize = true;
             this.labelEstCarreg_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEstCarreg_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelEstCarreg_Lote.Location = new System.Drawing.Point(469, 257);
+            this.labelEstCarreg_Lote.Location = new System.Drawing.Point(625, 316);
+            this.labelEstCarreg_Lote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEstCarreg_Lote.Name = "labelEstCarreg_Lote";
-            this.labelEstCarreg_Lote.Size = new System.Drawing.Size(138, 20);
+            this.labelEstCarreg_Lote.Size = new System.Drawing.Size(171, 25);
             this.labelEstCarreg_Lote.TabIndex = 40;
             this.labelEstCarreg_Lote.Text = "Estimativa Carreg.";
             this.labelEstCarreg_Lote.Visible = false;
@@ -2173,10 +2264,10 @@ namespace fazendaSuinos
             this.dateTPDataAloj_Lote.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.dateTPDataAloj_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTPDataAloj_Lote.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTPDataAloj_Lote.Location = new System.Drawing.Point(298, 282);
-            this.dateTPDataAloj_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTPDataAloj_Lote.Location = new System.Drawing.Point(397, 347);
+            this.dateTPDataAloj_Lote.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTPDataAloj_Lote.Name = "dateTPDataAloj_Lote";
-            this.dateTPDataAloj_Lote.Size = new System.Drawing.Size(125, 23);
+            this.dateTPDataAloj_Lote.Size = new System.Drawing.Size(165, 26);
             this.dateTPDataAloj_Lote.TabIndex = 38;
             this.dateTPDataAloj_Lote.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.dateTPDataAloj_Lote.Visible = false;
@@ -2188,14 +2279,15 @@ namespace fazendaSuinos
             this.comboSituacao_Lote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboSituacao_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboSituacao_Lote.FormattingEnabled = true;
-            this.comboSituacao_Lote.ItemHeight = 18;
+            this.comboSituacao_Lote.ItemHeight = 24;
             this.comboSituacao_Lote.Items.AddRange(new object[] {
             "Aberto",
             "Em andamento",
             "Fechado"});
-            this.comboSituacao_Lote.Location = new System.Drawing.Point(840, 198);
+            this.comboSituacao_Lote.Location = new System.Drawing.Point(1120, 244);
+            this.comboSituacao_Lote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboSituacao_Lote.Name = "comboSituacao_Lote";
-            this.comboSituacao_Lote.Size = new System.Drawing.Size(134, 26);
+            this.comboSituacao_Lote.Size = new System.Drawing.Size(177, 32);
             this.comboSituacao_Lote.TabIndex = 37;
             this.comboSituacao_Lote.Visible = false;
             // 
@@ -2204,10 +2296,10 @@ namespace fazendaSuinos
             this.campoQuantidade_Lote.BackColor = System.Drawing.Color.LightGray;
             this.campoQuantidade_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoQuantidade_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoQuantidade_Lote.Location = new System.Drawing.Point(298, 198);
-            this.campoQuantidade_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoQuantidade_Lote.Location = new System.Drawing.Point(397, 244);
+            this.campoQuantidade_Lote.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoQuantidade_Lote.Name = "campoQuantidade_Lote";
-            this.campoQuantidade_Lote.Size = new System.Drawing.Size(125, 19);
+            this.campoQuantidade_Lote.Size = new System.Drawing.Size(167, 23);
             this.campoQuantidade_Lote.TabIndex = 36;
             this.campoQuantidade_Lote.Visible = false;
             // 
@@ -2216,10 +2308,10 @@ namespace fazendaSuinos
             this.campoPesoTotal_Lote.BackColor = System.Drawing.Color.LightGray;
             this.campoPesoTotal_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoPesoTotal_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoPesoTotal_Lote.Location = new System.Drawing.Point(473, 198);
-            this.campoPesoTotal_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoPesoTotal_Lote.Location = new System.Drawing.Point(631, 244);
+            this.campoPesoTotal_Lote.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoPesoTotal_Lote.Name = "campoPesoTotal_Lote";
-            this.campoPesoTotal_Lote.Size = new System.Drawing.Size(110, 19);
+            this.campoPesoTotal_Lote.Size = new System.Drawing.Size(147, 23);
             this.campoPesoTotal_Lote.TabIndex = 35;
             this.campoPesoTotal_Lote.Visible = false;
             // 
@@ -2228,9 +2320,10 @@ namespace fazendaSuinos
             this.labelPesoTotal_Lote.AutoSize = true;
             this.labelPesoTotal_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPesoTotal_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelPesoTotal_Lote.Location = new System.Drawing.Point(470, 174);
+            this.labelPesoTotal_Lote.Location = new System.Drawing.Point(627, 214);
+            this.labelPesoTotal_Lote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPesoTotal_Lote.Name = "labelPesoTotal_Lote";
-            this.labelPesoTotal_Lote.Size = new System.Drawing.Size(84, 20);
+            this.labelPesoTotal_Lote.Size = new System.Drawing.Size(106, 25);
             this.labelPesoTotal_Lote.TabIndex = 34;
             this.labelPesoTotal_Lote.Text = "Peso Total";
             this.labelPesoTotal_Lote.Visible = false;
@@ -2240,9 +2333,10 @@ namespace fazendaSuinos
             this.labelQuantidade_Lote.AutoSize = true;
             this.labelQuantidade_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQuantidade_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelQuantidade_Lote.Location = new System.Drawing.Point(294, 169);
+            this.labelQuantidade_Lote.Location = new System.Drawing.Point(392, 208);
+            this.labelQuantidade_Lote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelQuantidade_Lote.Name = "labelQuantidade_Lote";
-            this.labelQuantidade_Lote.Size = new System.Drawing.Size(92, 20);
+            this.labelQuantidade_Lote.Size = new System.Drawing.Size(114, 25);
             this.labelQuantidade_Lote.TabIndex = 33;
             this.labelQuantidade_Lote.Text = "Quantidade";
             this.labelQuantidade_Lote.Visible = false;
@@ -2252,9 +2346,10 @@ namespace fazendaSuinos
             this.labelDataAloj_Lote.AutoSize = true;
             this.labelDataAloj_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDataAloj_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelDataAloj_Lote.Location = new System.Drawing.Point(296, 257);
+            this.labelDataAloj_Lote.Location = new System.Drawing.Point(395, 316);
+            this.labelDataAloj_Lote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDataAloj_Lote.Name = "labelDataAloj_Lote";
-            this.labelDataAloj_Lote.Size = new System.Drawing.Size(150, 20);
+            this.labelDataAloj_Lote.Size = new System.Drawing.Size(183, 25);
             this.labelDataAloj_Lote.TabIndex = 30;
             this.labelDataAloj_Lote.Text = "Data de Alojamento";
             this.labelDataAloj_Lote.Visible = false;
@@ -2264,10 +2359,10 @@ namespace fazendaSuinos
             this.campoPesoMedio_Lote.BackColor = System.Drawing.Color.LightGray;
             this.campoPesoMedio_Lote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoPesoMedio_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoPesoMedio_Lote.Location = new System.Drawing.Point(670, 198);
-            this.campoPesoMedio_Lote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoPesoMedio_Lote.Location = new System.Drawing.Point(893, 244);
+            this.campoPesoMedio_Lote.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoPesoMedio_Lote.Name = "campoPesoMedio_Lote";
-            this.campoPesoMedio_Lote.Size = new System.Drawing.Size(111, 19);
+            this.campoPesoMedio_Lote.Size = new System.Drawing.Size(148, 23);
             this.campoPesoMedio_Lote.TabIndex = 27;
             this.campoPesoMedio_Lote.Visible = false;
             // 
@@ -2276,9 +2371,10 @@ namespace fazendaSuinos
             this.labelPesoMedio_Lote.AutoSize = true;
             this.labelPesoMedio_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPesoMedio_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelPesoMedio_Lote.Location = new System.Drawing.Point(666, 173);
+            this.labelPesoMedio_Lote.Location = new System.Drawing.Point(888, 213);
+            this.labelPesoMedio_Lote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPesoMedio_Lote.Name = "labelPesoMedio_Lote";
-            this.labelPesoMedio_Lote.Size = new System.Drawing.Size(92, 20);
+            this.labelPesoMedio_Lote.Size = new System.Drawing.Size(116, 25);
             this.labelPesoMedio_Lote.TabIndex = 26;
             this.labelPesoMedio_Lote.Text = "Peso Médio";
             this.labelPesoMedio_Lote.Visible = false;
@@ -2293,10 +2389,10 @@ namespace fazendaSuinos
             this.btnGravarFazenda.IconColor = System.Drawing.Color.White;
             this.btnGravarFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGravarFazenda.IconSize = 23;
-            this.btnGravarFazenda.Location = new System.Drawing.Point(699, 455);
-            this.btnGravarFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGravarFazenda.Location = new System.Drawing.Point(932, 560);
+            this.btnGravarFazenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGravarFazenda.Name = "btnGravarFazenda";
-            this.btnGravarFazenda.Size = new System.Drawing.Size(137, 30);
+            this.btnGravarFazenda.Size = new System.Drawing.Size(183, 37);
             this.btnGravarFazenda.TabIndex = 23;
             this.btnGravarFazenda.Text = "Salvar Alterações";
             this.btnGravarFazenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2315,10 +2411,10 @@ namespace fazendaSuinos
             this.btnIncluirFazenda.IconColor = System.Drawing.Color.White;
             this.btnIncluirFazenda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnIncluirFazenda.IconSize = 23;
-            this.btnIncluirFazenda.Location = new System.Drawing.Point(868, 455);
-            this.btnIncluirFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIncluirFazenda.Location = new System.Drawing.Point(1157, 560);
+            this.btnIncluirFazenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIncluirFazenda.Name = "btnIncluirFazenda";
-            this.btnIncluirFazenda.Size = new System.Drawing.Size(106, 30);
+            this.btnIncluirFazenda.Size = new System.Drawing.Size(141, 37);
             this.btnIncluirFazenda.TabIndex = 22;
             this.btnIncluirFazenda.Text = "Incluir";
             this.btnIncluirFazenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2331,9 +2427,10 @@ namespace fazendaSuinos
             this.labelSituacao_Lote.AutoSize = true;
             this.labelSituacao_Lote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSituacao_Lote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelSituacao_Lote.Location = new System.Drawing.Point(838, 174);
+            this.labelSituacao_Lote.Location = new System.Drawing.Point(1117, 214);
+            this.labelSituacao_Lote.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSituacao_Lote.Name = "labelSituacao_Lote";
-            this.labelSituacao_Lote.Size = new System.Drawing.Size(72, 20);
+            this.labelSituacao_Lote.Size = new System.Drawing.Size(89, 25);
             this.labelSituacao_Lote.TabIndex = 11;
             this.labelSituacao_Lote.Text = "Situação";
             this.labelSituacao_Lote.Visible = false;
@@ -2343,11 +2440,11 @@ namespace fazendaSuinos
             this.campoCodigoFazenda.BackColor = System.Drawing.Color.LightGray;
             this.campoCodigoFazenda.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.campoCodigoFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.campoCodigoFazenda.Location = new System.Drawing.Point(472, 117);
-            this.campoCodigoFazenda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.campoCodigoFazenda.Location = new System.Drawing.Point(629, 144);
+            this.campoCodigoFazenda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.campoCodigoFazenda.Name = "campoCodigoFazenda";
             this.campoCodigoFazenda.ReadOnly = true;
-            this.campoCodigoFazenda.Size = new System.Drawing.Size(110, 19);
+            this.campoCodigoFazenda.Size = new System.Drawing.Size(147, 23);
             this.campoCodigoFazenda.TabIndex = 6;
             this.campoCodigoFazenda.TextChanged += new System.EventHandler(this.campoCodigoFazenda_TextChanged);
             // 
@@ -2356,9 +2453,10 @@ namespace fazendaSuinos
             this.labelCodigoFazenda.AutoSize = true;
             this.labelCodigoFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCodigoFazenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelCodigoFazenda.Location = new System.Drawing.Point(469, 93);
+            this.labelCodigoFazenda.Location = new System.Drawing.Point(625, 114);
+            this.labelCodigoFazenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCodigoFazenda.Name = "labelCodigoFazenda";
-            this.labelCodigoFazenda.Size = new System.Drawing.Size(59, 20);
+            this.labelCodigoFazenda.Size = new System.Drawing.Size(75, 25);
             this.labelCodigoFazenda.TabIndex = 5;
             this.labelCodigoFazenda.Text = "Código";
             // 
@@ -2369,16 +2467,17 @@ namespace fazendaSuinos
             this.comboTipoFazenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboTipoFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTipoFazenda.FormattingEnabled = true;
-            this.comboTipoFazenda.ItemHeight = 18;
+            this.comboTipoFazenda.ItemHeight = 24;
             this.comboTipoFazenda.Items.AddRange(new object[] {
             "Propriedade",
             "Pocilga",
             "Lote",
             "Visita",
             "Produto"});
-            this.comboTipoFazenda.Location = new System.Drawing.Point(298, 117);
+            this.comboTipoFazenda.Location = new System.Drawing.Point(397, 144);
+            this.comboTipoFazenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboTipoFazenda.Name = "comboTipoFazenda";
-            this.comboTipoFazenda.Size = new System.Drawing.Size(125, 26);
+            this.comboTipoFazenda.Size = new System.Drawing.Size(165, 32);
             this.comboTipoFazenda.TabIndex = 4;
             this.comboTipoFazenda.SelectedIndexChanged += new System.EventHandler(this.comboTipoFazenda_SelectedIndexChanged);
             // 
@@ -2387,9 +2486,10 @@ namespace fazendaSuinos
             this.labelTipoFazenda.AutoSize = true;
             this.labelTipoFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTipoFazenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelTipoFazenda.Location = new System.Drawing.Point(294, 94);
+            this.labelTipoFazenda.Location = new System.Drawing.Point(392, 116);
+            this.labelTipoFazenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTipoFazenda.Name = "labelTipoFazenda";
-            this.labelTipoFazenda.Size = new System.Drawing.Size(39, 20);
+            this.labelTipoFazenda.Size = new System.Drawing.Size(51, 25);
             this.labelTipoFazenda.TabIndex = 3;
             this.labelTipoFazenda.Text = "Tipo";
             // 
@@ -2398,9 +2498,10 @@ namespace fazendaSuinos
             this.labelDadosFazenda.AutoSize = true;
             this.labelDadosFazenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDadosFazenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.labelDadosFazenda.Location = new System.Drawing.Point(285, 47);
+            this.labelDadosFazenda.Location = new System.Drawing.Point(380, 58);
+            this.labelDadosFazenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDadosFazenda.Name = "labelDadosFazenda";
-            this.labelDadosFazenda.Size = new System.Drawing.Size(143, 24);
+            this.labelDadosFazenda.Size = new System.Drawing.Size(182, 29);
             this.labelDadosFazenda.TabIndex = 1;
             this.labelDadosFazenda.Text = "Dados Fazenda";
             // 
@@ -2420,14 +2521,15 @@ namespace fazendaSuinos
             // 
             // FormCadastros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1440, 857);
+            this.ClientSize = new System.Drawing.Size(1920, 1055);
             this.Controls.Add(this.panelCadastros);
             this.Controls.Add(this.panelFiltros);
             this.Controls.Add(this.panel3Botoes);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormCadastros";
             this.Text = "Cadastros";
             this.panel3Botoes.ResumeLayout(false);
